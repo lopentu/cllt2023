@@ -1,0 +1,35 @@
+---
+title: "Week 1"
+subtitle: "Welcome"
+editor: visual
+---
+
+::: callout-important
+課程有自動錄影功能
+:::
+
+## Prepare
+
+📖 Read the [syllabus](/course-syllabus.html)
+
+📖 Read the [support](/course-support.html) resources
+
+## Participate
+
+🖥️ [Lab 0 -](/_slides/lab-0.html)[Meet](/slides/lab-0.html)+ greet
+
+🖥️ [Lecture 1 - Welcome](/slides/lec-1.html)
+
+## Practice
+
+📋 AE 0
+
+## Perform
+
+⌨️ Lab 0 - Meet + greet
+
+<br><br>
+
+::: {style="font-size: 0.875em;"}
+Back to [course schedule](/ "Course schedule") ⏎
+:::

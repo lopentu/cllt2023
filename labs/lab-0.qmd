@@ -1,0 +1,8 @@
+---
+title: "Lab 0 - Welcome"
+editor: visual
+---
+
+-   熟悉彼此，相關軟體工具
+
+-   課程期待

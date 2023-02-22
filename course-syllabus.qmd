@@ -1,0 +1,79 @@
+---
+title: "課綱"
+---
+
+## 課程時地
+
+|        | Day  | Time              | Location |
+|--------|------|-------------------|----------|
+| 主課   | 週四 | 2:20 pm - 4:00 pm | 綜 301   |
+| 助教課 | 週四 | 4:10 pm - 5:10 pm | 綜 301   |
+
+## 學習目標
+
+By the end of the semester, you will be able to...
+
+## 課程錄影
+
+### LOPE channel
+
+部分課程濃縮內容，將放在 LOPE Youtube 頻道
+
+<!-- ```{=html}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_KN97j30ST4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+``` -->
+## 建議先備知識
+
+-   python 程式基礎
+
+-   機器學習基礎
+
+    可以參考 [Support](/course-support.html) page for more resources.
+
+## 教科書與參考書
+
+-   [Speech and Language Processing](https://web.stanford.edu/~jurafsky/slp3/) (3rd ed. draft) by [Dan Jurafsky](http://web.stanford.edu/people/jurafsky/) and [James H. Martin](http://www.cs.colorado.edu/~martin/)
+
+## 助教群
+
+-   王伯雅、古貿昌、陳韋伶、陳品而、周昕妤、張鈺琳
+
+## 回家作業
+
+每週有一份作業。
+
+-   繳交方式
+
+-   繳交時間
+
+## 考試與期末專案
+
+無期中與期末考。
+
+需實作一個專案計劃。
+
+## 給分方式
+
+計分比例如下
+
+| 項目           | 百分比                       |
+|----------------|------------------------------|
+| 課堂參與與練習 | 10%                          |
+| 作業           | 40% (10% x 4) 選最優十份作業 |
+| 期末專題       | 40%                          |
+| 助教實習課     | 10%                          |
+
+## 課堂期待
+
+1.  自主學習與積極參與討論
+2.  確實預習
+3.  不遲交、不遲到
+4.  彼此協助與合作
+5.  誠信與負責
+
+### 遲交評分
+
+-   每份作業最遲在截止日後三天補交，除非有正當理由教師認可，否則皆扣 10%。
+
+-   期末專案不得遲交。

@@ -1,0 +1,7 @@
+---
+title: "LING8505:計算語言學與語言學理論"
+---
+
+沒有理論，就不似科學。
+
+![](images/background-bikeshare.png){fig-alt="A series of six, generic data visualizations: a scatterplot, a density plot, a contour plot, a line plot, a box plot, and another scatterplot." width="700"}

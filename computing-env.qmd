@@ -1,0 +1,7 @@
+---
+title: "計算環境"
+---
+
+Google Colab
+
+Visual Studio code 與推薦套件

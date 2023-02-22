@@ -1,0 +1,10 @@
+---
+title: "參考連接"
+---
+
+|                                  |                                                                                                                                       |
+|----------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
+| 語料實務分析                     | [🔗](https://lopentu.github.io/corpus-book/?chap=%E8%AA%9E%E6%96%99%E8%99%95%E7%90%86%E6%96%B9%E6%B3%95%E5%B0%8E%E8%AB%96) (草稿階段) |
+| GitHub classroom                 | [🔗](https://classroom.github.com/classrooms/125784118-2023)                                                                          |
+| Google classroom                 | [🔗](https://classroom.google.com/u/2/c/NTQyNjkwNzIyODEx)                                                                             |
+| Lecture streaming and recordings | 🔗                                                                                                                                    |
