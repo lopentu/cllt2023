@@ -2,98 +2,94 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://lopentu.github.io/cllt/labs/lab-0.html</loc>
-    <lastmod>2023-02-22T14:29:19.050Z</lastmod>
+    <lastmod>2023-02-22T14:45:40.164Z</lastmod>
   </url>
   <url>
     <loc>https://lopentu.github.io/cllt/course-links.html</loc>
-    <lastmod>2023-02-22T14:29:19.388Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lopentu.github.io/cllt/LICENSE.html</loc>
-    <lastmod>2023-02-22T14:29:19.899Z</lastmod>
+    <lastmod>2023-02-22T14:45:40.531Z</lastmod>
   </url>
   <url>
     <loc>https://lopentu.github.io/cllt/weeks/week-1.html</loc>
-    <lastmod>2023-02-22T14:29:20.210Z</lastmod>
+    <lastmod>2023-02-22T14:45:40.882Z</lastmod>
   </url>
   <url>
     <loc>https://lopentu.github.io/cllt/weeks/week-2.html</loc>
-    <lastmod>2023-02-22T14:29:20.529Z</lastmod>
+    <lastmod>2023-02-22T14:45:41.256Z</lastmod>
   </url>
   <url>
     <loc>https://lopentu.github.io/cllt/project-tips-resources.html</loc>
-    <lastmod>2023-02-22T14:29:21.571Z</lastmod>
+    <lastmod>2023-02-22T14:45:42.458Z</lastmod>
   </url>
   <url>
     <loc>https://lopentu.github.io/cllt/course-overview.html</loc>
-    <lastmod>2023-02-22T14:29:21.875Z</lastmod>
+    <lastmod>2023-02-22T14:45:42.798Z</lastmod>
   </url>
   <url>
     <loc>https://lopentu.github.io/cllt/index.html</loc>
-    <lastmod>2023-02-22T14:29:22.235Z</lastmod>
+    <lastmod>2023-02-22T14:45:43.211Z</lastmod>
   </url>
   <url>
     <loc>https://lopentu.github.io/cllt/course-team.html</loc>
-    <lastmod>2023-02-22T14:39:45.892Z</lastmod>
+    <lastmod>2023-02-22T14:45:43.548Z</lastmod>
   </url>
   <url>
     <loc>https://lopentu.github.io/cllt/slides/lab-1.html</loc>
-    <lastmod>2023-02-22T14:29:22.949Z</lastmod>
+    <lastmod>2023-02-22T14:45:43.923Z</lastmod>
   </url>
   <url>
     <loc>https://lopentu.github.io/cllt/slides/lab-0.html</loc>
-    <lastmod>2023-02-22T14:29:23.243Z</lastmod>
+    <lastmod>2023-02-22T14:45:44.236Z</lastmod>
   </url>
   <url>
     <loc>https://lopentu.github.io/cllt/supplemental/mlr-matrix.html</loc>
-    <lastmod>2023-02-22T14:29:23.667Z</lastmod>
+    <lastmod>2023-02-22T14:45:44.710Z</lastmod>
   </url>
   <url>
     <loc>https://lopentu.github.io/cllt/supplemental/model-diagnostics-matrix.html</loc>
-    <lastmod>2023-02-22T14:29:24.042Z</lastmod>
+    <lastmod>2023-02-22T14:45:45.168Z</lastmod>
   </url>
   <url>
     <loc>https://lopentu.github.io/cllt/supplemental/slr-derivations.html</loc>
-    <lastmod>2023-02-22T14:29:24.402Z</lastmod>
+    <lastmod>2023-02-22T14:45:45.533Z</lastmod>
   </url>
   <url>
     <loc>https://lopentu.github.io/cllt/supplemental/log-transformations.html</loc>
-    <lastmod>2023-02-22T14:29:24.834Z</lastmod>
+    <lastmod>2023-02-22T14:45:45.988Z</lastmod>
   </url>
   <url>
     <loc>https://lopentu.github.io/cllt/supplemental/model-selection-criteria.html</loc>
-    <lastmod>2023-02-22T14:29:25.193Z</lastmod>
+    <lastmod>2023-02-22T14:45:46.359Z</lastmod>
   </url>
   <url>
     <loc>https://lopentu.github.io/cllt/computing-pipelines.html</loc>
-    <lastmod>2023-02-22T14:29:25.719Z</lastmod>
+    <lastmod>2023-02-22T14:45:46.937Z</lastmod>
   </url>
   <url>
     <loc>https://lopentu.github.io/cllt/course-faq.html</loc>
-    <lastmod>2023-02-22T14:29:26.067Z</lastmod>
+    <lastmod>2023-02-22T14:45:47.286Z</lastmod>
   </url>
   <url>
     <loc>https://lopentu.github.io/cllt/computing-env.html</loc>
-    <lastmod>2023-02-22T14:29:26.364Z</lastmod>
+    <lastmod>2023-02-22T14:45:47.599Z</lastmod>
   </url>
   <url>
     <loc>https://lopentu.github.io/cllt/course-support.html</loc>
-    <lastmod>2023-02-22T14:29:26.739Z</lastmod>
+    <lastmod>2023-02-22T14:45:48.013Z</lastmod>
   </url>
   <url>
     <loc>https://lopentu.github.io/cllt/exams/exam-1.html</loc>
-    <lastmod>2023-02-22T14:29:27.073Z</lastmod>
+    <lastmod>2023-02-22T14:45:48.403Z</lastmod>
   </url>
   <url>
     <loc>https://lopentu.github.io/cllt/project-description.html</loc>
-    <lastmod>2023-02-22T14:29:27.721Z</lastmod>
+    <lastmod>2023-02-22T14:45:49.195Z</lastmod>
   </url>
   <url>
     <loc>https://lopentu.github.io/cllt/course-syllabus.html</loc>
-    <lastmod>2023-02-22T14:29:28.046Z</lastmod>
+    <lastmod>2023-02-22T14:45:49.536Z</lastmod>
   </url>
   <url>
     <loc>https://lopentu.github.io/cllt/ta/ae-0-movies.html</loc>
-    <lastmod>2023-02-22T14:29:28.621Z</lastmod>
+    <lastmod>2023-02-22T14:45:50.109Z</lastmod>
   </url>
 </urlset>
