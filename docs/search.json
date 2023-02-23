@@ -11,42 +11,91 @@
     "href": "course-links.html",
     "title": "參考連接",
     "section": "",
-    "text": "語料實務分析\n🔗 (草稿階段)\n\n\nGitHub classroom\n🔗\n\n\nGoogle classroom\n🔗\n\n\nLecture streaming and recordings\n🔗"
+    "text": "CS224u at Stanford: Natural Language Understanding\n🔗\n\n\nPhilosophy of Language and Computation at ETH Zürich\n🔗\n\n\n語料實務分析\n🔗 (草稿階段)\n\n\nGitHub classroom\n🔗\n\n\nNTU COOL\n🔗\n\n\nLecture streaming and recordings\n🔗"
   },
   {
-    "objectID": "weeks/week-1.html",
-    "href": "weeks/week-1.html",
-    "title": "Week 1",
-    "section": "",
-    "text": "Important\n\n\n\n課程有自動錄影功能"
+    "objectID": "weeks/week-1.html#自然語言處理",
+    "href": "weeks/week-1.html#自然語言處理",
+    "title": "Week1 Orientation",
+    "section": "自然語言處理",
+    "text": "自然語言處理\n\n研究慣例上，將語言資訊的問題切分成不同的子任務，成熟之後就變成大家較熟悉的應用。\n\n語音辨識與語音合成\n文本摘要\n機器翻譯\n自動問答\n。。。。\n\n\n\n\n曾經語音與多模態(multimodality)是比較不歸類在 NLP 的領域，但最近幾年的進展與趨勢，也與 NLP 的研究社群密切互動。"
   },
   {
-    "objectID": "weeks/week-1.html#prepare",
-    "href": "weeks/week-1.html#prepare",
-    "title": "Week 1",
-    "section": "Prepare",
-    "text": "Prepare\n📖 Read the syllabus\n📖 Read the support resources"
+    "objectID": "weeks/week-1.html#計算語言學-1",
+    "href": "weeks/week-1.html#計算語言學-1",
+    "title": "Week1 Orientation",
+    "section": "計算語言學",
+    "text": "計算語言學\n\n\n漢語的雙音節化是怎麼演化的 （computational historical linguistics）\n新詞 (neologism)、新構式 (constructions) 是怎麼在社群中突現、傳遞、消亡的 （computational sociolinguistics）\n面對完全沒有接觸過的語言，如何理解與編寫語法系統？（computational linguistic typology/ xenolinguistics）\n……. (你的想法？)"
   },
   {
-    "objectID": "weeks/week-1.html#participate",
-    "href": "weeks/week-1.html#participate",
-    "title": "Week 1",
-    "section": "Participate",
-    "text": "Participate\n🖥️ Lab 0 -Meet+ greet\n🖥️ Lecture 1 - Welcome"
+    "objectID": "weeks/week-1.html#從語言的處理到理解",
+    "href": "weeks/week-1.html#從語言的處理到理解",
+    "title": "Week1 Orientation",
+    "section": "從語言的處理到理解",
+    "text": "從語言的處理到理解\nFrom Natural Language Processing to National Language Understanding\n\n對於處理與理解，都是操作型定義 (operationalized)。"
   },
   {
-    "objectID": "weeks/week-1.html#practice",
-    "href": "weeks/week-1.html#practice",
-    "title": "Week 1",
-    "section": "Practice",
-    "text": "Practice\n📋 AE 0"
+    "objectID": "weeks/week-1.html#傳統自然語言處理的發展",
+    "href": "weeks/week-1.html#傳統自然語言處理的發展",
+    "title": "Week1 Orientation",
+    "section": "傳統自然語言處理的發展",
+    "text": "傳統自然語言處理的發展\n\n\n\n中文 AI 知識庫與自然語言處理核心套件研討會"
   },
   {
-    "objectID": "weeks/week-1.html#perform",
-    "href": "weeks/week-1.html#perform",
-    "title": "Week 1",
-    "section": "Perform",
-    "text": "Perform\n⌨️ Lab 0 - Meet + greet\n\n\nBack to course schedule ⏎"
+    "objectID": "weeks/week-1.html#個人觀點",
+    "href": "weeks/week-1.html#個人觀點",
+    "title": "Week1 Orientation",
+    "section": "(個人觀點)",
+    "text": "(個人觀點)\n\n\n(形式)語言學與傳統自然語言處理中的 Modularity 預設， 是好用的虛構 (useful fiction, Haugen and Dil, 1972)，方便整理知識，但非真實的語言現象。\n語言：人類，爲了溝通目的，在時空脈絡下，發展出的形意符號系統。 (cultural Species; form-meaning pairing; symbolic; self-adaptive complex system; situated and embodied cognition; etc.)\n符碼本質是形意映射，而指涉意義是約定俗成、很吃情境的。因此符碼運算與表徵是給人看的。語言的理解，涉及到更複雜的連續的過程，而非一個分段、分解的過程。\n語言學不等於 rule-based。"
+  },
+  {
+    "objectID": "weeks/week-1.html#大型預訓練語言模型",
+    "href": "weeks/week-1.html#大型預訓練語言模型",
+    "title": "Week1 Orientation",
+    "section": "大型預訓練語言模型",
+    "text": "大型預訓練語言模型\npre-trained Large Language Models (pre-LLMs)\n\n改變了(目前)的自然語言處理研究方向"
+  },
+  {
+    "objectID": "weeks/week-1.html#gpt-3-and-beyond",
+    "href": "weeks/week-1.html#gpt-3-and-beyond",
+    "title": "Week1 Orientation",
+    "section": "GPT-3 and Beyond",
+    "text": "GPT-3 and Beyond\n很清楚的科普介紹"
+  },
+  {
+    "objectID": "weeks/week-1.html#post-ai-nlp-in-context-learning-prompt-training",
+    "href": "weeks/week-1.html#post-ai-nlp-in-context-learning-prompt-training",
+    "title": "Week1 Orientation",
+    "section": "post-AI NLP: in-context learning (prompt-training)",
+    "text": "post-AI NLP: in-context learning (prompt-training)\na new paradigm of NLP that is based on the recent advances in AI, especially in the field of language modeling.\n\nRecently, we have seen dramatic advances in natural language processing (NLP) driven by huge pre-trained language models such as GPT-3 and DALLE-2. Instead of building many small task-specific models, there is a movement to create and use these more all-purpose huge language models for many NLP applications.\n\nThe most intriguing finding is that these models employ a new learning paradigm: in-context learning, where they learn to do a downstream task simply by conditioning on a prompt consisting of a few input-output examples without any parameter updates"
+  },
+  {
+    "objectID": "weeks/week-1.html#如何影響教學",
+    "href": "weeks/week-1.html#如何影響教學",
+    "title": "Week1 Orientation",
+    "section": "如何影響教學",
+    "text": "如何影響教學\n(順便介紹助教群 😄)"
+  },
+  {
+    "objectID": "weeks/week-1.html#爲什麼我們可以放心或應該擔心",
+    "href": "weeks/week-1.html#爲什麼我們可以放心或應該擔心",
+    "title": "Week1 Orientation",
+    "section": "爲什麼我們可以放心（或應該擔心）？",
+    "text": "爲什麼我們可以放心（或應該擔心）？\naka. 無中生有，跟真的一樣"
+  },
+  {
+    "objectID": "weeks/week-1.html#我們怎麼實作這門課",
+    "href": "weeks/week-1.html#我們怎麼實作這門課",
+    "title": "Week1 Orientation",
+    "section": "我們怎麼實作這門課？",
+    "text": "我們怎麼實作這門課？\n\n我們的主要學習重點不會放在自然語言處理中的機器學習模型原理 (請大家在其他的課程中並行學習)，而是放在語言學理論與自然語言處理的關係。\n選擇有語言學背景的教材 (如 Jurafsky & Martin SLP3, Christopher Potts cs224u, etc.) 來進行課程的教學，並補充不同的觀點。\n\n\n\n\n\n\n\nWarning\n\n\n這是沒有教科書的學門\n\n\n\n\n實作部分側重應用。"
+  },
+  {
+    "objectID": "weeks/week-1.html#看看當前的研究教學",
+    "href": "weeks/week-1.html#看看當前的研究教學",
+    "title": "Week1 Orientation",
+    "section": "看看當前的研究教學",
+    "text": "看看當前的研究教學\nIntroduction and course overview"
   },
   {
     "objectID": "weeks/week-2.html",
@@ -116,14 +165,21 @@
     "href": "course-overview.html",
     "title": "LING8505:計算語言學與語言學理論",
     "section": "",
-    "text": "沒有理論，就不似科學。"
+    "text": "沒有理論，就不似(/是)科學。"
+  },
+  {
+    "objectID": "course-overview.html#課程先備知識建議",
+    "href": "course-overview.html#課程先備知識建議",
+    "title": "LING8505:計算語言學與語言學理論",
+    "section": "課程先備知識建議",
+    "text": "課程先備知識建議\n\n熟悉 Python | 繳交作業時，我們會要求你使用 Python 來完成。如果你不確定狀況，建議你先參考 Programming for Linguists 這類課程，確認你已經熟悉 Python 的基本語法。\n大學初級微積分與線性代數 | 瞭解微積分與線性代數的基本概念，包括導數、積分、矩陣、向量、線性方程式、線性空間、線性變換、特徵值與特徵向量等。\n機率與統計 | 熟悉基本的機率分佈，推估參數，以及機率的加法定理與乘法定理。"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "計算語言學與語言學理論",
     "section": "",
-    "text": "週次\n日期\n主題\n預習 📖\n投影片\n助教課\n課堂練習\n作業\n\n\n\n\n1\n02/23\n課程導論\n\n\n\n\n\n\n\n2\n03/02\n計算語言學導論\n\n\n\n\n\n\n\n3\n03/09\n計算構詞與詞彙 (1)\nslp3-02\n\n\n\n\n\n\n4\n03/16\n計算構詞與詞彙 (2)\nslp3-23\n\n\n\n\n\n\n5\n03/23\n計算構詞與詞彙 (3)\nslp3-21\n\n\n\n\n\n\n6\n03/30\n計算構詞與詞彙 (4)\nslp3-25\n\n\n\n\n\n\n7\n04/06\n句法理論與剖析器\nslp3-18\n\n\n\n\n\n\n8\n04/13\n認知語法與計算\n\n\n\n\n\n\n\n9\n04/20\n語意表徵 (1)\nslp3-06\n\n\n\n\n\n\n10\n04/27\n語意表徵 (2)\nslp3-10\n\n\n\n\n\n\n11\n05/04\n語意表徵 (3) & 業師分享\nslp3-11\n\n\n\n\n\n\n12\n05/11\n語意表徵 (4)\nslp3-22\n\n\n\n\n\n\n13\n05/18\n語音與社會變異\nslp3-28\n\n\n\n\n\n\n14\n05/25\n多模態與言談分析\nslp3-15\n\n\n\n\n\n\n15\n06/01\n綜合討論\n\n\n\n\n\n\n\n16\n06/08\n期末報告"
+    "text": "週次\n日期\n主題\n預習 📖\n投影片\n助教課\n課堂練習\n作業\n\n\n\n\n1\n02/23\n課程導論\n\norientation\n\n\n\n\n\n2\n03/02\n計算語言學導論\n\n\n\n\n\n\n\n3\n03/09\n計算構詞與詞彙 (1)\nslp3-02\n\n\n\n\n\n\n4\n03/16\n計算構詞與詞彙 (2)\nslp3-23\n\n\n\n\n\n\n5\n03/23\n計算構詞與詞彙 (3)\nslp3-21\n\n\n\n\n\n\n6\n03/30\n計算構詞與詞彙 (4)\nslp3-25\n\n\n\n\n\n\n7\n04/06\n句法理論與剖析器\nslp3-18\n\n\n\n\n\n\n8\n04/13\n認知語法與計算\n\n\n\n\n\n\n\n9\n04/20\n語意表徵 (1)\nslp3-06\n\n\n\n\n\n\n10\n04/27\n語意表徵 (2)\nslp3-10\n\n\n\n\n\n\n11\n05/04\n語意表徵 (3) & 業師分享\nslp3-11\n\n\n\n\n\n\n12\n05/11\n語意表徵 (4)\nslp3-22\n\n\n\n\n\n\n13\n05/18\n語音與社會變異\nslp3-28\n\n\n\n\n\n\n14\n05/25\n多模態與言談分析\nslp3-15\n\n\n\n\n\n\n15\n06/01\n綜合討論\n\n\n\n\n\n\n\n16\n06/08\n期末報告"
   },
   {
     "objectID": "course-team.html",
@@ -394,7 +450,7 @@
   {
     "objectID": "computing-env.html",
     "href": "computing-env.html",
-    "title": "計算環境",
+    "title": "計算環境與作業繳交",
     "section": "",
     "text": "Google Colab\nVisual Studio code 與推薦套件"
   },

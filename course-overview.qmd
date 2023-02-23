@@ -2,6 +2,19 @@
 title: "LING8505:計算語言學與語言學理論"
 ---
 
-沒有理論，就不似科學。
+> 沒有理論，就不似(/是)科學。
 
 ![](images/background-bikeshare.png){fig-alt="A series of six, generic data visualizations: a scatterplot, a density plot, a contour plot, a line plot, a box plot, and another scatterplot." width="700"}
+
+## 課程先備知識建議
+
+- 熟悉 `Python` | 繳交作業時，我們會要求你使用 Python 來完成。如果你不確定狀況，建議你先參考 [Programming for Linguists](https://web.stanford.edu/class/linguist278/) 這類課程，確認你已經熟悉 Python 的基本語法。
+
+- 大學`初級微積分與線性代數` | 瞭解微積分與線性代數的基本概念，包括導數、積分、矩陣、向量、線性方程式、線性空間、線性變換、特徵值與特徵向量等。
+
+- `機率`與`統計` | 熟悉基本的機率分佈，推估參數，以及機率的加法定理與乘法定理。
+
+
+
+
+# 課堂用到的基本概念會逐步放在[補充說明](/supplemental/)中。

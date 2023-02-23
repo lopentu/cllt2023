@@ -50,7 +50,7 @@ website:
       - section: "計算環境"
         contents:
           - href: computing-env.qmd
-            text: 計算環境與工具
+            text: 計算工具與作業繳交說明
 
       - section: "期末專題"
         contents:
