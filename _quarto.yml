@@ -6,9 +6,9 @@ website:
   page-navigation: true
   title: "Computational linguisics and linguistic theories - Spring 2023"
   description: "Homepage for LING8505 - CLLT course at NTU University, Spring 2023."
-  site-url: "https://lopentu.github.io/cllt/"
+  site-url: "https://lopentu.github.io/cllt2023/"
 
-  repo-url: https://github.com/lopen/cllt
+  repo-url: https://github.com/lopen/cllt2023
   repo-actions: [edit, issue]
 
   open-graph: true
