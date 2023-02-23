@@ -193,84 +193,7 @@
     "href": "course-team.html#助教",
     "title": "教學團隊",
     "section": "助教",
-    "text": "助教\n\n\n\n\n\nemail\n\n\n\n\n\n王伯雅，語言所博士班\n\n\n\n\n古貿昌，語言所博士班\n\n\n\n\n陳韋伶，語言所博士班\n\n\n\n\n陳品而，語言所博士班\n\n\n\n\n周昕妤，語言所碩士班\n\n\n\n\n張鈺琳，語言所碩士班"
-  },
-  {
-    "objectID": "slides/lab-1.html#what-to-expect-in-lab",
-    "href": "slides/lab-1.html#what-to-expect-in-lab",
-    "title": "Lab 1 - Meet the toolkit",
-    "section": "What to expect in lab",
-    "text": "What to expect in lab\n\nIntroduction to the lab assignment (~ 5 - 10 minutes)\nWork on the lab assignment (individual at first, but in teams for the rest of the semester)\nLab instructions posted on the course website.\nStart each lab by finding your assignment repo in the course GitHub organization\n\nThis is where you will find the Quarto document and data to get started"
-  },
-  {
-    "objectID": "slides/lab-1.html#tips",
-    "href": "slides/lab-1.html#tips",
-    "title": "Lab 1 - Meet the toolkit",
-    "section": "Tips",
-    "text": "Tips\n\nYou do not have to finish the lab in class, they will always be due the following Friday at 5:00 pm. One work strategy is to get through portions that you think will be most challenging (which initially might be the coding component) during lab when a TA can help you on the spot and leave the narrative writing until later.\nWhen working in teams (later in the semester) do not pressure each other to finish early; use the time wisely to really learn the material and produce a quality report."
-  },
-  {
-    "objectID": "slides/lab-1.html#check-do-you-have-the-lab-1-repo",
-    "href": "slides/lab-1.html#check-do-you-have-the-lab-1-repo",
-    "title": "Lab 1 - Meet the toolkit",
-    "section": "Check: Do you have the lab-1 repo?",
-    "text": "Check: Do you have the lab-1 repo?\n\nGo to the GitHub course organization: https://github.com/sta210-s22\nYou should see a repo with the prefix lab-1- followed by your GitHub username\nIf you do not have this repo, please let your TAs know!"
-  },
-  {
-    "objectID": "slides/lab-1.html#demo",
-    "href": "slides/lab-1.html#demo",
-    "title": "Lab 1 - Meet the toolkit",
-    "section": "Demo",
-    "text": "Demo\nFollow along as your TA demonstrates the following:\n\nConfigure Git using SSH\nClone RStudio repo and start new project\nRender document and produce PDF\nUpdate name in YAML\n\nRender, commit, push changes to GitHub\nSee updates in your GitHub repo"
-  },
-  {
-    "objectID": "slides/lab-1.html#when-youre-done-with-lab",
-    "href": "slides/lab-1.html#when-youre-done-with-lab",
-    "title": "Lab 1 - Meet the toolkit",
-    "section": "When you’re done with lab",
-    "text": "When you’re done with lab\n\nMake sure all your final changes have been pushed to your GitHub repo\nSubmit the PDF of your responses to Gradescope\n\nYou can access Gradescope through Sakai or the course website\nLogin using your Duke NetID credentials"
-  },
-  {
-    "objectID": "slides/lab-1.html#youre-now-ready-to-complete-the-rest-of-lab",
-    "href": "slides/lab-1.html#youre-now-ready-to-complete-the-rest-of-lab",
-    "title": "Lab 1 - Meet the toolkit",
-    "section": "You’re now ready to complete the rest of lab!",
-    "text": "You’re now ready to complete the rest of lab!\nPlease “raise your hand” if you need help as you work on the lab\n\n\n\nsta210-s22.github.io/website"
-  },
-  {
-    "objectID": "slides/lab-0.html#meet-your-ta",
-    "href": "slides/lab-0.html#meet-your-ta",
-    "title": "Lab 0 - Meet + greet",
-    "section": "Meet your TA!",
-    "text": "Meet your TA!"
-  },
-  {
-    "objectID": "slides/lab-0.html#meet-each-other",
-    "href": "slides/lab-0.html#meet-each-other",
-    "title": "Lab 0 - Meet + greet",
-    "section": "Meet each other!",
-    "text": "Meet each other!\nIn breakout rooms:\n\nName, year, major, hometown\nWhat did you do over the winter break?\nWhat do you hope to get out of this course?\nAnything else you want to share/ask?\n\n\n\n\n08:00"
-  },
-  {
-    "objectID": "slides/lab-0.html#take-the-survey",
-    "href": "slides/lab-0.html#take-the-survey",
-    "title": "Lab 0 - Meet + greet",
-    "section": "Take the survey",
-    "text": "Take the survey\n\nGo to the course website:\nhttps://sta210-s22.github.io/website\nClick on the instructions for Lab 0 on the course schedule\nTake the Getting to know you survey"
-  },
-  {
-    "objectID": "slides/lab-0.html#what-to-expect-in-lab",
-    "href": "slides/lab-0.html#what-to-expect-in-lab",
-    "title": "Lab 0 - Meet + greet",
-    "section": "What to expect in lab",
-    "text": "What to expect in lab\n\nIntroduction to the lab assignment (~ 5 - 10 minutes)\nWork on the lab assignment (individual at first, but in teams for the rest of the semester)\nLab instructions posted on the course website.\nStart each lab by finding your assignment repo in the course GitHub organization\nMore on all of these tools in lecture tomorrow and in lab next week"
-  },
-  {
-    "objectID": "slides/lab-0.html#wrap-up",
-    "href": "slides/lab-0.html#wrap-up",
-    "title": "Lab 0 - Meet + greet",
-    "section": "Wrap up",
-    "text": "Wrap up\nAny questions about the course?\n\n\n\nsta210-s22.github.io/website"
+    "text": "助教\n\n\n\n\n\nemail\n\n\n\n\n\n王伯雅，語言所博士班\ndiffere94nt@gmail.com\n\n\n\n古貿昌，語言所博士班\n\n\n\n\n陳韋伶，語言所博士班\n\n\n\n\n陳品而，語言所博士班\n\n\n\n\n周昕妤，語言所碩士班\n\n\n\n\n張鈺琳，語言所碩士班"
   },
   {
     "objectID": "supplemental/mlr-matrix.html",
@@ -614,40 +537,5 @@
     "title": "課綱",
     "section": "課堂期待",
     "text": "課堂期待\n\n自主學習與積極參與討論\n確實預習\n不遲交、不遲到\n彼此協助與合作\n誠信與負責\n\n\n遲交評分\n\n每份作業最遲在截止日後三天補交，除非有正當理由教師認可，否則皆扣 10%。\n期末專案不得遲交。"
-  },
-  {
-    "objectID": "ta/ae-0-movies.html",
-    "href": "ta/ae-0-movies.html",
-    "title": "Movie budgets and revenues",
-    "section": "",
-    "text": "Important\n\n\n\nThis application exercise is a demo only. You do not have a corresponding repository for it and you’re not expected to turn in anything for it.\nWe will look at the relationship between budget and revenue for movies made in the United States in 1986 to 2020. The dataset is created based on data from the Internet Movie Database (IMDB)."
-  },
-  {
-    "objectID": "ta/ae-0-movies.html#data",
-    "href": "ta/ae-0-movies.html#data",
-    "title": "Movie budgets and revenues",
-    "section": "Data",
-    "text": "Data\nThe movies data set includes basic information about each movie including budget, genre, movie studio, director, etc. A full list of the variables may be found here.\n\nmovies <- read_csv(\"https://raw.githubusercontent.com/danielgrijalva/movie-stats/master/movies.csv\")\n\nView the first 10 rows of data.\n\nmovies\n\n# A tibble: 7,668 × 15\n   name     rating genre  year relea…¹ score  votes direc…² writer star  country\n   <chr>    <chr>  <chr> <dbl> <chr>   <dbl>  <dbl> <chr>   <chr>  <chr> <chr>  \n 1 The Shi… R      Drama  1980 June 1…   8.4 9.27e5 Stanle… Steph… Jack… United…\n 2 The Blu… R      Adve…  1980 July 2…   5.8 6.5 e4 Randal… Henry… Broo… United…\n 3 Star Wa… PG     Acti…  1980 June 2…   8.7 1.2 e6 Irvin … Leigh… Mark… United…\n 4 Airplan… PG     Come…  1980 July 2…   7.7 2.21e5 Jim Ab… Jim A… Robe… United…\n 5 Caddysh… R      Come…  1980 July 2…   7.3 1.08e5 Harold… Brian… Chev… United…\n 6 Friday … R      Horr…  1980 May 9,…   6.4 1.23e5 Sean S… Victo… Bets… United…\n 7 The Blu… R      Acti…  1980 June 2…   7.9 1.88e5 John L… Dan A… John… United…\n 8 Raging … R      Biog…  1980 Decemb…   8.2 3.3 e5 Martin… Jake … Robe… United…\n 9 Superma… PG     Acti…  1980 June 1…   6.8 1.01e5 Richar… Jerry… Gene… United…\n10 The Lon… R      Biog…  1980 May 16…   7   1   e4 Walter… Bill … Davi… United…\n# … with 7,658 more rows, 4 more variables: budget <dbl>, gross <dbl>,\n#   company <chr>, runtime <dbl>, and abbreviated variable names ¹​released,\n#   ²​director\n\n\nThe ___ dataset has ___ observations and ___ variables."
-  },
-  {
-    "objectID": "ta/ae-0-movies.html#analysis",
-    "href": "ta/ae-0-movies.html#analysis",
-    "title": "Movie budgets and revenues",
-    "section": "Analysis",
-    "text": "Analysis\n\nGross over time\nWe begin by looking at how the average gross revenue (gross) has changed over time. Since we want to visualize the results, we will choose a few genres of interest for the analysis.\n\ngenre_list <- c(\"Comedy\", \"Action\", \"Animation\", \"Horror\")\n\nThen, we will filter for these genres and visualize the average gross revenue over time.\n\nmovies %>%\n  filter(genre %in% genre_list) %>% \n  group_by(genre,year) %>%\n  summarise(avg_gross = mean(gross)) %>%\n  ggplot(mapping = aes(x = year, y = avg_gross, color= genre)) +\n    geom_point() + \n    geom_line() +\n    scale_color_viridis_d() +\n    scale_y_continuous(labels = label_dollar()) +\n    labs(\n      x = \"Year\",\n      y = \"Average Gross Revenue (US Dollars)\",\n      color = \"Genre\",\n      title = \"Gross Revenue Over Time\"\n    )\n\n`summarise()` has grouped output by 'genre'. You can override using the\n`.groups` argument.\n\n\nWarning: Removed 47 rows containing missing values (`geom_point()`).\n\n\nWarning: Removed 23 rows containing missing values (`geom_line()`).\n\n\n\n\n\nThe plot suggests …\n\n\nBudget and gross\nNext, let’s see the relationship between a movie’s budget and its gross revenue.\n\nmovies %>%\n  filter(genre %in% genre_list, budget > 0) %>% \n  ggplot(mapping = aes(x=log(budget), y = log(gross), color=genre)) +\n  geom_point(alpha = 0.6) +\n  geom_smooth(method = \"lm\", se = FALSE) +\n  facet_wrap(~ genre) + \n  scale_color_viridis_d() +\n  labs(\n    x = \"Log-transformed Budget\",\n    y = \"Log-transformed Gross Revenue\"\n  )\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\nWarning: Removed 35 rows containing non-finite values (`stat_smooth()`).\n\n\nWarning: Removed 35 rows containing missing values (`geom_point()`)."
-  },
-  {
-    "objectID": "ta/ae-0-movies.html#exercises",
-    "href": "ta/ae-0-movies.html#exercises",
-    "title": "Movie budgets and revenues",
-    "section": "Exercises",
-    "text": "Exercises\n\nSuppose we fit a regression model for each genre that uses budget to predict gross revenue. What are the signs of the correlation between budget and gross and the slope in each regression equation?\nSuppose we fit the regression model from the previous question. Which genre would you expect to have the smallest residuals, on average (residual = observed revenue - predicted revenue)?\nIn the remaining time, discuss the following: Notice in the graph above that budget and gross are log-transformed. Why are the log-transformed values of the variables displayed rather than the original values (in U.S. dollars)?"
-  },
-  {
-    "objectID": "ta/ae-0-movies.html#appendix",
-    "href": "ta/ae-0-movies.html#appendix",
-    "title": "Movie budgets and revenues",
-    "section": "Appendix",
-    "text": "Appendix\nBelow is a list of genres in the data set:\n\nmovies %>% \n  distinct(genre) %>%\n  arrange(genre) %>% \n  datatable()"
   }
 ]
