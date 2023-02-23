@@ -11,13 +11,13 @@ title: "課綱"
 
 ## 學習目標
 
-By the end of the semester, you will be able to...
+<!-- By the end of the semester, you will be able to... -->
 
 ## 課程錄影
 
-### LOPE channel
+<!-- ### LOPE channel -->
 
-部分課程濃縮內容，將放在 LOPE Youtube 頻道
+<!-- 部分課程濃縮內容，將放在 LOPE Youtube 頻道 -->
 
 <!-- ```{=html}
 <iframe width="560" height="315" src="https://www.youtube.com/embed/_KN97j30ST4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
@@ -29,7 +29,7 @@ By the end of the semester, you will be able to...
 
 -   機器學習基礎
 
-    可以參考 [Support](/course-support.html) page for more resources.
+    <!-- 可以參考 [Support](/course-support.html) page for more resources. -->
 
 ## 教科書與參考書
 
