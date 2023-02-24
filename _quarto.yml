@@ -45,17 +45,13 @@ website:
           - href: index.qmd
             text: 時程
           - href: course-links.qmd
-            text: 連接
+            text: 連結
 
-      - section: "計算環境"
-        contents:
-          - href: computing-env.qmd
-            text: 計算工具與作業繳交說明
+      - text: "計算環境與作業繳交方式"
+        href: computing-env.qmd
 
-      - section: "期末專題"
-        contents:
-          - href: project-description.qmd
-            text: 專題計劃需知
+      - text: "期末專題計劃需知"
+        href: project-description.qmd
 
       - section: "每週教材"
         contents:

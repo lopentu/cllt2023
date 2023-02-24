@@ -1,5 +1,236 @@
 [
   {
+    "objectID": "computing-env.html",
+    "href": "computing-env.html",
+    "title": "計算環境與作業繳交方式",
+    "section": "",
+    "text": "Google Colab\nVisual Studio code 與推薦套件"
+  },
+  {
+    "objectID": "computing-pipelines.html",
+    "href": "computing-pipelines.html",
+    "title": "Pipelines",
+    "section": "",
+    "text": "library(palmerpenguins)\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.0     ✔ readr     2.1.4\n✔ forcats   1.0.0     ✔ stringr   1.5.0\n✔ ggplot2   3.4.1     ✔ tibble    3.1.8\n✔ lubridate 1.9.2     ✔ tidyr     1.3.0\n✔ purrr     1.0.1     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors\n\nlibrary(tidymodels)\n\n── Attaching packages ────────────────────────────────────── tidymodels 1.0.0 ──\n✔ broom        1.0.3     ✔ rsample      1.1.1\n✔ dials        1.1.0     ✔ tune         1.0.1\n✔ infer        1.0.4     ✔ workflows    1.1.3\n✔ modeldata    1.1.0     ✔ workflowsets 1.0.0\n✔ parsnip      1.0.4     ✔ yardstick    1.1.0\n✔ recipes      1.0.5     \n── Conflicts ───────────────────────────────────────── tidymodels_conflicts() ──\n✖ scales::discard() masks purrr::discard()\n✖ dplyr::filter()   masks stats::filter()\n✖ recipes::fixed()  masks stringr::fixed()\n✖ dplyr::lag()      masks stats::lag()\n✖ yardstick::spec() masks readr::spec()\n✖ recipes::step()   masks stats::step()\n• Use tidymodels_prefer() to resolve common conflicts.\n\nlibrary(knitr)"
+  },
+  {
+    "objectID": "computing-pipelines.html#simple-linear-regression",
+    "href": "computing-pipelines.html#simple-linear-regression",
+    "title": "Pipelines",
+    "section": "Simple linear regression",
+    "text": "Simple linear regression\n\nModel fitting\nFit model:\n\npenguins_fit <- linear_reg() %>%\n  set_engine(\"lm\") %>%\n  fit(body_mass_g ~ flipper_length_mm, data = penguins)\n\nTidy model output:\n\ntidy(penguins_fit)\n\n# A tibble: 2 × 5\n  term              estimate std.error statistic   p.value\n  <chr>                <dbl>     <dbl>     <dbl>     <dbl>\n1 (Intercept)        -5781.     306.       -18.9 5.59e- 55\n2 flipper_length_mm     49.7      1.52      32.7 4.37e-107\n\n\nFormat model output as table:\n\ntidy(penguins_fit) %>%\n  kable(digits = 3)\n\n\n\n\nterm\nestimate\nstd.error\nstatistic\np.value\n\n\n\n\n(Intercept)\n-5780.831\n305.815\n-18.903\n0\n\n\nflipper_length_mm\n49.686\n1.518\n32.722\n0\n\n\n\n\n\nAugment data with model:\n\naugment(penguins_fit$fit)\n\n# A tibble: 342 × 9\n   .rownames body_mass_g flippe…¹ .fitted  .resid    .hat .sigma .cooksd .std.…²\n   <chr>           <int>    <int>   <dbl>   <dbl>   <dbl>  <dbl>   <dbl>   <dbl>\n 1 1                3750      181   3212.  538.   0.00881   394. 8.34e-3  1.37  \n 2 2                3800      186   3461.  339.   0.00622   394. 2.33e-3  0.863 \n 3 3                3250      195   3908. -658.   0.00344   393. 4.83e-3 -1.67  \n 4 5                3450      193   3808. -358.   0.00385   394. 1.60e-3 -0.911 \n 5 6                3650      190   3659.   -9.43 0.00469   395. 1.35e-6 -0.0240\n 6 7                3625      181   3212.  413.   0.00881   394. 4.91e-3  1.05  \n 7 8                4675      195   3908.  767.   0.00344   393. 6.56e-3  1.95  \n 8 9                3475      193   3808. -333.   0.00385   394. 1.39e-3 -0.847 \n 9 10               4250      190   3659.  591.   0.00469   394. 5.31e-3  1.50  \n10 11               3300      186   3461. -161.   0.00622   395. 5.23e-4 -0.409 \n# … with 332 more rows, and abbreviated variable names ¹​flipper_length_mm,\n#   ²​.std.resid\n\n\n\n\nStatistical inference"
+  },
+  {
+    "objectID": "course-faq.html",
+    "href": "course-faq.html",
+    "title": "FAQ",
+    "section": "",
+    "text": "Go to your Files tab, check the box next to the file you want to download, then click on the blue gear icon on the Files tab to reveal the drop down menu, and select Export… If you have selected multiple files to export, RStudio will zip them up into a single zip file for you. If you’ve selected just a single file, it will only download that. The downloaded file will go to wherever files you download off the internet goes on your computer (usually your Downloads folder)."
+  },
+  {
+    "objectID": "course-faq.html#how-can-i-submit-my-assignment-to-gradescope",
+    "href": "course-faq.html#how-can-i-submit-my-assignment-to-gradescope",
+    "title": "FAQ",
+    "section": "How can I submit my assignment to Gradescope?",
+    "text": "How can I submit my assignment to Gradescope?\nThe instructions for submitting your assignment to Gradescope can be found here. In a nutshell, you’ll upload your PDF and them mark the page(s) where each question can be found. It’s OK if a question spans multiple pages, just mark them all. It’s also OK if a page includes multiple questions."
+  },
+  {
+    "objectID": "course-faq.html#can-i-use-a-local-install-of-r-and-rstudio-instead-of-using-the-rstudio-containers",
+    "href": "course-faq.html#can-i-use-a-local-install-of-r-and-rstudio-instead-of-using-the-rstudio-containers",
+    "title": "FAQ",
+    "section": "Can I use a local install of R and RStudio instead of using the RStudio containers?",
+    "text": "Can I use a local install of R and RStudio instead of using the RStudio containers?\nThe short answer is, I’d rather you didn’t, to save yourself some headache. But, the long answer is, sure! But you will need to install a specific versions of R and RStudio for everything to work as expected. You will also need to install the R packages we’re using as well as have Git installed on your computer. These are not extremely challenging things to get right, but they are not trivial either, particularly on certain operating systems. Myself and the TAs are always happy to provide help with any computational questions when you’re working in the containers we have provided for you. If you’re working on your local setup, we can’t guarantee being able to resolve your issues, though we’re happy to try.\nIf you want to take this path, here is what you need to do:\n\nDownload and install R 4.1.2: https://cran.r-project.org/\nDownload and install a daily build of RStudio: https://dailies.rstudio.com/\nInstall Quarto CLI: https://quarto.org/docs/getting-started/installation.html\nInstall Git: https://happygitwithr.com/install-git.html\nInstall any necessary packages with install.packages(\"___\")\n\nAnd I’d like to reiterate again that successful installation of these software is not a learning goal of this course. So if any of this seems tedious or intimidating in any way, just use the computing environment we have set up for you. More on that here."
+  },
+  {
+    "objectID": "course-links.html",
+    "href": "course-links.html",
+    "title": "參考連結",
+    "section": "",
+    "text": "CS224u at Stanford: Natural Language Understanding\n🔗\n\n\nPhilosophy of Language and Computation at ETH Zürich\n🔗\n\n\n語料實務分析\n🔗 (草稿階段)\n\n\nGitHub classroom\n🔗\n\n\nNTU COOL\n🔗\n\n\nLecture streaming and recordings\n🔗"
+  },
+  {
+    "objectID": "course-overview.html",
+    "href": "course-overview.html",
+    "title": "LING8505:計算語言學與語言學理論",
+    "section": "",
+    "text": "沒有理論，就不似(/是)科學。"
+  },
+  {
+    "objectID": "course-overview.html#課程先備知識建議",
+    "href": "course-overview.html#課程先備知識建議",
+    "title": "LING8505:計算語言學與語言學理論",
+    "section": "課程先備知識建議",
+    "text": "課程先備知識建議\n\n熟悉 Python | 繳交作業時，我們會要求你使用 Python 來完成。如果你不確定狀況，建議你先參考 Programming for Linguists 這類課程，確認你已經熟悉 Python 的基本語法。\n大學初級微積分與線性代數 | 瞭解微積分與線性代數的基本概念，包括導數、積分、矩陣、向量、線性方程式、線性空間、線性變換、特徵值與特徵向量等。\n機率與統計 | 熟悉基本的機率分佈，推估參數，以及機率的加法定理與乘法定理。"
+  },
+  {
+    "objectID": "course-support.html",
+    "href": "course-support.html",
+    "title": "Course support",
+    "section": "",
+    "text": "Most of you will need help at some point and we want to make sure you can identify when that is without getting too frustrated and feel comfortable seeking help."
+  },
+  {
+    "objectID": "course-support.html#lectures-and-labs",
+    "href": "course-support.html#lectures-and-labs",
+    "title": "Course support",
+    "section": "Lectures and labs",
+    "text": "Lectures and labs\nIf you have a question during lecture or lab, feel free to ask it! There are likely other students with the same question, so by asking you will create a learning opportunity for everyone."
+  },
+  {
+    "objectID": "course-support.html#office-hours",
+    "href": "course-support.html#office-hours",
+    "title": "Course support",
+    "section": "Office hours",
+    "text": "Office hours\nThe teaching team is here to help you be successful in the course. You are encouraged to attend office hours during the times posted on the home page to ask questions about the course content and assignments. A lot of questions are most effectively answered in-person, so office hours are a valuable resource. I encourage each and every one of you to take advantage of this resource! Make a pledge to stop by office hours at least once during the first three weeks of class. If you truly have no questions to ask, just stop by and say hi and introduce yourself. You can find a list of everyone’s office hours here."
+  },
+  {
+    "objectID": "course-support.html#discussion-forum",
+    "href": "course-support.html#discussion-forum",
+    "title": "Course support",
+    "section": "Discussion forum",
+    "text": "Discussion forum\nHave a question that can’t wait for office hours? Prefer to write out your question in detail rather than asking in person? The online discussion forum is the best venue for these! We will use Conversations as the online discussion forum. There is a chance another student has already asked a similar question, so please check the other posts on Ed Discussion before adding a new question. If you know the answer to a question that is posted, I encourage you to respond!"
+  },
+  {
+    "objectID": "course-support.html#email",
+    "href": "course-support.html#email",
+    "title": "Course support",
+    "section": "Email",
+    "text": "Email\nPlease refrain from emailing any course content questions (those should go Conversations), and only use email for questions about personal matters that may not be appropriate for the public course forum (e.g., illness, accommodations, etc.). For such matters, you may email Dr. Mine Çetinkaya-Rundel at mc301@duke.edu.\nIf there is a question that’s not appropriate for the public forum, you are welcome to email me directly. If you email me, please include “STA 210” in the subject line. Barring extenuating circumstances, I will respond to STA 210 emails within 48 hours Monday - Friday. Response time may be slower for emails sent Friday evening - Sunday."
+  },
+  {
+    "objectID": "course-support.html#academic-support",
+    "href": "course-support.html#academic-support",
+    "title": "Course support",
+    "section": "Academic support",
+    "text": "Academic support\nThere are times you may need help with the class that is beyond what can be provided by the teaching team. In those instances, I encourage you to visit the Academic Resource Center. The Academic Resource Center (ARC) offers free services to all students during their undergraduate careers at Duke. Services include Learning Consultations, Peer Tutoring and Study Groups, ADHD/LD Coaching, Outreach Workshops, and more. Because learning is a process unique to every individual, they work with each student to discover and develop their own academic strategy for success at Duke. ARC services are available free to any Duke undergraduate student, in any year, studying in any discipline. Contact the ARC to schedule an appointment. Undergraduates in any year, studying any discipline can benefit! Contact theARC@duke.edu, 919-684-5917."
+  },
+  {
+    "objectID": "course-support.html#mental-health-and-wellness",
+    "href": "course-support.html#mental-health-and-wellness",
+    "title": "Course support",
+    "section": "Mental health and wellness",
+    "text": "Mental health and wellness\nStudent mental health and wellness is of primary importance at Duke, and the university offers resources to support students in managing daily stress and self-care. Duke offers several resources for students to seek assistance on coursework and to nurture daily habits that support overall well-being, some of which are listed below:\n\nThe Academic Resource Center: (919) 684-5917, theARC@duke.edu, or arc.duke.edu,\nDuWell: (919) 681-8421, duwell@studentaffairs.duke.edu, or studentaffairs.duke.edu/duwell\n\nIf your mental health concerns and/or stressful events negatively affect your daily emotional state, academic performance, or ability to participate in your daily activities, many resources are available to help you through difficult times. Duke encourages all students to access these resources.\n\nDukeReach. Provides comprehensive outreach services to identify and support students in managing all aspects of well-being. If you have concerns about a student’s behavior or health visit the website for resources and assistance. studentaffairs.duke.edu/dukereach\nCounseling and Psychological Services (CAPS). CAPS helps Duke Students enhance strengths and develop abilities to successfully live, grow and learn in their personal and academic lives. CAPS recognizes that we are living in unprecedented times and that the changes, challenges and stressors brought on by the COVID-19 pandemic have impacted everyone, often in ways that are tax our well-being. CAPS offers many services to Duke undergraduate students, including brief individual and group counseling, couples counseling and more. CAPS staff also provides outreach to student groups, particularly programs supportive of at-risk populations, on a wide range of issues impacting them in various aspects of campus life. CAPS provides services to students via Telehealth. To initiate services, you can contact their front desk at 919-660-1000. studentaffairs.duke.edu/caps\nBlue Devils Care. A convenient and cost-effective way for Duke students to receive 24/7 mental health support through TalkNow and scheduled counseling. bluedevilscare.duke.edu\nTwo-Click Support. Duke Student Government and DukeReach partnership that connects students to help in just two clicks. bit.ly/TwoClickSupport\nWellTrack. Sign up for WellTrack at app.welltrack.com."
+  },
+  {
+    "objectID": "course-support.html#technology-accommodations",
+    "href": "course-support.html#technology-accommodations",
+    "title": "Course support",
+    "section": "Technology accommodations",
+    "text": "Technology accommodations\nStudents with demonstrated high financial need who have limited access to computers may request assistance in the form of loaner laptops. For technology assistance requests, please go here. Please note that supplies are limited.\nNote that we will be using Duke’s computational resources in this course. These resources are freely available to you. As long as your computer can connect to the internet and open a browser window, you can perform the necessary computing for this course. All software we use is open-source and/or freely available."
+  },
+  {
+    "objectID": "course-support.html#course-materials-costs",
+    "href": "course-support.html#course-materials-costs",
+    "title": "Course support",
+    "section": "Course materials costs",
+    "text": "Course materials costs\nThere are no costs associated with this course. All readings will come from freely available, open resources (open-source textbooks, journal articles, etc.)."
+  },
+  {
+    "objectID": "course-support.html#assistance-with-zoom-or-sakai",
+    "href": "course-support.html#assistance-with-zoom-or-sakai",
+    "title": "Course support",
+    "section": "Assistance with Zoom or Sakai",
+    "text": "Assistance with Zoom or Sakai\nFor technical help with Sakai or Zoom, contact the Duke OIT Service Desk at oit.duke.edu/help. You can also access the self-service help documentation for Zoom here and for Sakai here.\nNote that we will be making minimal use of Sakai in this course (primarily for announcements and grade book). All assignment submission and discussion will take place on GitHub instead.\nZoom will be used for online office hours as well as as a backup option should we need to hold the course online instead of in person."
+  },
+  {
+    "objectID": "course-syllabus.html",
+    "href": "course-syllabus.html",
+    "title": "課綱",
+    "section": "",
+    "text": "Day\nTime\nLocation\n\n\n\n\n主課\n週四\n2:20 pm - 4:00 pm\n綜 301\n\n\n助教課\n週四\n4:10 pm - 5:10 pm\n綜 301"
+  },
+  {
+    "objectID": "course-syllabus.html#學習目標",
+    "href": "course-syllabus.html#學習目標",
+    "title": "課綱",
+    "section": "學習目標",
+    "text": "學習目標"
+  },
+  {
+    "objectID": "course-syllabus.html#課程錄影",
+    "href": "course-syllabus.html#課程錄影",
+    "title": "課綱",
+    "section": "課程錄影",
+    "text": "課程錄影"
+  },
+  {
+    "objectID": "course-syllabus.html#建議先備知識",
+    "href": "course-syllabus.html#建議先備知識",
+    "title": "課綱",
+    "section": "建議先備知識",
+    "text": "建議先備知識\n\npython 程式基礎\n機器學習基礎"
+  },
+  {
+    "objectID": "course-syllabus.html#教科書與參考書",
+    "href": "course-syllabus.html#教科書與參考書",
+    "title": "課綱",
+    "section": "教科書與參考書",
+    "text": "教科書與參考書\n\nSpeech and Language Processing (3rd ed. draft) by Dan Jurafsky and James H. Martin"
+  },
+  {
+    "objectID": "course-syllabus.html#助教群",
+    "href": "course-syllabus.html#助教群",
+    "title": "課綱",
+    "section": "助教群",
+    "text": "助教群\n\n王伯雅、古貿昌、陳韋伶、陳品而、周昕妤、張鈺琳"
+  },
+  {
+    "objectID": "course-syllabus.html#回家作業",
+    "href": "course-syllabus.html#回家作業",
+    "title": "課綱",
+    "section": "回家作業",
+    "text": "回家作業\n每週有一份作業。\n\n繳交方式\n繳交時間"
+  },
+  {
+    "objectID": "course-syllabus.html#考試與期末專案",
+    "href": "course-syllabus.html#考試與期末專案",
+    "title": "課綱",
+    "section": "考試與期末專案",
+    "text": "考試與期末專案\n無期中與期末考。\n需實作一個專案計劃。"
+  },
+  {
+    "objectID": "course-syllabus.html#給分方式",
+    "href": "course-syllabus.html#給分方式",
+    "title": "課綱",
+    "section": "給分方式",
+    "text": "給分方式\n計分比例如下\n\n\n\n項目\n百分比\n\n\n\n\n課堂參與與練習\n10%\n\n\n作業\n40% (10% x 4) 選最優十份作業\n\n\n期末專題\n40%\n\n\n助教實習課\n10%"
+  },
+  {
+    "objectID": "course-syllabus.html#課堂期待",
+    "href": "course-syllabus.html#課堂期待",
+    "title": "課綱",
+    "section": "課堂期待",
+    "text": "課堂期待\n\n自主學習與積極參與討論\n確實預習\n不遲交、不遲到\n彼此協助與合作\n誠信與負責\n\n\n遲交評分\n\n每份作業最遲在截止日後三天補交，除非有正當理由教師認可，否則皆扣 10%。\n期末專案不得遲交。"
+  },
+  {
+    "objectID": "course-team.html",
+    "href": "course-team.html",
+    "title": "教學團隊",
+    "section": "",
+    "text": "謝舒凱，德國杜賓根大學計算語言學博士，臺大語言學研究所副教授。\n\n\n\nOffice hours\nLocation\n\n\n\n\n個別另約\nR307, GIL."
+  },
+  {
+    "objectID": "course-team.html#助教",
+    "href": "course-team.html#助教",
+    "title": "教學團隊",
+    "section": "助教",
+    "text": "助教\n\n\n\n\nTA\nemail\n\n\n\n\n\n王伯雅，語言所博士班\ndiffere94nt@gmail.com\n\n\n\n古貿昌，語言所博士班\nd08142002@ntu.edu.tw\n\n\n\n陳韋伶，語言所博士班\n\n\n\n\n陳品而，語言所博士班\n\n\n\n\n周昕妤，語言所碩士班\n\n\n\n\n張鈺琳，語言所碩士班"
+  },
+  {
+    "objectID": "exams/exam-1.html",
+    "href": "exams/exam-1.html",
+    "title": "Exam 1",
+    "section": "",
+    "text": "Exam 1 will be released on Friday, Feb 4 at 9 am ET and must be completed by Mon, Feb 7 at 11:59 pm.\nThe exam will consist of two parts:\n\nPart 1 - Conceptual: Multiple choice questions on Sakai test and quizzes. This portion may only be submitted one time. Go here to complete Part 1 of the exam.\nPart 2 - Applied: Data analysis in RStudio and submitted in Gradescope (like a usual lab and homework). Go to the GitHub organization for the course and find the exam-1- repo to complete Part 3 of your exam. Add your answers to the exam-1.qmd file in your repo.\n\nBoth portions must be completed and submitted by Mon, Feb 7 at 11:59 pm. Late work will only be accepted in the case of of extenuating circumstances and notification from your academic dean.\n🍀 Good luck! 🍀\n\n\n\nBy taking this exam, you pledge to uphold the Duke Community Standard:\n\nI will not lie, cheat, or steal in my academic endeavors;\nI will conduct myself honorably in all my endeavors; and\nI will act if the Standard is compromised.\n\n\n\n\n\nThis is an individual assignment. Everything in your repository and on Sakai is for your eyes only.\nYou may not collaborate or communicate anything about this exam to anyone except the instructor and the head TA (Rick Presman). For example, you may not communicate with other students, other TAs, or post/solicit help on the internet, email or via any other method of communication.\nThe exam is open-book, open-note, so you may use any materials from class as you take the exam.\nOnly head TA and professor office hours will be held during the exam period.\nYou may not email the TAs questions about the exam.\nIf you have questions, direct message the professor or the head TA (Rick Presman) on Slack or post on Sakai Conversations for “Instructors in this site” only or attend my office hours (Monday, 10:30 am - 11:30 am).\n\n\n\n\n\nPart 1 - Conceptual: The answers to the multiple choice/short answer questions should be submitted under Test & Quizzes in Sakai.\nPart 2 - Applied: The PDF document for the data analysis portion must be uploaded to Gradescope.\n\nYou must submit a PDF to Gradescope that corresponds to the .qmd file on your GitHub repository in order to receive credit for this portion of the exam.\nYou must upload a PDF, not HTML. Any non-PDF submissions will not be graded.\nMark the pages associated with each question. If any answer for a question spans multiple pages, mark all associated pages.\nMake sure to associate the “Workflow & formatting” section with the first page.\nFailure to mark the pages in Gradescope will result in point deductions. Any pages that are not marked will not be graded.\nMake sure that your uploaded PDF document matches your .qmd and the PDF in your GitHub repository exactly. Points will be deducted for documents that are not reproducible."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "計算語言學與語言學理論",
+    "section": "",
+    "text": "週次\n日期\n主題\n預習 📖\n投影片\n助教課\n課堂練習\n作業\n\n\n\n\n1\n02/23\n課程導論\n\norientation\n\n\n\n\n\n2\n03/02\n計算語言學導論\n\n\n\n\n\n\n\n3\n03/09\n計算構詞與詞彙 (1)\nslp3-02\n\n\n\n\n\n\n4\n03/16\n計算構詞與詞彙 (2)\nslp3-23\n\n\n\n\n\n\n5\n03/23\n計算構詞與詞彙 (3)\nslp3-21\n\n\n\n\n\n\n6\n03/30\n計算構詞與詞彙 (4)\nslp3-25\n\n\n\n\n\n\n7\n04/06\n句法理論與剖析器\nslp3-18\n\n\n\n\n\n\n8\n04/13\n認知語法與計算\n\n\n\n\n\n\n\n9\n04/20\n語意表徵 (1)\nslp3-06\n\n\n\n\n\n\n10\n04/27\n語意表徵 (2)\nslp3-10\n\n\n\n\n\n\n11\n05/04\n語意表徵 (3) & 業師分享\nslp3-11\n\n\n\n\n\n\n12\n05/11\n語意表徵 (4)\nslp3-22\n\n\n\n\n\n\n13\n05/18\n語音與社會變異\nslp3-28\n\n\n\n\n\n\n14\n05/25\n多模態與言談分析\nslp3-15\n\n\n\n\n\n\n15\n06/01\n綜合討論\n\n\n\n\n\n\n\n16\n06/08\n期末報告"
+  },
+  {
     "objectID": "labs/lab-0.html",
     "href": "labs/lab-0.html",
     "title": "Lab 0 - Welcome",
@@ -7,11 +238,186 @@
     "text": "熟悉彼此，相關軟體工具\n課程期待"
   },
   {
-    "objectID": "course-links.html",
-    "href": "course-links.html",
-    "title": "參考連接",
+    "objectID": "project-description.html",
+    "href": "project-description.html",
+    "title": "期末專題計劃需知",
     "section": "",
-    "text": "CS224u at Stanford: Natural Language Understanding\n🔗\n\n\nPhilosophy of Language and Computation at ETH Zürich\n🔗\n\n\n語料實務分析\n🔗 (草稿階段)\n\n\nGitHub classroom\n🔗\n\n\nNTU COOL\n🔗\n\n\nLecture streaming and recordings\n🔗"
+    "text": "Topic ideas due\nProposal due\nFinal report due\nVideo presentation + slides and final GitHub repo due\nPresentation comments due"
+  },
+  {
+    "objectID": "project-description.html#期末專題",
+    "href": "project-description.html#期末專題",
+    "title": "期末專題計劃需知",
+    "section": "期末專題",
+    "text": "期末專題\nTL;DR:\n\n利用 NLP 工具分析語料\n開發、建立部署模型與任務\n探究語言模型的限制與可能性"
+  },
+  {
+    "objectID": "project-tips-resources.html",
+    "href": "project-tips-resources.html",
+    "title": "Project tips + resources",
+    "section": "",
+    "text": "R Data Sources for Regression Analysis\nFiveThirtyEight data\nTidyTuesday\n\n\n\n\n\nWorld Health Organization\nThe National Bureau of Economic Research\nInternational Monetary Fund\nGeneral Social Survey\nUnited Nations Data\nUnited Nations Statistics Division\nU.K. Data\nU.S. Data\nU.S. Census Data\nEuropean Statistics\nStatistics Canada\nPew Research\nUNICEF\nCDC\nWorld Bank\nElection Studies"
+  },
+  {
+    "objectID": "project-tips-resources.html#tips",
+    "href": "project-tips-resources.html#tips",
+    "title": "Project tips + resources",
+    "section": "Tips",
+    "text": "Tips\n\nAsk questions if any of the expectations are unclear.\nCode: In your write up your code should be hidden (echo = FALSE) so that your document is neat and easy to read. However your document should include all your code such that if I re-knit your qmd file I should be able to obtain the results you presented.\n\nException: If you want to highlight something specific about a piece of code, you’re welcome to show that portion.\n\nMerge conflicts will happen, issues will arise, and that’s fine! Commit and push often, and ask questions when stuck.\nMake sure each team member is contributing, both in terms of quality and quantity of contribution (we will be reviewing commits from different team members).\nAll team members are expected to contribute equally to the completion of this assignment and group assessments will be given at its completion - anyone judged to not have sufficient contributed to the final product will have their grade penalized. While different teams members may have different backgrounds and abilities, it is the responsibility of every team member to understand how and why all code and approaches in the assignment works."
+  },
+  {
+    "objectID": "project-tips-resources.html#formatting-communication-tips",
+    "href": "project-tips-resources.html#formatting-communication-tips",
+    "title": "Project tips + resources",
+    "section": "Formatting + communication tips",
+    "text": "Formatting + communication tips\n\nSuppress Code, Warnings, & Messages\n\nInclude the following code in a code chunk at the top of your .qmd file to suppress all code, warnings, and other messages. Use the code chunk header {r set-up, include = FALSE} to suppress this set up code.\n\nknitr::opts_chunk$set(echo = FALSE,\n                      warning = FALSE, \n                      message = FALSE)\n\n\nHeaders\n\nUse headers to clearly label each section.\nInspect the document outline to review your headers and sub-headers.\n\n\n\nReferences\n\nInclude all references in a section called “References” at the end of the report.\nThis course does not have specific requirements for formatting citations and references.\n\n\n\nAppendix\n\nIf you have additional work that does not fit or does not belong in the body of the report, you may put it at the end of the document in section called “Appendix”.\nThe items in the appendix should be properly labeled.\nThe appendix should only be for additional material. The reader should be able to fully understand your report without viewing content in the appendix.\n\n\n\nResize figures\nResize plots and figures, so you have more space for the narrative.\n\n\nArranging plots\nArrange plots in a grid, instead of one after the other. This is especially useful when displaying plots for exploratory data analysis and to check assumptions.\nIf you’re using ggplot2 functions, the patchwork package makes it easy to arrange plots in a grid. See the documentation and examples here.\n\n\nPlot titles and axis labels\nBe sure all plot titles and axis labels are visible and easy to read.\n\nUse informative titles, not variable names, for titles and axis labels.\n\n❌ NO! The x-axis is hard to read because the names overlap.\n\nggplot(data = mpg, aes(x = manufacturer)) +\n  geom_bar()\n\n\n\n\n✅ YES! Names are readable\n\nggplot(data = mpg, aes(y = manufacturer)) +\n  geom_bar()\n\n\n\n\n\n\nDo a little more to make the plot look professional!\n\nInformative title and axis labels\nFlipped coordinates to make names readable\nArranged bars based on count\nCapitalized manufacturer names\nOptional: Added color - Use a coordinated color scheme throughout paper / presentation\nOptional: Applied a theme - Use same theme throughout paper / presentation\n\n\nmpg %>%\n  count(manufacturer) %>%\n  mutate(manufacturer = str_to_title(manufacturer)) %>%\n  ggplot(aes(y = fct_reorder(manufacturer,n), x = n)) +\n  geom_bar(stat = \"identity\", fill = \"steelblue\") +\n  labs(x = \"Manufacturer\", \n       y = \"Count\", \n       title = \"The most common manufacturer is Dodge\") +\n  theme_minimal() \n\n\n\n\n\n\nTables and model output\n\nUse the kable function from the knitr package to neatly output all tables and model output. This will also ensure all model coefficients are displayed.\n\nUse the digits argument to display only 3 or 4 significant digits.\nUse the caption argument to add captions to your table.\n\n\n\nmodel <- lm(mpg ~ hp, data = mtcars)\ntidy(model) %>%\n  kable(digits = 3)\n\n\n\n\nterm\nestimate\nstd.error\nstatistic\np.value\n\n\n\n\n(Intercept)\n30.099\n1.634\n18.421\n0\n\n\nhp\n-0.068\n0.010\n-6.742\n0\n\n\n\n\n\n\n\nGuidelines for communicating results\n\nDon’t use variable names in your narrative! Use descriptive terms, so the reader understands your narrative without relying on the data dictionary.\n\n❌ There is a negative linear relationship between mpg and hp.\n✅ There is a negative linear relationship between a car’s fuel economy (in miles per gallon) and its horsepower.\n\nKnow your audience: Your report should be written for a general audience who has an understanding of statistics at the level of STA 210.\nAvoid subject matter jargon: Don’t assume the audience knows all of the specific terminology related to your subject area. If you must use jargon, include a brief definition the first time you introduce a term.\nTell the “so what”: Your report and presentation should be more than a list of interpretations and technical definitions. Focus on what the results mean, i.e. what you want the audience to know about your topic after reading your report or viewing your presentation.\n\n❌ For every one unit increase in horsepower, we expect the miles per gallon to decrease by 0.068 units, on average.\n✅ If the priority is to have good fuel economy, then one should choose a car with lower horsepower. Based on our model, the fuel economy is expected to decrease, on average, by 0.68 miles per gallon for every 10 additional horsepower.\n\nTell a story: All visualizations, tables, model output, and narrative should tell a cohesive story!\nUse one voice: Though multiple people are writing the report, it should read as if it’s from a single author. At least one team member should read through the report before submission to ensure it reads like a cohesive document."
+  },
+  {
+    "objectID": "project-tips-resources.html#additional-resources",
+    "href": "project-tips-resources.html#additional-resources",
+    "title": "Project tips + resources",
+    "section": "Additional resources",
+    "text": "Additional resources\n\nR for Data Science\nQuarto Documentation\nData visualization\n\nggplot2 Reference\nggplot2: Elegant Graphics for Data Analysis\nData Visualization: A Practice Introduction\nPatchwork R Package"
+  },
+  {
+    "objectID": "supplemental/log-transformations.html",
+    "href": "supplemental/log-transformations.html",
+    "title": "Log Transformations in Linear Regression",
+    "section": "",
+    "text": "Note\n\n\n\nThe following supplemental notes were created by Dr. Maria Tackett for STA 210. They are provided for students who want to dive deeper into the mathematics behind regression and reflect some of the material covered in STA 211: Mathematics of Regression. Additional supplemental notes will be added throughout the semester.\nThis document provides details about the model interpretation when the predictor and/or response variables are log-transformed. For simplicity, we will discuss transformations for the simple linear regression model as shown in Equation 1.\n\\[\n\\label{orig}\ny = \\beta_0 + \\beta_1 x\n\\tag{1}\\]\nAll results and interpretations can be easily extended to transformations in multiple regression models.\nNote: log refers to the natural logarithm."
+  },
+  {
+    "objectID": "supplemental/log-transformations.html#log-transformation-on-the-response-variable",
+    "href": "supplemental/log-transformations.html#log-transformation-on-the-response-variable",
+    "title": "Log Transformations in Linear Regression",
+    "section": "Log-transformation on the response variable",
+    "text": "Log-transformation on the response variable\nSuppose we fit a linear regression model with \\(\\log(y)\\), the log-transformed \\(y\\), as the response variable. Under this model, we assume a linear relationship exists between \\(x\\) and \\(\\log(y)\\), such that \\(\\log(y) \\sim N(\\beta_0 + \\beta_1 x, \\sigma^2)\\) for some \\(\\beta_0\\), \\(\\beta_1\\) and \\(\\sigma^2\\). In other words, we can model the relationship between \\(x\\) and \\(\\log(y)\\) using the model in Equation 2.\n\\[\n\\log(y) = \\beta_0 + \\beta_1 x\n\\tag{2}\\]\nIf we interpret the model in terms of \\(\\log(y)\\), then we can use the usual interpretations for slope and intercept. When reporting results, however, it is best to give all interpretations in terms of the original response variable \\(y\\), since interpretations using log-transformed variables are often more difficult to truly understand.\nIn order to get back on the original scale, we need to use the exponential function (also known as the anti-log), \\(\\exp\\{x\\} = e^x\\). Therefore, we use the model in Equation 2 for interpretations and predictions, we will use Equation 3 to state our conclusions in terms of \\(y\\).\n\\[\n\\begin{aligned}\n&\\exp\\{\\log(y)\\} = \\exp\\{\\beta_0 + \\beta_1 x\\} \\\\[10pt]\n\\Rightarrow &y = \\exp\\{\\beta_0 + \\beta_1 x\\} \\\\[10pt]\n\\Rightarrow &y = \\exp\\{\\beta_0\\}\\exp\\{\\beta_1 x\\}\n\\end{aligned}\n\\tag{3}\\]\nIn order to interpret the slope and intercept, we need to first understand the relationship between the mean, median and log transformations.\n\nMean, Median, and Log Transformations\nSuppose we have a dataset y that contains the following observations:\n\n\n[1] 3 5 6 7 8\n\n\nIf we log-transform the values of y then calculate the mean and median, we have\n\n\n\n\n\nmean_log_y\nmedian_log_y\n\n\n\n\n1.70503\n1.79176\n\n\n\n\n\nIf we calculate the mean and median of y, then log-transform the mean and median, we have\n\n\n\n\n\nlog_mean\nlog_median\n\n\n\n\n1.75786\n1.79176\n\n\n\n\n\nThis is a simple illustration to show\n\n\\(\\text{Mean}[{\\log(y)}] \\neq \\log[\\text{Mean}(y)]\\) - the mean and log are not commutable\n\\(\\text{Median}[\\log(y)] = \\log[\\text{Median}(y)]\\) - the median and log are commutable\n\n\n\nInterpretaton of model coefficients\nUsing Equation 2, the mean \\(\\log(y)\\) for any given value of \\(x\\) is \\(\\beta_0 + \\beta_1 x\\); however, this does not indicate that the mean of \\(y = \\exp\\{\\beta_0 + \\beta_1 x\\}\\) (see previous section). From the assumptions of linear regression, we assume that for any given value of \\(x\\), the distribution of \\(\\log(y)\\) is Normal, and therefore symmetric. Thus the median of \\(\\log(y)\\) is equal to the mean of \\(\\log(y)\\), i.e \\(\\text{Median}(\\log(y)) = \\beta_0 + \\beta_1 x\\).\nSince the log and the median are commutable, \\(\\text{Median}(\\log(y)) = \\beta_0 + \\beta_1 x \\Rightarrow \\text{Median}(y) = \\exp\\{\\beta_0 + \\beta_1 x\\}\\). Thus, when we log-transform the response variable, the interpretation of the intercept and slope are in terms of the effect on the median of \\(y\\).\nIntercept: The intercept is expected median of \\(y\\) when the predictor variable equals 0. Therefore, when \\(x=0\\),\n\\[\n\\begin{aligned}\n&\\log(y) = \\beta_0 + \\beta_1 \\times 0 = \\beta_0 \\\\[10pt]\n\\Rightarrow &y = \\exp\\{\\beta_0\\}\n\\end{aligned}\n\\]\nInterpretation: When \\(x=0\\), the median of \\(y\\) is expected to be \\(\\exp\\{\\beta_0\\}\\).\nSlope: The slope is the expected change in the median of \\(y\\) when \\(x\\) increases by 1 unit. The change in the median of \\(y\\) is\n\\[\n\\exp\\{[\\beta_0 + \\beta_1 (x+1)] - [\\beta_0 + \\beta_1 x]\\} = \\frac{\\exp\\{\\beta_0 + \\beta_1 (x+1)\\}}{\\exp\\{\\beta_0 + \\beta_1 x\\}} = \\frac{\\exp\\{\\beta_0\\}\\exp\\{\\beta_1 x\\}\\exp\\{\\beta_1\\}}{\\exp\\{\\beta_0\\}\\exp\\{\\beta_1 x\\}} = \\exp\\{\\beta_1\\}\n\\]\nThus, the median of \\(y\\) for \\(x+1\\) is \\(\\exp\\{\\beta_1\\}\\) times the median of \\(y\\) for \\(x\\).\nInterpretation: When \\(x\\) increases by one unit, the median of \\(y\\) is expected to multiply by a factor of \\(\\exp\\{\\beta_1\\}\\)."
+  },
+  {
+    "objectID": "supplemental/log-transformations.html#log-transformation-on-the-predictor-variable",
+    "href": "supplemental/log-transformations.html#log-transformation-on-the-predictor-variable",
+    "title": "Log Transformations in Linear Regression",
+    "section": "Log-transformation on the predictor variable",
+    "text": "Log-transformation on the predictor variable\nSuppose we fit a linear regression model with \\(\\log(x)\\), the log-transformed \\(x\\), as the predictor variable. Under this model, we assume a linear relationship exists between \\(\\log(x)\\) and \\(y\\), such that \\(y \\sim N(\\beta_0 + \\beta_1 \\log(x), \\sigma^2)\\) for some \\(\\beta_0\\), \\(\\beta_1\\) and \\(\\sigma^2\\). In other words, we can model the relationship between \\(\\log(x)\\) and \\(y\\) using the model in #eq-log-x.\n\\[\ny = \\beta_0 + \\beta_1 \\log(x)\n\\tag{4}\\]\nIntercept: The intercept is the mean of \\(y\\) when \\(\\log(x) = 0\\), i.e. \\(x = 1\\).\nInterpretation: When \\(x = 1\\) \\((\\log(x) = 0)\\), the mean of \\(y\\) is expected to be \\(\\beta_0\\).\nSlope: The slope is interpreted in terms of the change in the mean of \\(y\\) when \\(x\\) is multiplied by a factor of \\(C\\), since \\(\\log(Cx) = \\log(x) + \\log(C)\\). Thus, when \\(x\\) is multiplied by a factor of \\(C\\), the change in the mean of \\(y\\) is\n\\[\n\\begin{aligned}\n[\\beta_0 + \\beta_1 \\log(Cx)] - [\\beta_0 + \\beta_1 \\log(x)] &= \\beta_1 [\\log(Cx) - \\log(x)] \\\\[10pt]\n& = \\beta_1[\\log(C) + \\log(x) - \\log(x)] \\\\[10pt]\n& = \\beta_1 \\log(C)\n\\end{aligned}\n\\]\nThus the mean of \\(y\\) changes by \\(\\beta_1 \\log(C)\\) units.\nInterpretation: When \\(x\\) is multiplied by a factor of \\(C\\), the mean of \\(y\\) is expected to change by \\(\\beta_1 \\log(C)\\) units. For example, if \\(x\\) is doubled, then the mean of \\(y\\) is expected to change by \\(\\beta_1 \\log(2)\\) units."
+  },
+  {
+    "objectID": "supplemental/log-transformations.html#log-transformation-on-the-the-response-and-predictor-variable",
+    "href": "supplemental/log-transformations.html#log-transformation-on-the-the-response-and-predictor-variable",
+    "title": "Log Transformations in Linear Regression",
+    "section": "Log-transformation on the the response and predictor variable",
+    "text": "Log-transformation on the the response and predictor variable\nSuppose we fit a linear regression model with \\(\\log(x)\\), the log-transformed \\(x\\), as the predictor variable and \\(\\log(y)\\), the log-transformed \\(y\\), as the response variable. Under this model, we assume a linear relationship exists between \\(\\log(x)\\) and \\(\\log(y)\\), such that \\(\\log(y) \\sim N(\\beta_0 + \\beta_1 \\log(x), \\sigma^2)\\) for some \\(\\beta_0\\), \\(\\beta_1\\) and \\(\\sigma^2\\). In other words, we can model the relationship between \\(\\log(x)\\) and \\(\\log(y)\\) using the model in Equation 5.\n\\[\n\\log(y) = \\beta_0 + \\beta_1 \\log(x)\n\\tag{5}\\]\nBecause the response variable is log-transformed, the interpretations on the original scale will be in terms of the median of \\(y\\) (see the section on the log-transformed response variable for more detail).\nIntercept: The intercept is the mean of \\(y\\) when \\(\\log(x) = 0\\), i.e. \\(x = 1\\). Therefore, when \\(\\log(x) = 0\\),\n\\[\n\\begin{aligned}\n&\\log(y) = \\beta_0 + \\beta_1 \\times 0 = \\beta_0 \\\\[10pt]\n\\Rightarrow &y = \\exp\\{\\beta_0\\}\n\\end{aligned}\n\\]\nInterpretation: When \\(x = 1\\) \\((\\log(x) = 0)\\), the median of \\(y\\) is expected to be \\(\\exp\\{\\beta_0\\}\\).\nSlope: The slope is interpreted in terms of the change in the median \\(y\\) when \\(x\\) is multiplied by a factor of \\(C\\), since \\(\\log(Cx) = \\log(x) + \\log(C)\\). Thus, when \\(x\\) is multiplied by a factor of \\(C\\), the change in the median of \\(y\\) is\n\\[\n\\begin{aligned}\n\\exp\\{[\\beta_0 + \\beta_1 \\log(Cx)] - [\\beta_0 + \\beta_1 \\log(x)]\\} &=\n\\exp\\{\\beta_1 [\\log(Cx) - \\log(x)]\\} \\\\[10pt]\n& = \\exp\\{\\beta_1[\\log(C) + \\log(x) - \\log(x)]\\} \\\\[10pt]\n& = \\exp\\{\\beta_1 \\log(C)\\} = C^{\\beta_1}\n\\end{aligned}\n\\]\nThus, the median of \\(y\\) for \\(Cx\\) is \\(C^{\\beta_1}\\) times the median of \\(y\\) for \\(x\\).\nInterpretation: When \\(x\\) is multiplied by a factor of \\(C\\), the median of \\(y\\) is expected to multiple by a factor of \\(C^{\\beta_1}\\). For example, if \\(x\\) is doubled, then the median of \\(y\\) is expected to multiply by \\(2^{\\beta_1}\\)."
+  },
+  {
+    "objectID": "supplemental/mlr-matrix.html",
+    "href": "supplemental/mlr-matrix.html",
+    "title": "Matrix Notation for Multiple Linear Regression",
+    "section": "",
+    "text": "Note\n\n\n\nThe following supplemental notes were created by Dr. Maria Tackett for STA 210. They are provided for students who want to dive deeper into the mathematics behind regression and reflect some of the material covered in STA 211: Mathematics of Regression. Additional supplemental notes will be added throughout the semester.\nThis document provides the details for the matrix notation for multiple linear regression. We assume the reader has familiarity with some linear algebra. Please see Chapter 1 of An Introduction to Statistical Learning for a brief review of linear algebra."
+  },
+  {
+    "objectID": "supplemental/mlr-matrix.html#introduction",
+    "href": "supplemental/mlr-matrix.html#introduction",
+    "title": "Matrix Notation for Multiple Linear Regression",
+    "section": "Introduction",
+    "text": "Introduction\nSuppose we have \\(n\\) observations. Let the \\(i^{th}\\) be \\((x_{i1}, \\ldots, x_{ip}, y_i)\\), such that \\(x_{i1}, \\ldots, x_{ip}\\) are the explanatory variables (predictors) and \\(y_i\\) is the response variable. We assume the data can be modeled using the least-squares regression model, such that the mean response for a given combination of explanatory variables follows the form in Equation 1.\n\\[\ny = \\beta_0 + \\beta_1 x_1 + \\dots + \\beta_p x_p\n\\tag{1}\\]\nWe can write the response for the \\(i^{th}\\) observation as shown in Equation 2\n\\[\ny_i = \\beta_0 + \\beta_1 x_{i1} + \\dots + \\beta_p x_{ip} + \\epsilon_i\n\\tag{2}\\]\nsuch that \\(\\epsilon_i\\) is the amount \\(y_i\\) deviates from \\(\\mu\\{y|x_{i1}, \\ldots, x_{ip}\\}\\), the mean response for a given combination of explanatory variables. We assume each \\(\\epsilon_i \\sim N(0,\\sigma^2)\\), where \\(\\sigma^2\\) is a constant variance for the distribution of the response \\(y\\) for any combination of explanatory variables \\(x_1, \\ldots, x_p\\)."
+  },
+  {
+    "objectID": "supplemental/mlr-matrix.html#matrix-representation-for-the-regression-model",
+    "href": "supplemental/mlr-matrix.html#matrix-representation-for-the-regression-model",
+    "title": "Matrix Notation for Multiple Linear Regression",
+    "section": "Matrix Representation for the Regression Model",
+    "text": "Matrix Representation for the Regression Model\nWe can represent the Equation 1 and Equation 2 using matrix notation. Let\n\\[\n\\mathbf{Y} = \\begin{bmatrix}y_1 \\\\ y_2 \\\\ \\vdots \\\\y_n\\end{bmatrix}\n\\hspace{15mm}\n\\mathbf{X} = \\begin{bmatrix}x_{11} & x_{12} & \\dots & x_{1p} \\\\\nx_{21} & x_{22} & \\dots & x_{2p} \\\\\n\\vdots & \\vdots & \\ddots & \\vdots\\\\\nx_{n1} & x_{n2} & \\dots & x_{np} \\end{bmatrix}\n\\hspace{15mm}\n\\boldsymbol{\\beta}= \\begin{bmatrix}\\beta_0 \\\\ \\beta_1 \\\\ \\vdots \\\\ \\beta_p \\end{bmatrix}\n\\hspace{15mm}\n\\boldsymbol{\\epsilon}= \\begin{bmatrix}\\epsilon_1 \\\\ \\epsilon_2 \\\\ \\vdots \\\\ \\epsilon_n \\end{bmatrix}\n\\tag{3}\\]\nThus,\n\\[\\mathbf{Y} = \\mathbf{X}\\boldsymbol{\\beta} + \\mathbf{\\epsilon}\\]\nTherefore the estimated response for a given combination of explanatory variables and the associated residuals can be written as\n\\[\n\\hat{\\mathbf{Y}} = \\mathbf{X}\\hat{\\boldsymbol{\\beta}} \\hspace{10mm} \\mathbf{e} = \\mathbf{Y} - \\mathbf{X}\\hat{\\boldsymbol{\\beta}}\n\\tag{4}\\]"
+  },
+  {
+    "objectID": "supplemental/mlr-matrix.html#estimating-the-coefficients",
+    "href": "supplemental/mlr-matrix.html#estimating-the-coefficients",
+    "title": "Matrix Notation for Multiple Linear Regression",
+    "section": "Estimating the Coefficients",
+    "text": "Estimating the Coefficients\nThe least-squares model is the one that minimizes the sum of the squared residuals. Therefore, we want to find the coefficients, \\(\\hat{\\boldsymbol{\\beta}}\\) that minimizes\n\\[\n\\sum\\limits_{i=1}^{n} e_{i}^2 = \\mathbf{e}^T\\mathbf{e} = (\\mathbf{Y} - \\mathbf{X}\\hat{\\boldsymbol{\\beta}})^T(\\mathbf{Y} - \\mathbf{X}\\hat{\\boldsymbol{\\beta}})\n\\tag{5}\\]\nwhere \\(\\mathbf{e}^T\\), the transpose of the matrix \\(\\mathbf{e}\\).\n\\[\n(\\mathbf{Y} - \\mathbf{X}\\hat{\\boldsymbol{\\beta}})^T(\\mathbf{Y} - \\mathbf{X}\\hat{\\boldsymbol{\\beta}}) = (\\mathbf{Y}^T\\mathbf{Y} -\n\\mathbf{Y}^T \\mathbf{X}\\hat{\\boldsymbol{\\beta}} - (\\hat{\\boldsymbol{\\beta}}{}^{T}\\mathbf{X}^T\\mathbf{Y} +\n\\hat{\\boldsymbol{\\beta}}{}^{T}\\mathbf{X}^T\\mathbf{X}\n\\hat{\\boldsymbol{\\beta}})\n\\tag{6}\\]\nNote that \\((\\mathbf{Y^T}\\mathbf{X}\\hat{\\boldsymbol{\\beta}})^T = \\hat{\\boldsymbol{\\beta}}{}^{T}\\mathbf{X}^T\\mathbf{Y}\\). Since these are both constants (i.e. \\(1\\times 1\\) vectors), \\(\\mathbf{Y^T}\\mathbf{X}\\hat{\\boldsymbol{\\beta}} = \\hat{\\boldsymbol{\\beta}}{}^{T}\\mathbf{X}^T\\mathbf{Y}\\). Thus, Equation 6 becomes\n\\[\n\\mathbf{Y}^T\\mathbf{Y} - 2 \\mathbf{X}^T\\hat{\\boldsymbol{\\beta}}{}^{T}\\mathbf{Y} + \\hat{\\boldsymbol{\\beta}}{}^{T}\\mathbf{X}^T\\mathbf{X}\n\\hat{\\boldsymbol{\\beta}}\n\\]\nSince we want to find the \\(\\hat{\\boldsymbol{\\beta}}\\) that minimizes Equation 5, will find the value of \\(\\hat{\\boldsymbol{\\beta}}\\) such that the derivative with respect to \\(\\hat{\\boldsymbol{\\beta}}\\) is equal to 0.\n\\[\n\\begin{aligned}\n\\frac{\\partial \\mathbf{e}^T\\mathbf{e}}{\\partial \\hat{\\boldsymbol{\\beta}}} & = \\frac{\\partial}{\\partial \\hat{\\boldsymbol{\\beta}}}(\\mathbf{Y}^T\\mathbf{Y} - 2 \\mathbf{X}^T\\hat{\\boldsymbol{\\beta}}{}^T\\mathbf{Y} + \\hat{\\boldsymbol{\\beta}}{}^{T}\\mathbf{X}^T\\mathbf{X}\\hat{\\boldsymbol{\\beta}}) = 0 \\\\\n&\\Rightarrow - 2 \\mathbf{X}^T\\mathbf{Y} + 2 \\mathbf{X}^T\\mathbf{X}\\hat{\\boldsymbol{\\beta}} = 0 \\\\\n& \\Rightarrow 2 \\mathbf{X}^T\\mathbf{Y} = 2 \\mathbf{X}^T\\mathbf{X}\\hat{\\boldsymbol{\\beta}} \\\\\n& \\Rightarrow \\mathbf{X}^T\\mathbf{Y} = \\mathbf{X}^T\\mathbf{X}\\hat{\\boldsymbol{\\beta}} \\\\\n& \\Rightarrow (\\mathbf{X}^T\\mathbf{X})^{-1}\\mathbf{X}^T\\mathbf{Y} = (\\mathbf{X}^T\\mathbf{X})^{-1}\\mathbf{X}^T\\mathbf{X}\\hat{\\boldsymbol{\\beta}} \\\\\n& \\Rightarrow (\\mathbf{X}^T\\mathbf{X})^{-1}\\mathbf{X}^T\\mathbf{Y} = \\mathbf{I}\\hat{\\boldsymbol{\\beta}}\n\\end{aligned}\n\\tag{7}\\]\nThus, the estimate of the model coefficients is \\(\\hat{\\boldsymbol{\\beta}} = (\\mathbf{X}^T\\mathbf{X})^{-1}\\mathbf{X}^T\\mathbf{Y}\\)."
+  },
+  {
+    "objectID": "supplemental/mlr-matrix.html#variance-covariance-matrix-of-the-coefficients",
+    "href": "supplemental/mlr-matrix.html#variance-covariance-matrix-of-the-coefficients",
+    "title": "Matrix Notation for Multiple Linear Regression",
+    "section": "Variance-covariance matrix of the coefficients",
+    "text": "Variance-covariance matrix of the coefficients\nWe will use two properties to derive the form of the variance-covariance matrix of the coefficients:\n\n\\(E[\\boldsymbol{\\epsilon}\\boldsymbol{\\epsilon}^T] = \\sigma^2I\\)\n\\(\\hat{\\boldsymbol{\\beta}} = \\boldsymbol{\\beta} + (\\mathbf{X}^T\\mathbf{X})^{-1}\\epsilon\\)\n\nFirst, we will show that \\(E[\\boldsymbol{\\epsilon}\\boldsymbol{\\epsilon}^T] = \\sigma^2I\\)\n\\[\n\\begin{aligned}\nE[\\boldsymbol{\\epsilon}\\boldsymbol{\\epsilon}^T] &= E \\begin{bmatrix}\\epsilon_1  & \\epsilon_2 & \\dots & \\epsilon_n \\end{bmatrix}\\begin{bmatrix}\\epsilon_1 \\\\ \\epsilon_2 \\\\ \\vdots \\\\ \\epsilon_n \\end{bmatrix}  \\\\\n& = E \\begin{bmatrix} \\epsilon_1^2  & \\epsilon_1 \\epsilon_2 & \\dots & \\epsilon_1 \\epsilon_n \\\\\n\\epsilon_2 \\epsilon_1 & \\epsilon_2^2 & \\dots & \\epsilon_2 \\epsilon_n \\\\\n\\vdots & \\vdots & \\ddots & \\vdots \\\\\n\\epsilon_n \\epsilon_1 & \\epsilon_n \\epsilon_2 & \\dots & \\epsilon_n^2\n\\end{bmatrix} \\\\\n& = \\begin{bmatrix} E[\\epsilon_1^2]  & E[\\epsilon_1 \\epsilon_2] & \\dots & E[\\epsilon_1 \\epsilon_n] \\\\\nE[\\epsilon_2 \\epsilon_1] & E[\\epsilon_2^2] & \\dots & E[\\epsilon_2 \\epsilon_n] \\\\\n\\vdots & \\vdots & \\ddots & \\vdots \\\\\nE[\\epsilon_n \\epsilon_1] & E[\\epsilon_n \\epsilon_2] & \\dots & E[\\epsilon_n^2]\n\\end{bmatrix}\n\\end{aligned}\n\\tag{8}\\]\nRecall, the regression assumption that the errors \\(\\epsilon_i's\\) are Normally distributed with mean 0 and variance \\(\\sigma^2\\). Thus, \\(E(\\epsilon_i^2) = Var(\\epsilon_i) = \\sigma^2\\) for all \\(i\\). Additionally, recall the regression assumption that the errors are uncorrelated, i.e. \\(E(\\epsilon_i \\epsilon_j) = Cov(\\epsilon_i, \\epsilon_j) = 0\\) for all \\(i,j\\). Using these assumptions, we can write Equation 8 as\n\\[\nE[\\mathbf{\\epsilon}\\mathbf{\\epsilon}^T]  = \\begin{bmatrix} \\sigma^2  & 0 & \\dots & 0 \\\\\n0 & \\sigma^2  & \\dots & 0 \\\\\n\\vdots & \\vdots & \\ddots & \\vdots \\\\\n0 & 0 & \\dots & \\sigma^2\n\\end{bmatrix} = \\sigma^2 \\mathbf{I}\n\\tag{9}\\]\nwhere \\(\\mathbf{I}\\) is the \\(n \\times n\\) identity matrix.\nNext, we show that \\(\\hat{\\boldsymbol{\\beta}} = \\boldsymbol{\\beta} + (\\mathbf{X}^T\\mathbf{X})^{-1}\\epsilon\\).\nRecall that the \\(\\hat{\\boldsymbol{\\beta}} = (\\mathbf{X}^T\\mathbf{X})^{-1}\\mathbf{X}^T\\mathbf{Y}\\) and \\(\\mathbf{Y} = \\mathbf{X}\\mathbf{\\beta} + \\mathbf{\\epsilon}\\). Then,\n\\[\n\\begin{aligned}\n\\hat{\\boldsymbol{\\beta}} &= (\\mathbf{X}^T\\mathbf{X})^{-1}\\mathbf{X}^T\\mathbf{Y} \\\\\n&= (\\mathbf{X}^T\\mathbf{X})^{-1}\\mathbf{X}^T(\\mathbf{X}\\boldsymbol{\\beta} + \\boldsymbol{\\epsilon}) \\\\\n&= \\boldsymbol{\\beta} + (\\mathbf{X}^T\\mathbf{X})^{-1}\\mathbf{X}^T \\mathbf{\\epsilon} \\\\\n\\end{aligned}\n\\tag{10}\\]\nUsing these two properties, we derive the form of the variance-covariance matrix for the coefficients. Note that the covariance matrix is \\(E[(\\hat{\\boldsymbol{\\beta}} - \\boldsymbol{\\beta})(\\hat{\\boldsymbol{\\beta}} - \\boldsymbol{\\beta})^T]\\)\n\\[\n\\begin{aligned}\nE[(\\hat{\\boldsymbol{\\beta}} - \\boldsymbol{\\beta})(\\hat{\\boldsymbol{\\beta}} - \\boldsymbol{\\beta})^T] &= E[(\\boldsymbol{\\beta} + (\\mathbf{X}^T\\mathbf{X})^{-1} \\mathbf{X}^T \\boldsymbol{\\epsilon} - \\boldsymbol{\\beta})(\\boldsymbol{\\beta} + (\\mathbf{X}^T\\mathbf{X})^{-1} \\mathbf{X}^T \\boldsymbol{\\epsilon} - \\boldsymbol{\\beta})^T]\\\\\n& = E[(\\mathbf{X}^T\\mathbf{X})^{-1} \\mathbf{X}^T \\boldsymbol{\\epsilon}\\boldsymbol{\\epsilon}^T\\mathbf{X}(\\mathbf{X}^T\\mathbf{X})^{-1}] \\\\\n& = (\\mathbf{X}^T\\mathbf{X})^{-1} \\mathbf{X}^T E[\\boldsymbol{\\epsilon}\\boldsymbol{\\epsilon}^T]\\mathbf{X}(\\mathbf{X}^T\\mathbf{X})^{-1}\\\\\n& = (\\mathbf{X}^T\\mathbf{X})^{-1} \\mathbf{X}^T (\\sigma^2\\mathbf{I})\\mathbf{X}(\\mathbf{X}^T\\mathbf{X})^{-1}\\\\\n&= \\sigma^2\\mathbf{I}(\\mathbf{X}^T\\mathbf{X})^{-1}\\mathbf{X}^T\\mathbf{X}(\\mathbf{X}^T\\mathbf{X})^{-1}\\\\\n& = \\sigma^2\\mathbf{I}(\\mathbf{X}^T\\mathbf{X})^{-1}\\\\\n&  = \\sigma^2(\\mathbf{X}^T\\mathbf{X})^{-1} \\\\\n\\end{aligned}\n\\tag{11}\\]"
+  },
+  {
+    "objectID": "supplemental/model-diagnostics-matrix.html",
+    "href": "supplemental/model-diagnostics-matrix.html",
+    "title": "Model Diagnostics",
+    "section": "",
+    "text": "Note\n\n\n\nThe following supplemental notes were created by Dr. Maria Tackett for STA 210. They are provided for students who want to dive deeper into the mathematics behind regression and reflect some of the material covered in STA 211: Mathematics of Regression. Additional supplemental notes will be added throughout the semester.\nThis document discusses some of the mathematical details of the model diagnostics - leverage, standardized residuals, and Cook’s distance. We assume the reader knowledge of the matrix form for multiple linear regression. Please see Matrix Form of Linear Regression for a review."
+  },
+  {
+    "objectID": "supplemental/model-diagnostics-matrix.html#introduction",
+    "href": "supplemental/model-diagnostics-matrix.html#introduction",
+    "title": "Model Diagnostics",
+    "section": "Introduction",
+    "text": "Introduction\nSuppose we have \\(n\\) observations. Let the \\(i^{th}\\) be \\((x_{i1}, \\ldots, x_{ip}, y_i)\\), such that \\(x_{i1}, \\ldots, x_{ip}\\) are the explanatory variables (predictors) and \\(y_i\\) is the response variable. We assume the data can be modeled using the least-squares regression model, such that the mean response for a given combination of explanatory variables follows the form in Equation 1.\n\\[\ny = \\beta_0 + \\beta_1 x_1 + \\dots + \\beta_p x_p\n\\tag{1}\\]\nWe can write the response for the \\(i^{th}\\) observation as shown in Equation 2.\n\\[\ny_i = \\beta_0 + \\beta_1 x_{i1} + \\dots + \\beta_p x_{ip} + \\epsilon_i\n\\tag{2}\\]\nsuch that \\(\\epsilon_i\\) is the amount \\(y_i\\) deviates from \\(\\mu\\{y|x_{i1}, \\ldots, x_{ip}\\}\\), the mean response for a given combination of explanatory variables. We assume each \\(\\epsilon_i \\sim N(0,\\sigma^2)\\), where \\(\\sigma^2\\) is a constant variance for the distribution of the response \\(y\\) for any combination of explanatory variables \\(x_1, \\ldots, x_p\\)."
+  },
+  {
+    "objectID": "supplemental/model-diagnostics-matrix.html#matrix-form-for-the-regression-model",
+    "href": "supplemental/model-diagnostics-matrix.html#matrix-form-for-the-regression-model",
+    "title": "Model Diagnostics",
+    "section": "Matrix Form for the Regression Model",
+    "text": "Matrix Form for the Regression Model\nWe can represent the Equation 1 and Equation 2 using matrix notation. Let\n\\[\n\\mathbf{Y} = \\begin{bmatrix}y_1 \\\\ y_2 \\\\ \\vdots \\\\y_n\\end{bmatrix}\n\\hspace{15mm}\n\\mathbf{X} = \\begin{bmatrix}x_{11} & x_{12} & \\dots & x_{1p} \\\\\nx_{21} & x_{22} & \\dots & x_{2p} \\\\\n\\vdots & \\vdots & \\ddots & \\vdots\\\\\nx_{n1} & x_{n2} & \\dots & x_{np} \\end{bmatrix}\n\\hspace{15mm}\n\\boldsymbol{\\beta}= \\begin{bmatrix}\\beta_0 \\\\ \\beta_1 \\\\ \\vdots \\\\ \\beta_p \\end{bmatrix}\n\\hspace{15mm}\n\\boldsymbol{\\epsilon}= \\begin{bmatrix}\\epsilon_1 \\\\ \\epsilon_2 \\\\ \\vdots \\\\ \\epsilon_n \\end{bmatrix}\n\\tag{3}\\]\nThus,\n\\[\\mathbf{Y} = \\mathbf{X}\\boldsymbol{\\beta} + \\mathbf{\\epsilon}\\]\nTherefore the estimated response for a given combination of explanatory variables and the associated residuals can be written as\n\\[\n\\hat{\\mathbf{Y}} = \\mathbf{X}\\hat{\\boldsymbol{\\beta}} \\hspace{10mm} \\mathbf{e} = \\mathbf{Y} - \\mathbf{X}\\hat{\\boldsymbol{\\beta}}\n\\tag{4}\\]"
+  },
+  {
+    "objectID": "supplemental/model-diagnostics-matrix.html#hat-matrix-leverage",
+    "href": "supplemental/model-diagnostics-matrix.html#hat-matrix-leverage",
+    "title": "Model Diagnostics",
+    "section": "Hat Matrix & Leverage",
+    "text": "Hat Matrix & Leverage\nRecall from the notes Matrix Form of Linear Regression that \\(\\hat{\\boldsymbol{\\beta}}\\) can be written as the following:\n\\[\n\\hat{\\boldsymbol{\\beta}} = (\\mathbf{X}^T\\mathbf{X})^{-1}\\mathbf{X}^T\\mathbf{Y}\n\\tag{5}\\]\nCombining Equation 4 and Equation 5, we can write \\(\\hat{\\mathbf{Y}}\\) as the following:\n\\[\n\\begin{aligned}\n\\hat{\\mathbf{Y}} &= \\mathbf{X}\\hat{\\boldsymbol{\\beta}} \\\\[10pt]\n&= \\mathbf{X}(\\mathbf{X}^T\\mathbf{X})^{-1}\\mathbf{X}^T\\mathbf{Y}\\\\\n\\end{aligned}\n\\tag{6}\\]\nWe define the hat matrix as an \\(n \\times n\\) matrix of the form \\(\\mathbf{H} = \\mathbf{X}(\\mathbf{X}^T\\mathbf{X})^{-1}\\mathbf{X}^T\\). Thus Equation 6 becomes\n\\[\n\\hat{\\mathbf{Y}} = \\mathbf{H}\\mathbf{Y}\n\\tag{7}\\]\nThe diagonal elements of the hat matrix are a measure of how far the predictor variables of each observation are from the means of the predictor variables. For example, \\(h_{ii}\\) is a measure of how far the values of the predictor variables for the \\(i^{th}\\) observation, \\(x_{i1}, x_{i2}, \\ldots, x_{ip}\\), are from the mean values of the predictor variables, \\(\\bar{x}_1, \\bar{x}_2, \\ldots, \\bar{x}_p\\). In the case of simple linear regression, the \\(i^{th}\\) diagonal, \\(h_{ii}\\), can be written as\n\\[\nh_{ii} =  \\frac{1}{n} + \\frac{(x_i - \\bar{x})^2}{\\sum_{j=1}^{n}(x_j-\\bar{x})^2}\n\\]\nWe call these diagonal elements, the leverage of each observation.\nThe diagonal elements of the hat matrix have the following properties:\n\n\\(0 \\leq h_ii \\leq 1\\)\n\\(\\sum\\limits_{i=1}^{n} h_{ii} = p+1\\), where \\(p\\) is the number of predictor variables in the model.\nThe mean hat value is \\(\\bar{h} = \\frac{\\sum\\limits_{i=1}^{n} h_{ii}}{n} = \\frac{p+1}{n}\\).\n\nUsing these properties, we consider a point to have high leverage if it has a leverage value that is more than 2 times the average. In other words, observations with leverage greater than \\(\\frac{2(p+1)}{n}\\) are considered to be high leverage points, i.e. outliers in the predictor variables. We are interested in flagging high leverage points, because they may have an influence on the regression coefficients.\nWhen there are high leverage points in the data, the regression line will tend towards those points; therefore, one property of high leverage points is that they tend to have small residuals. We will show this by rewriting the residuals from Equation 4 using Equation 7.\n\\[\n\\begin{aligned}\n\\mathbf{e} &= \\mathbf{Y} - \\hat{\\mathbf{Y}} \\\\[10pt]\n& = \\mathbf{Y} - \\mathbf{H}\\mathbf{Y} \\\\[10pt]\n&= (1-\\mathbf{H})\\mathbf{Y}\n\\end{aligned}\n\\tag{8}\\]\nNote that the identity matrix and hat matrix are idempotent, i.e. \\(\\mathbf{I}\\mathbf{I} = \\mathbf{I}\\), \\(\\mathbf{H}\\mathbf{H} = \\mathbf{H}\\). Thus, \\((\\mathbf{I} - \\mathbf{H})\\) is also idempotent. These matrices are also symmetric. Using these properties and Equation 8, we have that the variance-covariance matrix of the residuals \\(\\boldsymbol{e}\\), is\n\\[\n\\begin{aligned}\nVar(\\mathbf{e}) &= \\mathbf{e}\\mathbf{e}^T \\\\[10pt]\n&=  (1-\\mathbf{H})Var(\\mathbf{Y})^T(1-\\mathbf{H})^T \\\\[10pt]\n&= (1-\\mathbf{H})\\hat{\\sigma}^2(1-\\mathbf{H})^T  \\\\[10pt]\n&= \\hat{\\sigma}^2(1-\\mathbf{H})(1-\\mathbf{H})  \\\\[10pt]\n&= \\hat{\\sigma}^2(1-\\mathbf{H})\n\\end{aligned}\n\\tag{9}\\]\nwhere \\(\\hat{\\sigma}^2 = \\frac{\\sum_{i=1}^{n}e_i^2}{n-p-1}\\) is the estimated regression variance. Thus, the variance of the \\(i^{th}\\) residual is \\(Var(e_i) = \\hat{\\sigma}^2(1-h_{ii})\\). Therefore, the higher the leverage, the smaller the variance of the residual. Because the expected value of the residuals is 0, we conclude that points with high leverage tend to have smaller residuals than points with lower leverage."
+  },
+  {
+    "objectID": "supplemental/model-diagnostics-matrix.html#standardized-residuals",
+    "href": "supplemental/model-diagnostics-matrix.html#standardized-residuals",
+    "title": "Model Diagnostics",
+    "section": "Standardized Residuals",
+    "text": "Standardized Residuals\nIn general, we standardize a value by shifting by the expected value and rescaling by the standard deviation (or standard error). Thus, the \\(i^{th}\\) standardized residual takes the form\n\\[\nstd.res_i = \\frac{e_i - E(e_i)}{SE(e_i)}\n\\]\nThe expected value of the residuals is 0, i.e. \\(E(e_i) = 0\\). From Equation 9), the standard error of the residual is \\(SE(e_i) = \\hat{\\sigma}\\sqrt{1-h_{ii}}\\). Therefore,\n\\[\nstd.res_i = \\frac{e_i}{\\hat{\\sigma}\\sqrt{1-h_{ii}}}\n\\tag{10}\\]"
+  },
+  {
+    "objectID": "supplemental/model-diagnostics-matrix.html#cooks-distance",
+    "href": "supplemental/model-diagnostics-matrix.html#cooks-distance",
+    "title": "Model Diagnostics",
+    "section": "Cook’s Distance",
+    "text": "Cook’s Distance\nCook’s distance is a measure of how much each observation influences the model coefficients, and thus the predicted values. The Cook’s distance for the \\(i^{th}\\) observation can be written as\n\\[\nD_i = \\frac{(\\hat{\\mathbf{Y}} -\\hat{\\mathbf{Y}}_{(i)})^T(\\hat{\\mathbf{Y}} -\\hat{\\mathbf{Y}}_{(i)})}{(p+1)\\hat{\\sigma}}\n\\tag{11}\\]\nwhere \\(\\hat{\\mathbf{Y}}_{(i)}\\) is the vector of predicted values from the model fitted when the \\(i^{th}\\) observation is deleted. Cook’s Distance can be calculated without deleting observations one at a time, since Equation 12 below is mathematically equivalent to Equation 11.\n\\[\nD_i = \\frac{1}{p+1}std.res_i^2\\Bigg[\\frac{h_{ii}}{(1-h_{ii})}\\Bigg] = \\frac{e_i^2}{(p+1)\\hat{\\sigma}^2(1-h_{ii})}\\Bigg[\\frac{h_{ii}}{(1-h_{ii})}\\Bigg]\n\\tag{12}\\]"
+  },
+  {
+    "objectID": "supplemental/model-selection-criteria.html",
+    "href": "supplemental/model-selection-criteria.html",
+    "title": "Model Selection Criteria: AIC & BIC",
+    "section": "",
+    "text": "Note\n\n\n\nThe following supplemental notes were created by Dr. Maria Tackett for STA 210. They are provided for students who want to dive deeper into the mathematics behind regression and reflect some of the material covered in STA 211: Mathematics of Regression. Additional supplemental notes will be added throughout the semester.\nThis document discusses some of the mathematical details of Akaike’s Information Criterion (AIC) and Schwarz’s Bayesian Information Criterion (BIC). We assume the reader knowledge of the matrix form for multiple linear regression.Please see Matrix Notation for Multiple Linear Regression for a review."
+  },
+  {
+    "objectID": "supplemental/model-selection-criteria.html#maximum-likelihood-estimation-of-boldsymbolbeta-and-sigma",
+    "href": "supplemental/model-selection-criteria.html#maximum-likelihood-estimation-of-boldsymbolbeta-and-sigma",
+    "title": "Model Selection Criteria: AIC & BIC",
+    "section": "Maximum Likelihood Estimation of \\(\\boldsymbol{\\beta}\\) and \\(\\sigma\\)",
+    "text": "Maximum Likelihood Estimation of \\(\\boldsymbol{\\beta}\\) and \\(\\sigma\\)\nTo understand the formulas for AIC and BIC, we will first briefly explain the likelihood function and maximum likelihood estimates for regression.\nLet \\(\\mathbf{Y}\\) be \\(n \\times 1\\) matrix of responses, \\(\\mathbf{X}\\), the \\(n \\times (p+1)\\) matrix of predictors, and \\(\\boldsymbol{\\beta}\\), \\((p+1) \\times 1\\) matrix of coefficients. If the multiple linear regression model is correct then,\n\\[\n\\mathbf{Y} \\sim N(\\mathbf{X}\\boldsymbol{\\beta}, \\sigma^2)\n\\tag{1}\\]\nWhen we do linear regression, our goal is to estimate the unknown parameters \\(\\boldsymbol{\\beta}\\) and \\(\\sigma^2\\) from Equation 1. In Matrix Notation for Multiple Linear Regression, we showed a way to estimate these parameters using matrix alegbra. Another approach for estimating \\(\\boldsymbol{\\beta}\\) and \\(\\sigma^2\\) is using maximum likelihood estimation.\nA likelihood function is used to summarise the evidence from the data in support of each possible value of a model parameter. Using Equation 1, we will write the likelihood function for linear regression as\n\\[\nL(\\mathbf{X}, \\mathbf{Y}|\\boldsymbol{\\beta}, \\sigma^2) = \\prod\\limits_{i=1}^n (2\\pi \\sigma^2)^{-\\frac{1}{2}} \\exp\\bigg\\{-\\frac{1}{2\\sigma^2}\\sum\\limits_{i=1}^n(Y_i - \\mathbf{X}_i \\boldsymbol{\\beta})^T(Y_i - \\mathbf{X}_i \\boldsymbol{\\beta})\\bigg\\}\n\\tag{2}\\]\nwhere \\(Y_i\\) is the \\(i^{th}\\) response and \\(\\mathbf{X}_i\\) is the vector of predictors for the \\(i^{th}\\) observation. One approach estimating \\(\\boldsymbol{\\beta}\\) and \\(\\sigma^2\\) is to find the values of those parameters that maximize the likelihood in Equation 2, i.e. maximum likelhood estimation. To make the calculations more manageable, instead of maximizing the likelihood function, we will instead maximize its logarithm, i.e. the log-likelihood function. The values of the parameters that maximize the log-likelihood function are those that maximize the likelihood function. The log-likelihood function we will maximize is\n\\[\n\\begin{aligned}\n\\log L(\\mathbf{X}, \\mathbf{Y}|\\boldsymbol{\\beta}, \\sigma^2) &= \\sum\\limits_{i=1}^n -\\frac{1}{2}\\log(2\\pi\\sigma^2) -\\frac{1}{2\\sigma^2}\\sum\\limits_{i=1}^n(Y_i - \\mathbf{X}_i \\boldsymbol{\\beta})^T(Y_i - \\mathbf{X}_i \\boldsymbol{\\beta}) \\\\\n&= -\\frac{n}{2}\\log(2\\pi\\sigma^2) - \\frac{1}{2\\sigma^2}(\\mathbf{Y} - \\mathbf{X} \\boldsymbol{\\beta})^T(\\mathbf{Y} - \\mathbf{X} \\boldsymbol{\\beta})\\\\\n\\end{aligned}\n\\tag{3}\\]\n\nThe maximum likelihood estimate of \\(\\boldsymbol{\\beta}\\) and \\(\\sigma^2\\) are \\[\n\\hat{\\boldsymbol{\\beta}} = (\\mathbf{X}^T\\mathbf{X})^{-1}\\mathbf{X}^T\\mathbf{Y} \\hspace{10mm} \\hat{\\sigma}^2 = \\frac{1}{n}(\\mathbf{Y} - \\mathbf{X} \\boldsymbol{\\beta})^T(\\mathbf{Y} - \\mathbf{X} \\boldsymbol{\\beta}) = \\frac{1}{n}RSS\n\\tag{4}\\]\nwhere \\(RSS\\) is the residual sum of squares. Note that the maximum likelihood estimate is not exactly equal to the estimate of \\(\\sigma^2\\) we typically use \\(\\frac{RSS}{n-p-1}\\). This is because the maximum likelihood estimate of \\(\\sigma^2\\) in Equation 4 is a biased estimator of \\(\\sigma^2\\). When \\(n\\) is much larger than the number of predictors \\(p\\), then the differences in these two estimates are trivial."
+  },
+  {
+    "objectID": "supplemental/model-selection-criteria.html#aic",
+    "href": "supplemental/model-selection-criteria.html#aic",
+    "title": "Model Selection Criteria: AIC & BIC",
+    "section": "AIC",
+    "text": "AIC\nAkaike’s Information Criterion (AIC) is\n\\[\nAIC = -2 \\log L + 2(p+1)\n\\tag{5}\\]\nwhere \\(\\log L\\) is the log-likelihood. This is the general form of AIC that can be applied to a variety of models, but for now, let’s focus on AIC for mutliple linear regression.\n\\[\n\\begin{aligned}\nAIC &= -2 \\log L + 2(p+1) \\\\\n&= -2\\bigg[-\\frac{n}{2}\\log(2\\pi\\sigma^2) - \\frac{1}{2\\sigma^2}(\\mathbf{Y} - \\mathbf{X} \\boldsymbol{\\beta})^T(\\mathbf{Y} - \\mathbf{X} \\boldsymbol{\\beta})\\bigg] + 2(p+1) \\\\\n&= n\\log\\big(2\\pi\\frac{RSS}{n}\\big) + \\frac{1}{RSS/n}RSS \\\\\n&= n\\log(2\\pi) + n\\log(RSS) - n\\log(n) + 2(p+1)\n\\end{aligned}\n\\tag{6}\\]"
+  },
+  {
+    "objectID": "supplemental/model-selection-criteria.html#bic",
+    "href": "supplemental/model-selection-criteria.html#bic",
+    "title": "Model Selection Criteria: AIC & BIC",
+    "section": "BIC",
+    "text": "BIC\n[To be added.]"
+  },
+  {
+    "objectID": "supplemental/slr-derivations.html",
+    "href": "supplemental/slr-derivations.html",
+    "title": "Deriving the Least-Squares Estimates for Simple Linear Regression",
+    "section": "",
+    "text": "Note\n\n\n\nThe following supplemental notes were created by Dr. Maria Tackett for STA 210. They are provided for students who want to dive deeper into the mathematics behind regression and reflect some of the material covered in STA 211: Mathematics of Regression. Additional supplemental notes will be added throughout the semester.\n\n\nThis document contains the mathematical details for deriving the least-squares estimates for slope (\\(\\beta_1\\)) and intercept (\\(\\beta_0\\)). We obtain the estimates, \\(\\hat{\\beta}_1\\) and \\(\\hat{\\beta}_0\\) by finding the values that minimize the sum of squared residuals, as shown in Equation 1.\n\\[\nSSR = \\sum\\limits_{i=1}^{n}[y_i - \\hat{y}_i]^2 = [y_i - (\\hat{\\beta}_0 + \\hat{\\beta}_1 x_i)]^2 = [y_i - \\hat{\\beta}_0 - \\hat{\\beta}_1 x_i]^2\n\\tag{1}\\]\nRecall that we can find the values of \\(\\hat{\\beta}_1\\) and \\(\\hat{\\beta}_0\\) that minimize /eq-ssr by taking the partial derivatives of Equation 1 and setting them to 0. Thus, the values of \\(\\hat{\\beta}_1\\) and \\(\\hat{\\beta}_0\\) that minimize the respective partial derivative also minimize the sum of squared residuals. The partial derivatives are shown in Equation 2.\n\\[\n\\begin{aligned}\n\\frac{\\partial \\text{SSR}}{\\partial \\hat{\\beta}_1} &= -2 \\sum\\limits_{i=1}^{n}x_i(y_i - \\hat{\\beta}_0 - \\hat{\\beta}_1 x_i)  \\\\\n\\frac{\\partial \\text{SSR}}{\\partial \\hat{\\beta}_0} &= -2 \\sum\\limits_{i=1}^{n}(y_i - \\hat{\\beta}_0 - \\hat{\\beta}_1 x_i)\n\\end{aligned}\n\\tag{2}\\]\nThe derivation of deriving \\(\\hat{\\beta}_0\\) is shown in Equation 3.\n\\[\n\\begin{aligned}\\frac{\\partial \\text{SSR}}{\\partial \\hat{\\beta}_0} &= -2 \\sum\\limits_{i=1}^{n}(y_i - \\hat{\\beta}_0 - \\hat{\\beta}_1 x_i) = 0 \\\\&\\Rightarrow -\\sum\\limits_{i=1}^{n}(y_i + \\hat{\\beta}_0 + \\hat{\\beta}_1 x_i) = 0 \\\\&\\Rightarrow - \\sum\\limits_{i=1}^{n}y_i + n\\hat{\\beta}_0 + \\hat{\\beta}_1\\sum\\limits_{i=1}^{n}x_i = 0 \\\\&\\Rightarrow n\\hat{\\beta}_0  = \\sum\\limits_{i=1}^{n}y_i - \\hat{\\beta}_1\\sum\\limits_{i=1}^{n}x_i \\\\&\\Rightarrow \\hat{\\beta}_0  = \\frac{1}{n}\\Big(\\sum\\limits_{i=1}^{n}y_i - \\hat{\\beta}_1\\sum\\limits_{i=1}^{n}x_i\\Big)\\\\&\\Rightarrow \\hat{\\beta}_0  = \\bar{y} - \\hat{\\beta}_1 \\bar{x} \\\\\\end{aligned}\n\\tag{3}\\]\nThe derivation of \\(\\hat{\\beta}_1\\) using the \\(\\hat{\\beta}_0\\) we just derived is shown in Equation 4.\n\\[\n\\begin{aligned}&\\frac{\\partial \\text{SSR}}{\\partial \\hat{\\beta}_1} = -2 \\sum\\limits_{i=1}^{n}x_i(y_i - \\hat{\\beta}_0 - \\hat{\\beta}_1 x_i) = 0  \\\\&\\Rightarrow -\\sum\\limits_{i=1}^{n}x_iy_i + \\hat{\\beta}_0\\sum\\limits_{i=1}^{n}x_i + \\hat{\\beta}_1\\sum\\limits_{i=1}^{n}x_i^2 = 0 \\\\\\text{(Fill in }\\hat{\\beta}_0\\text{)}&\\Rightarrow -\\sum\\limits_{i=1}^{n}x_iy_i + (\\bar{y} - \\hat{\\beta}_1\\bar{x})\\sum\\limits_{i=1}^{n}x_i + \\hat{\\beta}_1\\sum\\limits_{i=1}^{n}x_i^2 = 0 \\\\&\\Rightarrow  (\\bar{y} - \\hat{\\beta}_1\\bar{x})\\sum\\limits_{i=1}^{n}x_i + \\hat{\\beta}_1\\sum\\limits_{i=1}^{n}x_i^2 = \\sum\\limits_{i=1}^{n}x_iy_i \\\\&\\Rightarrow \\bar{y}\\sum\\limits_{i=1}^{n}x_i - \\hat{\\beta}_1\\bar{x}\\sum\\limits_{i=1}^{n}x_i + \\hat{\\beta}_1\\sum\\limits_{i=1}^{n}x_i^2 = \\sum\\limits_{i=1}^{n}x_iy_i \\\\&\\Rightarrow n\\bar{y}\\bar{x} - \\hat{\\beta}_1n\\bar{x}^2 + \\hat{\\beta}_1\\sum\\limits_{i=1}^{n}x_i^2 = \\sum\\limits_{i=1}^{n}x_iy_i \\\\&\\Rightarrow \\hat{\\beta}_1\\sum\\limits_{i=1}^{n}x_i^2 - \\hat{\\beta}_1n\\bar{x}^2  = \\sum\\limits_{i=1}^{n}x_iy_i - n\\bar{y}\\bar{x} \\\\&\\Rightarrow \\hat{\\beta}_1\\Big(\\sum\\limits_{i=1}^{n}x_i^2 -n\\bar{x}^2\\Big)  = \\sum\\limits_{i=1}^{n}x_iy_i - n\\bar{y}\\bar{x} \\\\ &\\hat{\\beta}_1 = \\frac{\\sum\\limits_{i=1}^{n}x_iy_i - n\\bar{y}\\bar{x}}{\\sum\\limits_{i=1}^{n}x_i^2 -n\\bar{x}^2}\\end{aligned}\n\\tag{4}\\]\nTo write \\(\\hat{\\beta}_1\\) in a form that’s more recognizable, we will use the following:\n\\[\n\\sum x_iy_i - n\\bar{y}\\bar{x} = \\sum(x - \\bar{x})(y - \\bar{y}) = (n-1)\\text{Cov}(x,y)\n\\tag{5}\\]\n\\[\n\\sum x_i^2 - n\\bar{x}^2 - \\sum(x - \\bar{x})^2 = (n-1)s_x^2\n\\tag{6}\\]\nwhere \\(\\text{Cov}(x,y)\\) is the covariance of \\(x\\) and \\(y\\), and \\(s_x^2\\) is the sample variance of \\(x\\) (\\(s_x\\) is the sample standard deviation).\nThus, applying Equation 5 and Equation 6, we have\n\\[\n\\begin{aligned}\\hat{\\beta}_1 &= \\frac{\\sum\\limits_{i=1}^{n}x_iy_i - n\\bar{y}\\bar{x}}{\\sum\\limits_{i=1}^{n}x_i^2 -n\\bar{x}^2} \\\\&= \\frac{\\sum\\limits_{i=1}^{n}(x-\\bar{x})(y-\\bar{y})}{\\sum\\limits_{i=1}^{n}(x-\\bar{x})^2}\\\\&= \\frac{(n-1)\\text{Cov}(x,y)}{(n-1)s_x^2}\\\\&= \\frac{\\text{Cov}(x,y)}{s_x^2}\\end{aligned}\n\\tag{7}\\]\nThe correlation between \\(x\\) and \\(y\\) is \\(r = \\frac{\\text{Cov}(x,y)}{s_x s_y}\\). Thus, \\(\\text{Cov}(x,y) = r s_xs_y\\). Plugging this into Equation 7, we have\n\\[\n\\hat{\\beta}_1 = \\frac{\\text{Cov}(x,y)}{s_x^2} = r\\frac{s_ys_x}{s_x^2} = r\\frac{s_y}{s_x}\n\\tag{8}\\]"
   },
   {
     "objectID": "weeks/week-1.html#自然語言處理",
@@ -131,411 +537,5 @@
     "title": "Week 2",
     "section": "Perform",
     "text": "Perform\n⌨️ Lab 1 - Meet the toolkit\n\n\nBack to course schedule ⏎"
-  },
-  {
-    "objectID": "project-tips-resources.html",
-    "href": "project-tips-resources.html",
-    "title": "Project tips + resources",
-    "section": "",
-    "text": "R Data Sources for Regression Analysis\nFiveThirtyEight data\nTidyTuesday\n\n\n\n\n\nWorld Health Organization\nThe National Bureau of Economic Research\nInternational Monetary Fund\nGeneral Social Survey\nUnited Nations Data\nUnited Nations Statistics Division\nU.K. Data\nU.S. Data\nU.S. Census Data\nEuropean Statistics\nStatistics Canada\nPew Research\nUNICEF\nCDC\nWorld Bank\nElection Studies"
-  },
-  {
-    "objectID": "project-tips-resources.html#tips",
-    "href": "project-tips-resources.html#tips",
-    "title": "Project tips + resources",
-    "section": "Tips",
-    "text": "Tips\n\nAsk questions if any of the expectations are unclear.\nCode: In your write up your code should be hidden (echo = FALSE) so that your document is neat and easy to read. However your document should include all your code such that if I re-knit your qmd file I should be able to obtain the results you presented.\n\nException: If you want to highlight something specific about a piece of code, you’re welcome to show that portion.\n\nMerge conflicts will happen, issues will arise, and that’s fine! Commit and push often, and ask questions when stuck.\nMake sure each team member is contributing, both in terms of quality and quantity of contribution (we will be reviewing commits from different team members).\nAll team members are expected to contribute equally to the completion of this assignment and group assessments will be given at its completion - anyone judged to not have sufficient contributed to the final product will have their grade penalized. While different teams members may have different backgrounds and abilities, it is the responsibility of every team member to understand how and why all code and approaches in the assignment works."
-  },
-  {
-    "objectID": "project-tips-resources.html#formatting-communication-tips",
-    "href": "project-tips-resources.html#formatting-communication-tips",
-    "title": "Project tips + resources",
-    "section": "Formatting + communication tips",
-    "text": "Formatting + communication tips\n\nSuppress Code, Warnings, & Messages\n\nInclude the following code in a code chunk at the top of your .qmd file to suppress all code, warnings, and other messages. Use the code chunk header {r set-up, include = FALSE} to suppress this set up code.\n\nknitr::opts_chunk$set(echo = FALSE,\n                      warning = FALSE, \n                      message = FALSE)\n\n\nHeaders\n\nUse headers to clearly label each section.\nInspect the document outline to review your headers and sub-headers.\n\n\n\nReferences\n\nInclude all references in a section called “References” at the end of the report.\nThis course does not have specific requirements for formatting citations and references.\n\n\n\nAppendix\n\nIf you have additional work that does not fit or does not belong in the body of the report, you may put it at the end of the document in section called “Appendix”.\nThe items in the appendix should be properly labeled.\nThe appendix should only be for additional material. The reader should be able to fully understand your report without viewing content in the appendix.\n\n\n\nResize figures\nResize plots and figures, so you have more space for the narrative.\n\n\nArranging plots\nArrange plots in a grid, instead of one after the other. This is especially useful when displaying plots for exploratory data analysis and to check assumptions.\nIf you’re using ggplot2 functions, the patchwork package makes it easy to arrange plots in a grid. See the documentation and examples here.\n\n\nPlot titles and axis labels\nBe sure all plot titles and axis labels are visible and easy to read.\n\nUse informative titles, not variable names, for titles and axis labels.\n\n❌ NO! The x-axis is hard to read because the names overlap.\n\nggplot(data = mpg, aes(x = manufacturer)) +\n  geom_bar()\n\n\n\n\n✅ YES! Names are readable\n\nggplot(data = mpg, aes(y = manufacturer)) +\n  geom_bar()\n\n\n\n\n\n\nDo a little more to make the plot look professional!\n\nInformative title and axis labels\nFlipped coordinates to make names readable\nArranged bars based on count\nCapitalized manufacturer names\nOptional: Added color - Use a coordinated color scheme throughout paper / presentation\nOptional: Applied a theme - Use same theme throughout paper / presentation\n\n\nmpg %>%\n  count(manufacturer) %>%\n  mutate(manufacturer = str_to_title(manufacturer)) %>%\n  ggplot(aes(y = fct_reorder(manufacturer,n), x = n)) +\n  geom_bar(stat = \"identity\", fill = \"steelblue\") +\n  labs(x = \"Manufacturer\", \n       y = \"Count\", \n       title = \"The most common manufacturer is Dodge\") +\n  theme_minimal() \n\n\n\n\n\n\nTables and model output\n\nUse the kable function from the knitr package to neatly output all tables and model output. This will also ensure all model coefficients are displayed.\n\nUse the digits argument to display only 3 or 4 significant digits.\nUse the caption argument to add captions to your table.\n\n\n\nmodel <- lm(mpg ~ hp, data = mtcars)\ntidy(model) %>%\n  kable(digits = 3)\n\n\n\n\nterm\nestimate\nstd.error\nstatistic\np.value\n\n\n\n\n(Intercept)\n30.099\n1.634\n18.421\n0\n\n\nhp\n-0.068\n0.010\n-6.742\n0\n\n\n\n\n\n\n\nGuidelines for communicating results\n\nDon’t use variable names in your narrative! Use descriptive terms, so the reader understands your narrative without relying on the data dictionary.\n\n❌ There is a negative linear relationship between mpg and hp.\n✅ There is a negative linear relationship between a car’s fuel economy (in miles per gallon) and its horsepower.\n\nKnow your audience: Your report should be written for a general audience who has an understanding of statistics at the level of STA 210.\nAvoid subject matter jargon: Don’t assume the audience knows all of the specific terminology related to your subject area. If you must use jargon, include a brief definition the first time you introduce a term.\nTell the “so what”: Your report and presentation should be more than a list of interpretations and technical definitions. Focus on what the results mean, i.e. what you want the audience to know about your topic after reading your report or viewing your presentation.\n\n❌ For every one unit increase in horsepower, we expect the miles per gallon to decrease by 0.068 units, on average.\n✅ If the priority is to have good fuel economy, then one should choose a car with lower horsepower. Based on our model, the fuel economy is expected to decrease, on average, by 0.68 miles per gallon for every 10 additional horsepower.\n\nTell a story: All visualizations, tables, model output, and narrative should tell a cohesive story!\nUse one voice: Though multiple people are writing the report, it should read as if it’s from a single author. At least one team member should read through the report before submission to ensure it reads like a cohesive document."
-  },
-  {
-    "objectID": "project-tips-resources.html#additional-resources",
-    "href": "project-tips-resources.html#additional-resources",
-    "title": "Project tips + resources",
-    "section": "Additional resources",
-    "text": "Additional resources\n\nR for Data Science\nQuarto Documentation\nData visualization\n\nggplot2 Reference\nggplot2: Elegant Graphics for Data Analysis\nData Visualization: A Practice Introduction\nPatchwork R Package"
-  },
-  {
-    "objectID": "course-overview.html",
-    "href": "course-overview.html",
-    "title": "LING8505:計算語言學與語言學理論",
-    "section": "",
-    "text": "沒有理論，就不似(/是)科學。"
-  },
-  {
-    "objectID": "course-overview.html#課程先備知識建議",
-    "href": "course-overview.html#課程先備知識建議",
-    "title": "LING8505:計算語言學與語言學理論",
-    "section": "課程先備知識建議",
-    "text": "課程先備知識建議\n\n熟悉 Python | 繳交作業時，我們會要求你使用 Python 來完成。如果你不確定狀況，建議你先參考 Programming for Linguists 這類課程，確認你已經熟悉 Python 的基本語法。\n大學初級微積分與線性代數 | 瞭解微積分與線性代數的基本概念，包括導數、積分、矩陣、向量、線性方程式、線性空間、線性變換、特徵值與特徵向量等。\n機率與統計 | 熟悉基本的機率分佈，推估參數，以及機率的加法定理與乘法定理。"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "計算語言學與語言學理論",
-    "section": "",
-    "text": "週次\n日期\n主題\n預習 📖\n投影片\n助教課\n課堂練習\n作業\n\n\n\n\n1\n02/23\n課程導論\n\norientation\n\n\n\n\n\n2\n03/02\n計算語言學導論\n\n\n\n\n\n\n\n3\n03/09\n計算構詞與詞彙 (1)\nslp3-02\n\n\n\n\n\n\n4\n03/16\n計算構詞與詞彙 (2)\nslp3-23\n\n\n\n\n\n\n5\n03/23\n計算構詞與詞彙 (3)\nslp3-21\n\n\n\n\n\n\n6\n03/30\n計算構詞與詞彙 (4)\nslp3-25\n\n\n\n\n\n\n7\n04/06\n句法理論與剖析器\nslp3-18\n\n\n\n\n\n\n8\n04/13\n認知語法與計算\n\n\n\n\n\n\n\n9\n04/20\n語意表徵 (1)\nslp3-06\n\n\n\n\n\n\n10\n04/27\n語意表徵 (2)\nslp3-10\n\n\n\n\n\n\n11\n05/04\n語意表徵 (3) & 業師分享\nslp3-11\n\n\n\n\n\n\n12\n05/11\n語意表徵 (4)\nslp3-22\n\n\n\n\n\n\n13\n05/18\n語音與社會變異\nslp3-28\n\n\n\n\n\n\n14\n05/25\n多模態與言談分析\nslp3-15\n\n\n\n\n\n\n15\n06/01\n綜合討論\n\n\n\n\n\n\n\n16\n06/08\n期末報告"
-  },
-  {
-    "objectID": "course-team.html",
-    "href": "course-team.html",
-    "title": "教學團隊",
-    "section": "",
-    "text": "謝舒凱，德國杜賓根大學計算語言學博士，臺大語言學研究所副教授。\n\n\n\nOffice hours\nLocation\n\n\n\n\n個別另約\nR307, GIL."
-  },
-  {
-    "objectID": "course-team.html#助教",
-    "href": "course-team.html#助教",
-    "title": "教學團隊",
-    "section": "助教",
-    "text": "助教\n\n\n\n\n\nemail\n\n\n\n\n\n王伯雅，語言所博士班\ndiffere94nt@gmail.com\n\n\n\n古貿昌，語言所博士班\n\n\n\n\n陳韋伶，語言所博士班\n\n\n\n\n陳品而，語言所博士班\n\n\n\n\n周昕妤，語言所碩士班\n\n\n\n\n張鈺琳，語言所碩士班"
-  },
-  {
-    "objectID": "supplemental/mlr-matrix.html",
-    "href": "supplemental/mlr-matrix.html",
-    "title": "Matrix Notation for Multiple Linear Regression",
-    "section": "",
-    "text": "Note\n\n\n\nThe following supplemental notes were created by Dr. Maria Tackett for STA 210. They are provided for students who want to dive deeper into the mathematics behind regression and reflect some of the material covered in STA 211: Mathematics of Regression. Additional supplemental notes will be added throughout the semester.\nThis document provides the details for the matrix notation for multiple linear regression. We assume the reader has familiarity with some linear algebra. Please see Chapter 1 of An Introduction to Statistical Learning for a brief review of linear algebra."
-  },
-  {
-    "objectID": "supplemental/mlr-matrix.html#introduction",
-    "href": "supplemental/mlr-matrix.html#introduction",
-    "title": "Matrix Notation for Multiple Linear Regression",
-    "section": "Introduction",
-    "text": "Introduction\nSuppose we have \\(n\\) observations. Let the \\(i^{th}\\) be \\((x_{i1}, \\ldots, x_{ip}, y_i)\\), such that \\(x_{i1}, \\ldots, x_{ip}\\) are the explanatory variables (predictors) and \\(y_i\\) is the response variable. We assume the data can be modeled using the least-squares regression model, such that the mean response for a given combination of explanatory variables follows the form in Equation 1.\n\\[\ny = \\beta_0 + \\beta_1 x_1 + \\dots + \\beta_p x_p\n\\tag{1}\\]\nWe can write the response for the \\(i^{th}\\) observation as shown in Equation 2\n\\[\ny_i = \\beta_0 + \\beta_1 x_{i1} + \\dots + \\beta_p x_{ip} + \\epsilon_i\n\\tag{2}\\]\nsuch that \\(\\epsilon_i\\) is the amount \\(y_i\\) deviates from \\(\\mu\\{y|x_{i1}, \\ldots, x_{ip}\\}\\), the mean response for a given combination of explanatory variables. We assume each \\(\\epsilon_i \\sim N(0,\\sigma^2)\\), where \\(\\sigma^2\\) is a constant variance for the distribution of the response \\(y\\) for any combination of explanatory variables \\(x_1, \\ldots, x_p\\)."
-  },
-  {
-    "objectID": "supplemental/mlr-matrix.html#matrix-representation-for-the-regression-model",
-    "href": "supplemental/mlr-matrix.html#matrix-representation-for-the-regression-model",
-    "title": "Matrix Notation for Multiple Linear Regression",
-    "section": "Matrix Representation for the Regression Model",
-    "text": "Matrix Representation for the Regression Model\nWe can represent the Equation 1 and Equation 2 using matrix notation. Let\n\\[\n\\mathbf{Y} = \\begin{bmatrix}y_1 \\\\ y_2 \\\\ \\vdots \\\\y_n\\end{bmatrix}\n\\hspace{15mm}\n\\mathbf{X} = \\begin{bmatrix}x_{11} & x_{12} & \\dots & x_{1p} \\\\\nx_{21} & x_{22} & \\dots & x_{2p} \\\\\n\\vdots & \\vdots & \\ddots & \\vdots\\\\\nx_{n1} & x_{n2} & \\dots & x_{np} \\end{bmatrix}\n\\hspace{15mm}\n\\boldsymbol{\\beta}= \\begin{bmatrix}\\beta_0 \\\\ \\beta_1 \\\\ \\vdots \\\\ \\beta_p \\end{bmatrix}\n\\hspace{15mm}\n\\boldsymbol{\\epsilon}= \\begin{bmatrix}\\epsilon_1 \\\\ \\epsilon_2 \\\\ \\vdots \\\\ \\epsilon_n \\end{bmatrix}\n\\tag{3}\\]\nThus,\n\\[\\mathbf{Y} = \\mathbf{X}\\boldsymbol{\\beta} + \\mathbf{\\epsilon}\\]\nTherefore the estimated response for a given combination of explanatory variables and the associated residuals can be written as\n\\[\n\\hat{\\mathbf{Y}} = \\mathbf{X}\\hat{\\boldsymbol{\\beta}} \\hspace{10mm} \\mathbf{e} = \\mathbf{Y} - \\mathbf{X}\\hat{\\boldsymbol{\\beta}}\n\\tag{4}\\]"
-  },
-  {
-    "objectID": "supplemental/mlr-matrix.html#estimating-the-coefficients",
-    "href": "supplemental/mlr-matrix.html#estimating-the-coefficients",
-    "title": "Matrix Notation for Multiple Linear Regression",
-    "section": "Estimating the Coefficients",
-    "text": "Estimating the Coefficients\nThe least-squares model is the one that minimizes the sum of the squared residuals. Therefore, we want to find the coefficients, \\(\\hat{\\boldsymbol{\\beta}}\\) that minimizes\n\\[\n\\sum\\limits_{i=1}^{n} e_{i}^2 = \\mathbf{e}^T\\mathbf{e} = (\\mathbf{Y} - \\mathbf{X}\\hat{\\boldsymbol{\\beta}})^T(\\mathbf{Y} - \\mathbf{X}\\hat{\\boldsymbol{\\beta}})\n\\tag{5}\\]\nwhere \\(\\mathbf{e}^T\\), the transpose of the matrix \\(\\mathbf{e}\\).\n\\[\n(\\mathbf{Y} - \\mathbf{X}\\hat{\\boldsymbol{\\beta}})^T(\\mathbf{Y} - \\mathbf{X}\\hat{\\boldsymbol{\\beta}}) = (\\mathbf{Y}^T\\mathbf{Y} -\n\\mathbf{Y}^T \\mathbf{X}\\hat{\\boldsymbol{\\beta}} - (\\hat{\\boldsymbol{\\beta}}{}^{T}\\mathbf{X}^T\\mathbf{Y} +\n\\hat{\\boldsymbol{\\beta}}{}^{T}\\mathbf{X}^T\\mathbf{X}\n\\hat{\\boldsymbol{\\beta}})\n\\tag{6}\\]\nNote that \\((\\mathbf{Y^T}\\mathbf{X}\\hat{\\boldsymbol{\\beta}})^T = \\hat{\\boldsymbol{\\beta}}{}^{T}\\mathbf{X}^T\\mathbf{Y}\\). Since these are both constants (i.e. \\(1\\times 1\\) vectors), \\(\\mathbf{Y^T}\\mathbf{X}\\hat{\\boldsymbol{\\beta}} = \\hat{\\boldsymbol{\\beta}}{}^{T}\\mathbf{X}^T\\mathbf{Y}\\). Thus, Equation 6 becomes\n\\[\n\\mathbf{Y}^T\\mathbf{Y} - 2 \\mathbf{X}^T\\hat{\\boldsymbol{\\beta}}{}^{T}\\mathbf{Y} + \\hat{\\boldsymbol{\\beta}}{}^{T}\\mathbf{X}^T\\mathbf{X}\n\\hat{\\boldsymbol{\\beta}}\n\\]\nSince we want to find the \\(\\hat{\\boldsymbol{\\beta}}\\) that minimizes Equation 5, will find the value of \\(\\hat{\\boldsymbol{\\beta}}\\) such that the derivative with respect to \\(\\hat{\\boldsymbol{\\beta}}\\) is equal to 0.\n\\[\n\\begin{aligned}\n\\frac{\\partial \\mathbf{e}^T\\mathbf{e}}{\\partial \\hat{\\boldsymbol{\\beta}}} & = \\frac{\\partial}{\\partial \\hat{\\boldsymbol{\\beta}}}(\\mathbf{Y}^T\\mathbf{Y} - 2 \\mathbf{X}^T\\hat{\\boldsymbol{\\beta}}{}^T\\mathbf{Y} + \\hat{\\boldsymbol{\\beta}}{}^{T}\\mathbf{X}^T\\mathbf{X}\\hat{\\boldsymbol{\\beta}}) = 0 \\\\\n&\\Rightarrow - 2 \\mathbf{X}^T\\mathbf{Y} + 2 \\mathbf{X}^T\\mathbf{X}\\hat{\\boldsymbol{\\beta}} = 0 \\\\\n& \\Rightarrow 2 \\mathbf{X}^T\\mathbf{Y} = 2 \\mathbf{X}^T\\mathbf{X}\\hat{\\boldsymbol{\\beta}} \\\\\n& \\Rightarrow \\mathbf{X}^T\\mathbf{Y} = \\mathbf{X}^T\\mathbf{X}\\hat{\\boldsymbol{\\beta}} \\\\\n& \\Rightarrow (\\mathbf{X}^T\\mathbf{X})^{-1}\\mathbf{X}^T\\mathbf{Y} = (\\mathbf{X}^T\\mathbf{X})^{-1}\\mathbf{X}^T\\mathbf{X}\\hat{\\boldsymbol{\\beta}} \\\\\n& \\Rightarrow (\\mathbf{X}^T\\mathbf{X})^{-1}\\mathbf{X}^T\\mathbf{Y} = \\mathbf{I}\\hat{\\boldsymbol{\\beta}}\n\\end{aligned}\n\\tag{7}\\]\nThus, the estimate of the model coefficients is \\(\\hat{\\boldsymbol{\\beta}} = (\\mathbf{X}^T\\mathbf{X})^{-1}\\mathbf{X}^T\\mathbf{Y}\\)."
-  },
-  {
-    "objectID": "supplemental/mlr-matrix.html#variance-covariance-matrix-of-the-coefficients",
-    "href": "supplemental/mlr-matrix.html#variance-covariance-matrix-of-the-coefficients",
-    "title": "Matrix Notation for Multiple Linear Regression",
-    "section": "Variance-covariance matrix of the coefficients",
-    "text": "Variance-covariance matrix of the coefficients\nWe will use two properties to derive the form of the variance-covariance matrix of the coefficients:\n\n\\(E[\\boldsymbol{\\epsilon}\\boldsymbol{\\epsilon}^T] = \\sigma^2I\\)\n\\(\\hat{\\boldsymbol{\\beta}} = \\boldsymbol{\\beta} + (\\mathbf{X}^T\\mathbf{X})^{-1}\\epsilon\\)\n\nFirst, we will show that \\(E[\\boldsymbol{\\epsilon}\\boldsymbol{\\epsilon}^T] = \\sigma^2I\\)\n\\[\n\\begin{aligned}\nE[\\boldsymbol{\\epsilon}\\boldsymbol{\\epsilon}^T] &= E \\begin{bmatrix}\\epsilon_1  & \\epsilon_2 & \\dots & \\epsilon_n \\end{bmatrix}\\begin{bmatrix}\\epsilon_1 \\\\ \\epsilon_2 \\\\ \\vdots \\\\ \\epsilon_n \\end{bmatrix}  \\\\\n& = E \\begin{bmatrix} \\epsilon_1^2  & \\epsilon_1 \\epsilon_2 & \\dots & \\epsilon_1 \\epsilon_n \\\\\n\\epsilon_2 \\epsilon_1 & \\epsilon_2^2 & \\dots & \\epsilon_2 \\epsilon_n \\\\\n\\vdots & \\vdots & \\ddots & \\vdots \\\\\n\\epsilon_n \\epsilon_1 & \\epsilon_n \\epsilon_2 & \\dots & \\epsilon_n^2\n\\end{bmatrix} \\\\\n& = \\begin{bmatrix} E[\\epsilon_1^2]  & E[\\epsilon_1 \\epsilon_2] & \\dots & E[\\epsilon_1 \\epsilon_n] \\\\\nE[\\epsilon_2 \\epsilon_1] & E[\\epsilon_2^2] & \\dots & E[\\epsilon_2 \\epsilon_n] \\\\\n\\vdots & \\vdots & \\ddots & \\vdots \\\\\nE[\\epsilon_n \\epsilon_1] & E[\\epsilon_n \\epsilon_2] & \\dots & E[\\epsilon_n^2]\n\\end{bmatrix}\n\\end{aligned}\n\\tag{8}\\]\nRecall, the regression assumption that the errors \\(\\epsilon_i's\\) are Normally distributed with mean 0 and variance \\(\\sigma^2\\). Thus, \\(E(\\epsilon_i^2) = Var(\\epsilon_i) = \\sigma^2\\) for all \\(i\\). Additionally, recall the regression assumption that the errors are uncorrelated, i.e. \\(E(\\epsilon_i \\epsilon_j) = Cov(\\epsilon_i, \\epsilon_j) = 0\\) for all \\(i,j\\). Using these assumptions, we can write Equation 8 as\n\\[\nE[\\mathbf{\\epsilon}\\mathbf{\\epsilon}^T]  = \\begin{bmatrix} \\sigma^2  & 0 & \\dots & 0 \\\\\n0 & \\sigma^2  & \\dots & 0 \\\\\n\\vdots & \\vdots & \\ddots & \\vdots \\\\\n0 & 0 & \\dots & \\sigma^2\n\\end{bmatrix} = \\sigma^2 \\mathbf{I}\n\\tag{9}\\]\nwhere \\(\\mathbf{I}\\) is the \\(n \\times n\\) identity matrix.\nNext, we show that \\(\\hat{\\boldsymbol{\\beta}} = \\boldsymbol{\\beta} + (\\mathbf{X}^T\\mathbf{X})^{-1}\\epsilon\\).\nRecall that the \\(\\hat{\\boldsymbol{\\beta}} = (\\mathbf{X}^T\\mathbf{X})^{-1}\\mathbf{X}^T\\mathbf{Y}\\) and \\(\\mathbf{Y} = \\mathbf{X}\\mathbf{\\beta} + \\mathbf{\\epsilon}\\). Then,\n\\[\n\\begin{aligned}\n\\hat{\\boldsymbol{\\beta}} &= (\\mathbf{X}^T\\mathbf{X})^{-1}\\mathbf{X}^T\\mathbf{Y} \\\\\n&= (\\mathbf{X}^T\\mathbf{X})^{-1}\\mathbf{X}^T(\\mathbf{X}\\boldsymbol{\\beta} + \\boldsymbol{\\epsilon}) \\\\\n&= \\boldsymbol{\\beta} + (\\mathbf{X}^T\\mathbf{X})^{-1}\\mathbf{X}^T \\mathbf{\\epsilon} \\\\\n\\end{aligned}\n\\tag{10}\\]\nUsing these two properties, we derive the form of the variance-covariance matrix for the coefficients. Note that the covariance matrix is \\(E[(\\hat{\\boldsymbol{\\beta}} - \\boldsymbol{\\beta})(\\hat{\\boldsymbol{\\beta}} - \\boldsymbol{\\beta})^T]\\)\n\\[\n\\begin{aligned}\nE[(\\hat{\\boldsymbol{\\beta}} - \\boldsymbol{\\beta})(\\hat{\\boldsymbol{\\beta}} - \\boldsymbol{\\beta})^T] &= E[(\\boldsymbol{\\beta} + (\\mathbf{X}^T\\mathbf{X})^{-1} \\mathbf{X}^T \\boldsymbol{\\epsilon} - \\boldsymbol{\\beta})(\\boldsymbol{\\beta} + (\\mathbf{X}^T\\mathbf{X})^{-1} \\mathbf{X}^T \\boldsymbol{\\epsilon} - \\boldsymbol{\\beta})^T]\\\\\n& = E[(\\mathbf{X}^T\\mathbf{X})^{-1} \\mathbf{X}^T \\boldsymbol{\\epsilon}\\boldsymbol{\\epsilon}^T\\mathbf{X}(\\mathbf{X}^T\\mathbf{X})^{-1}] \\\\\n& = (\\mathbf{X}^T\\mathbf{X})^{-1} \\mathbf{X}^T E[\\boldsymbol{\\epsilon}\\boldsymbol{\\epsilon}^T]\\mathbf{X}(\\mathbf{X}^T\\mathbf{X})^{-1}\\\\\n& = (\\mathbf{X}^T\\mathbf{X})^{-1} \\mathbf{X}^T (\\sigma^2\\mathbf{I})\\mathbf{X}(\\mathbf{X}^T\\mathbf{X})^{-1}\\\\\n&= \\sigma^2\\mathbf{I}(\\mathbf{X}^T\\mathbf{X})^{-1}\\mathbf{X}^T\\mathbf{X}(\\mathbf{X}^T\\mathbf{X})^{-1}\\\\\n& = \\sigma^2\\mathbf{I}(\\mathbf{X}^T\\mathbf{X})^{-1}\\\\\n&  = \\sigma^2(\\mathbf{X}^T\\mathbf{X})^{-1} \\\\\n\\end{aligned}\n\\tag{11}\\]"
-  },
-  {
-    "objectID": "supplemental/model-diagnostics-matrix.html",
-    "href": "supplemental/model-diagnostics-matrix.html",
-    "title": "Model Diagnostics",
-    "section": "",
-    "text": "Note\n\n\n\nThe following supplemental notes were created by Dr. Maria Tackett for STA 210. They are provided for students who want to dive deeper into the mathematics behind regression and reflect some of the material covered in STA 211: Mathematics of Regression. Additional supplemental notes will be added throughout the semester.\nThis document discusses some of the mathematical details of the model diagnostics - leverage, standardized residuals, and Cook’s distance. We assume the reader knowledge of the matrix form for multiple linear regression. Please see Matrix Form of Linear Regression for a review."
-  },
-  {
-    "objectID": "supplemental/model-diagnostics-matrix.html#introduction",
-    "href": "supplemental/model-diagnostics-matrix.html#introduction",
-    "title": "Model Diagnostics",
-    "section": "Introduction",
-    "text": "Introduction\nSuppose we have \\(n\\) observations. Let the \\(i^{th}\\) be \\((x_{i1}, \\ldots, x_{ip}, y_i)\\), such that \\(x_{i1}, \\ldots, x_{ip}\\) are the explanatory variables (predictors) and \\(y_i\\) is the response variable. We assume the data can be modeled using the least-squares regression model, such that the mean response for a given combination of explanatory variables follows the form in Equation 1.\n\\[\ny = \\beta_0 + \\beta_1 x_1 + \\dots + \\beta_p x_p\n\\tag{1}\\]\nWe can write the response for the \\(i^{th}\\) observation as shown in Equation 2.\n\\[\ny_i = \\beta_0 + \\beta_1 x_{i1} + \\dots + \\beta_p x_{ip} + \\epsilon_i\n\\tag{2}\\]\nsuch that \\(\\epsilon_i\\) is the amount \\(y_i\\) deviates from \\(\\mu\\{y|x_{i1}, \\ldots, x_{ip}\\}\\), the mean response for a given combination of explanatory variables. We assume each \\(\\epsilon_i \\sim N(0,\\sigma^2)\\), where \\(\\sigma^2\\) is a constant variance for the distribution of the response \\(y\\) for any combination of explanatory variables \\(x_1, \\ldots, x_p\\)."
-  },
-  {
-    "objectID": "supplemental/model-diagnostics-matrix.html#matrix-form-for-the-regression-model",
-    "href": "supplemental/model-diagnostics-matrix.html#matrix-form-for-the-regression-model",
-    "title": "Model Diagnostics",
-    "section": "Matrix Form for the Regression Model",
-    "text": "Matrix Form for the Regression Model\nWe can represent the Equation 1 and Equation 2 using matrix notation. Let\n\\[\n\\mathbf{Y} = \\begin{bmatrix}y_1 \\\\ y_2 \\\\ \\vdots \\\\y_n\\end{bmatrix}\n\\hspace{15mm}\n\\mathbf{X} = \\begin{bmatrix}x_{11} & x_{12} & \\dots & x_{1p} \\\\\nx_{21} & x_{22} & \\dots & x_{2p} \\\\\n\\vdots & \\vdots & \\ddots & \\vdots\\\\\nx_{n1} & x_{n2} & \\dots & x_{np} \\end{bmatrix}\n\\hspace{15mm}\n\\boldsymbol{\\beta}= \\begin{bmatrix}\\beta_0 \\\\ \\beta_1 \\\\ \\vdots \\\\ \\beta_p \\end{bmatrix}\n\\hspace{15mm}\n\\boldsymbol{\\epsilon}= \\begin{bmatrix}\\epsilon_1 \\\\ \\epsilon_2 \\\\ \\vdots \\\\ \\epsilon_n \\end{bmatrix}\n\\tag{3}\\]\nThus,\n\\[\\mathbf{Y} = \\mathbf{X}\\boldsymbol{\\beta} + \\mathbf{\\epsilon}\\]\nTherefore the estimated response for a given combination of explanatory variables and the associated residuals can be written as\n\\[\n\\hat{\\mathbf{Y}} = \\mathbf{X}\\hat{\\boldsymbol{\\beta}} \\hspace{10mm} \\mathbf{e} = \\mathbf{Y} - \\mathbf{X}\\hat{\\boldsymbol{\\beta}}\n\\tag{4}\\]"
-  },
-  {
-    "objectID": "supplemental/model-diagnostics-matrix.html#hat-matrix-leverage",
-    "href": "supplemental/model-diagnostics-matrix.html#hat-matrix-leverage",
-    "title": "Model Diagnostics",
-    "section": "Hat Matrix & Leverage",
-    "text": "Hat Matrix & Leverage\nRecall from the notes Matrix Form of Linear Regression that \\(\\hat{\\boldsymbol{\\beta}}\\) can be written as the following:\n\\[\n\\hat{\\boldsymbol{\\beta}} = (\\mathbf{X}^T\\mathbf{X})^{-1}\\mathbf{X}^T\\mathbf{Y}\n\\tag{5}\\]\nCombining Equation 4 and Equation 5, we can write \\(\\hat{\\mathbf{Y}}\\) as the following:\n\\[\n\\begin{aligned}\n\\hat{\\mathbf{Y}} &= \\mathbf{X}\\hat{\\boldsymbol{\\beta}} \\\\[10pt]\n&= \\mathbf{X}(\\mathbf{X}^T\\mathbf{X})^{-1}\\mathbf{X}^T\\mathbf{Y}\\\\\n\\end{aligned}\n\\tag{6}\\]\nWe define the hat matrix as an \\(n \\times n\\) matrix of the form \\(\\mathbf{H} = \\mathbf{X}(\\mathbf{X}^T\\mathbf{X})^{-1}\\mathbf{X}^T\\). Thus Equation 6 becomes\n\\[\n\\hat{\\mathbf{Y}} = \\mathbf{H}\\mathbf{Y}\n\\tag{7}\\]\nThe diagonal elements of the hat matrix are a measure of how far the predictor variables of each observation are from the means of the predictor variables. For example, \\(h_{ii}\\) is a measure of how far the values of the predictor variables for the \\(i^{th}\\) observation, \\(x_{i1}, x_{i2}, \\ldots, x_{ip}\\), are from the mean values of the predictor variables, \\(\\bar{x}_1, \\bar{x}_2, \\ldots, \\bar{x}_p\\). In the case of simple linear regression, the \\(i^{th}\\) diagonal, \\(h_{ii}\\), can be written as\n\\[\nh_{ii} =  \\frac{1}{n} + \\frac{(x_i - \\bar{x})^2}{\\sum_{j=1}^{n}(x_j-\\bar{x})^2}\n\\]\nWe call these diagonal elements, the leverage of each observation.\nThe diagonal elements of the hat matrix have the following properties:\n\n\\(0 \\leq h_ii \\leq 1\\)\n\\(\\sum\\limits_{i=1}^{n} h_{ii} = p+1\\), where \\(p\\) is the number of predictor variables in the model.\nThe mean hat value is \\(\\bar{h} = \\frac{\\sum\\limits_{i=1}^{n} h_{ii}}{n} = \\frac{p+1}{n}\\).\n\nUsing these properties, we consider a point to have high leverage if it has a leverage value that is more than 2 times the average. In other words, observations with leverage greater than \\(\\frac{2(p+1)}{n}\\) are considered to be high leverage points, i.e. outliers in the predictor variables. We are interested in flagging high leverage points, because they may have an influence on the regression coefficients.\nWhen there are high leverage points in the data, the regression line will tend towards those points; therefore, one property of high leverage points is that they tend to have small residuals. We will show this by rewriting the residuals from Equation 4 using Equation 7.\n\\[\n\\begin{aligned}\n\\mathbf{e} &= \\mathbf{Y} - \\hat{\\mathbf{Y}} \\\\[10pt]\n& = \\mathbf{Y} - \\mathbf{H}\\mathbf{Y} \\\\[10pt]\n&= (1-\\mathbf{H})\\mathbf{Y}\n\\end{aligned}\n\\tag{8}\\]\nNote that the identity matrix and hat matrix are idempotent, i.e. \\(\\mathbf{I}\\mathbf{I} = \\mathbf{I}\\), \\(\\mathbf{H}\\mathbf{H} = \\mathbf{H}\\). Thus, \\((\\mathbf{I} - \\mathbf{H})\\) is also idempotent. These matrices are also symmetric. Using these properties and Equation 8, we have that the variance-covariance matrix of the residuals \\(\\boldsymbol{e}\\), is\n\\[\n\\begin{aligned}\nVar(\\mathbf{e}) &= \\mathbf{e}\\mathbf{e}^T \\\\[10pt]\n&=  (1-\\mathbf{H})Var(\\mathbf{Y})^T(1-\\mathbf{H})^T \\\\[10pt]\n&= (1-\\mathbf{H})\\hat{\\sigma}^2(1-\\mathbf{H})^T  \\\\[10pt]\n&= \\hat{\\sigma}^2(1-\\mathbf{H})(1-\\mathbf{H})  \\\\[10pt]\n&= \\hat{\\sigma}^2(1-\\mathbf{H})\n\\end{aligned}\n\\tag{9}\\]\nwhere \\(\\hat{\\sigma}^2 = \\frac{\\sum_{i=1}^{n}e_i^2}{n-p-1}\\) is the estimated regression variance. Thus, the variance of the \\(i^{th}\\) residual is \\(Var(e_i) = \\hat{\\sigma}^2(1-h_{ii})\\). Therefore, the higher the leverage, the smaller the variance of the residual. Because the expected value of the residuals is 0, we conclude that points with high leverage tend to have smaller residuals than points with lower leverage."
-  },
-  {
-    "objectID": "supplemental/model-diagnostics-matrix.html#standardized-residuals",
-    "href": "supplemental/model-diagnostics-matrix.html#standardized-residuals",
-    "title": "Model Diagnostics",
-    "section": "Standardized Residuals",
-    "text": "Standardized Residuals\nIn general, we standardize a value by shifting by the expected value and rescaling by the standard deviation (or standard error). Thus, the \\(i^{th}\\) standardized residual takes the form\n\\[\nstd.res_i = \\frac{e_i - E(e_i)}{SE(e_i)}\n\\]\nThe expected value of the residuals is 0, i.e. \\(E(e_i) = 0\\). From Equation 9), the standard error of the residual is \\(SE(e_i) = \\hat{\\sigma}\\sqrt{1-h_{ii}}\\). Therefore,\n\\[\nstd.res_i = \\frac{e_i}{\\hat{\\sigma}\\sqrt{1-h_{ii}}}\n\\tag{10}\\]"
-  },
-  {
-    "objectID": "supplemental/model-diagnostics-matrix.html#cooks-distance",
-    "href": "supplemental/model-diagnostics-matrix.html#cooks-distance",
-    "title": "Model Diagnostics",
-    "section": "Cook’s Distance",
-    "text": "Cook’s Distance\nCook’s distance is a measure of how much each observation influences the model coefficients, and thus the predicted values. The Cook’s distance for the \\(i^{th}\\) observation can be written as\n\\[\nD_i = \\frac{(\\hat{\\mathbf{Y}} -\\hat{\\mathbf{Y}}_{(i)})^T(\\hat{\\mathbf{Y}} -\\hat{\\mathbf{Y}}_{(i)})}{(p+1)\\hat{\\sigma}}\n\\tag{11}\\]\nwhere \\(\\hat{\\mathbf{Y}}_{(i)}\\) is the vector of predicted values from the model fitted when the \\(i^{th}\\) observation is deleted. Cook’s Distance can be calculated without deleting observations one at a time, since Equation 12 below is mathematically equivalent to Equation 11.\n\\[\nD_i = \\frac{1}{p+1}std.res_i^2\\Bigg[\\frac{h_{ii}}{(1-h_{ii})}\\Bigg] = \\frac{e_i^2}{(p+1)\\hat{\\sigma}^2(1-h_{ii})}\\Bigg[\\frac{h_{ii}}{(1-h_{ii})}\\Bigg]\n\\tag{12}\\]"
-  },
-  {
-    "objectID": "supplemental/slr-derivations.html",
-    "href": "supplemental/slr-derivations.html",
-    "title": "Deriving the Least-Squares Estimates for Simple Linear Regression",
-    "section": "",
-    "text": "Note\n\n\n\nThe following supplemental notes were created by Dr. Maria Tackett for STA 210. They are provided for students who want to dive deeper into the mathematics behind regression and reflect some of the material covered in STA 211: Mathematics of Regression. Additional supplemental notes will be added throughout the semester.\n\n\nThis document contains the mathematical details for deriving the least-squares estimates for slope (\\(\\beta_1\\)) and intercept (\\(\\beta_0\\)). We obtain the estimates, \\(\\hat{\\beta}_1\\) and \\(\\hat{\\beta}_0\\) by finding the values that minimize the sum of squared residuals, as shown in Equation 1.\n\\[\nSSR = \\sum\\limits_{i=1}^{n}[y_i - \\hat{y}_i]^2 = [y_i - (\\hat{\\beta}_0 + \\hat{\\beta}_1 x_i)]^2 = [y_i - \\hat{\\beta}_0 - \\hat{\\beta}_1 x_i]^2\n\\tag{1}\\]\nRecall that we can find the values of \\(\\hat{\\beta}_1\\) and \\(\\hat{\\beta}_0\\) that minimize /eq-ssr by taking the partial derivatives of Equation 1 and setting them to 0. Thus, the values of \\(\\hat{\\beta}_1\\) and \\(\\hat{\\beta}_0\\) that minimize the respective partial derivative also minimize the sum of squared residuals. The partial derivatives are shown in Equation 2.\n\\[\n\\begin{aligned}\n\\frac{\\partial \\text{SSR}}{\\partial \\hat{\\beta}_1} &= -2 \\sum\\limits_{i=1}^{n}x_i(y_i - \\hat{\\beta}_0 - \\hat{\\beta}_1 x_i)  \\\\\n\\frac{\\partial \\text{SSR}}{\\partial \\hat{\\beta}_0} &= -2 \\sum\\limits_{i=1}^{n}(y_i - \\hat{\\beta}_0 - \\hat{\\beta}_1 x_i)\n\\end{aligned}\n\\tag{2}\\]\nThe derivation of deriving \\(\\hat{\\beta}_0\\) is shown in Equation 3.\n\\[\n\\begin{aligned}\\frac{\\partial \\text{SSR}}{\\partial \\hat{\\beta}_0} &= -2 \\sum\\limits_{i=1}^{n}(y_i - \\hat{\\beta}_0 - \\hat{\\beta}_1 x_i) = 0 \\\\&\\Rightarrow -\\sum\\limits_{i=1}^{n}(y_i + \\hat{\\beta}_0 + \\hat{\\beta}_1 x_i) = 0 \\\\&\\Rightarrow - \\sum\\limits_{i=1}^{n}y_i + n\\hat{\\beta}_0 + \\hat{\\beta}_1\\sum\\limits_{i=1}^{n}x_i = 0 \\\\&\\Rightarrow n\\hat{\\beta}_0  = \\sum\\limits_{i=1}^{n}y_i - \\hat{\\beta}_1\\sum\\limits_{i=1}^{n}x_i \\\\&\\Rightarrow \\hat{\\beta}_0  = \\frac{1}{n}\\Big(\\sum\\limits_{i=1}^{n}y_i - \\hat{\\beta}_1\\sum\\limits_{i=1}^{n}x_i\\Big)\\\\&\\Rightarrow \\hat{\\beta}_0  = \\bar{y} - \\hat{\\beta}_1 \\bar{x} \\\\\\end{aligned}\n\\tag{3}\\]\nThe derivation of \\(\\hat{\\beta}_1\\) using the \\(\\hat{\\beta}_0\\) we just derived is shown in Equation 4.\n\\[\n\\begin{aligned}&\\frac{\\partial \\text{SSR}}{\\partial \\hat{\\beta}_1} = -2 \\sum\\limits_{i=1}^{n}x_i(y_i - \\hat{\\beta}_0 - \\hat{\\beta}_1 x_i) = 0  \\\\&\\Rightarrow -\\sum\\limits_{i=1}^{n}x_iy_i + \\hat{\\beta}_0\\sum\\limits_{i=1}^{n}x_i + \\hat{\\beta}_1\\sum\\limits_{i=1}^{n}x_i^2 = 0 \\\\\\text{(Fill in }\\hat{\\beta}_0\\text{)}&\\Rightarrow -\\sum\\limits_{i=1}^{n}x_iy_i + (\\bar{y} - \\hat{\\beta}_1\\bar{x})\\sum\\limits_{i=1}^{n}x_i + \\hat{\\beta}_1\\sum\\limits_{i=1}^{n}x_i^2 = 0 \\\\&\\Rightarrow  (\\bar{y} - \\hat{\\beta}_1\\bar{x})\\sum\\limits_{i=1}^{n}x_i + \\hat{\\beta}_1\\sum\\limits_{i=1}^{n}x_i^2 = \\sum\\limits_{i=1}^{n}x_iy_i \\\\&\\Rightarrow \\bar{y}\\sum\\limits_{i=1}^{n}x_i - \\hat{\\beta}_1\\bar{x}\\sum\\limits_{i=1}^{n}x_i + \\hat{\\beta}_1\\sum\\limits_{i=1}^{n}x_i^2 = \\sum\\limits_{i=1}^{n}x_iy_i \\\\&\\Rightarrow n\\bar{y}\\bar{x} - \\hat{\\beta}_1n\\bar{x}^2 + \\hat{\\beta}_1\\sum\\limits_{i=1}^{n}x_i^2 = \\sum\\limits_{i=1}^{n}x_iy_i \\\\&\\Rightarrow \\hat{\\beta}_1\\sum\\limits_{i=1}^{n}x_i^2 - \\hat{\\beta}_1n\\bar{x}^2  = \\sum\\limits_{i=1}^{n}x_iy_i - n\\bar{y}\\bar{x} \\\\&\\Rightarrow \\hat{\\beta}_1\\Big(\\sum\\limits_{i=1}^{n}x_i^2 -n\\bar{x}^2\\Big)  = \\sum\\limits_{i=1}^{n}x_iy_i - n\\bar{y}\\bar{x} \\\\ &\\hat{\\beta}_1 = \\frac{\\sum\\limits_{i=1}^{n}x_iy_i - n\\bar{y}\\bar{x}}{\\sum\\limits_{i=1}^{n}x_i^2 -n\\bar{x}^2}\\end{aligned}\n\\tag{4}\\]\nTo write \\(\\hat{\\beta}_1\\) in a form that’s more recognizable, we will use the following:\n\\[\n\\sum x_iy_i - n\\bar{y}\\bar{x} = \\sum(x - \\bar{x})(y - \\bar{y}) = (n-1)\\text{Cov}(x,y)\n\\tag{5}\\]\n\\[\n\\sum x_i^2 - n\\bar{x}^2 - \\sum(x - \\bar{x})^2 = (n-1)s_x^2\n\\tag{6}\\]\nwhere \\(\\text{Cov}(x,y)\\) is the covariance of \\(x\\) and \\(y\\), and \\(s_x^2\\) is the sample variance of \\(x\\) (\\(s_x\\) is the sample standard deviation).\nThus, applying Equation 5 and Equation 6, we have\n\\[\n\\begin{aligned}\\hat{\\beta}_1 &= \\frac{\\sum\\limits_{i=1}^{n}x_iy_i - n\\bar{y}\\bar{x}}{\\sum\\limits_{i=1}^{n}x_i^2 -n\\bar{x}^2} \\\\&= \\frac{\\sum\\limits_{i=1}^{n}(x-\\bar{x})(y-\\bar{y})}{\\sum\\limits_{i=1}^{n}(x-\\bar{x})^2}\\\\&= \\frac{(n-1)\\text{Cov}(x,y)}{(n-1)s_x^2}\\\\&= \\frac{\\text{Cov}(x,y)}{s_x^2}\\end{aligned}\n\\tag{7}\\]\nThe correlation between \\(x\\) and \\(y\\) is \\(r = \\frac{\\text{Cov}(x,y)}{s_x s_y}\\). Thus, \\(\\text{Cov}(x,y) = r s_xs_y\\). Plugging this into Equation 7, we have\n\\[\n\\hat{\\beta}_1 = \\frac{\\text{Cov}(x,y)}{s_x^2} = r\\frac{s_ys_x}{s_x^2} = r\\frac{s_y}{s_x}\n\\tag{8}\\]"
-  },
-  {
-    "objectID": "supplemental/log-transformations.html",
-    "href": "supplemental/log-transformations.html",
-    "title": "Log Transformations in Linear Regression",
-    "section": "",
-    "text": "Note\n\n\n\nThe following supplemental notes were created by Dr. Maria Tackett for STA 210. They are provided for students who want to dive deeper into the mathematics behind regression and reflect some of the material covered in STA 211: Mathematics of Regression. Additional supplemental notes will be added throughout the semester.\nThis document provides details about the model interpretation when the predictor and/or response variables are log-transformed. For simplicity, we will discuss transformations for the simple linear regression model as shown in Equation 1.\n\\[\n\\label{orig}\ny = \\beta_0 + \\beta_1 x\n\\tag{1}\\]\nAll results and interpretations can be easily extended to transformations in multiple regression models.\nNote: log refers to the natural logarithm."
-  },
-  {
-    "objectID": "supplemental/log-transformations.html#log-transformation-on-the-response-variable",
-    "href": "supplemental/log-transformations.html#log-transformation-on-the-response-variable",
-    "title": "Log Transformations in Linear Regression",
-    "section": "Log-transformation on the response variable",
-    "text": "Log-transformation on the response variable\nSuppose we fit a linear regression model with \\(\\log(y)\\), the log-transformed \\(y\\), as the response variable. Under this model, we assume a linear relationship exists between \\(x\\) and \\(\\log(y)\\), such that \\(\\log(y) \\sim N(\\beta_0 + \\beta_1 x, \\sigma^2)\\) for some \\(\\beta_0\\), \\(\\beta_1\\) and \\(\\sigma^2\\). In other words, we can model the relationship between \\(x\\) and \\(\\log(y)\\) using the model in Equation 2.\n\\[\n\\log(y) = \\beta_0 + \\beta_1 x\n\\tag{2}\\]\nIf we interpret the model in terms of \\(\\log(y)\\), then we can use the usual interpretations for slope and intercept. When reporting results, however, it is best to give all interpretations in terms of the original response variable \\(y\\), since interpretations using log-transformed variables are often more difficult to truly understand.\nIn order to get back on the original scale, we need to use the exponential function (also known as the anti-log), \\(\\exp\\{x\\} = e^x\\). Therefore, we use the model in Equation 2 for interpretations and predictions, we will use Equation 3 to state our conclusions in terms of \\(y\\).\n\\[\n\\begin{aligned}\n&\\exp\\{\\log(y)\\} = \\exp\\{\\beta_0 + \\beta_1 x\\} \\\\[10pt]\n\\Rightarrow &y = \\exp\\{\\beta_0 + \\beta_1 x\\} \\\\[10pt]\n\\Rightarrow &y = \\exp\\{\\beta_0\\}\\exp\\{\\beta_1 x\\}\n\\end{aligned}\n\\tag{3}\\]\nIn order to interpret the slope and intercept, we need to first understand the relationship between the mean, median and log transformations.\n\nMean, Median, and Log Transformations\nSuppose we have a dataset y that contains the following observations:\n\n\n[1] 3 5 6 7 8\n\n\nIf we log-transform the values of y then calculate the mean and median, we have\n\n\n\n\n\nmean_log_y\nmedian_log_y\n\n\n\n\n1.70503\n1.79176\n\n\n\n\n\nIf we calculate the mean and median of y, then log-transform the mean and median, we have\n\n\n\n\n\nlog_mean\nlog_median\n\n\n\n\n1.75786\n1.79176\n\n\n\n\n\nThis is a simple illustration to show\n\n\\(\\text{Mean}[{\\log(y)}] \\neq \\log[\\text{Mean}(y)]\\) - the mean and log are not commutable\n\\(\\text{Median}[\\log(y)] = \\log[\\text{Median}(y)]\\) - the median and log are commutable\n\n\n\nInterpretaton of model coefficients\nUsing Equation 2, the mean \\(\\log(y)\\) for any given value of \\(x\\) is \\(\\beta_0 + \\beta_1 x\\); however, this does not indicate that the mean of \\(y = \\exp\\{\\beta_0 + \\beta_1 x\\}\\) (see previous section). From the assumptions of linear regression, we assume that for any given value of \\(x\\), the distribution of \\(\\log(y)\\) is Normal, and therefore symmetric. Thus the median of \\(\\log(y)\\) is equal to the mean of \\(\\log(y)\\), i.e \\(\\text{Median}(\\log(y)) = \\beta_0 + \\beta_1 x\\).\nSince the log and the median are commutable, \\(\\text{Median}(\\log(y)) = \\beta_0 + \\beta_1 x \\Rightarrow \\text{Median}(y) = \\exp\\{\\beta_0 + \\beta_1 x\\}\\). Thus, when we log-transform the response variable, the interpretation of the intercept and slope are in terms of the effect on the median of \\(y\\).\nIntercept: The intercept is expected median of \\(y\\) when the predictor variable equals 0. Therefore, when \\(x=0\\),\n\\[\n\\begin{aligned}\n&\\log(y) = \\beta_0 + \\beta_1 \\times 0 = \\beta_0 \\\\[10pt]\n\\Rightarrow &y = \\exp\\{\\beta_0\\}\n\\end{aligned}\n\\]\nInterpretation: When \\(x=0\\), the median of \\(y\\) is expected to be \\(\\exp\\{\\beta_0\\}\\).\nSlope: The slope is the expected change in the median of \\(y\\) when \\(x\\) increases by 1 unit. The change in the median of \\(y\\) is\n\\[\n\\exp\\{[\\beta_0 + \\beta_1 (x+1)] - [\\beta_0 + \\beta_1 x]\\} = \\frac{\\exp\\{\\beta_0 + \\beta_1 (x+1)\\}}{\\exp\\{\\beta_0 + \\beta_1 x\\}} = \\frac{\\exp\\{\\beta_0\\}\\exp\\{\\beta_1 x\\}\\exp\\{\\beta_1\\}}{\\exp\\{\\beta_0\\}\\exp\\{\\beta_1 x\\}} = \\exp\\{\\beta_1\\}\n\\]\nThus, the median of \\(y\\) for \\(x+1\\) is \\(\\exp\\{\\beta_1\\}\\) times the median of \\(y\\) for \\(x\\).\nInterpretation: When \\(x\\) increases by one unit, the median of \\(y\\) is expected to multiply by a factor of \\(\\exp\\{\\beta_1\\}\\)."
-  },
-  {
-    "objectID": "supplemental/log-transformations.html#log-transformation-on-the-predictor-variable",
-    "href": "supplemental/log-transformations.html#log-transformation-on-the-predictor-variable",
-    "title": "Log Transformations in Linear Regression",
-    "section": "Log-transformation on the predictor variable",
-    "text": "Log-transformation on the predictor variable\nSuppose we fit a linear regression model with \\(\\log(x)\\), the log-transformed \\(x\\), as the predictor variable. Under this model, we assume a linear relationship exists between \\(\\log(x)\\) and \\(y\\), such that \\(y \\sim N(\\beta_0 + \\beta_1 \\log(x), \\sigma^2)\\) for some \\(\\beta_0\\), \\(\\beta_1\\) and \\(\\sigma^2\\). In other words, we can model the relationship between \\(\\log(x)\\) and \\(y\\) using the model in #eq-log-x.\n\\[\ny = \\beta_0 + \\beta_1 \\log(x)\n\\tag{4}\\]\nIntercept: The intercept is the mean of \\(y\\) when \\(\\log(x) = 0\\), i.e. \\(x = 1\\).\nInterpretation: When \\(x = 1\\) \\((\\log(x) = 0)\\), the mean of \\(y\\) is expected to be \\(\\beta_0\\).\nSlope: The slope is interpreted in terms of the change in the mean of \\(y\\) when \\(x\\) is multiplied by a factor of \\(C\\), since \\(\\log(Cx) = \\log(x) + \\log(C)\\). Thus, when \\(x\\) is multiplied by a factor of \\(C\\), the change in the mean of \\(y\\) is\n\\[\n\\begin{aligned}\n[\\beta_0 + \\beta_1 \\log(Cx)] - [\\beta_0 + \\beta_1 \\log(x)] &= \\beta_1 [\\log(Cx) - \\log(x)] \\\\[10pt]\n& = \\beta_1[\\log(C) + \\log(x) - \\log(x)] \\\\[10pt]\n& = \\beta_1 \\log(C)\n\\end{aligned}\n\\]\nThus the mean of \\(y\\) changes by \\(\\beta_1 \\log(C)\\) units.\nInterpretation: When \\(x\\) is multiplied by a factor of \\(C\\), the mean of \\(y\\) is expected to change by \\(\\beta_1 \\log(C)\\) units. For example, if \\(x\\) is doubled, then the mean of \\(y\\) is expected to change by \\(\\beta_1 \\log(2)\\) units."
-  },
-  {
-    "objectID": "supplemental/log-transformations.html#log-transformation-on-the-the-response-and-predictor-variable",
-    "href": "supplemental/log-transformations.html#log-transformation-on-the-the-response-and-predictor-variable",
-    "title": "Log Transformations in Linear Regression",
-    "section": "Log-transformation on the the response and predictor variable",
-    "text": "Log-transformation on the the response and predictor variable\nSuppose we fit a linear regression model with \\(\\log(x)\\), the log-transformed \\(x\\), as the predictor variable and \\(\\log(y)\\), the log-transformed \\(y\\), as the response variable. Under this model, we assume a linear relationship exists between \\(\\log(x)\\) and \\(\\log(y)\\), such that \\(\\log(y) \\sim N(\\beta_0 + \\beta_1 \\log(x), \\sigma^2)\\) for some \\(\\beta_0\\), \\(\\beta_1\\) and \\(\\sigma^2\\). In other words, we can model the relationship between \\(\\log(x)\\) and \\(\\log(y)\\) using the model in Equation 5.\n\\[\n\\log(y) = \\beta_0 + \\beta_1 \\log(x)\n\\tag{5}\\]\nBecause the response variable is log-transformed, the interpretations on the original scale will be in terms of the median of \\(y\\) (see the section on the log-transformed response variable for more detail).\nIntercept: The intercept is the mean of \\(y\\) when \\(\\log(x) = 0\\), i.e. \\(x = 1\\). Therefore, when \\(\\log(x) = 0\\),\n\\[\n\\begin{aligned}\n&\\log(y) = \\beta_0 + \\beta_1 \\times 0 = \\beta_0 \\\\[10pt]\n\\Rightarrow &y = \\exp\\{\\beta_0\\}\n\\end{aligned}\n\\]\nInterpretation: When \\(x = 1\\) \\((\\log(x) = 0)\\), the median of \\(y\\) is expected to be \\(\\exp\\{\\beta_0\\}\\).\nSlope: The slope is interpreted in terms of the change in the median \\(y\\) when \\(x\\) is multiplied by a factor of \\(C\\), since \\(\\log(Cx) = \\log(x) + \\log(C)\\). Thus, when \\(x\\) is multiplied by a factor of \\(C\\), the change in the median of \\(y\\) is\n\\[\n\\begin{aligned}\n\\exp\\{[\\beta_0 + \\beta_1 \\log(Cx)] - [\\beta_0 + \\beta_1 \\log(x)]\\} &=\n\\exp\\{\\beta_1 [\\log(Cx) - \\log(x)]\\} \\\\[10pt]\n& = \\exp\\{\\beta_1[\\log(C) + \\log(x) - \\log(x)]\\} \\\\[10pt]\n& = \\exp\\{\\beta_1 \\log(C)\\} = C^{\\beta_1}\n\\end{aligned}\n\\]\nThus, the median of \\(y\\) for \\(Cx\\) is \\(C^{\\beta_1}\\) times the median of \\(y\\) for \\(x\\).\nInterpretation: When \\(x\\) is multiplied by a factor of \\(C\\), the median of \\(y\\) is expected to multiple by a factor of \\(C^{\\beta_1}\\). For example, if \\(x\\) is doubled, then the median of \\(y\\) is expected to multiply by \\(2^{\\beta_1}\\)."
-  },
-  {
-    "objectID": "supplemental/model-selection-criteria.html",
-    "href": "supplemental/model-selection-criteria.html",
-    "title": "Model Selection Criteria: AIC & BIC",
-    "section": "",
-    "text": "Note\n\n\n\nThe following supplemental notes were created by Dr. Maria Tackett for STA 210. They are provided for students who want to dive deeper into the mathematics behind regression and reflect some of the material covered in STA 211: Mathematics of Regression. Additional supplemental notes will be added throughout the semester.\nThis document discusses some of the mathematical details of Akaike’s Information Criterion (AIC) and Schwarz’s Bayesian Information Criterion (BIC). We assume the reader knowledge of the matrix form for multiple linear regression.Please see Matrix Notation for Multiple Linear Regression for a review."
-  },
-  {
-    "objectID": "supplemental/model-selection-criteria.html#maximum-likelihood-estimation-of-boldsymbolbeta-and-sigma",
-    "href": "supplemental/model-selection-criteria.html#maximum-likelihood-estimation-of-boldsymbolbeta-and-sigma",
-    "title": "Model Selection Criteria: AIC & BIC",
-    "section": "Maximum Likelihood Estimation of \\(\\boldsymbol{\\beta}\\) and \\(\\sigma\\)",
-    "text": "Maximum Likelihood Estimation of \\(\\boldsymbol{\\beta}\\) and \\(\\sigma\\)\nTo understand the formulas for AIC and BIC, we will first briefly explain the likelihood function and maximum likelihood estimates for regression.\nLet \\(\\mathbf{Y}\\) be \\(n \\times 1\\) matrix of responses, \\(\\mathbf{X}\\), the \\(n \\times (p+1)\\) matrix of predictors, and \\(\\boldsymbol{\\beta}\\), \\((p+1) \\times 1\\) matrix of coefficients. If the multiple linear regression model is correct then,\n\\[\n\\mathbf{Y} \\sim N(\\mathbf{X}\\boldsymbol{\\beta}, \\sigma^2)\n\\tag{1}\\]\nWhen we do linear regression, our goal is to estimate the unknown parameters \\(\\boldsymbol{\\beta}\\) and \\(\\sigma^2\\) from Equation 1. In Matrix Notation for Multiple Linear Regression, we showed a way to estimate these parameters using matrix alegbra. Another approach for estimating \\(\\boldsymbol{\\beta}\\) and \\(\\sigma^2\\) is using maximum likelihood estimation.\nA likelihood function is used to summarise the evidence from the data in support of each possible value of a model parameter. Using Equation 1, we will write the likelihood function for linear regression as\n\\[\nL(\\mathbf{X}, \\mathbf{Y}|\\boldsymbol{\\beta}, \\sigma^2) = \\prod\\limits_{i=1}^n (2\\pi \\sigma^2)^{-\\frac{1}{2}} \\exp\\bigg\\{-\\frac{1}{2\\sigma^2}\\sum\\limits_{i=1}^n(Y_i - \\mathbf{X}_i \\boldsymbol{\\beta})^T(Y_i - \\mathbf{X}_i \\boldsymbol{\\beta})\\bigg\\}\n\\tag{2}\\]\nwhere \\(Y_i\\) is the \\(i^{th}\\) response and \\(\\mathbf{X}_i\\) is the vector of predictors for the \\(i^{th}\\) observation. One approach estimating \\(\\boldsymbol{\\beta}\\) and \\(\\sigma^2\\) is to find the values of those parameters that maximize the likelihood in Equation 2, i.e. maximum likelhood estimation. To make the calculations more manageable, instead of maximizing the likelihood function, we will instead maximize its logarithm, i.e. the log-likelihood function. The values of the parameters that maximize the log-likelihood function are those that maximize the likelihood function. The log-likelihood function we will maximize is\n\\[\n\\begin{aligned}\n\\log L(\\mathbf{X}, \\mathbf{Y}|\\boldsymbol{\\beta}, \\sigma^2) &= \\sum\\limits_{i=1}^n -\\frac{1}{2}\\log(2\\pi\\sigma^2) -\\frac{1}{2\\sigma^2}\\sum\\limits_{i=1}^n(Y_i - \\mathbf{X}_i \\boldsymbol{\\beta})^T(Y_i - \\mathbf{X}_i \\boldsymbol{\\beta}) \\\\\n&= -\\frac{n}{2}\\log(2\\pi\\sigma^2) - \\frac{1}{2\\sigma^2}(\\mathbf{Y} - \\mathbf{X} \\boldsymbol{\\beta})^T(\\mathbf{Y} - \\mathbf{X} \\boldsymbol{\\beta})\\\\\n\\end{aligned}\n\\tag{3}\\]\n\nThe maximum likelihood estimate of \\(\\boldsymbol{\\beta}\\) and \\(\\sigma^2\\) are \\[\n\\hat{\\boldsymbol{\\beta}} = (\\mathbf{X}^T\\mathbf{X})^{-1}\\mathbf{X}^T\\mathbf{Y} \\hspace{10mm} \\hat{\\sigma}^2 = \\frac{1}{n}(\\mathbf{Y} - \\mathbf{X} \\boldsymbol{\\beta})^T(\\mathbf{Y} - \\mathbf{X} \\boldsymbol{\\beta}) = \\frac{1}{n}RSS\n\\tag{4}\\]\nwhere \\(RSS\\) is the residual sum of squares. Note that the maximum likelihood estimate is not exactly equal to the estimate of \\(\\sigma^2\\) we typically use \\(\\frac{RSS}{n-p-1}\\). This is because the maximum likelihood estimate of \\(\\sigma^2\\) in Equation 4 is a biased estimator of \\(\\sigma^2\\). When \\(n\\) is much larger than the number of predictors \\(p\\), then the differences in these two estimates are trivial."
-  },
-  {
-    "objectID": "supplemental/model-selection-criteria.html#aic",
-    "href": "supplemental/model-selection-criteria.html#aic",
-    "title": "Model Selection Criteria: AIC & BIC",
-    "section": "AIC",
-    "text": "AIC\nAkaike’s Information Criterion (AIC) is\n\\[\nAIC = -2 \\log L + 2(p+1)\n\\tag{5}\\]\nwhere \\(\\log L\\) is the log-likelihood. This is the general form of AIC that can be applied to a variety of models, but for now, let’s focus on AIC for mutliple linear regression.\n\\[\n\\begin{aligned}\nAIC &= -2 \\log L + 2(p+1) \\\\\n&= -2\\bigg[-\\frac{n}{2}\\log(2\\pi\\sigma^2) - \\frac{1}{2\\sigma^2}(\\mathbf{Y} - \\mathbf{X} \\boldsymbol{\\beta})^T(\\mathbf{Y} - \\mathbf{X} \\boldsymbol{\\beta})\\bigg] + 2(p+1) \\\\\n&= n\\log\\big(2\\pi\\frac{RSS}{n}\\big) + \\frac{1}{RSS/n}RSS \\\\\n&= n\\log(2\\pi) + n\\log(RSS) - n\\log(n) + 2(p+1)\n\\end{aligned}\n\\tag{6}\\]"
-  },
-  {
-    "objectID": "supplemental/model-selection-criteria.html#bic",
-    "href": "supplemental/model-selection-criteria.html#bic",
-    "title": "Model Selection Criteria: AIC & BIC",
-    "section": "BIC",
-    "text": "BIC\n[To be added.]"
-  },
-  {
-    "objectID": "computing-pipelines.html",
-    "href": "computing-pipelines.html",
-    "title": "Pipelines",
-    "section": "",
-    "text": "library(palmerpenguins)\nlibrary(tidyverse)\n\n── Attaching packages ─────────────────────────────────────── tidyverse 1.3.1 ──\n\n\n✓ ggplot2 3.3.5     ✓ purrr   0.3.4\n✓ tibble  3.1.6     ✓ dplyr   1.0.7\n✓ tidyr   1.1.4     ✓ stringr 1.4.0\n✓ readr   2.1.1     ✓ forcats 0.5.1\n\n\n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\nx dplyr::filter() masks stats::filter()\nx dplyr::lag()    masks stats::lag()\n\nlibrary(tidymodels)\n\nRegistered S3 method overwritten by 'tune':\n  method                   from   \n  required_pkgs.model_spec parsnip\n\n\n── Attaching packages ────────────────────────────────────── tidymodels 0.1.4 ──\n\n\n✓ broom        0.7.10         ✓ rsample      0.1.1     \n✓ dials        0.0.10         ✓ tune         0.1.6     \n✓ infer        1.0.1.9000     ✓ workflows    0.2.4     \n✓ modeldata    0.1.1          ✓ workflowsets 0.1.0     \n✓ parsnip      0.1.7          ✓ yardstick    0.0.9     \n✓ recipes      0.2.0          \n\n\n── Conflicts ───────────────────────────────────────── tidymodels_conflicts() ──\nx scales::discard() masks purrr::discard()\nx dplyr::filter()   masks stats::filter()\nx recipes::fixed()  masks stringr::fixed()\nx dplyr::lag()      masks stats::lag()\nx yardstick::spec() masks readr::spec()\nx recipes::step()   masks stats::step()\n• Search for functions across packages at https://www.tidymodels.org/find/\n\nlibrary(knitr)"
-  },
-  {
-    "objectID": "computing-pipelines.html#simple-linear-regression",
-    "href": "computing-pipelines.html#simple-linear-regression",
-    "title": "Pipelines",
-    "section": "Simple linear regression",
-    "text": "Simple linear regression\n\nModel fitting\nFit model:\n\npenguins_fit <- linear_reg() %>%\n  set_engine(\"lm\") %>%\n  fit(body_mass_g ~ flipper_length_mm, data = penguins)\n\nTidy model output:\n\ntidy(penguins_fit)\n\n# A tibble: 2 × 5\n  term              estimate std.error statistic   p.value\n  <chr>                <dbl>     <dbl>     <dbl>     <dbl>\n1 (Intercept)        -5781.     306.       -18.9 5.59e- 55\n2 flipper_length_mm     49.7      1.52      32.7 4.37e-107\n\n\nFormat model output as table:\n\ntidy(penguins_fit) %>%\n  kable(digits = 3)\n\n\n\n\nterm\nestimate\nstd.error\nstatistic\np.value\n\n\n\n\n(Intercept)\n-5780.831\n305.815\n-18.903\n0\n\n\nflipper_length_mm\n49.686\n1.518\n32.722\n0\n\n\n\n\n\nAugment data with model:\n\naugment(penguins_fit$fit)\n\n# A tibble: 342 × 9\n   .rownames body_mass_g flipper_length_… .fitted  .resid    .hat .sigma .cooksd\n   <chr>           <int>            <int>   <dbl>   <dbl>   <dbl>  <dbl>   <dbl>\n 1 1                3750              181   3212.  538.   0.00881   394. 8.34e-3\n 2 2                3800              186   3461.  339.   0.00622   394. 2.33e-3\n 3 3                3250              195   3908. -658.   0.00344   393. 4.83e-3\n 4 5                3450              193   3808. -358.   0.00385   394. 1.60e-3\n 5 6                3650              190   3659.   -9.43 0.00469   395. 1.35e-6\n 6 7                3625              181   3212.  413.   0.00881   394. 4.91e-3\n 7 8                4675              195   3908.  767.   0.00344   393. 6.56e-3\n 8 9                3475              193   3808. -333.   0.00385   394. 1.39e-3\n 9 10               4250              190   3659.  591.   0.00469   394. 5.31e-3\n10 11               3300              186   3461. -161.   0.00622   395. 5.23e-4\n# … with 332 more rows, and 1 more variable: .std.resid <dbl>\n\n\n\n\nStatistical inference"
-  },
-  {
-    "objectID": "course-faq.html",
-    "href": "course-faq.html",
-    "title": "FAQ",
-    "section": "",
-    "text": "Go to your Files tab, check the box next to the file you want to download, then click on the blue gear icon on the Files tab to reveal the drop down menu, and select Export… If you have selected multiple files to export, RStudio will zip them up into a single zip file for you. If you’ve selected just a single file, it will only download that. The downloaded file will go to wherever files you download off the internet goes on your computer (usually your Downloads folder)."
-  },
-  {
-    "objectID": "course-faq.html#how-can-i-submit-my-assignment-to-gradescope",
-    "href": "course-faq.html#how-can-i-submit-my-assignment-to-gradescope",
-    "title": "FAQ",
-    "section": "How can I submit my assignment to Gradescope?",
-    "text": "How can I submit my assignment to Gradescope?\nThe instructions for submitting your assignment to Gradescope can be found here. In a nutshell, you’ll upload your PDF and them mark the page(s) where each question can be found. It’s OK if a question spans multiple pages, just mark them all. It’s also OK if a page includes multiple questions."
-  },
-  {
-    "objectID": "course-faq.html#can-i-use-a-local-install-of-r-and-rstudio-instead-of-using-the-rstudio-containers",
-    "href": "course-faq.html#can-i-use-a-local-install-of-r-and-rstudio-instead-of-using-the-rstudio-containers",
-    "title": "FAQ",
-    "section": "Can I use a local install of R and RStudio instead of using the RStudio containers?",
-    "text": "Can I use a local install of R and RStudio instead of using the RStudio containers?\nThe short answer is, I’d rather you didn’t, to save yourself some headache. But, the long answer is, sure! But you will need to install a specific versions of R and RStudio for everything to work as expected. You will also need to install the R packages we’re using as well as have Git installed on your computer. These are not extremely challenging things to get right, but they are not trivial either, particularly on certain operating systems. Myself and the TAs are always happy to provide help with any computational questions when you’re working in the containers we have provided for you. If you’re working on your local setup, we can’t guarantee being able to resolve your issues, though we’re happy to try.\nIf you want to take this path, here is what you need to do:\n\nDownload and install R 4.1.2: https://cran.r-project.org/\nDownload and install a daily build of RStudio: https://dailies.rstudio.com/\nInstall Quarto CLI: https://quarto.org/docs/getting-started/installation.html\nInstall Git: https://happygitwithr.com/install-git.html\nInstall any necessary packages with install.packages(\"___\")\n\nAnd I’d like to reiterate again that successful installation of these software is not a learning goal of this course. So if any of this seems tedious or intimidating in any way, just use the computing environment we have set up for you. More on that here."
-  },
-  {
-    "objectID": "computing-env.html",
-    "href": "computing-env.html",
-    "title": "計算環境與作業繳交",
-    "section": "",
-    "text": "Google Colab\nVisual Studio code 與推薦套件"
-  },
-  {
-    "objectID": "course-support.html",
-    "href": "course-support.html",
-    "title": "Course support",
-    "section": "",
-    "text": "Most of you will need help at some point and we want to make sure you can identify when that is without getting too frustrated and feel comfortable seeking help."
-  },
-  {
-    "objectID": "course-support.html#lectures-and-labs",
-    "href": "course-support.html#lectures-and-labs",
-    "title": "Course support",
-    "section": "Lectures and labs",
-    "text": "Lectures and labs\nIf you have a question during lecture or lab, feel free to ask it! There are likely other students with the same question, so by asking you will create a learning opportunity for everyone."
-  },
-  {
-    "objectID": "course-support.html#office-hours",
-    "href": "course-support.html#office-hours",
-    "title": "Course support",
-    "section": "Office hours",
-    "text": "Office hours\nThe teaching team is here to help you be successful in the course. You are encouraged to attend office hours during the times posted on the home page to ask questions about the course content and assignments. A lot of questions are most effectively answered in-person, so office hours are a valuable resource. I encourage each and every one of you to take advantage of this resource! Make a pledge to stop by office hours at least once during the first three weeks of class. If you truly have no questions to ask, just stop by and say hi and introduce yourself. You can find a list of everyone’s office hours here."
-  },
-  {
-    "objectID": "course-support.html#discussion-forum",
-    "href": "course-support.html#discussion-forum",
-    "title": "Course support",
-    "section": "Discussion forum",
-    "text": "Discussion forum\nHave a question that can’t wait for office hours? Prefer to write out your question in detail rather than asking in person? The online discussion forum is the best venue for these! We will use Conversations as the online discussion forum. There is a chance another student has already asked a similar question, so please check the other posts on Ed Discussion before adding a new question. If you know the answer to a question that is posted, I encourage you to respond!"
-  },
-  {
-    "objectID": "course-support.html#email",
-    "href": "course-support.html#email",
-    "title": "Course support",
-    "section": "Email",
-    "text": "Email\nPlease refrain from emailing any course content questions (those should go Conversations), and only use email for questions about personal matters that may not be appropriate for the public course forum (e.g., illness, accommodations, etc.). For such matters, you may email Dr. Mine Çetinkaya-Rundel at mc301@duke.edu.\nIf there is a question that’s not appropriate for the public forum, you are welcome to email me directly. If you email me, please include “STA 210” in the subject line. Barring extenuating circumstances, I will respond to STA 210 emails within 48 hours Monday - Friday. Response time may be slower for emails sent Friday evening - Sunday."
-  },
-  {
-    "objectID": "course-support.html#academic-support",
-    "href": "course-support.html#academic-support",
-    "title": "Course support",
-    "section": "Academic support",
-    "text": "Academic support\nThere are times you may need help with the class that is beyond what can be provided by the teaching team. In those instances, I encourage you to visit the Academic Resource Center. The Academic Resource Center (ARC) offers free services to all students during their undergraduate careers at Duke. Services include Learning Consultations, Peer Tutoring and Study Groups, ADHD/LD Coaching, Outreach Workshops, and more. Because learning is a process unique to every individual, they work with each student to discover and develop their own academic strategy for success at Duke. ARC services are available free to any Duke undergraduate student, in any year, studying in any discipline. Contact the ARC to schedule an appointment. Undergraduates in any year, studying any discipline can benefit! Contact theARC@duke.edu, 919-684-5917."
-  },
-  {
-    "objectID": "course-support.html#mental-health-and-wellness",
-    "href": "course-support.html#mental-health-and-wellness",
-    "title": "Course support",
-    "section": "Mental health and wellness",
-    "text": "Mental health and wellness\nStudent mental health and wellness is of primary importance at Duke, and the university offers resources to support students in managing daily stress and self-care. Duke offers several resources for students to seek assistance on coursework and to nurture daily habits that support overall well-being, some of which are listed below:\n\nThe Academic Resource Center: (919) 684-5917, theARC@duke.edu, or arc.duke.edu,\nDuWell: (919) 681-8421, duwell@studentaffairs.duke.edu, or studentaffairs.duke.edu/duwell\n\nIf your mental health concerns and/or stressful events negatively affect your daily emotional state, academic performance, or ability to participate in your daily activities, many resources are available to help you through difficult times. Duke encourages all students to access these resources.\n\nDukeReach. Provides comprehensive outreach services to identify and support students in managing all aspects of well-being. If you have concerns about a student’s behavior or health visit the website for resources and assistance. studentaffairs.duke.edu/dukereach\nCounseling and Psychological Services (CAPS). CAPS helps Duke Students enhance strengths and develop abilities to successfully live, grow and learn in their personal and academic lives. CAPS recognizes that we are living in unprecedented times and that the changes, challenges and stressors brought on by the COVID-19 pandemic have impacted everyone, often in ways that are tax our well-being. CAPS offers many services to Duke undergraduate students, including brief individual and group counseling, couples counseling and more. CAPS staff also provides outreach to student groups, particularly programs supportive of at-risk populations, on a wide range of issues impacting them in various aspects of campus life. CAPS provides services to students via Telehealth. To initiate services, you can contact their front desk at 919-660-1000. studentaffairs.duke.edu/caps\nBlue Devils Care. A convenient and cost-effective way for Duke students to receive 24/7 mental health support through TalkNow and scheduled counseling. bluedevilscare.duke.edu\nTwo-Click Support. Duke Student Government and DukeReach partnership that connects students to help in just two clicks. bit.ly/TwoClickSupport\nWellTrack. Sign up for WellTrack at app.welltrack.com."
-  },
-  {
-    "objectID": "course-support.html#technology-accommodations",
-    "href": "course-support.html#technology-accommodations",
-    "title": "Course support",
-    "section": "Technology accommodations",
-    "text": "Technology accommodations\nStudents with demonstrated high financial need who have limited access to computers may request assistance in the form of loaner laptops. For technology assistance requests, please go here. Please note that supplies are limited.\nNote that we will be using Duke’s computational resources in this course. These resources are freely available to you. As long as your computer can connect to the internet and open a browser window, you can perform the necessary computing for this course. All software we use is open-source and/or freely available."
-  },
-  {
-    "objectID": "course-support.html#course-materials-costs",
-    "href": "course-support.html#course-materials-costs",
-    "title": "Course support",
-    "section": "Course materials costs",
-    "text": "Course materials costs\nThere are no costs associated with this course. All readings will come from freely available, open resources (open-source textbooks, journal articles, etc.)."
-  },
-  {
-    "objectID": "course-support.html#assistance-with-zoom-or-sakai",
-    "href": "course-support.html#assistance-with-zoom-or-sakai",
-    "title": "Course support",
-    "section": "Assistance with Zoom or Sakai",
-    "text": "Assistance with Zoom or Sakai\nFor technical help with Sakai or Zoom, contact the Duke OIT Service Desk at oit.duke.edu/help. You can also access the self-service help documentation for Zoom here and for Sakai here.\nNote that we will be making minimal use of Sakai in this course (primarily for announcements and grade book). All assignment submission and discussion will take place on GitHub instead.\nZoom will be used for online office hours as well as as a backup option should we need to hold the course online instead of in person."
-  },
-  {
-    "objectID": "exams/exam-1.html",
-    "href": "exams/exam-1.html",
-    "title": "Exam 1",
-    "section": "",
-    "text": "Exam 1 will be released on Friday, Feb 4 at 9 am ET and must be completed by Mon, Feb 7 at 11:59 pm.\nThe exam will consist of two parts:\n\nPart 1 - Conceptual: Multiple choice questions on Sakai test and quizzes. This portion may only be submitted one time. Go here to complete Part 1 of the exam.\nPart 2 - Applied: Data analysis in RStudio and submitted in Gradescope (like a usual lab and homework). Go to the GitHub organization for the course and find the exam-1- repo to complete Part 3 of your exam. Add your answers to the exam-1.qmd file in your repo.\n\nBoth portions must be completed and submitted by Mon, Feb 7 at 11:59 pm. Late work will only be accepted in the case of of extenuating circumstances and notification from your academic dean.\n🍀 Good luck! 🍀\n\n\n\nBy taking this exam, you pledge to uphold the Duke Community Standard:\n\nI will not lie, cheat, or steal in my academic endeavors;\nI will conduct myself honorably in all my endeavors; and\nI will act if the Standard is compromised.\n\n\n\n\n\nThis is an individual assignment. Everything in your repository and on Sakai is for your eyes only.\nYou may not collaborate or communicate anything about this exam to anyone except the instructor and the head TA (Rick Presman). For example, you may not communicate with other students, other TAs, or post/solicit help on the internet, email or via any other method of communication.\nThe exam is open-book, open-note, so you may use any materials from class as you take the exam.\nOnly head TA and professor office hours will be held during the exam period.\nYou may not email the TAs questions about the exam.\nIf you have questions, direct message the professor or the head TA (Rick Presman) on Slack or post on Sakai Conversations for “Instructors in this site” only or attend my office hours (Monday, 10:30 am - 11:30 am).\n\n\n\n\n\nPart 1 - Conceptual: The answers to the multiple choice/short answer questions should be submitted under Test & Quizzes in Sakai.\nPart 2 - Applied: The PDF document for the data analysis portion must be uploaded to Gradescope.\n\nYou must submit a PDF to Gradescope that corresponds to the .qmd file on your GitHub repository in order to receive credit for this portion of the exam.\nYou must upload a PDF, not HTML. Any non-PDF submissions will not be graded.\nMark the pages associated with each question. If any answer for a question spans multiple pages, mark all associated pages.\nMake sure to associate the “Workflow & formatting” section with the first page.\nFailure to mark the pages in Gradescope will result in point deductions. Any pages that are not marked will not be graded.\nMake sure that your uploaded PDF document matches your .qmd and the PDF in your GitHub repository exactly. Points will be deducted for documents that are not reproducible."
-  },
-  {
-    "objectID": "project-description.html",
-    "href": "project-description.html",
-    "title": "專題計劃需知",
-    "section": "",
-    "text": "Topic ideas due\nProposal due\nFinal report due\nVideo presentation + slides and final GitHub repo due\nPresentation comments due"
-  },
-  {
-    "objectID": "project-description.html#期末專題",
-    "href": "project-description.html#期末專題",
-    "title": "專題計劃需知",
-    "section": "期末專題",
-    "text": "期末專題\nTL;DR:\n\n利用 NLP 工具分析語料\n開發、建立部署模型與任務\n探究語言模型的限制與可能性"
-  },
-  {
-    "objectID": "course-syllabus.html",
-    "href": "course-syllabus.html",
-    "title": "課綱",
-    "section": "",
-    "text": "Day\nTime\nLocation\n\n\n\n\n主課\n週四\n2:20 pm - 4:00 pm\n綜 301\n\n\n助教課\n週四\n4:10 pm - 5:10 pm\n綜 301"
-  },
-  {
-    "objectID": "course-syllabus.html#學習目標",
-    "href": "course-syllabus.html#學習目標",
-    "title": "課綱",
-    "section": "學習目標",
-    "text": "學習目標"
-  },
-  {
-    "objectID": "course-syllabus.html#課程錄影",
-    "href": "course-syllabus.html#課程錄影",
-    "title": "課綱",
-    "section": "課程錄影",
-    "text": "課程錄影"
-  },
-  {
-    "objectID": "course-syllabus.html#建議先備知識",
-    "href": "course-syllabus.html#建議先備知識",
-    "title": "課綱",
-    "section": "建議先備知識",
-    "text": "建議先備知識\n\npython 程式基礎\n機器學習基礎"
-  },
-  {
-    "objectID": "course-syllabus.html#教科書與參考書",
-    "href": "course-syllabus.html#教科書與參考書",
-    "title": "課綱",
-    "section": "教科書與參考書",
-    "text": "教科書與參考書\n\nSpeech and Language Processing (3rd ed. draft) by Dan Jurafsky and James H. Martin"
-  },
-  {
-    "objectID": "course-syllabus.html#助教群",
-    "href": "course-syllabus.html#助教群",
-    "title": "課綱",
-    "section": "助教群",
-    "text": "助教群\n\n王伯雅、古貿昌、陳韋伶、陳品而、周昕妤、張鈺琳"
-  },
-  {
-    "objectID": "course-syllabus.html#回家作業",
-    "href": "course-syllabus.html#回家作業",
-    "title": "課綱",
-    "section": "回家作業",
-    "text": "回家作業\n每週有一份作業。\n\n繳交方式\n繳交時間"
-  },
-  {
-    "objectID": "course-syllabus.html#考試與期末專案",
-    "href": "course-syllabus.html#考試與期末專案",
-    "title": "課綱",
-    "section": "考試與期末專案",
-    "text": "考試與期末專案\n無期中與期末考。\n需實作一個專案計劃。"
-  },
-  {
-    "objectID": "course-syllabus.html#給分方式",
-    "href": "course-syllabus.html#給分方式",
-    "title": "課綱",
-    "section": "給分方式",
-    "text": "給分方式\n計分比例如下\n\n\n\n項目\n百分比\n\n\n\n\n課堂參與與練習\n10%\n\n\n作業\n40% (10% x 4) 選最優十份作業\n\n\n期末專題\n40%\n\n\n助教實習課\n10%"
-  },
-  {
-    "objectID": "course-syllabus.html#課堂期待",
-    "href": "course-syllabus.html#課堂期待",
-    "title": "課綱",
-    "section": "課堂期待",
-    "text": "課堂期待\n\n自主學習與積極參與討論\n確實預習\n不遲交、不遲到\n彼此協助與合作\n誠信與負責\n\n\n遲交評分\n\n每份作業最遲在截止日後三天補交，除非有正當理由教師認可，否則皆扣 10%。\n期末專案不得遲交。"
   }
 ]
