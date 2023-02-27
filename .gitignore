@@ -129,3 +129,5 @@ dmypy.json
 .pyre/
 
 /.quarto/
+!docs/site_libs/revealjs/dist
+
