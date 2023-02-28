@@ -1,4 +1,4 @@
----
+<!-- ---
 title: "Week 2"
 subtitle: "Simple linear regression"
 editor: visual
@@ -35,4 +35,4 @@ editor: visual
 
 ::: {style="font-size: 0.875em;"}
 Back to [course schedule](/ "Course schedule") ⏎
-:::
+::: -->
