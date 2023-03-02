@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "Week 2 Introduction"
 author: "謝舒凱 台大語言所"
@@ -9,6 +10,12 @@ format:
       multiplex: true
       logo: /images/logo_round.png
 bibliography: ../cllt.bib
+=======
+<!-- ---
+title: "Week 2"
+subtitle: "Simple linear regression"
+editor: visual
+>>>>>>> a2126c0f3863bcb9c01d0eb8aa910c0a9a5e20ec
 ---
 
 # 計算語言學入門
@@ -269,6 +276,7 @@ multimodal LLM
 - [1]（計算語言學傳統）利用計算模型與工具， 以人懂的方式 <span style="color:red;">（符碼運算）</span>解析與瞭解語言 (及其他模態)。
 
 
+<<<<<<< HEAD
 - [2]（post-LLM NLP 導向）以電腦會就好<span style="color:red;">（張量運算）</span>的方式，開發與調整模型的 (驚人的) 落地應用。 
 :::
 
@@ -332,3 +340,8 @@ multimodal LLM
 
 ::: {#refs}
 :::
+=======
+::: {style="font-size: 0.875em;"}
+Back to [course schedule](/ "Course schedule") ⏎
+::: -->
+>>>>>>> a2126c0f3863bcb9c01d0eb8aa910c0a9a5e20ec

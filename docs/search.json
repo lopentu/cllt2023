@@ -1,5 +1,36 @@
 [
   {
+<<<<<<< HEAD
+=======
+    "objectID": "computing-env.html",
+    "href": "computing-env.html",
+    "title": "計算環境與作業繳交方式",
+    "section": "",
+    "text": "Google Colab\nVisual Studio code 與推薦套件"
+  },
+  {
+    "objectID": "course-faq.html",
+    "href": "course-faq.html",
+    "title": "FAQ",
+    "section": "",
+    "text": "Go to your Files tab, check the box next to the file you want to download, then click on the blue gear icon on the Files tab to reveal the drop down menu, and select Export… If you have selected multiple files to export, RStudio will zip them up into a single zip file for you. If you’ve selected just a single file, it will only download that. The downloaded file will go to wherever files you download off the internet goes on your computer (usually your Downloads folder)."
+  },
+  {
+    "objectID": "course-faq.html#how-can-i-submit-my-assignment-to-gradescope",
+    "href": "course-faq.html#how-can-i-submit-my-assignment-to-gradescope",
+    "title": "FAQ",
+    "section": "How can I submit my assignment to Gradescope?",
+    "text": "How can I submit my assignment to Gradescope?\nThe instructions for submitting your assignment to Gradescope can be found here. In a nutshell, you’ll upload your PDF and them mark the page(s) where each question can be found. It’s OK if a question spans multiple pages, just mark them all. It’s also OK if a page includes multiple questions."
+  },
+  {
+    "objectID": "course-faq.html#can-i-use-a-local-install-of-r-and-rstudio-instead-of-using-the-rstudio-containers",
+    "href": "course-faq.html#can-i-use-a-local-install-of-r-and-rstudio-instead-of-using-the-rstudio-containers",
+    "title": "FAQ",
+    "section": "Can I use a local install of R and RStudio instead of using the RStudio containers?",
+    "text": "Can I use a local install of R and RStudio instead of using the RStudio containers?\nThe short answer is, I’d rather you didn’t, to save yourself some headache. But, the long answer is, sure! But you will need to install a specific versions of R and RStudio for everything to work as expected. You will also need to install the R packages we’re using as well as have Git installed on your computer. These are not extremely challenging things to get right, but they are not trivial either, particularly on certain operating systems. Myself and the TAs are always happy to provide help with any computational questions when you’re working in the containers we have provided for you. If you’re working on your local setup, we can’t guarantee being able to resolve your issues, though we’re happy to try.\nIf you want to take this path, here is what you need to do:\n\nDownload and install R 4.1.2: https://cran.r-project.org/\nDownload and install a daily build of RStudio: https://dailies.rstudio.com/\nInstall Quarto CLI: https://quarto.org/docs/getting-started/installation.html\nInstall Git: https://happygitwithr.com/install-git.html\nInstall any necessary packages with install.packages(\"___\")\n\nAnd I’d like to reiterate again that successful installation of these software is not a learning goal of this course. So if any of this seems tedious or intimidating in any way, just use the computing environment we have set up for you. More on that here."
+  },
+  {
+>>>>>>> a2126c0f3863bcb9c01d0eb8aa910c0a9a5e20ec
     "objectID": "course-links.html",
     "href": "course-links.html",
     "title": "參考連結",
@@ -7,90 +38,91 @@
     "text": "CS224u at Stanford: Natural Language Understanding\n🔗\n\n\nPhilosophy of Language and Computation at ETH Zürich\n🔗\n\n\n語料實務分析\n🔗 (草稿階段)\n\n\nGitHub classroom\n🔗\n\n\nNTU COOL\n🔗\n\n\nLecture streaming and recordings\n🔗"
   },
   {
-    "objectID": "weeks/week-1.html#自然語言處理",
-    "href": "weeks/week-1.html#自然語言處理",
-    "title": "Week1 Orientation",
-    "section": "自然語言處理",
-    "text": "自然語言處理\n\n研究慣例上，將語言資訊的問題切分成不同的子任務，成熟之後就變成大家較熟悉的應用。\n\n語音辨識與語音合成\n文本摘要\n機器翻譯\n自動問答\n。。。。\n\n\n\n\n曾經語音與多模態(multimodality)是比較不歸類在 NLP 的領域，但最近幾年的進展與趨勢，也與 NLP 的研究社群密切互動。"
+    "objectID": "course-overview.html",
+    "href": "course-overview.html",
+    "title": "LING8505:計算語言學與語言學理論",
+    "section": "",
+    "text": "沒有理論，就不似(/是)科學。"
   },
   {
-    "objectID": "weeks/week-1.html#計算語言學-1",
-    "href": "weeks/week-1.html#計算語言學-1",
-    "title": "Week1 Orientation",
-    "section": "計算語言學",
-    "text": "計算語言學\n\n\n漢語的雙音節化是怎麼演化的 （computational historical linguistics）\n新詞 (neologism)、新構式 (constructions) 是怎麼在社群中突現、傳遞、消亡的 （computational sociolinguistics）\n面對完全沒有接觸過的語言，如何理解與編寫語法系統？（computational linguistic typology/ xenolinguistics）\n……. (你的想法？)"
+    "objectID": "course-overview.html#課程先備知識建議",
+    "href": "course-overview.html#課程先備知識建議",
+    "title": "LING8505:計算語言學與語言學理論",
+    "section": "課程先備知識建議",
+    "text": "課程先備知識建議\n\n熟悉 Python | 繳交作業時，我們會要求你使用 Python 來完成。如果你不確定狀況，建議你先參考 Programming for Linguists 這類課程，確認你已經熟悉 Python 的基本語法。\n大學初級微積分與線性代數 | 瞭解微積分與線性代數的基本概念，包括導數、積分、矩陣、向量、線性方程式、線性空間、線性變換、特徵值與特徵向量等。\n機率與統計 | 熟悉基本的機率分佈，推估參數，以及機率的加法定理與乘法定理。"
   },
   {
-    "objectID": "weeks/week-1.html#從語言的處理到理解",
-    "href": "weeks/week-1.html#從語言的處理到理解",
-    "title": "Week1 Orientation",
-    "section": "從語言的處理到理解",
-    "text": "從語言的處理到理解\nFrom Natural Language Processing to National Language Understanding\n\n對於處理與理解，都是操作型定義 (operationalized)。"
+    "objectID": "course-support.html",
+    "href": "course-support.html",
+    "title": "Course support",
+    "section": "",
+    "text": "Most of you will need help at some point and we want to make sure you can identify when that is without getting too frustrated and feel comfortable seeking help."
   },
   {
-    "objectID": "weeks/week-1.html#傳統自然語言處理的發展",
-    "href": "weeks/week-1.html#傳統自然語言處理的發展",
-    "title": "Week1 Orientation",
-    "section": "傳統自然語言處理的發展",
-    "text": "傳統自然語言處理的發展\n\n\n\n中文 AI 知識庫與自然語言處理核心套件研討會"
+    "objectID": "course-support.html#lectures-and-labs",
+    "href": "course-support.html#lectures-and-labs",
+    "title": "Course support",
+    "section": "Lectures and labs",
+    "text": "Lectures and labs\nIf you have a question during lecture or lab, feel free to ask it! There are likely other students with the same question, so by asking you will create a learning opportunity for everyone."
   },
   {
-    "objectID": "weeks/week-1.html#個人觀點",
-    "href": "weeks/week-1.html#個人觀點",
-    "title": "Week1 Orientation",
-    "section": "(個人觀點)",
-    "text": "(個人觀點)\n\n\n(形式)語言學與傳統自然語言處理中的 Modularity 預設， 是好用的虛構 (useful fiction, Haugen and Dil, 1972)，方便整理知識，但非真實的語言現象。\n語言：人類，爲了溝通目的，在時空脈絡下，發展出的形意符號系統。 (cultural Species; form-meaning pairing; symbolic; self-adaptive complex system; situated and embodied cognition; etc.)\n符碼本質是形意映射，而指涉意義是約定俗成、很吃情境的。因此符碼運算與表徵是給人看的。語言的理解，涉及到更複雜的連續的過程，而非一個分段、分解的過程。\n語言學不等於 rule-based。"
+    "objectID": "course-support.html#office-hours",
+    "href": "course-support.html#office-hours",
+    "title": "Course support",
+    "section": "Office hours",
+    "text": "Office hours\nThe teaching team is here to help you be successful in the course. You are encouraged to attend office hours during the times posted on the home page to ask questions about the course content and assignments. A lot of questions are most effectively answered in-person, so office hours are a valuable resource. I encourage each and every one of you to take advantage of this resource! Make a pledge to stop by office hours at least once during the first three weeks of class. If you truly have no questions to ask, just stop by and say hi and introduce yourself. You can find a list of everyone’s office hours here."
   },
   {
-    "objectID": "weeks/week-1.html#大型預訓練語言模型",
-    "href": "weeks/week-1.html#大型預訓練語言模型",
-    "title": "Week1 Orientation",
-    "section": "大型預訓練語言模型",
-    "text": "大型預訓練語言模型\npre-trained Large Language Models (pre-LLMs)\n\n改變了(目前)的自然語言處理研究方向"
+    "objectID": "course-support.html#discussion-forum",
+    "href": "course-support.html#discussion-forum",
+    "title": "Course support",
+    "section": "Discussion forum",
+    "text": "Discussion forum\nHave a question that can’t wait for office hours? Prefer to write out your question in detail rather than asking in person? The online discussion forum is the best venue for these! We will use Conversations as the online discussion forum. There is a chance another student has already asked a similar question, so please check the other posts on Ed Discussion before adding a new question. If you know the answer to a question that is posted, I encourage you to respond!"
   },
   {
-    "objectID": "weeks/week-1.html#gpt-3-and-beyond",
-    "href": "weeks/week-1.html#gpt-3-and-beyond",
-    "title": "Week1 Orientation",
-    "section": "GPT-3 and Beyond",
-    "text": "GPT-3 and Beyond\n很清楚的科普介紹"
+    "objectID": "course-support.html#email",
+    "href": "course-support.html#email",
+    "title": "Course support",
+    "section": "Email",
+    "text": "Email\nPlease refrain from emailing any course content questions (those should go Conversations), and only use email for questions about personal matters that may not be appropriate for the public course forum (e.g., illness, accommodations, etc.). For such matters, you may email Dr. Mine Çetinkaya-Rundel at mc301@duke.edu.\nIf there is a question that’s not appropriate for the public forum, you are welcome to email me directly. If you email me, please include “STA 210” in the subject line. Barring extenuating circumstances, I will respond to STA 210 emails within 48 hours Monday - Friday. Response time may be slower for emails sent Friday evening - Sunday."
   },
   {
-    "objectID": "weeks/week-1.html#post-ai-nlp-in-context-learning-prompt-training",
-    "href": "weeks/week-1.html#post-ai-nlp-in-context-learning-prompt-training",
-    "title": "Week1 Orientation",
-    "section": "post-AI NLP: in-context learning (prompt-training)",
-    "text": "post-AI NLP: in-context learning (prompt-training)\na new paradigm of NLP that is based on the recent advances in AI, especially in the field of language modeling.\n\nRecently, we have seen dramatic advances in natural language processing (NLP) driven by huge pre-trained language models such as GPT-3 and DALLE-2. Instead of building many small task-specific models, there is a movement to create and use these more all-purpose huge language models for many NLP applications.\n\nThe most intriguing finding is that these models employ a new learning paradigm: in-context learning, where they learn to do a downstream task simply by conditioning on a prompt consisting of a few input-output examples without any parameter updates"
+    "objectID": "course-support.html#academic-support",
+    "href": "course-support.html#academic-support",
+    "title": "Course support",
+    "section": "Academic support",
+    "text": "Academic support\nThere are times you may need help with the class that is beyond what can be provided by the teaching team. In those instances, I encourage you to visit the Academic Resource Center. The Academic Resource Center (ARC) offers free services to all students during their undergraduate careers at Duke. Services include Learning Consultations, Peer Tutoring and Study Groups, ADHD/LD Coaching, Outreach Workshops, and more. Because learning is a process unique to every individual, they work with each student to discover and develop their own academic strategy for success at Duke. ARC services are available free to any Duke undergraduate student, in any year, studying in any discipline. Contact the ARC to schedule an appointment. Undergraduates in any year, studying any discipline can benefit! Contact theARC@duke.edu, 919-684-5917."
   },
   {
-    "objectID": "weeks/week-1.html#如何影響教學",
-    "href": "weeks/week-1.html#如何影響教學",
-    "title": "Week1 Orientation",
-    "section": "如何影響教學",
-    "text": "如何影響教學\n(順便介紹助教群 😄)"
+    "objectID": "course-support.html#mental-health-and-wellness",
+    "href": "course-support.html#mental-health-and-wellness",
+    "title": "Course support",
+    "section": "Mental health and wellness",
+    "text": "Mental health and wellness\nStudent mental health and wellness is of primary importance at Duke, and the university offers resources to support students in managing daily stress and self-care. Duke offers several resources for students to seek assistance on coursework and to nurture daily habits that support overall well-being, some of which are listed below:\n\nThe Academic Resource Center: (919) 684-5917, theARC@duke.edu, or arc.duke.edu,\nDuWell: (919) 681-8421, duwell@studentaffairs.duke.edu, or studentaffairs.duke.edu/duwell\n\nIf your mental health concerns and/or stressful events negatively affect your daily emotional state, academic performance, or ability to participate in your daily activities, many resources are available to help you through difficult times. Duke encourages all students to access these resources.\n\nDukeReach. Provides comprehensive outreach services to identify and support students in managing all aspects of well-being. If you have concerns about a student’s behavior or health visit the website for resources and assistance. studentaffairs.duke.edu/dukereach\nCounseling and Psychological Services (CAPS). CAPS helps Duke Students enhance strengths and develop abilities to successfully live, grow and learn in their personal and academic lives. CAPS recognizes that we are living in unprecedented times and that the changes, challenges and stressors brought on by the COVID-19 pandemic have impacted everyone, often in ways that are tax our well-being. CAPS offers many services to Duke undergraduate students, including brief individual and group counseling, couples counseling and more. CAPS staff also provides outreach to student groups, particularly programs supportive of at-risk populations, on a wide range of issues impacting them in various aspects of campus life. CAPS provides services to students via Telehealth. To initiate services, you can contact their front desk at 919-660-1000. studentaffairs.duke.edu/caps\nBlue Devils Care. A convenient and cost-effective way for Duke students to receive 24/7 mental health support through TalkNow and scheduled counseling. bluedevilscare.duke.edu\nTwo-Click Support. Duke Student Government and DukeReach partnership that connects students to help in just two clicks. bit.ly/TwoClickSupport\nWellTrack. Sign up for WellTrack at app.welltrack.com."
   },
   {
-    "objectID": "weeks/week-1.html#爲什麼我們可以放心或應該擔心",
-    "href": "weeks/week-1.html#爲什麼我們可以放心或應該擔心",
-    "title": "Week1 Orientation",
-    "section": "爲什麼我們可以放心（或應該擔心）？",
-    "text": "爲什麼我們可以放心（或應該擔心）？\naka. 無中生有，跟真的一樣"
+    "objectID": "course-support.html#technology-accommodations",
+    "href": "course-support.html#technology-accommodations",
+    "title": "Course support",
+    "section": "Technology accommodations",
+    "text": "Technology accommodations\nStudents with demonstrated high financial need who have limited access to computers may request assistance in the form of loaner laptops. For technology assistance requests, please go here. Please note that supplies are limited.\nNote that we will be using Duke’s computational resources in this course. These resources are freely available to you. As long as your computer can connect to the internet and open a browser window, you can perform the necessary computing for this course. All software we use is open-source and/or freely available."
   },
   {
-    "objectID": "weeks/week-1.html#我們怎麼實作這門課",
-    "href": "weeks/week-1.html#我們怎麼實作這門課",
-    "title": "Week1 Orientation",
-    "section": "我們怎麼實作這門課？",
-    "text": "我們怎麼實作這門課？\n\n我們的主要學習重點不會放在自然語言處理中的機器學習模型原理 (請大家在其他的課程中並行學習)，而是放在語言學理論與自然語言處理的關係。\n選擇有語言學背景的教材 (如 Jurafsky & Martin SLP3, Christopher Potts cs224u, etc.) 來進行課程的教學，並補充不同的觀點。\n\n\n\n\n\n\n\nWarning\n\n\n這是沒有教科書的學門\n\n\n\n\n實作部分側重應用。"
+    "objectID": "course-support.html#course-materials-costs",
+    "href": "course-support.html#course-materials-costs",
+    "title": "Course support",
+    "section": "Course materials costs",
+    "text": "Course materials costs\nThere are no costs associated with this course. All readings will come from freely available, open resources (open-source textbooks, journal articles, etc.)."
   },
   {
-    "objectID": "weeks/week-1.html#看看當前的研究教學",
-    "href": "weeks/week-1.html#看看當前的研究教學",
-    "title": "Week1 Orientation",
-    "section": "看看當前的研究教學",
-    "text": "看看當前的研究教學\nIntroduction and course overview"
+    "objectID": "course-support.html#assistance-with-zoom-or-sakai",
+    "href": "course-support.html#assistance-with-zoom-or-sakai",
+    "title": "Course support",
+    "section": "Assistance with Zoom or Sakai",
+    "text": "Assistance with Zoom or Sakai\nFor technical help with Sakai or Zoom, contact the Duke OIT Service Desk at oit.duke.edu/help. You can also access the self-service help documentation for Zoom here and for Sakai here.\nNote that we will be making minimal use of Sakai in this course (primarily for announcements and grade book). All assignment submission and discussion will take place on GitHub instead.\nZoom will be used for online office hours as well as as a backup option should we need to hold the course online instead of in person."
   },
   {
+<<<<<<< HEAD
     "objectID": "weeks/week-2.html#上週重點",
     "href": "weeks/week-2.html#上週重點",
     "title": "Week 2 Introduction",
@@ -264,6 +296,133 @@
     "title": "Week 2 Introduction",
     "section": "",
     "text": "References\n\n\nBaroni, Marco. 2021. “On the Gap Between Computational and Theoretical Linguistics.” https://www.virtual2021.eacl.org/plenary_session_keynote_by_marco_baroni.html.\n\n\nBrown, Tom, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared D Kaplan, Prafulla Dhariwal, Arvind Neelakantan, et al. 2020. “Language Models Are Few-Shot Learners.” Advances in Neural Information Processing Systems 33: 1877–1901.\n\n\nDong, Qingxiu, Lei Li, Damai Dai, Ce Zheng, Zhiyong Wu, Baobao Chang, Xu Sun, Jingjing Xu, and Zhifang Sui. 2022. “A Survey for in-Context Learning.” arXiv Preprint arXiv:2301.00234.\n\n\nWei, Jason, Xuezhi Wang, Dale Schuurmans, Maarten Bosma, Ed Chi, Quoc Le, and Denny Zhou. 2022. “Chain of Thought Prompting Elicits Reasoning in Large Language Models.” arXiv Preprint arXiv:2201.11903.\n\n\nZhou, Yongchao, Andrei Ioan Muresanu, Ziwen Han, Keiran Paster, Silviu Pitis, Harris Chan, and Jimmy Ba. 2022. “Large Language Models Are Human-Level Prompt Engineers.” arXiv Preprint arXiv:2211.01910."
+=======
+    "objectID": "course-syllabus.html",
+    "href": "course-syllabus.html",
+    "title": "課綱",
+    "section": "",
+    "text": "Day\nTime\nLocation\n\n\n\n\n主課\n週四\n2:20 pm - 4:00 pm\n綜 301\n\n\n助教課\n週四\n4:10 pm - 5:10 pm\n綜 301"
+  },
+  {
+    "objectID": "course-syllabus.html#學習目標",
+    "href": "course-syllabus.html#學習目標",
+    "title": "課綱",
+    "section": "學習目標",
+    "text": "學習目標"
+  },
+  {
+    "objectID": "course-syllabus.html#課程錄影",
+    "href": "course-syllabus.html#課程錄影",
+    "title": "課綱",
+    "section": "課程錄影",
+    "text": "課程錄影"
+>>>>>>> a2126c0f3863bcb9c01d0eb8aa910c0a9a5e20ec
+  },
+  {
+    "objectID": "course-syllabus.html#建議先備知識",
+    "href": "course-syllabus.html#建議先備知識",
+    "title": "課綱",
+    "section": "建議先備知識",
+    "text": "建議先備知識\n\npython 程式基礎\n機器學習基礎"
+  },
+  {
+    "objectID": "course-syllabus.html#教科書與參考書",
+    "href": "course-syllabus.html#教科書與參考書",
+    "title": "課綱",
+    "section": "教科書與參考書",
+    "text": "教科書與參考書\n\nSpeech and Language Processing (3rd ed. draft) by Dan Jurafsky and James H. Martin"
+  },
+  {
+    "objectID": "course-syllabus.html#助教群",
+    "href": "course-syllabus.html#助教群",
+    "title": "課綱",
+    "section": "助教群",
+    "text": "助教群\n\n王伯雅、古貿昌、陳韋伶、陳品而、周昕妤、張鈺琳"
+  },
+  {
+    "objectID": "course-syllabus.html#回家作業",
+    "href": "course-syllabus.html#回家作業",
+    "title": "課綱",
+    "section": "回家作業",
+    "text": "回家作業\n每週有一份作業。\n\n繳交方式\n繳交時間"
+  },
+  {
+    "objectID": "course-syllabus.html#考試與期末專案",
+    "href": "course-syllabus.html#考試與期末專案",
+    "title": "課綱",
+    "section": "考試與期末專案",
+    "text": "考試與期末專案\n無期中與期末考。\n需實作一個專案計劃。"
+  },
+  {
+    "objectID": "course-syllabus.html#給分方式",
+    "href": "course-syllabus.html#給分方式",
+    "title": "課綱",
+    "section": "給分方式",
+    "text": "給分方式\n計分比例如下\n\n\n\n項目\n百分比\n\n\n\n\n課堂參與與練習\n10%\n\n\n作業\n40% (10% x 4) 選最優十份作業\n\n\n期末專題\n40%\n\n\n助教實習課\n10%"
+  },
+  {
+<<<<<<< HEAD
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "計算語言學與語言學理論",
+    "section": "",
+    "text": "週次\n日期\n主題\n預習 📖\n投影片\n助教課\n課堂練習\n作業\n\n\n\n\n1\n02/23\n課程導論\n\norientation\n\n\n\n\n\n2\n03/02\n計算語言學導論\n\n\n\n\n\n\n\n3\n03/09\n計算構詞與詞彙 (1)\nslp3-02\n\n\n\n\n\n\n4\n03/16\n計算構詞與詞彙 (2)\nslp3-23\n\n\n\n\n\n\n5\n03/23\n計算構詞與詞彙 (3)\nslp3-21\n\n\n\n\n\n\n6\n03/30\n計算構詞與詞彙 (4)\nslp3-25\n\n\n\n\n\n\n7\n04/06\n句法理論與剖析器\nslp3-18; (Linzen and Baroni, 2021)\n\n\n\n\n\n\n8\n04/13\n認知語法與計算\ncognitive linguistics meets computational linguistics\n\n\n\n\n\n\n9\n04/20\n語意表徵 (1)\nslp3-06\n\n\n\n\n\n\n10\n04/27\n語意表徵 (2)\nslp3-10\n\n\n\n\n\n\n11\n05/04\n語意表徵 (3) & 業師分享\nslp3-11\n\n\n\n\n\n\n12\n05/11\n語意表徵 (4)\nslp3-22\n\n\n\n\n\n\n13\n05/18\nBakeoff practice\n\n\n\n\n\n\n\n14\n05/25\n語音、多模態與言談分析\nslp3-15; slp3-28\n\n\n\n\n\n\n15\n06/01\n綜合討論\n\n\n\n\n\n\n\n16\n06/08\n期末報告"
+=======
+    "objectID": "course-syllabus.html#課堂期待",
+    "href": "course-syllabus.html#課堂期待",
+    "title": "課綱",
+    "section": "課堂期待",
+    "text": "課堂期待\n\n自主學習與積極參與討論\n確實預習\n不遲交、不遲到\n彼此協助與合作\n誠信與負責\n\n\n遲交評分\n\n每份作業最遲在截止日後三天補交，除非有正當理由教師認可，否則皆扣 10%。\n期末專案不得遲交。"
+>>>>>>> a2126c0f3863bcb9c01d0eb8aa910c0a9a5e20ec
+  },
+  {
+    "objectID": "course-team.html",
+    "href": "course-team.html",
+    "title": "教學團隊",
+    "section": "",
+    "text": "謝舒凱，德國杜賓根大學計算語言學博士，臺大語言學研究所副教授。\n\n\n\nOffice hours\nLocation\n\n\n\n\n個別另約\nR307, GIL."
+  },
+  {
+    "objectID": "course-team.html#助教",
+    "href": "course-team.html#助教",
+    "title": "教學團隊",
+    "section": "助教",
+    "text": "助教\n\n\n\n\nTA\nemail\n\n\n\n\n\n王伯雅，語言所博士班\ndiffere94nt@gmail.com\n\n\n\n古貿昌，語言所博士班\nd08142002@ntu.edu.tw\n\n\n\n陳韋伶，語言所博士班\nd10142007@ntu.edu.tw\n\n\n\n陳品而，語言所博士班\nf10142001@ntu.edu.tw\n\n\n\n周昕妤，語言所碩士班\nr10142008@ntu.edu.tw"
+  },
+  {
+    "objectID": "exams/exam-1.html",
+    "href": "exams/exam-1.html",
+    "title": "Exam 1",
+    "section": "",
+    "text": "Exam 1 will be released on Friday, Feb 4 at 9 am ET and must be completed by Mon, Feb 7 at 11:59 pm.\nThe exam will consist of two parts:\n\nPart 1 - Conceptual: Multiple choice questions on Sakai test and quizzes. This portion may only be submitted one time. Go here to complete Part 1 of the exam.\nPart 2 - Applied: Data analysis in RStudio and submitted in Gradescope (like a usual lab and homework). Go to the GitHub organization for the course and find the exam-1- repo to complete Part 3 of your exam. Add your answers to the exam-1.qmd file in your repo.\n\nBoth portions must be completed and submitted by Mon, Feb 7 at 11:59 pm. Late work will only be accepted in the case of of extenuating circumstances and notification from your academic dean.\n🍀 Good luck! 🍀\n\n\n\nBy taking this exam, you pledge to uphold the Duke Community Standard:\n\nI will not lie, cheat, or steal in my academic endeavors;\nI will conduct myself honorably in all my endeavors; and\nI will act if the Standard is compromised.\n\n\n\n\n\nThis is an individual assignment. Everything in your repository and on Sakai is for your eyes only.\nYou may not collaborate or communicate anything about this exam to anyone except the instructor and the head TA (Rick Presman). For example, you may not communicate with other students, other TAs, or post/solicit help on the internet, email or via any other method of communication.\nThe exam is open-book, open-note, so you may use any materials from class as you take the exam.\nOnly head TA and professor office hours will be held during the exam period.\nYou may not email the TAs questions about the exam.\nIf you have questions, direct message the professor or the head TA (Rick Presman) on Slack or post on Sakai Conversations for “Instructors in this site” only or attend my office hours (Monday, 10:30 am - 11:30 am).\n\n\n\n\n\nPart 1 - Conceptual: The answers to the multiple choice/short answer questions should be submitted under Test & Quizzes in Sakai.\nPart 2 - Applied: The PDF document for the data analysis portion must be uploaded to Gradescope.\n\nYou must submit a PDF to Gradescope that corresponds to the .qmd file on your GitHub repository in order to receive credit for this portion of the exam.\nYou must upload a PDF, not HTML. Any non-PDF submissions will not be graded.\nMark the pages associated with each question. If any answer for a question spans multiple pages, mark all associated pages.\nMake sure to associate the “Workflow & formatting” section with the first page.\nFailure to mark the pages in Gradescope will result in point deductions. Any pages that are not marked will not be graded.\nMake sure that your uploaded PDF document matches your .qmd and the PDF in your GitHub repository exactly. Points will be deducted for documents that are not reproducible."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "計算語言學與語言學理論",
+    "section": "",
+    "text": "週次\n日期\n主題\n預習 📖\n投影片\n助教課\n課堂練習\n作業\n\n\n\n\n1\n02/23\n課程導論\n\norientation\n\n\n\n\n\n2\n03/02\n計算語言學導論\n\n\n\n\n\n\n\n3\n03/09\n計算構詞與詞彙 (1)\nslp3-02\n\n\n\n\n\n\n4\n03/16\n計算構詞與詞彙 (2)\nslp3-23\n\n\n\n\n\n\n5\n03/23\n計算構詞與詞彙 (3)\nslp3-21\n\n\n\n\n\n\n6\n03/30\n計算構詞與詞彙 (4)\nslp3-25\n\n\n\n\n\n\n7\n04/06\n句法理論與剖析器\nslp3-18\n\n\n\n\n\n\n8\n04/13\n認知語法與計算\n\n\n\n\n\n\n\n9\n04/20\n語意表徵 (1)\nslp3-06\n\n\n\n\n\n\n10\n04/27\n語意表徵 (2)\nslp3-10\n\n\n\n\n\n\n11\n05/04\n語意表徵 (3) & 業師分享\nslp3-11\n\n\n\n\n\n\n12\n05/11\n語意表徵 (4)\nslp3-22\n\n\n\n\n\n\n13\n05/18\n語音與社會變異\nslp3-28\n\n\n\n\n\n\n14\n05/25\n多模態與言談分析\nslp3-15\n\n\n\n\n\n\n15\n06/01\n綜合討論\n\n\n\n\n\n\n\n16\n06/08\n期末報告"
+  },
+  {
+    "objectID": "labs/lab-0.html",
+    "href": "labs/lab-0.html",
+    "title": "Lab 0 - Welcome",
+    "section": "",
+    "text": "熟悉彼此，相關軟體工具\n課程期待"
+  },
+  {
+    "objectID": "project-description.html",
+    "href": "project-description.html",
+    "title": "期末專題計劃需知",
+    "section": "",
+    "text": "Topic ideas due\nProposal due\nFinal report due\nVideo presentation + slides and final GitHub repo due\nPresentation comments due"
+  },
+  {
+    "objectID": "project-description.html#期末專題",
+    "href": "project-description.html#期末專題",
+    "title": "期末專題計劃需知",
+    "section": "期末專題",
+    "text": "期末專題\nTL;DR:\n\n利用 NLP 工具分析語料\n開發、建立部署模型與任務\n探究語言模型的限制與可能性"
   },
   {
     "objectID": "project-tips-resources.html",
@@ -294,39 +453,32 @@
     "text": "Additional resources\n\nR for Data Science\nQuarto Documentation\nData visualization\n\nggplot2 Reference\nggplot2: Elegant Graphics for Data Analysis\nData Visualization: A Practice Introduction\nPatchwork R Package"
   },
   {
-    "objectID": "course-overview.html",
-    "href": "course-overview.html",
-    "title": "LING8505:計算語言學與語言學理論",
+    "objectID": "supplemental/log-transformations.html",
+    "href": "supplemental/log-transformations.html",
+    "title": "Log Transformations in Linear Regression",
     "section": "",
-    "text": "沒有理論，就不似(/是)科學。"
+    "text": "Note\n\n\n\nThe following supplemental notes were created by Dr. Maria Tackett for STA 210. They are provided for students who want to dive deeper into the mathematics behind regression and reflect some of the material covered in STA 211: Mathematics of Regression. Additional supplemental notes will be added throughout the semester.\nThis document provides details about the model interpretation when the predictor and/or response variables are log-transformed. For simplicity, we will discuss transformations for the simple linear regression model as shown in Equation 1.\n\\[\n\\label{orig}\ny = \\beta_0 + \\beta_1 x\n\\tag{1}\\]\nAll results and interpretations can be easily extended to transformations in multiple regression models.\nNote: log refers to the natural logarithm."
   },
   {
-    "objectID": "course-overview.html#課程先備知識建議",
-    "href": "course-overview.html#課程先備知識建議",
-    "title": "LING8505:計算語言學與語言學理論",
-    "section": "課程先備知識建議",
-    "text": "課程先備知識建議\n\n熟悉 Python | 繳交作業時，我們會要求你使用 Python 來完成。如果你不確定狀況，建議你先參考 Programming for Linguists 這類課程，確認你已經熟悉 Python 的基本語法。\n大學初級微積分與線性代數 | 瞭解微積分與線性代數的基本概念，包括導數、積分、矩陣、向量、線性方程式、線性空間、線性變換、特徵值與特徵向量等。\n機率與統計 | 熟悉基本的機率分佈，推估參數，以及機率的加法定理與乘法定理。"
+    "objectID": "supplemental/log-transformations.html#log-transformation-on-the-response-variable",
+    "href": "supplemental/log-transformations.html#log-transformation-on-the-response-variable",
+    "title": "Log Transformations in Linear Regression",
+    "section": "Log-transformation on the response variable",
+    "text": "Log-transformation on the response variable\nSuppose we fit a linear regression model with \\(\\log(y)\\), the log-transformed \\(y\\), as the response variable. Under this model, we assume a linear relationship exists between \\(x\\) and \\(\\log(y)\\), such that \\(\\log(y) \\sim N(\\beta_0 + \\beta_1 x, \\sigma^2)\\) for some \\(\\beta_0\\), \\(\\beta_1\\) and \\(\\sigma^2\\). In other words, we can model the relationship between \\(x\\) and \\(\\log(y)\\) using the model in Equation 2.\n\\[\n\\log(y) = \\beta_0 + \\beta_1 x\n\\tag{2}\\]\nIf we interpret the model in terms of \\(\\log(y)\\), then we can use the usual interpretations for slope and intercept. When reporting results, however, it is best to give all interpretations in terms of the original response variable \\(y\\), since interpretations using log-transformed variables are often more difficult to truly understand.\nIn order to get back on the original scale, we need to use the exponential function (also known as the anti-log), \\(\\exp\\{x\\} = e^x\\). Therefore, we use the model in Equation 2 for interpretations and predictions, we will use Equation 3 to state our conclusions in terms of \\(y\\).\n\\[\n\\begin{aligned}\n&\\exp\\{\\log(y)\\} = \\exp\\{\\beta_0 + \\beta_1 x\\} \\\\[10pt]\n\\Rightarrow &y = \\exp\\{\\beta_0 + \\beta_1 x\\} \\\\[10pt]\n\\Rightarrow &y = \\exp\\{\\beta_0\\}\\exp\\{\\beta_1 x\\}\n\\end{aligned}\n\\tag{3}\\]\nIn order to interpret the slope and intercept, we need to first understand the relationship between the mean, median and log transformations.\n\nMean, Median, and Log Transformations\nSuppose we have a dataset y that contains the following observations:\n\n\n[1] 3 5 6 7 8\n\n\nIf we log-transform the values of y then calculate the mean and median, we have\n\n\n\n\n\nmean_log_y\nmedian_log_y\n\n\n\n\n1.70503\n1.79176\n\n\n\n\n\nIf we calculate the mean and median of y, then log-transform the mean and median, we have\n\n\n\n\n\nlog_mean\nlog_median\n\n\n\n\n1.75786\n1.79176\n\n\n\n\n\nThis is a simple illustration to show\n\n\\(\\text{Mean}[{\\log(y)}] \\neq \\log[\\text{Mean}(y)]\\) - the mean and log are not commutable\n\\(\\text{Median}[\\log(y)] = \\log[\\text{Median}(y)]\\) - the median and log are commutable\n\n\n\nInterpretaton of model coefficients\nUsing Equation 2, the mean \\(\\log(y)\\) for any given value of \\(x\\) is \\(\\beta_0 + \\beta_1 x\\); however, this does not indicate that the mean of \\(y = \\exp\\{\\beta_0 + \\beta_1 x\\}\\) (see previous section). From the assumptions of linear regression, we assume that for any given value of \\(x\\), the distribution of \\(\\log(y)\\) is Normal, and therefore symmetric. Thus the median of \\(\\log(y)\\) is equal to the mean of \\(\\log(y)\\), i.e \\(\\text{Median}(\\log(y)) = \\beta_0 + \\beta_1 x\\).\nSince the log and the median are commutable, \\(\\text{Median}(\\log(y)) = \\beta_0 + \\beta_1 x \\Rightarrow \\text{Median}(y) = \\exp\\{\\beta_0 + \\beta_1 x\\}\\). Thus, when we log-transform the response variable, the interpretation of the intercept and slope are in terms of the effect on the median of \\(y\\).\nIntercept: The intercept is expected median of \\(y\\) when the predictor variable equals 0. Therefore, when \\(x=0\\),\n\\[\n\\begin{aligned}\n&\\log(y) = \\beta_0 + \\beta_1 \\times 0 = \\beta_0 \\\\[10pt]\n\\Rightarrow &y = \\exp\\{\\beta_0\\}\n\\end{aligned}\n\\]\nInterpretation: When \\(x=0\\), the median of \\(y\\) is expected to be \\(\\exp\\{\\beta_0\\}\\).\nSlope: The slope is the expected change in the median of \\(y\\) when \\(x\\) increases by 1 unit. The change in the median of \\(y\\) is\n\\[\n\\exp\\{[\\beta_0 + \\beta_1 (x+1)] - [\\beta_0 + \\beta_1 x]\\} = \\frac{\\exp\\{\\beta_0 + \\beta_1 (x+1)\\}}{\\exp\\{\\beta_0 + \\beta_1 x\\}} = \\frac{\\exp\\{\\beta_0\\}\\exp\\{\\beta_1 x\\}\\exp\\{\\beta_1\\}}{\\exp\\{\\beta_0\\}\\exp\\{\\beta_1 x\\}} = \\exp\\{\\beta_1\\}\n\\]\nThus, the median of \\(y\\) for \\(x+1\\) is \\(\\exp\\{\\beta_1\\}\\) times the median of \\(y\\) for \\(x\\).\nInterpretation: When \\(x\\) increases by one unit, the median of \\(y\\) is expected to multiply by a factor of \\(\\exp\\{\\beta_1\\}\\)."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "計算語言學與語言學理論",
-    "section": "",
-    "text": "週次\n日期\n主題\n預習 📖\n投影片\n助教課\n課堂練習\n作業\n\n\n\n\n1\n02/23\n課程導論\n\norientation\n\n\n\n\n\n2\n03/02\n計算語言學導論\n\n\n\n\n\n\n\n3\n03/09\n計算構詞與詞彙 (1)\nslp3-02\n\n\n\n\n\n\n4\n03/16\n計算構詞與詞彙 (2)\nslp3-23\n\n\n\n\n\n\n5\n03/23\n計算構詞與詞彙 (3)\nslp3-21\n\n\n\n\n\n\n6\n03/30\n計算構詞與詞彙 (4)\nslp3-25\n\n\n\n\n\n\n7\n04/06\n句法理論與剖析器\nslp3-18; (Linzen and Baroni, 2021)\n\n\n\n\n\n\n8\n04/13\n認知語法與計算\ncognitive linguistics meets computational linguistics\n\n\n\n\n\n\n9\n04/20\n語意表徵 (1)\nslp3-06\n\n\n\n\n\n\n10\n04/27\n語意表徵 (2)\nslp3-10\n\n\n\n\n\n\n11\n05/04\n語意表徵 (3) & 業師分享\nslp3-11\n\n\n\n\n\n\n12\n05/11\n語意表徵 (4)\nslp3-22\n\n\n\n\n\n\n13\n05/18\nBakeoff practice\n\n\n\n\n\n\n\n14\n05/25\n語音、多模態與言談分析\nslp3-15; slp3-28\n\n\n\n\n\n\n15\n06/01\n綜合討論\n\n\n\n\n\n\n\n16\n06/08\n期末報告"
+    "objectID": "supplemental/log-transformations.html#log-transformation-on-the-predictor-variable",
+    "href": "supplemental/log-transformations.html#log-transformation-on-the-predictor-variable",
+    "title": "Log Transformations in Linear Regression",
+    "section": "Log-transformation on the predictor variable",
+    "text": "Log-transformation on the predictor variable\nSuppose we fit a linear regression model with \\(\\log(x)\\), the log-transformed \\(x\\), as the predictor variable. Under this model, we assume a linear relationship exists between \\(\\log(x)\\) and \\(y\\), such that \\(y \\sim N(\\beta_0 + \\beta_1 \\log(x), \\sigma^2)\\) for some \\(\\beta_0\\), \\(\\beta_1\\) and \\(\\sigma^2\\). In other words, we can model the relationship between \\(\\log(x)\\) and \\(y\\) using the model in #eq-log-x.\n\\[\ny = \\beta_0 + \\beta_1 \\log(x)\n\\tag{4}\\]\nIntercept: The intercept is the mean of \\(y\\) when \\(\\log(x) = 0\\), i.e. \\(x = 1\\).\nInterpretation: When \\(x = 1\\) \\((\\log(x) = 0)\\), the mean of \\(y\\) is expected to be \\(\\beta_0\\).\nSlope: The slope is interpreted in terms of the change in the mean of \\(y\\) when \\(x\\) is multiplied by a factor of \\(C\\), since \\(\\log(Cx) = \\log(x) + \\log(C)\\). Thus, when \\(x\\) is multiplied by a factor of \\(C\\), the change in the mean of \\(y\\) is\n\\[\n\\begin{aligned}\n[\\beta_0 + \\beta_1 \\log(Cx)] - [\\beta_0 + \\beta_1 \\log(x)] &= \\beta_1 [\\log(Cx) - \\log(x)] \\\\[10pt]\n& = \\beta_1[\\log(C) + \\log(x) - \\log(x)] \\\\[10pt]\n& = \\beta_1 \\log(C)\n\\end{aligned}\n\\]\nThus the mean of \\(y\\) changes by \\(\\beta_1 \\log(C)\\) units.\nInterpretation: When \\(x\\) is multiplied by a factor of \\(C\\), the mean of \\(y\\) is expected to change by \\(\\beta_1 \\log(C)\\) units. For example, if \\(x\\) is doubled, then the mean of \\(y\\) is expected to change by \\(\\beta_1 \\log(2)\\) units."
   },
   {
-    "objectID": "course-team.html",
-    "href": "course-team.html",
-    "title": "教學團隊",
-    "section": "",
-    "text": "謝舒凱，德國杜賓根大學計算語言學博士，臺大語言學研究所副教授。\n\n\n\nOffice hours\nLocation\n\n\n\n\n個別另約\nR307, GIL."
-  },
-  {
-    "objectID": "course-team.html#助教",
-    "href": "course-team.html#助教",
-    "title": "教學團隊",
-    "section": "助教",
-    "text": "助教\n\n\n\n\nTA\nemail\n\n\n\n\n\n王伯雅，語言所博士班\ndiffere94nt@gmail.com\n\n\n\n古貿昌，語言所博士班\nd08142002@ntu.edu.tw\n\n\n\n陳韋伶，語言所博士班\n\n\n\n\n陳品而，語言所博士班\n\n\n\n\n周昕妤，語言所碩士班\n\n\n\n\n張鈺琳，語言所碩士班"
+    "objectID": "supplemental/log-transformations.html#log-transformation-on-the-the-response-and-predictor-variable",
+    "href": "supplemental/log-transformations.html#log-transformation-on-the-the-response-and-predictor-variable",
+    "title": "Log Transformations in Linear Regression",
+    "section": "Log-transformation on the the response and predictor variable",
+    "text": "Log-transformation on the the response and predictor variable\nSuppose we fit a linear regression model with \\(\\log(x)\\), the log-transformed \\(x\\), as the predictor variable and \\(\\log(y)\\), the log-transformed \\(y\\), as the response variable. Under this model, we assume a linear relationship exists between \\(\\log(x)\\) and \\(\\log(y)\\), such that \\(\\log(y) \\sim N(\\beta_0 + \\beta_1 \\log(x), \\sigma^2)\\) for some \\(\\beta_0\\), \\(\\beta_1\\) and \\(\\sigma^2\\). In other words, we can model the relationship between \\(\\log(x)\\) and \\(\\log(y)\\) using the model in Equation 5.\n\\[\n\\log(y) = \\beta_0 + \\beta_1 \\log(x)\n\\tag{5}\\]\nBecause the response variable is log-transformed, the interpretations on the original scale will be in terms of the median of \\(y\\) (see the section on the log-transformed response variable for more detail).\nIntercept: The intercept is the mean of \\(y\\) when \\(\\log(x) = 0\\), i.e. \\(x = 1\\). Therefore, when \\(\\log(x) = 0\\),\n\\[\n\\begin{aligned}\n&\\log(y) = \\beta_0 + \\beta_1 \\times 0 = \\beta_0 \\\\[10pt]\n\\Rightarrow &y = \\exp\\{\\beta_0\\}\n\\end{aligned}\n\\]\nInterpretation: When \\(x = 1\\) \\((\\log(x) = 0)\\), the median of \\(y\\) is expected to be \\(\\exp\\{\\beta_0\\}\\).\nSlope: The slope is interpreted in terms of the change in the median \\(y\\) when \\(x\\) is multiplied by a factor of \\(C\\), since \\(\\log(Cx) = \\log(x) + \\log(C)\\). Thus, when \\(x\\) is multiplied by a factor of \\(C\\), the change in the median of \\(y\\) is\n\\[\n\\begin{aligned}\n\\exp\\{[\\beta_0 + \\beta_1 \\log(Cx)] - [\\beta_0 + \\beta_1 \\log(x)]\\} &=\n\\exp\\{\\beta_1 [\\log(Cx) - \\log(x)]\\} \\\\[10pt]\n& = \\exp\\{\\beta_1[\\log(C) + \\log(x) - \\log(x)]\\} \\\\[10pt]\n& = \\exp\\{\\beta_1 \\log(C)\\} = C^{\\beta_1}\n\\end{aligned}\n\\]\nThus, the median of \\(y\\) for \\(Cx\\) is \\(C^{\\beta_1}\\) times the median of \\(y\\) for \\(x\\).\nInterpretation: When \\(x\\) is multiplied by a factor of \\(C\\), the median of \\(y\\) is expected to multiple by a factor of \\(C^{\\beta_1}\\). For example, if \\(x\\) is doubled, then the median of \\(y\\) is expected to multiply by \\(2^{\\beta_1}\\)."
   },
   {
     "objectID": "supplemental/mlr-matrix.html",
@@ -406,41 +558,6 @@
     "text": "Cook’s Distance\nCook’s distance is a measure of how much each observation influences the model coefficients, and thus the predicted values. The Cook’s distance for the \\(i^{th}\\) observation can be written as\n\\[\nD_i = \\frac{(\\hat{\\mathbf{Y}} -\\hat{\\mathbf{Y}}_{(i)})^T(\\hat{\\mathbf{Y}} -\\hat{\\mathbf{Y}}_{(i)})}{(p+1)\\hat{\\sigma}}\n\\tag{11}\\]\nwhere \\(\\hat{\\mathbf{Y}}_{(i)}\\) is the vector of predicted values from the model fitted when the \\(i^{th}\\) observation is deleted. Cook’s Distance can be calculated without deleting observations one at a time, since Equation 12 below is mathematically equivalent to Equation 11.\n\\[\nD_i = \\frac{1}{p+1}std.res_i^2\\Bigg[\\frac{h_{ii}}{(1-h_{ii})}\\Bigg] = \\frac{e_i^2}{(p+1)\\hat{\\sigma}^2(1-h_{ii})}\\Bigg[\\frac{h_{ii}}{(1-h_{ii})}\\Bigg]\n\\tag{12}\\]"
   },
   {
-    "objectID": "supplemental/slr-derivations.html",
-    "href": "supplemental/slr-derivations.html",
-    "title": "Deriving the Least-Squares Estimates for Simple Linear Regression",
-    "section": "",
-    "text": "Note\n\n\n\nThe following supplemental notes were created by Dr. Maria Tackett for STA 210. They are provided for students who want to dive deeper into the mathematics behind regression and reflect some of the material covered in STA 211: Mathematics of Regression. Additional supplemental notes will be added throughout the semester.\n\n\nThis document contains the mathematical details for deriving the least-squares estimates for slope (\\(\\beta_1\\)) and intercept (\\(\\beta_0\\)). We obtain the estimates, \\(\\hat{\\beta}_1\\) and \\(\\hat{\\beta}_0\\) by finding the values that minimize the sum of squared residuals, as shown in Equation 1.\n\\[\nSSR = \\sum\\limits_{i=1}^{n}[y_i - \\hat{y}_i]^2 = [y_i - (\\hat{\\beta}_0 + \\hat{\\beta}_1 x_i)]^2 = [y_i - \\hat{\\beta}_0 - \\hat{\\beta}_1 x_i]^2\n\\tag{1}\\]\nRecall that we can find the values of \\(\\hat{\\beta}_1\\) and \\(\\hat{\\beta}_0\\) that minimize /eq-ssr by taking the partial derivatives of Equation 1 and setting them to 0. Thus, the values of \\(\\hat{\\beta}_1\\) and \\(\\hat{\\beta}_0\\) that minimize the respective partial derivative also minimize the sum of squared residuals. The partial derivatives are shown in Equation 2.\n\\[\n\\begin{aligned}\n\\frac{\\partial \\text{SSR}}{\\partial \\hat{\\beta}_1} &= -2 \\sum\\limits_{i=1}^{n}x_i(y_i - \\hat{\\beta}_0 - \\hat{\\beta}_1 x_i)  \\\\\n\\frac{\\partial \\text{SSR}}{\\partial \\hat{\\beta}_0} &= -2 \\sum\\limits_{i=1}^{n}(y_i - \\hat{\\beta}_0 - \\hat{\\beta}_1 x_i)\n\\end{aligned}\n\\tag{2}\\]\nThe derivation of deriving \\(\\hat{\\beta}_0\\) is shown in Equation 3.\n\\[\n\\begin{aligned}\\frac{\\partial \\text{SSR}}{\\partial \\hat{\\beta}_0} &= -2 \\sum\\limits_{i=1}^{n}(y_i - \\hat{\\beta}_0 - \\hat{\\beta}_1 x_i) = 0 \\\\&\\Rightarrow -\\sum\\limits_{i=1}^{n}(y_i + \\hat{\\beta}_0 + \\hat{\\beta}_1 x_i) = 0 \\\\&\\Rightarrow - \\sum\\limits_{i=1}^{n}y_i + n\\hat{\\beta}_0 + \\hat{\\beta}_1\\sum\\limits_{i=1}^{n}x_i = 0 \\\\&\\Rightarrow n\\hat{\\beta}_0  = \\sum\\limits_{i=1}^{n}y_i - \\hat{\\beta}_1\\sum\\limits_{i=1}^{n}x_i \\\\&\\Rightarrow \\hat{\\beta}_0  = \\frac{1}{n}\\Big(\\sum\\limits_{i=1}^{n}y_i - \\hat{\\beta}_1\\sum\\limits_{i=1}^{n}x_i\\Big)\\\\&\\Rightarrow \\hat{\\beta}_0  = \\bar{y} - \\hat{\\beta}_1 \\bar{x} \\\\\\end{aligned}\n\\tag{3}\\]\nThe derivation of \\(\\hat{\\beta}_1\\) using the \\(\\hat{\\beta}_0\\) we just derived is shown in Equation 4.\n\\[\n\\begin{aligned}&\\frac{\\partial \\text{SSR}}{\\partial \\hat{\\beta}_1} = -2 \\sum\\limits_{i=1}^{n}x_i(y_i - \\hat{\\beta}_0 - \\hat{\\beta}_1 x_i) = 0  \\\\&\\Rightarrow -\\sum\\limits_{i=1}^{n}x_iy_i + \\hat{\\beta}_0\\sum\\limits_{i=1}^{n}x_i + \\hat{\\beta}_1\\sum\\limits_{i=1}^{n}x_i^2 = 0 \\\\\\text{(Fill in }\\hat{\\beta}_0\\text{)}&\\Rightarrow -\\sum\\limits_{i=1}^{n}x_iy_i + (\\bar{y} - \\hat{\\beta}_1\\bar{x})\\sum\\limits_{i=1}^{n}x_i + \\hat{\\beta}_1\\sum\\limits_{i=1}^{n}x_i^2 = 0 \\\\&\\Rightarrow  (\\bar{y} - \\hat{\\beta}_1\\bar{x})\\sum\\limits_{i=1}^{n}x_i + \\hat{\\beta}_1\\sum\\limits_{i=1}^{n}x_i^2 = \\sum\\limits_{i=1}^{n}x_iy_i \\\\&\\Rightarrow \\bar{y}\\sum\\limits_{i=1}^{n}x_i - \\hat{\\beta}_1\\bar{x}\\sum\\limits_{i=1}^{n}x_i + \\hat{\\beta}_1\\sum\\limits_{i=1}^{n}x_i^2 = \\sum\\limits_{i=1}^{n}x_iy_i \\\\&\\Rightarrow n\\bar{y}\\bar{x} - \\hat{\\beta}_1n\\bar{x}^2 + \\hat{\\beta}_1\\sum\\limits_{i=1}^{n}x_i^2 = \\sum\\limits_{i=1}^{n}x_iy_i \\\\&\\Rightarrow \\hat{\\beta}_1\\sum\\limits_{i=1}^{n}x_i^2 - \\hat{\\beta}_1n\\bar{x}^2  = \\sum\\limits_{i=1}^{n}x_iy_i - n\\bar{y}\\bar{x} \\\\&\\Rightarrow \\hat{\\beta}_1\\Big(\\sum\\limits_{i=1}^{n}x_i^2 -n\\bar{x}^2\\Big)  = \\sum\\limits_{i=1}^{n}x_iy_i - n\\bar{y}\\bar{x} \\\\ &\\hat{\\beta}_1 = \\frac{\\sum\\limits_{i=1}^{n}x_iy_i - n\\bar{y}\\bar{x}}{\\sum\\limits_{i=1}^{n}x_i^2 -n\\bar{x}^2}\\end{aligned}\n\\tag{4}\\]\nTo write \\(\\hat{\\beta}_1\\) in a form that’s more recognizable, we will use the following:\n\\[\n\\sum x_iy_i - n\\bar{y}\\bar{x} = \\sum(x - \\bar{x})(y - \\bar{y}) = (n-1)\\text{Cov}(x,y)\n\\tag{5}\\]\n\\[\n\\sum x_i^2 - n\\bar{x}^2 - \\sum(x - \\bar{x})^2 = (n-1)s_x^2\n\\tag{6}\\]\nwhere \\(\\text{Cov}(x,y)\\) is the covariance of \\(x\\) and \\(y\\), and \\(s_x^2\\) is the sample variance of \\(x\\) (\\(s_x\\) is the sample standard deviation).\nThus, applying Equation 5 and Equation 6, we have\n\\[\n\\begin{aligned}\\hat{\\beta}_1 &= \\frac{\\sum\\limits_{i=1}^{n}x_iy_i - n\\bar{y}\\bar{x}}{\\sum\\limits_{i=1}^{n}x_i^2 -n\\bar{x}^2} \\\\&= \\frac{\\sum\\limits_{i=1}^{n}(x-\\bar{x})(y-\\bar{y})}{\\sum\\limits_{i=1}^{n}(x-\\bar{x})^2}\\\\&= \\frac{(n-1)\\text{Cov}(x,y)}{(n-1)s_x^2}\\\\&= \\frac{\\text{Cov}(x,y)}{s_x^2}\\end{aligned}\n\\tag{7}\\]\nThe correlation between \\(x\\) and \\(y\\) is \\(r = \\frac{\\text{Cov}(x,y)}{s_x s_y}\\). Thus, \\(\\text{Cov}(x,y) = r s_xs_y\\). Plugging this into Equation 7, we have\n\\[\n\\hat{\\beta}_1 = \\frac{\\text{Cov}(x,y)}{s_x^2} = r\\frac{s_ys_x}{s_x^2} = r\\frac{s_y}{s_x}\n\\tag{8}\\]"
-  },
-  {
-    "objectID": "supplemental/log-transformations.html",
-    "href": "supplemental/log-transformations.html",
-    "title": "Log Transformations in Linear Regression",
-    "section": "",
-    "text": "Note\n\n\n\nThe following supplemental notes were created by Dr. Maria Tackett for STA 210. They are provided for students who want to dive deeper into the mathematics behind regression and reflect some of the material covered in STA 211: Mathematics of Regression. Additional supplemental notes will be added throughout the semester.\nThis document provides details about the model interpretation when the predictor and/or response variables are log-transformed. For simplicity, we will discuss transformations for the simple linear regression model as shown in Equation 1.\n\\[\n\\label{orig}\ny = \\beta_0 + \\beta_1 x\n\\tag{1}\\]\nAll results and interpretations can be easily extended to transformations in multiple regression models.\nNote: log refers to the natural logarithm."
-  },
-  {
-    "objectID": "supplemental/log-transformations.html#log-transformation-on-the-response-variable",
-    "href": "supplemental/log-transformations.html#log-transformation-on-the-response-variable",
-    "title": "Log Transformations in Linear Regression",
-    "section": "Log-transformation on the response variable",
-    "text": "Log-transformation on the response variable\nSuppose we fit a linear regression model with \\(\\log(y)\\), the log-transformed \\(y\\), as the response variable. Under this model, we assume a linear relationship exists between \\(x\\) and \\(\\log(y)\\), such that \\(\\log(y) \\sim N(\\beta_0 + \\beta_1 x, \\sigma^2)\\) for some \\(\\beta_0\\), \\(\\beta_1\\) and \\(\\sigma^2\\). In other words, we can model the relationship between \\(x\\) and \\(\\log(y)\\) using the model in Equation 2.\n\\[\n\\log(y) = \\beta_0 + \\beta_1 x\n\\tag{2}\\]\nIf we interpret the model in terms of \\(\\log(y)\\), then we can use the usual interpretations for slope and intercept. When reporting results, however, it is best to give all interpretations in terms of the original response variable \\(y\\), since interpretations using log-transformed variables are often more difficult to truly understand.\nIn order to get back on the original scale, we need to use the exponential function (also known as the anti-log), \\(\\exp\\{x\\} = e^x\\). Therefore, we use the model in Equation 2 for interpretations and predictions, we will use Equation 3 to state our conclusions in terms of \\(y\\).\n\\[\n\\begin{aligned}\n&\\exp\\{\\log(y)\\} = \\exp\\{\\beta_0 + \\beta_1 x\\} \\\\[10pt]\n\\Rightarrow &y = \\exp\\{\\beta_0 + \\beta_1 x\\} \\\\[10pt]\n\\Rightarrow &y = \\exp\\{\\beta_0\\}\\exp\\{\\beta_1 x\\}\n\\end{aligned}\n\\tag{3}\\]\nIn order to interpret the slope and intercept, we need to first understand the relationship between the mean, median and log transformations.\n\nMean, Median, and Log Transformations\nSuppose we have a dataset y that contains the following observations:\n\n\n[1] 3 5 6 7 8\n\n\nIf we log-transform the values of y then calculate the mean and median, we have\n\n\n\n\n\nmean_log_y\nmedian_log_y\n\n\n\n\n1.70503\n1.79176\n\n\n\n\n\nIf we calculate the mean and median of y, then log-transform the mean and median, we have\n\n\n\n\n\nlog_mean\nlog_median\n\n\n\n\n1.75786\n1.79176\n\n\n\n\n\nThis is a simple illustration to show\n\n\\(\\text{Mean}[{\\log(y)}] \\neq \\log[\\text{Mean}(y)]\\) - the mean and log are not commutable\n\\(\\text{Median}[\\log(y)] = \\log[\\text{Median}(y)]\\) - the median and log are commutable\n\n\n\nInterpretaton of model coefficients\nUsing Equation 2, the mean \\(\\log(y)\\) for any given value of \\(x\\) is \\(\\beta_0 + \\beta_1 x\\); however, this does not indicate that the mean of \\(y = \\exp\\{\\beta_0 + \\beta_1 x\\}\\) (see previous section). From the assumptions of linear regression, we assume that for any given value of \\(x\\), the distribution of \\(\\log(y)\\) is Normal, and therefore symmetric. Thus the median of \\(\\log(y)\\) is equal to the mean of \\(\\log(y)\\), i.e \\(\\text{Median}(\\log(y)) = \\beta_0 + \\beta_1 x\\).\nSince the log and the median are commutable, \\(\\text{Median}(\\log(y)) = \\beta_0 + \\beta_1 x \\Rightarrow \\text{Median}(y) = \\exp\\{\\beta_0 + \\beta_1 x\\}\\). Thus, when we log-transform the response variable, the interpretation of the intercept and slope are in terms of the effect on the median of \\(y\\).\nIntercept: The intercept is expected median of \\(y\\) when the predictor variable equals 0. Therefore, when \\(x=0\\),\n\\[\n\\begin{aligned}\n&\\log(y) = \\beta_0 + \\beta_1 \\times 0 = \\beta_0 \\\\[10pt]\n\\Rightarrow &y = \\exp\\{\\beta_0\\}\n\\end{aligned}\n\\]\nInterpretation: When \\(x=0\\), the median of \\(y\\) is expected to be \\(\\exp\\{\\beta_0\\}\\).\nSlope: The slope is the expected change in the median of \\(y\\) when \\(x\\) increases by 1 unit. The change in the median of \\(y\\) is\n\\[\n\\exp\\{[\\beta_0 + \\beta_1 (x+1)] - [\\beta_0 + \\beta_1 x]\\} = \\frac{\\exp\\{\\beta_0 + \\beta_1 (x+1)\\}}{\\exp\\{\\beta_0 + \\beta_1 x\\}} = \\frac{\\exp\\{\\beta_0\\}\\exp\\{\\beta_1 x\\}\\exp\\{\\beta_1\\}}{\\exp\\{\\beta_0\\}\\exp\\{\\beta_1 x\\}} = \\exp\\{\\beta_1\\}\n\\]\nThus, the median of \\(y\\) for \\(x+1\\) is \\(\\exp\\{\\beta_1\\}\\) times the median of \\(y\\) for \\(x\\).\nInterpretation: When \\(x\\) increases by one unit, the median of \\(y\\) is expected to multiply by a factor of \\(\\exp\\{\\beta_1\\}\\)."
-  },
-  {
-    "objectID": "supplemental/log-transformations.html#log-transformation-on-the-predictor-variable",
-    "href": "supplemental/log-transformations.html#log-transformation-on-the-predictor-variable",
-    "title": "Log Transformations in Linear Regression",
-    "section": "Log-transformation on the predictor variable",
-    "text": "Log-transformation on the predictor variable\nSuppose we fit a linear regression model with \\(\\log(x)\\), the log-transformed \\(x\\), as the predictor variable. Under this model, we assume a linear relationship exists between \\(\\log(x)\\) and \\(y\\), such that \\(y \\sim N(\\beta_0 + \\beta_1 \\log(x), \\sigma^2)\\) for some \\(\\beta_0\\), \\(\\beta_1\\) and \\(\\sigma^2\\). In other words, we can model the relationship between \\(\\log(x)\\) and \\(y\\) using the model in #eq-log-x.\n\\[\ny = \\beta_0 + \\beta_1 \\log(x)\n\\tag{4}\\]\nIntercept: The intercept is the mean of \\(y\\) when \\(\\log(x) = 0\\), i.e. \\(x = 1\\).\nInterpretation: When \\(x = 1\\) \\((\\log(x) = 0)\\), the mean of \\(y\\) is expected to be \\(\\beta_0\\).\nSlope: The slope is interpreted in terms of the change in the mean of \\(y\\) when \\(x\\) is multiplied by a factor of \\(C\\), since \\(\\log(Cx) = \\log(x) + \\log(C)\\). Thus, when \\(x\\) is multiplied by a factor of \\(C\\), the change in the mean of \\(y\\) is\n\\[\n\\begin{aligned}\n[\\beta_0 + \\beta_1 \\log(Cx)] - [\\beta_0 + \\beta_1 \\log(x)] &= \\beta_1 [\\log(Cx) - \\log(x)] \\\\[10pt]\n& = \\beta_1[\\log(C) + \\log(x) - \\log(x)] \\\\[10pt]\n& = \\beta_1 \\log(C)\n\\end{aligned}\n\\]\nThus the mean of \\(y\\) changes by \\(\\beta_1 \\log(C)\\) units.\nInterpretation: When \\(x\\) is multiplied by a factor of \\(C\\), the mean of \\(y\\) is expected to change by \\(\\beta_1 \\log(C)\\) units. For example, if \\(x\\) is doubled, then the mean of \\(y\\) is expected to change by \\(\\beta_1 \\log(2)\\) units."
-  },
-  {
-    "objectID": "supplemental/log-transformations.html#log-transformation-on-the-the-response-and-predictor-variable",
-    "href": "supplemental/log-transformations.html#log-transformation-on-the-the-response-and-predictor-variable",
-    "title": "Log Transformations in Linear Regression",
-    "section": "Log-transformation on the the response and predictor variable",
-    "text": "Log-transformation on the the response and predictor variable\nSuppose we fit a linear regression model with \\(\\log(x)\\), the log-transformed \\(x\\), as the predictor variable and \\(\\log(y)\\), the log-transformed \\(y\\), as the response variable. Under this model, we assume a linear relationship exists between \\(\\log(x)\\) and \\(\\log(y)\\), such that \\(\\log(y) \\sim N(\\beta_0 + \\beta_1 \\log(x), \\sigma^2)\\) for some \\(\\beta_0\\), \\(\\beta_1\\) and \\(\\sigma^2\\). In other words, we can model the relationship between \\(\\log(x)\\) and \\(\\log(y)\\) using the model in Equation 5.\n\\[\n\\log(y) = \\beta_0 + \\beta_1 \\log(x)\n\\tag{5}\\]\nBecause the response variable is log-transformed, the interpretations on the original scale will be in terms of the median of \\(y\\) (see the section on the log-transformed response variable for more detail).\nIntercept: The intercept is the mean of \\(y\\) when \\(\\log(x) = 0\\), i.e. \\(x = 1\\). Therefore, when \\(\\log(x) = 0\\),\n\\[\n\\begin{aligned}\n&\\log(y) = \\beta_0 + \\beta_1 \\times 0 = \\beta_0 \\\\[10pt]\n\\Rightarrow &y = \\exp\\{\\beta_0\\}\n\\end{aligned}\n\\]\nInterpretation: When \\(x = 1\\) \\((\\log(x) = 0)\\), the median of \\(y\\) is expected to be \\(\\exp\\{\\beta_0\\}\\).\nSlope: The slope is interpreted in terms of the change in the median \\(y\\) when \\(x\\) is multiplied by a factor of \\(C\\), since \\(\\log(Cx) = \\log(x) + \\log(C)\\). Thus, when \\(x\\) is multiplied by a factor of \\(C\\), the change in the median of \\(y\\) is\n\\[\n\\begin{aligned}\n\\exp\\{[\\beta_0 + \\beta_1 \\log(Cx)] - [\\beta_0 + \\beta_1 \\log(x)]\\} &=\n\\exp\\{\\beta_1 [\\log(Cx) - \\log(x)]\\} \\\\[10pt]\n& = \\exp\\{\\beta_1[\\log(C) + \\log(x) - \\log(x)]\\} \\\\[10pt]\n& = \\exp\\{\\beta_1 \\log(C)\\} = C^{\\beta_1}\n\\end{aligned}\n\\]\nThus, the median of \\(y\\) for \\(Cx\\) is \\(C^{\\beta_1}\\) times the median of \\(y\\) for \\(x\\).\nInterpretation: When \\(x\\) is multiplied by a factor of \\(C\\), the median of \\(y\\) is expected to multiple by a factor of \\(C^{\\beta_1}\\). For example, if \\(x\\) is doubled, then the median of \\(y\\) is expected to multiply by \\(2^{\\beta_1}\\)."
-  },
-  {
     "objectID": "supplemental/model-selection-criteria.html",
     "href": "supplemental/model-selection-criteria.html",
     "title": "Model Selection Criteria: AIC & BIC",
@@ -469,192 +586,94 @@
     "text": "BIC\n[To be added.]"
   },
   {
-    "objectID": "course-faq.html",
-    "href": "course-faq.html",
-    "title": "FAQ",
+    "objectID": "supplemental/slr-derivations.html",
+    "href": "supplemental/slr-derivations.html",
+    "title": "Deriving the Least-Squares Estimates for Simple Linear Regression",
     "section": "",
-    "text": "Go to your Files tab, check the box next to the file you want to download, then click on the blue gear icon on the Files tab to reveal the drop down menu, and select Export… If you have selected multiple files to export, RStudio will zip them up into a single zip file for you. If you’ve selected just a single file, it will only download that. The downloaded file will go to wherever files you download off the internet goes on your computer (usually your Downloads folder)."
+    "text": "Note\n\n\n\nThe following supplemental notes were created by Dr. Maria Tackett for STA 210. They are provided for students who want to dive deeper into the mathematics behind regression and reflect some of the material covered in STA 211: Mathematics of Regression. Additional supplemental notes will be added throughout the semester.\n\n\nThis document contains the mathematical details for deriving the least-squares estimates for slope (\\(\\beta_1\\)) and intercept (\\(\\beta_0\\)). We obtain the estimates, \\(\\hat{\\beta}_1\\) and \\(\\hat{\\beta}_0\\) by finding the values that minimize the sum of squared residuals, as shown in Equation 1.\n\\[\nSSR = \\sum\\limits_{i=1}^{n}[y_i - \\hat{y}_i]^2 = [y_i - (\\hat{\\beta}_0 + \\hat{\\beta}_1 x_i)]^2 = [y_i - \\hat{\\beta}_0 - \\hat{\\beta}_1 x_i]^2\n\\tag{1}\\]\nRecall that we can find the values of \\(\\hat{\\beta}_1\\) and \\(\\hat{\\beta}_0\\) that minimize /eq-ssr by taking the partial derivatives of Equation 1 and setting them to 0. Thus, the values of \\(\\hat{\\beta}_1\\) and \\(\\hat{\\beta}_0\\) that minimize the respective partial derivative also minimize the sum of squared residuals. The partial derivatives are shown in Equation 2.\n\\[\n\\begin{aligned}\n\\frac{\\partial \\text{SSR}}{\\partial \\hat{\\beta}_1} &= -2 \\sum\\limits_{i=1}^{n}x_i(y_i - \\hat{\\beta}_0 - \\hat{\\beta}_1 x_i)  \\\\\n\\frac{\\partial \\text{SSR}}{\\partial \\hat{\\beta}_0} &= -2 \\sum\\limits_{i=1}^{n}(y_i - \\hat{\\beta}_0 - \\hat{\\beta}_1 x_i)\n\\end{aligned}\n\\tag{2}\\]\nThe derivation of deriving \\(\\hat{\\beta}_0\\) is shown in Equation 3.\n\\[\n\\begin{aligned}\\frac{\\partial \\text{SSR}}{\\partial \\hat{\\beta}_0} &= -2 \\sum\\limits_{i=1}^{n}(y_i - \\hat{\\beta}_0 - \\hat{\\beta}_1 x_i) = 0 \\\\&\\Rightarrow -\\sum\\limits_{i=1}^{n}(y_i + \\hat{\\beta}_0 + \\hat{\\beta}_1 x_i) = 0 \\\\&\\Rightarrow - \\sum\\limits_{i=1}^{n}y_i + n\\hat{\\beta}_0 + \\hat{\\beta}_1\\sum\\limits_{i=1}^{n}x_i = 0 \\\\&\\Rightarrow n\\hat{\\beta}_0  = \\sum\\limits_{i=1}^{n}y_i - \\hat{\\beta}_1\\sum\\limits_{i=1}^{n}x_i \\\\&\\Rightarrow \\hat{\\beta}_0  = \\frac{1}{n}\\Big(\\sum\\limits_{i=1}^{n}y_i - \\hat{\\beta}_1\\sum\\limits_{i=1}^{n}x_i\\Big)\\\\&\\Rightarrow \\hat{\\beta}_0  = \\bar{y} - \\hat{\\beta}_1 \\bar{x} \\\\\\end{aligned}\n\\tag{3}\\]\nThe derivation of \\(\\hat{\\beta}_1\\) using the \\(\\hat{\\beta}_0\\) we just derived is shown in Equation 4.\n\\[\n\\begin{aligned}&\\frac{\\partial \\text{SSR}}{\\partial \\hat{\\beta}_1} = -2 \\sum\\limits_{i=1}^{n}x_i(y_i - \\hat{\\beta}_0 - \\hat{\\beta}_1 x_i) = 0  \\\\&\\Rightarrow -\\sum\\limits_{i=1}^{n}x_iy_i + \\hat{\\beta}_0\\sum\\limits_{i=1}^{n}x_i + \\hat{\\beta}_1\\sum\\limits_{i=1}^{n}x_i^2 = 0 \\\\\\text{(Fill in }\\hat{\\beta}_0\\text{)}&\\Rightarrow -\\sum\\limits_{i=1}^{n}x_iy_i + (\\bar{y} - \\hat{\\beta}_1\\bar{x})\\sum\\limits_{i=1}^{n}x_i + \\hat{\\beta}_1\\sum\\limits_{i=1}^{n}x_i^2 = 0 \\\\&\\Rightarrow  (\\bar{y} - \\hat{\\beta}_1\\bar{x})\\sum\\limits_{i=1}^{n}x_i + \\hat{\\beta}_1\\sum\\limits_{i=1}^{n}x_i^2 = \\sum\\limits_{i=1}^{n}x_iy_i \\\\&\\Rightarrow \\bar{y}\\sum\\limits_{i=1}^{n}x_i - \\hat{\\beta}_1\\bar{x}\\sum\\limits_{i=1}^{n}x_i + \\hat{\\beta}_1\\sum\\limits_{i=1}^{n}x_i^2 = \\sum\\limits_{i=1}^{n}x_iy_i \\\\&\\Rightarrow n\\bar{y}\\bar{x} - \\hat{\\beta}_1n\\bar{x}^2 + \\hat{\\beta}_1\\sum\\limits_{i=1}^{n}x_i^2 = \\sum\\limits_{i=1}^{n}x_iy_i \\\\&\\Rightarrow \\hat{\\beta}_1\\sum\\limits_{i=1}^{n}x_i^2 - \\hat{\\beta}_1n\\bar{x}^2  = \\sum\\limits_{i=1}^{n}x_iy_i - n\\bar{y}\\bar{x} \\\\&\\Rightarrow \\hat{\\beta}_1\\Big(\\sum\\limits_{i=1}^{n}x_i^2 -n\\bar{x}^2\\Big)  = \\sum\\limits_{i=1}^{n}x_iy_i - n\\bar{y}\\bar{x} \\\\ &\\hat{\\beta}_1 = \\frac{\\sum\\limits_{i=1}^{n}x_iy_i - n\\bar{y}\\bar{x}}{\\sum\\limits_{i=1}^{n}x_i^2 -n\\bar{x}^2}\\end{aligned}\n\\tag{4}\\]\nTo write \\(\\hat{\\beta}_1\\) in a form that’s more recognizable, we will use the following:\n\\[\n\\sum x_iy_i - n\\bar{y}\\bar{x} = \\sum(x - \\bar{x})(y - \\bar{y}) = (n-1)\\text{Cov}(x,y)\n\\tag{5}\\]\n\\[\n\\sum x_i^2 - n\\bar{x}^2 - \\sum(x - \\bar{x})^2 = (n-1)s_x^2\n\\tag{6}\\]\nwhere \\(\\text{Cov}(x,y)\\) is the covariance of \\(x\\) and \\(y\\), and \\(s_x^2\\) is the sample variance of \\(x\\) (\\(s_x\\) is the sample standard deviation).\nThus, applying Equation 5 and Equation 6, we have\n\\[\n\\begin{aligned}\\hat{\\beta}_1 &= \\frac{\\sum\\limits_{i=1}^{n}x_iy_i - n\\bar{y}\\bar{x}}{\\sum\\limits_{i=1}^{n}x_i^2 -n\\bar{x}^2} \\\\&= \\frac{\\sum\\limits_{i=1}^{n}(x-\\bar{x})(y-\\bar{y})}{\\sum\\limits_{i=1}^{n}(x-\\bar{x})^2}\\\\&= \\frac{(n-1)\\text{Cov}(x,y)}{(n-1)s_x^2}\\\\&= \\frac{\\text{Cov}(x,y)}{s_x^2}\\end{aligned}\n\\tag{7}\\]\nThe correlation between \\(x\\) and \\(y\\) is \\(r = \\frac{\\text{Cov}(x,y)}{s_x s_y}\\). Thus, \\(\\text{Cov}(x,y) = r s_xs_y\\). Plugging this into Equation 7, we have\n\\[\n\\hat{\\beta}_1 = \\frac{\\text{Cov}(x,y)}{s_x^2} = r\\frac{s_ys_x}{s_x^2} = r\\frac{s_y}{s_x}\n\\tag{8}\\]"
   },
   {
-    "objectID": "course-faq.html#how-can-i-submit-my-assignment-to-gradescope",
-    "href": "course-faq.html#how-can-i-submit-my-assignment-to-gradescope",
-    "title": "FAQ",
-    "section": "How can I submit my assignment to Gradescope?",
-    "text": "How can I submit my assignment to Gradescope?\nThe instructions for submitting your assignment to Gradescope can be found here. In a nutshell, you’ll upload your PDF and them mark the page(s) where each question can be found. It’s OK if a question spans multiple pages, just mark them all. It’s also OK if a page includes multiple questions."
+    "objectID": "weeks/week-1.html#自然語言處理",
+    "href": "weeks/week-1.html#自然語言處理",
+    "title": "Week1 Orientation",
+    "section": "自然語言處理",
+    "text": "自然語言處理\n\n研究慣例上，將語言資訊的問題切分成不同的子任務，成熟之後就變成大家較熟悉的應用。\n\n語音辨識與語音合成\n文本摘要\n機器翻譯\n自動問答\n。。。。\n\n\n\n\n曾經語音與多模態(multimodality)是比較不歸類在 NLP 的領域，但最近幾年的進展與趨勢，也與 NLP 的研究社群密切互動。"
   },
   {
-    "objectID": "course-faq.html#can-i-use-a-local-install-of-r-and-rstudio-instead-of-using-the-rstudio-containers",
-    "href": "course-faq.html#can-i-use-a-local-install-of-r-and-rstudio-instead-of-using-the-rstudio-containers",
-    "title": "FAQ",
-    "section": "Can I use a local install of R and RStudio instead of using the RStudio containers?",
-    "text": "Can I use a local install of R and RStudio instead of using the RStudio containers?\nThe short answer is, I’d rather you didn’t, to save yourself some headache. But, the long answer is, sure! But you will need to install a specific versions of R and RStudio for everything to work as expected. You will also need to install the R packages we’re using as well as have Git installed on your computer. These are not extremely challenging things to get right, but they are not trivial either, particularly on certain operating systems. Myself and the TAs are always happy to provide help with any computational questions when you’re working in the containers we have provided for you. If you’re working on your local setup, we can’t guarantee being able to resolve your issues, though we’re happy to try.\nIf you want to take this path, here is what you need to do:\n\nDownload and install R 4.1.2: https://cran.r-project.org/\nDownload and install a daily build of RStudio: https://dailies.rstudio.com/\nInstall Quarto CLI: https://quarto.org/docs/getting-started/installation.html\nInstall Git: https://happygitwithr.com/install-git.html\nInstall any necessary packages with install.packages(\"___\")\n\nAnd I’d like to reiterate again that successful installation of these software is not a learning goal of this course. So if any of this seems tedious or intimidating in any way, just use the computing environment we have set up for you. More on that here."
+    "objectID": "weeks/week-1.html#計算語言學-1",
+    "href": "weeks/week-1.html#計算語言學-1",
+    "title": "Week1 Orientation",
+    "section": "計算語言學",
+    "text": "計算語言學\n\n\n漢語的雙音節化是怎麼演化的 （computational historical linguistics）\n新詞 (neologism)、新構式 (constructions) 是怎麼在社群中突現、傳遞、消亡的 （computational sociolinguistics）\n面對完全沒有接觸過的語言，如何理解與編寫語法系統？（computational linguistic typology/ xenolinguistics）\n……. (你的想法？)"
   },
   {
-    "objectID": "computing-env.html",
-    "href": "computing-env.html",
-    "title": "計算環境與作業繳交方式",
-    "section": "",
-    "text": "Google Colab\nVisual Studio code 與推薦套件"
+    "objectID": "weeks/week-1.html#從語言的處理到理解",
+    "href": "weeks/week-1.html#從語言的處理到理解",
+    "title": "Week1 Orientation",
+    "section": "從語言的處理到理解",
+    "text": "從語言的處理到理解\nFrom Natural Language Processing to National Language Understanding\n\n對於處理與理解，都是操作型定義 (operationalized)。"
   },
   {
-    "objectID": "course-support.html",
-    "href": "course-support.html",
-    "title": "Course support",
-    "section": "",
-    "text": "Most of you will need help at some point and we want to make sure you can identify when that is without getting too frustrated and feel comfortable seeking help."
+    "objectID": "weeks/week-1.html#傳統自然語言處理的發展",
+    "href": "weeks/week-1.html#傳統自然語言處理的發展",
+    "title": "Week1 Orientation",
+    "section": "傳統自然語言處理的發展",
+    "text": "傳統自然語言處理的發展\n\n\n\n中文 AI 知識庫與自然語言處理核心套件研討會"
   },
   {
-    "objectID": "course-support.html#lectures-and-labs",
-    "href": "course-support.html#lectures-and-labs",
-    "title": "Course support",
-    "section": "Lectures and labs",
-    "text": "Lectures and labs\nIf you have a question during lecture or lab, feel free to ask it! There are likely other students with the same question, so by asking you will create a learning opportunity for everyone."
+    "objectID": "weeks/week-1.html#個人觀點",
+    "href": "weeks/week-1.html#個人觀點",
+    "title": "Week1 Orientation",
+    "section": "(個人觀點)",
+    "text": "(個人觀點)\n\n\n(形式)語言學與傳統自然語言處理中的 Modularity 預設， 是好用的虛構 (useful fiction, Haugen and Dil, 1972)，方便整理知識，但非真實的語言現象。\n語言：人類，爲了溝通目的，在時空脈絡下，發展出的形意符號系統。 (cultural Species; form-meaning pairing; symbolic; self-adaptive complex system; situated and embodied cognition; etc.)\n符碼本質是形意映射，而指涉意義是約定俗成、很吃情境的。因此符碼運算與表徵是給人看的。語言的理解，涉及到更複雜的連續的過程，而非一個分段、分解的過程。\n語言學不等於 rule-based。"
   },
   {
-    "objectID": "course-support.html#office-hours",
-    "href": "course-support.html#office-hours",
-    "title": "Course support",
-    "section": "Office hours",
-    "text": "Office hours\nThe teaching team is here to help you be successful in the course. You are encouraged to attend office hours during the times posted on the home page to ask questions about the course content and assignments. A lot of questions are most effectively answered in-person, so office hours are a valuable resource. I encourage each and every one of you to take advantage of this resource! Make a pledge to stop by office hours at least once during the first three weeks of class. If you truly have no questions to ask, just stop by and say hi and introduce yourself. You can find a list of everyone’s office hours here."
+    "objectID": "weeks/week-1.html#大型預訓練語言模型",
+    "href": "weeks/week-1.html#大型預訓練語言模型",
+    "title": "Week1 Orientation",
+    "section": "大型預訓練語言模型",
+    "text": "大型預訓練語言模型\npre-trained Large Language Models (pre-LLMs)\n\n改變了(目前)的自然語言處理研究方向"
   },
   {
-    "objectID": "course-support.html#discussion-forum",
-    "href": "course-support.html#discussion-forum",
-    "title": "Course support",
-    "section": "Discussion forum",
-    "text": "Discussion forum\nHave a question that can’t wait for office hours? Prefer to write out your question in detail rather than asking in person? The online discussion forum is the best venue for these! We will use Conversations as the online discussion forum. There is a chance another student has already asked a similar question, so please check the other posts on Ed Discussion before adding a new question. If you know the answer to a question that is posted, I encourage you to respond!"
+    "objectID": "weeks/week-1.html#gpt-3-and-beyond",
+    "href": "weeks/week-1.html#gpt-3-and-beyond",
+    "title": "Week1 Orientation",
+    "section": "GPT-3 and Beyond",
+    "text": "GPT-3 and Beyond\n很清楚的科普介紹"
   },
   {
-    "objectID": "course-support.html#email",
-    "href": "course-support.html#email",
-    "title": "Course support",
-    "section": "Email",
-    "text": "Email\nPlease refrain from emailing any course content questions (those should go Conversations), and only use email for questions about personal matters that may not be appropriate for the public course forum (e.g., illness, accommodations, etc.). For such matters, you may email Dr. Mine Çetinkaya-Rundel at mc301@duke.edu.\nIf there is a question that’s not appropriate for the public forum, you are welcome to email me directly. If you email me, please include “STA 210” in the subject line. Barring extenuating circumstances, I will respond to STA 210 emails within 48 hours Monday - Friday. Response time may be slower for emails sent Friday evening - Sunday."
+    "objectID": "weeks/week-1.html#post-ai-nlp-in-context-learning-prompt-training",
+    "href": "weeks/week-1.html#post-ai-nlp-in-context-learning-prompt-training",
+    "title": "Week1 Orientation",
+    "section": "post-AI NLP: in-context learning (prompt-training)",
+    "text": "post-AI NLP: in-context learning (prompt-training)\na new paradigm of NLP that is based on the recent advances in AI, especially in the field of language modeling.\n\nRecently, we have seen dramatic advances in natural language processing (NLP) driven by huge pre-trained language models such as GPT-3 and DALLE-2. Instead of building many small task-specific models, there is a movement to create and use these more all-purpose huge language models for many NLP applications.\n\nThe most intriguing finding is that these models employ a new learning paradigm: in-context learning, where they learn to do a downstream task simply by conditioning on a prompt consisting of a few input-output examples without any parameter updates"
   },
   {
-    "objectID": "course-support.html#academic-support",
-    "href": "course-support.html#academic-support",
-    "title": "Course support",
-    "section": "Academic support",
-    "text": "Academic support\nThere are times you may need help with the class that is beyond what can be provided by the teaching team. In those instances, I encourage you to visit the Academic Resource Center. The Academic Resource Center (ARC) offers free services to all students during their undergraduate careers at Duke. Services include Learning Consultations, Peer Tutoring and Study Groups, ADHD/LD Coaching, Outreach Workshops, and more. Because learning is a process unique to every individual, they work with each student to discover and develop their own academic strategy for success at Duke. ARC services are available free to any Duke undergraduate student, in any year, studying in any discipline. Contact the ARC to schedule an appointment. Undergraduates in any year, studying any discipline can benefit! Contact theARC@duke.edu, 919-684-5917."
+    "objectID": "weeks/week-1.html#如何影響教學",
+    "href": "weeks/week-1.html#如何影響教學",
+    "title": "Week1 Orientation",
+    "section": "如何影響教學",
+    "text": "如何影響教學\n(順便介紹助教群 😄)"
   },
   {
-    "objectID": "course-support.html#mental-health-and-wellness",
-    "href": "course-support.html#mental-health-and-wellness",
-    "title": "Course support",
-    "section": "Mental health and wellness",
-    "text": "Mental health and wellness\nStudent mental health and wellness is of primary importance at Duke, and the university offers resources to support students in managing daily stress and self-care. Duke offers several resources for students to seek assistance on coursework and to nurture daily habits that support overall well-being, some of which are listed below:\n\nThe Academic Resource Center: (919) 684-5917, theARC@duke.edu, or arc.duke.edu,\nDuWell: (919) 681-8421, duwell@studentaffairs.duke.edu, or studentaffairs.duke.edu/duwell\n\nIf your mental health concerns and/or stressful events negatively affect your daily emotional state, academic performance, or ability to participate in your daily activities, many resources are available to help you through difficult times. Duke encourages all students to access these resources.\n\nDukeReach. Provides comprehensive outreach services to identify and support students in managing all aspects of well-being. If you have concerns about a student’s behavior or health visit the website for resources and assistance. studentaffairs.duke.edu/dukereach\nCounseling and Psychological Services (CAPS). CAPS helps Duke Students enhance strengths and develop abilities to successfully live, grow and learn in their personal and academic lives. CAPS recognizes that we are living in unprecedented times and that the changes, challenges and stressors brought on by the COVID-19 pandemic have impacted everyone, often in ways that are tax our well-being. CAPS offers many services to Duke undergraduate students, including brief individual and group counseling, couples counseling and more. CAPS staff also provides outreach to student groups, particularly programs supportive of at-risk populations, on a wide range of issues impacting them in various aspects of campus life. CAPS provides services to students via Telehealth. To initiate services, you can contact their front desk at 919-660-1000. studentaffairs.duke.edu/caps\nBlue Devils Care. A convenient and cost-effective way for Duke students to receive 24/7 mental health support through TalkNow and scheduled counseling. bluedevilscare.duke.edu\nTwo-Click Support. Duke Student Government and DukeReach partnership that connects students to help in just two clicks. bit.ly/TwoClickSupport\nWellTrack. Sign up for WellTrack at app.welltrack.com."
+    "objectID": "weeks/week-1.html#爲什麼我們可以放心或應該擔心",
+    "href": "weeks/week-1.html#爲什麼我們可以放心或應該擔心",
+    "title": "Week1 Orientation",
+    "section": "爲什麼我們可以放心（或應該擔心）？",
+    "text": "爲什麼我們可以放心（或應該擔心）？\naka. 無中生有，跟真的一樣"
   },
   {
-    "objectID": "course-support.html#technology-accommodations",
-    "href": "course-support.html#technology-accommodations",
-    "title": "Course support",
-    "section": "Technology accommodations",
-    "text": "Technology accommodations\nStudents with demonstrated high financial need who have limited access to computers may request assistance in the form of loaner laptops. For technology assistance requests, please go here. Please note that supplies are limited.\nNote that we will be using Duke’s computational resources in this course. These resources are freely available to you. As long as your computer can connect to the internet and open a browser window, you can perform the necessary computing for this course. All software we use is open-source and/or freely available."
+    "objectID": "weeks/week-1.html#我們怎麼實作這門課",
+    "href": "weeks/week-1.html#我們怎麼實作這門課",
+    "title": "Week1 Orientation",
+    "section": "我們怎麼實作這門課？",
+    "text": "我們怎麼實作這門課？\n\n我們的主要學習重點不會放在自然語言處理中的機器學習模型原理 (請大家在其他的課程中並行學習)，而是放在語言學理論與自然語言處理的關係。\n選擇有語言學背景的教材 (如 Jurafsky & Martin SLP3, Christopher Potts cs224u, etc.) 來進行課程的教學，並補充不同的觀點。\n\n\n\n\n\n\n\nWarning\n\n\n\n這是沒有教科書的學門\n\n\n\n實作部分側重應用。"
   },
   {
-    "objectID": "course-support.html#course-materials-costs",
-    "href": "course-support.html#course-materials-costs",
-    "title": "Course support",
-    "section": "Course materials costs",
-    "text": "Course materials costs\nThere are no costs associated with this course. All readings will come from freely available, open resources (open-source textbooks, journal articles, etc.)."
-  },
-  {
-    "objectID": "course-support.html#assistance-with-zoom-or-sakai",
-    "href": "course-support.html#assistance-with-zoom-or-sakai",
-    "title": "Course support",
-    "section": "Assistance with Zoom or Sakai",
-    "text": "Assistance with Zoom or Sakai\nFor technical help with Sakai or Zoom, contact the Duke OIT Service Desk at oit.duke.edu/help. You can also access the self-service help documentation for Zoom here and for Sakai here.\nNote that we will be making minimal use of Sakai in this course (primarily for announcements and grade book). All assignment submission and discussion will take place on GitHub instead.\nZoom will be used for online office hours as well as as a backup option should we need to hold the course online instead of in person."
-  },
-  {
-    "objectID": "exams/exam-1.html",
-    "href": "exams/exam-1.html",
-    "title": "Exam 1",
-    "section": "",
-    "text": "Exam 1 will be released on Friday, Feb 4 at 9 am ET and must be completed by Mon, Feb 7 at 11:59 pm.\nThe exam will consist of two parts:\n\nPart 1 - Conceptual: Multiple choice questions on Sakai test and quizzes. This portion may only be submitted one time. Go here to complete Part 1 of the exam.\nPart 2 - Applied: Data analysis in RStudio and submitted in Gradescope (like a usual lab and homework). Go to the GitHub organization for the course and find the exam-1- repo to complete Part 3 of your exam. Add your answers to the exam-1.qmd file in your repo.\n\nBoth portions must be completed and submitted by Mon, Feb 7 at 11:59 pm. Late work will only be accepted in the case of of extenuating circumstances and notification from your academic dean.\n🍀 Good luck! 🍀\n\n\n\nBy taking this exam, you pledge to uphold the Duke Community Standard:\n\nI will not lie, cheat, or steal in my academic endeavors;\nI will conduct myself honorably in all my endeavors; and\nI will act if the Standard is compromised.\n\n\n\n\n\nThis is an individual assignment. Everything in your repository and on Sakai is for your eyes only.\nYou may not collaborate or communicate anything about this exam to anyone except the instructor and the head TA (Rick Presman). For example, you may not communicate with other students, other TAs, or post/solicit help on the internet, email or via any other method of communication.\nThe exam is open-book, open-note, so you may use any materials from class as you take the exam.\nOnly head TA and professor office hours will be held during the exam period.\nYou may not email the TAs questions about the exam.\nIf you have questions, direct message the professor or the head TA (Rick Presman) on Slack or post on Sakai Conversations for “Instructors in this site” only or attend my office hours (Monday, 10:30 am - 11:30 am).\n\n\n\n\n\nPart 1 - Conceptual: The answers to the multiple choice/short answer questions should be submitted under Test & Quizzes in Sakai.\nPart 2 - Applied: The PDF document for the data analysis portion must be uploaded to Gradescope.\n\nYou must submit a PDF to Gradescope that corresponds to the .qmd file on your GitHub repository in order to receive credit for this portion of the exam.\nYou must upload a PDF, not HTML. Any non-PDF submissions will not be graded.\nMark the pages associated with each question. If any answer for a question spans multiple pages, mark all associated pages.\nMake sure to associate the “Workflow & formatting” section with the first page.\nFailure to mark the pages in Gradescope will result in point deductions. Any pages that are not marked will not be graded.\nMake sure that your uploaded PDF document matches your .qmd and the PDF in your GitHub repository exactly. Points will be deducted for documents that are not reproducible."
-  },
-  {
-    "objectID": "project-description.html",
-    "href": "project-description.html",
-    "title": "期末專題計劃需知",
-    "section": "",
-    "text": "Topic ideas due\nProposal due\nFinal report due\nVideo presentation + slides and final GitHub repo due\nPresentation comments due"
-  },
-  {
-    "objectID": "project-description.html#期末專題",
-    "href": "project-description.html#期末專題",
-    "title": "期末專題計劃需知",
-    "section": "期末專題",
-    "text": "期末專題\nTL;DR:\n\n利用 NLP 工具分析語料\n開發、建立部署模型與任務\n探究語言模型的限制與可能性"
-  },
-  {
-    "objectID": "course-syllabus.html",
-    "href": "course-syllabus.html",
-    "title": "課綱",
-    "section": "",
-    "text": "Day\nTime\nLocation\n\n\n\n\n主課\n週四\n2:20 pm - 4:00 pm\n綜 301\n\n\n助教課\n週四\n4:10 pm - 5:10 pm\n綜 301"
-  },
-  {
-    "objectID": "course-syllabus.html#學習目標",
-    "href": "course-syllabus.html#學習目標",
-    "title": "課綱",
-    "section": "學習目標",
-    "text": "學習目標"
-  },
-  {
-    "objectID": "course-syllabus.html#課程錄影",
-    "href": "course-syllabus.html#課程錄影",
-    "title": "課綱",
-    "section": "課程錄影",
-    "text": "課程錄影"
-  },
-  {
-    "objectID": "course-syllabus.html#建議先備知識",
-    "href": "course-syllabus.html#建議先備知識",
-    "title": "課綱",
-    "section": "建議先備知識",
-    "text": "建議先備知識\n\npython 程式基礎\n機器學習基礎"
-  },
-  {
-    "objectID": "course-syllabus.html#教科書與參考書",
-    "href": "course-syllabus.html#教科書與參考書",
-    "title": "課綱",
-    "section": "教科書與參考書",
-    "text": "教科書與參考書\n\nSpeech and Language Processing (3rd ed. draft) by Dan Jurafsky and James H. Martin"
-  },
-  {
-    "objectID": "course-syllabus.html#助教群",
-    "href": "course-syllabus.html#助教群",
-    "title": "課綱",
-    "section": "助教群",
-    "text": "助教群\n\n王伯雅、古貿昌、陳韋伶、陳品而、周昕妤、張鈺琳"
-  },
-  {
-    "objectID": "course-syllabus.html#回家作業",
-    "href": "course-syllabus.html#回家作業",
-    "title": "課綱",
-    "section": "回家作業",
-    "text": "回家作業\n每週有一份作業。\n\n繳交方式\n繳交時間"
-  },
-  {
-    "objectID": "course-syllabus.html#考試與期末專案",
-    "href": "course-syllabus.html#考試與期末專案",
-    "title": "課綱",
-    "section": "考試與期末專案",
-    "text": "考試與期末專案\n無期中與期末考。\n需實作一個專案計劃。"
-  },
-  {
-    "objectID": "course-syllabus.html#給分方式",
-    "href": "course-syllabus.html#給分方式",
-    "title": "課綱",
-    "section": "給分方式",
-    "text": "給分方式\n計分比例如下\n\n\n\n項目\n百分比\n\n\n\n\n課堂參與與練習\n10%\n\n\n作業\n40% (10% x 4) 選最優十份作業\n\n\n期末專題\n40%\n\n\n助教實習課\n10%"
-  },
-  {
-    "objectID": "course-syllabus.html#課堂期待",
-    "href": "course-syllabus.html#課堂期待",
-    "title": "課綱",
-    "section": "課堂期待",
-    "text": "課堂期待\n\n自主學習與積極參與討論\n確實預習\n不遲交、不遲到\n彼此協助與合作\n誠信與負責\n\n\n遲交評分\n\n每份作業最遲在截止日後三天補交，除非有正當理由教師認可，否則皆扣 10%。\n期末專案不得遲交。"
+    "objectID": "weeks/week-1.html#看看當前的研究教學",
+    "href": "weeks/week-1.html#看看當前的研究教學",
+    "title": "Week1 Orientation",
+    "section": "看看當前的研究教學",
+    "text": "看看當前的研究教學\nIntroduction and course overview"
   }
 ]
