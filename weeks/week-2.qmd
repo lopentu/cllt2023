@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 ---
 title: "Week 2 Introduction"
 author: "謝舒凱 台大語言所"
@@ -10,12 +10,6 @@ format:
       multiplex: true
       logo: /images/logo_round.png
 bibliography: ../cllt.bib
-=======
-<!-- ---
-title: "Week 2"
-subtitle: "Simple linear regression"
-editor: visual
->>>>>>> a2126c0f3863bcb9c01d0eb8aa910c0a9a5e20ec
 ---
 
 # 計算語言學入門
