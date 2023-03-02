@@ -336,5 +336,4 @@ multimodal LLM
 =======
 ::: {style="font-size: 0.875em;"}
 Back to [course schedule](/ "Course schedule") ⏎
-::: -->
->>>>>>> a2126c0f3863bcb9c01d0eb8aa910c0a9a5e20ec
+::: 
