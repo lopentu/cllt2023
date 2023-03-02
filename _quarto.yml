@@ -8,7 +8,7 @@ website:
   description: "Homepage for LING8505 - CLLT course at NTU University, Spring 2023."
   site-url: "https://lopentu.github.io/cllt2023/"
 
-  repo-url: https://github.com/lopen/cllt2023
+  repo-url: https://github.com/lopentu/cllt2023
   repo-actions: [edit, issue]
 
   open-graph: true
@@ -57,7 +57,9 @@ website:
         contents:
           - href: weeks/week-1.qmd
             text: "Week 1"
-         
+          - href: weeks/week-2.qmd
+            text: "Week 2"
+            
       - section: "補充說明"
         # contents:
         #   - href: supplemental/slr-derivations.qmd
@@ -75,14 +77,15 @@ format:
   html:
     highlight-style: a11y
     theme:
-      light: flatly
+      # light: flatly>
       dark: darkly
-      # light: [cosmo, theme.scss]
+      light: [cosmo, theme.scss]
       # dark: [cosmo, theme-dark.scss]
     mainfont: "Atkinson Hyperlegible"
     code-copy: true
     code-overflow: wrap
     toc: true
+from: markdown+emoji
 
 freeze: auto
 

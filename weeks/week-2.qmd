@@ -1,38 +1,334 @@
 ---
-title: "Week 2"
-subtitle: "Simple linear regression"
-editor: visual
+title: "Week 2 Introduction"
+author: "謝舒凱 台大語言所"
+format: 
+    revealjs:
+      slide-number: true
+      preview-links: auto
+      chalkboard: true
+      multiplex: true
+      logo: /images/logo_round.png
+bibliography: ../cllt.bib
 ---
 
-::: callout-important
--   Classes are virtual this week. Find Zoom links [here](https://sakai.duke.edu/portal/site/779c3ebe-3b88-4bcc-bd01-1813e8396a23/page/d5eef508-07a4-4c6d-b7bd-4614a9631562 "Sakai - Zoom meetings").
--   Due dates:
-    -   Lab 1: Fri, Jan 14, 5pm ET
-    -   AE 1: Sun, Jan 16, 11:59pm ET
+# 計算語言學入門
+
+> 實務應用上會使用 SOTA 的工具。科學探索上要學習背後的理論歷史。
+
+
+
+## 上週重點
+
+- 自然語言處理和計算語言學的異同
+
+- 但兩者的基礎類似 (機器學習、程式能力、演算法)
+    - 前者目前更側重語言模型的工程訓練
+    - 後者偏向邏輯推理與模組解析的語言理論研究
+
+
+
+## 本週課程
+
+- NLP 簡史
+
+- 語言理論與深度學習
+
+- 入門實習
+
+## Timeline of NLP 
+
+![](../images/nlp-history.webp){width=80%}
+
+
+
+
+::: notes
+[image source](https://medium.com/nlplanet/a-brief-timeline-of-nlp-bc45b640f07d)
 :::
 
-## Prepare
 
-📖 Read Introduction to Modern Statistics, Chp 7: [Linear regression with a single predictor](https://openintro-ims.netlify.app/model-slr.html)
+## Timeline NLP during the Deep Learning Era
 
-## Participate
+![](../images/llm.png){width=90%}
 
-🖥️ [Lab 1 - Meet the toolkit](/slides/lab-1.html)
+- 在大數據大演算力的時代，**auto-regressive LLMs** (以 `chatGPT` [@brown2020language] 爲代表) **改變了當前 NLP 生態的發展方向**。
+![](../images/autoreg.svg){width=40%}
 
-🖥️ [Lecture 2 - Simple linear regression](/slides/lec-2.html)
 
-🖥️ [Lecture 3 - Model fitting in R with tidymodels](/slides/lec-3.html)
+## 從這樣
+NLP Process 
 
-## Practice
+![](../images/pipe.png){width=90%}
 
-📋 [Application Exercise 1 - Bike rentals in DC](/ae/ae-1-dcbikeshare.html) *(Post-class note: complete only Part 1 - Daily counts and temperature)*
 
-## Perform
+## 變到這樣 
+NLP Process with a Language Model
 
-⌨️ [Lab 1 - Meet the toolkit](/labs/lab-1.html "Lab instructions")
+![](../images/llm-nlp.png)
 
-<br><br>
+::: notes
+[image source](https://miro.medium.com/v2/resize:fit:1400/0*9cIphEN4LvZnkkI5.png)
+:::
 
-::: {style="font-size: 0.875em;"}
-Back to [course schedule](/ "Course schedule") ⏎
+
+## 到晚近的 in-context learning (ICL, [@dong2022survey])
+
+- **Learning from a few examples in context**: 將 $X$ 以及可能支持其預測 $Y$ 的一些 context（可能是其他標記數據，背景知識，相關文檔等）一起輸入模型中，實現對 $Y$ 的預測。
+
+- 當下學習，不重新調參數。Different from supervised learning requiring a training stage that uses backward gradients to update model parameters, ICL does not conduct parameter updates and directly performs predictions on the pretrained language models. 
+
+<!-- > 不管如何，這些模型都是在做一件事：預測下一個單詞。(Copilot AI, 2023) -->
+
+
+
+## Learn from analogy 
+![](../images/icl.png)
+
+$A:B=C:?$
+
+::: {.callout-important}
+- 會用自然語言寫 `prompting templates`、排序與挑選脈絡，變成一種解析技能。[@zhou2022large]
+:::
+
+
+## 一個語言學相關的有趣的延伸研究
+
+邏輯推理是機器可學習的嗎？
+
+- a **chain of thought** (i.e., a series of intermediate reasoning steps) significantly improves the ability of large language models to perform complex reasoning.[@wei2022chain] 
+
+- 看看解語言謎題的結果 [Translation Puzzles are In‑context Learning Tasks](https://vamvas.ch/translation-puzzles-are-in-context-learning-tasks)
+
+![](../images/chickasaw.png){width=10%, align=center, style="border: 1px solid black;"}
+
+
+
+
+
+
+## 先做基本的理解 
+#### 預訓練大型語言模型 (Pre-trained Large Language Models) 
+
+- 語言模型從大量語料中學習語詞的機率分佈 (e.g., how likely a word or sequence can occur in the context).
+
+- Transformer-based language models。GP**T**-3 和 BER**T** 是其中具代表性的。
+
+- 目前火紅的 `chatGPT` [@brown2020language] (GPT-3 variants) 還利用人工反饋之強化學習微調 pre-trained on a huge corpus of web and book data and fine-tuned with human conversation examples through supervised learning and reinforcement learning from human feedback (RLHF).
+
+
+
+## Transformer 架構
+
+![](../images/transformer.png){width=80%}
+
+-  是一種 encoder-decoder 神經網路類型，
+
+## Transformer-based Language Models
+
+- `Transformer` 使用的<span style="color:red;">注意力計算機制</span> (attention)，可以用來很好的處理序列數據 (e.g., 文本、語音、音樂)。
+
+- 注意力機制讓模型更去注意到序列元素之間的相關性。(e.g., *He-Tom*, *apples-them*)
+![](../images/attention.webp){width=50%}
+
+
+::: notes
+[source](https://bootcamp.uxdesign.cc/how-chatgpt-really-works-explained-for-non-technical-people-71efb078a5c9)
+:::
+
+
+
+
+
+## 問題與討論
+
+- 語言表達能力流暢 (儘管說的是真是假不確定)
+
+- 貌似可以進行討論 (但是背後推理機制不透明) making probabilistic predictions in the generation process based on the corpus it has been trained on, which can lead to false claims about facts. Typical hedging behavior of ChatGPT will certainly increase the safety of the system.
+
+- 不開源；非商業組織如大學，通常缺乏跟上語言模型快速發展所需的計算和財務資源。
+
+## 以一個討論的場景爲例
+
+![](../images/wife.png){width=80%}
+
+## 課堂練習
+
+- 玩一題語奧 ([`NACLO`](https://www.nacloweb.org/past_competitions.php), [`UKLO`](https://www.uklo.org/past-exam-papers/), [`Panini`](https://ltrc.iiit.ac.in/nlpmt/plo/#/resource/))。分組討論 prompt/in-context 的設計，比看看 `ChrF` 的效果。
+
+
+
+
+<!-- demo prompt/in-context -->
+
+# 與語言學的工作爲何漸行漸遠？
+
+> DNNs' input data and architectures are not based on the symbolic representations familiar with linguistics, such as a parse trees or logical formulas. Instead, DNNs learn to encode words and sentences as vectors (sequences of real-numbers)...
+
+
+
+
+
+
+
+
+## preLLMs 學到了什麼？
+
+- 學習到的不僅僅是鄰近字串機率，還有一些結構性的知識。
+以許多語言的 `long-distance number agreement` 為例。[@baroni2021]:p8
+
+
+- 如果先瞭解語言怎麼被我們學習到的 usage-based theory of language acquisition
+    - 結構性的東西，在一定的數據學習之後，會 emerged。不需要預先規劃與給定。
+    - 以 Papadimitriou and Jurafsky EMNLP 2020 爲例。
+
+- 這就是爲何形式語言學與認知功能語言學的震驚程度不同 :laughing:
+
+<!-- no linguist in our learning process -->
+
+## 語言學與機器學習的關係 (IMO)
+
+- 規則學習 | 形式語言學 (formal syntax)
+
+- 特徵學習 | 統計語言學 (statistical linguistics)
+
+- 深度學習 | 認知與功能語言學 (cognitive/functional linguistics)
+
+
+
+
+# 模型與語言理論之間的關係曖昧
+
+
+- 背後有不同的哲學思潮，我們日後慢慢帶入。
+
+
+## 理論語言學 | Theorectical Linguistics
+(mostly known as Formal Syntax, or Generative Grammar)[^1]
+
+![](../images/ling.png){width=70%}
+
+- 生成語法預設語言是個由有限遞迴規則組成的形式系統， 可以用來生成所有可能的合法句子。
+
+- 大部分所謂的語言學理論，都是在生成語法的架構之下，主題包括：
+
+    - Learnability
+    - Generalization given insufficient data
+    - Centrality of syntactic structure
+    - . . 
+
+
+[^1]: 以上採自 [@baroni2021] 的觀點
+
+
+
+
+
+
+
+
+## 認知功能語言學 | Cognitive/Functional Linguistics
+- 晚近才引入 NLP 的解釋
+
+- Language as a complex system
+
+
+
+
+
+
+## 這些都蠻進階的，但我們慢慢從幾個重要的語言面向開始。
+
+- 詞彙
+- 句法
+- 語意
+- 語音與多模態
+
+::: {.callout-warning}
+探究這些現象的語言學理論背景是什麼？又怎麼連接到 NLP 的工程實踐？
+:::
+
+## 我認爲 (accord with LeCun, Carmack II)
+
+- 目前的 LLM (Generative AI) 不太是 GAI (General AI) 的實踐方向，但是可以當作一個 IA 謹慎使用。
+
+- 目前來說 (2023 上半年)，讓 LLM 發展更好一點，各司其職是個方法 :grin:
+
+`toolTransformer`； 事實與邏輯的學習
+[perplexity.ai](https://www.perplexity.ai/?s=u&uuid=91d2c8ce-f610-4972-942e-cb60e6058b78)
+
+
+## 但發展速度真的很快
+multimodal LLM
+
+![](../images/multillm.png){width=80%}
+
+
+## 分出兩種 NLP 
+::: {.incremental}
+
+- [1]（計算語言學傳統）利用計算模型與工具， 以人懂的方式 <span style="color:red;">（符碼運算）</span>解析與瞭解語言 (及其他模態)。
+
+
+- [2]（post-LLM NLP 導向）以電腦會就好<span style="color:red;">（張量運算）</span>的方式，開發與調整模型的 (驚人的) 落地應用。 
+:::
+
+
+[1] 提供模型挑戰與複雜性 (e.g., 辯論、認錯、同理、意識, ...)； [2] 反饋給（語言）理論發展範式的合理性，並且改變社會發展。
+
+
+
+## 回到我們課程設計上
+
+
+- [Lecture] 講解「與 NLP 相關的語言學理論」
+    - linguistically-oriented DNN analysis (cf. [BlackBox NLP 系列研討會](); [Computation in Linguistics 協會](https://blogs.umass.edu/scil/))
+
+    - (ML 課程搭配) 
+
+- [Lab] 透過實作練習與工具使用
+    - 語言模組解析 via `spacy`
+    - 語言模型應用 via `Hugging Face (transformers)`
+
+
+
+
+
+# 程式環境與工具準備
+
+- 語料處理的基本功
+    - `bash` (shell script)
+    - `python` (data processing)
+    - `git` (version control)
+    - `jupyter` (notebook)
+    - `conda` (virtual environment)
+
+- 語料庫與程式工具
+    - `NLTK`, `spaCy`, and `flair` 
+    - `ckip-core`, `hanlp`, and `jieba`
+    - `Hugging Face` 
+    - `Keras`, `PyTorch` and `TensorFlow`
+    - `Gensim`, `fastText`
+    - `scikit-learn`, etc.
+
+::: {.callout-tip}
+
+- [語料分析實務](https://lopentu.github.io/corpus-book/?chap=%E8%AA%9E%E6%96%99%E8%99%95%E7%90%86%E6%96%B9%E6%B3%95%E5%B0%8E%E8%AB%96)
+這本線上教材還沒完成，但是可以先看看。希望這學期前會完成讓大家可以參考。 
+
+:::
+
+## 
+
+
+
+
+
+
+
+
+
+
+### References
+
+::: {#refs}
 :::
