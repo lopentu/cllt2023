@@ -2,10 +2,50 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://lopentu.github.io/cllt2023/weeks/week-2.html</loc>
-    <lastmod>2023-03-02T07:51:13.614Z</lastmod>
+    <lastmod>2023-03-02T08:34:12.952Z</lastmod>
   </url>
   <url>
     <loc>https://lopentu.github.io/cllt2023/index.html</loc>
-    <lastmod>2023-03-02T07:51:12.425Z</lastmod>
+    <lastmod>2023-03-02T08:35:00.934Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lopentu.github.io/cllt2023/labs/lab1.html</loc>
+    <lastmod>2023-03-02T08:34:12.185Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lopentu.github.io/cllt2023/weeks/week-1.html</loc>
+    <lastmod>2023-03-02T08:34:12.528Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lopentu.github.io/cllt2023/project-tips-resources.html</loc>
+    <lastmod>2023-03-02T08:34:13.499Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lopentu.github.io/cllt2023/supplemental/mlr-matrix.html</loc>
+    <lastmod>2023-03-02T08:34:13.812Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lopentu.github.io/cllt2023/supplemental/model-diagnostics-matrix.html</loc>
+    <lastmod>2023-03-02T08:34:14.142Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lopentu.github.io/cllt2023/supplemental/slr-derivations.html</loc>
+    <lastmod>2023-03-02T08:34:14.429Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lopentu.github.io/cllt2023/supplemental/log-transformations.html</loc>
+    <lastmod>2023-03-02T08:34:14.794Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lopentu.github.io/cllt2023/supplemental/model-selection-criteria.html</loc>
+    <lastmod>2023-03-02T08:34:15.096Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lopentu.github.io/cllt2023/exams/exam-1.html</loc>
+    <lastmod>2023-03-02T08:34:15.383Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lopentu.github.io/cllt2023/project-description.html</loc>
+    <lastmod>2023-03-02T08:34:15.674Z</lastmod>
   </url>
 </urlset>
