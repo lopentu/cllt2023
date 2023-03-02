@@ -270,8 +270,6 @@ multimodal LLM
 
 - [1]（計算語言學傳統）利用計算模型與工具， 以人懂的方式 <span style="color:red;">（符碼運算）</span>解析與瞭解語言 (及其他模態)。
 
-
-<<<<<<< HEAD
 - [2]（post-LLM NLP 導向）以電腦會就好<span style="color:red;">（張量運算）</span>的方式，開發與調整模型的 (驚人的) 落地應用。 
 :::
 
