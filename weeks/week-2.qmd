@@ -1,4 +1,3 @@
-
 ---
 title: "Week 2 Introduction"
 author: "謝舒凱 台大語言所"
@@ -11,6 +10,10 @@ format:
       logo: /images/logo_round.png
 bibliography: ../cllt.bib
 ---
+
+
+
+
 
 # 計算語言學入門
 
