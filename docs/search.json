@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "計算語言學與語言學理論",
     "section": "",
-    "text": "週次\n日期\n主題\n預習 📖\n投影片\n助教課\n課堂練習\n作業\n\n\n\n\n1\n02/23\n課程導論\n\norientation\n\n\n\n\n\n2\n03/02\n計算語言學導論\n\n\nslides\ncolab\nHW1\n\n\n3\n03/09\n計算構詞與詞彙 (1)\nslp3-02\nw3\nslides\ncolab\n\n\n\n4\n03/16\n計算構詞與詞彙 (2)\nslp3-23\n\n\n\n\n\n\n5\n03/23\n計算構詞與詞彙 (3)\nslp3-21\n\n\n\n\n\n\n6\n03/30\n計算構詞與詞彙 (4)\nslp3-25\n\n\n\n\n\n\n7\n04/06\n句法理論與剖析器\nslp3-18; (Linzen and Baroni, 2021)\n\n\n\n\n\n\n8\n04/13\n認知語法與計算\ncognitive linguistics meets computational linguistics\n\n\n\n\n\n\n9\n04/20\n語意表徵 (1)\nslp3-06\n\n\n\n\n\n\n10\n04/27\n語意表徵 (2)\nslp3-10\n\n\n\n\n\n\n11\n05/04\n語意表徵 (3) & 業師分享\nslp3-11\n\n\n\n\n\n\n12\n05/11\n語意表徵 (4)\nslp3-22\n\n\n\n\n\n\n13\n05/18\nBakeoff practice\n\n\n\n\n\n\n\n14\n05/25\n語音、多模態與言談分析\nslp3-15; slp3-28\n\n\n\n\n\n\n15\n06/01\n綜合討論\n\n\n\n\n\n\n\n16\n06/08\n期末報告"
+    "text": "週次\n日期\n主題\n預習 📖\n投影片\n助教課\n課堂練習\n作業\n\n\n\n\n1\n02/23\n課程導論\n\norientation\n\n\n\n\n\n2\n03/02\n計算語言學導論\n\n\nslides\ncolab\nHW1,HW1_Ans\n\n\n3\n03/09\n計算構詞與詞彙 (1)\nslp3-02\nw3\nslides\ncolab\n\n\n\n4\n03/16\n計算構詞與詞彙 (2)\nslp3-23\n\n\n\n\n\n\n5\n03/23\n計算構詞與詞彙 (3)\nslp3-21\n\n\n\n\n\n\n6\n03/30\n計算構詞與詞彙 (4)\nslp3-25\n\n\n\n\n\n\n7\n04/06\n句法理論與剖析器\nslp3-18; (Linzen and Baroni, 2021)\n\n\n\n\n\n\n8\n04/13\n認知語法與計算\ncognitive linguistics meets computational linguistics\n\n\n\n\n\n\n9\n04/20\n語意表徵 (1)\nslp3-06\n\n\n\n\n\n\n10\n04/27\n語意表徵 (2)\nslp3-10\n\n\n\n\n\n\n11\n05/04\n語意表徵 (3) & 業師分享\nslp3-11\n\n\n\n\n\n\n12\n05/11\n語意表徵 (4)\nslp3-22\n\n\n\n\n\n\n13\n05/18\nBakeoff practice\n\n\n\n\n\n\n\n14\n05/25\n語音、多模態與言談分析\nslp3-15; slp3-28\n\n\n\n\n\n\n15\n06/01\n綜合討論\n\n\n\n\n\n\n\n16\n06/08\n期末報告"
   },
   {
     "objectID": "project-tips-resources.html",
@@ -271,5 +271,229 @@
     "title": "Exam 1",
     "section": "",
     "text": "Exam 1 will be released on Friday, Feb 4 at 9 am ET and must be completed by Mon, Feb 7 at 11:59 pm.\nThe exam will consist of two parts:\n\nPart 1 - Conceptual: Multiple choice questions on Sakai test and quizzes. This portion may only be submitted one time. Go here to complete Part 1 of the exam.\nPart 2 - Applied: Data analysis in RStudio and submitted in Gradescope (like a usual lab and homework). Go to the GitHub organization for the course and find the exam-1- repo to complete Part 3 of your exam. Add your answers to the exam-1.qmd file in your repo.\n\nBoth portions must be completed and submitted by Mon, Feb 7 at 11:59 pm. Late work will only be accepted in the case of of extenuating circumstances and notification from your academic dean.\n🍀 Good luck! 🍀\n\n\n\nBy taking this exam, you pledge to uphold the Duke Community Standard:\n\nI will not lie, cheat, or steal in my academic endeavors;\nI will conduct myself honorably in all my endeavors; and\nI will act if the Standard is compromised.\n\n\n\n\n\nThis is an individual assignment. Everything in your repository and on Sakai is for your eyes only.\nYou may not collaborate or communicate anything about this exam to anyone except the instructor and the head TA (Rick Presman). For example, you may not communicate with other students, other TAs, or post/solicit help on the internet, email or via any other method of communication.\nThe exam is open-book, open-note, so you may use any materials from class as you take the exam.\nOnly head TA and professor office hours will be held during the exam period.\nYou may not email the TAs questions about the exam.\nIf you have questions, direct message the professor or the head TA (Rick Presman) on Slack or post on Sakai Conversations for “Instructors in this site” only or attend my office hours (Monday, 10:30 am - 11:30 am).\n\n\n\n\n\nPart 1 - Conceptual: The answers to the multiple choice/short answer questions should be submitted under Test & Quizzes in Sakai.\nPart 2 - Applied: The PDF document for the data analysis portion must be uploaded to Gradescope.\n\nYou must submit a PDF to Gradescope that corresponds to the .qmd file on your GitHub repository in order to receive credit for this portion of the exam.\nYou must upload a PDF, not HTML. Any non-PDF submissions will not be graded.\nMark the pages associated with each question. If any answer for a question spans multiple pages, mark all associated pages.\nMake sure to associate the “Workflow & formatting” section with the first page.\nFailure to mark the pages in Gradescope will result in point deductions. Any pages that are not marked will not be graded.\nMake sure that your uploaded PDF document matches your .qmd and the PDF in your GitHub repository exactly. Points will be deducted for documents that are not reproducible."
+  },
+  {
+    "objectID": "weeks/week-1.html#自然語言處理",
+    "href": "weeks/week-1.html#自然語言處理",
+    "title": "Week1 Orientation",
+    "section": "自然語言處理",
+    "text": "自然語言處理\n\n研究慣例上，將語言資訊的問題切分成不同的子任務，成熟之後就變成大家較熟悉的應用。\n\n語音辨識與語音合成\n文本摘要\n機器翻譯\n自動問答\n。。。。\n\n\n\n\n曾經語音與多模態(multimodality)是比較不歸類在 NLP 的領域，但最近幾年的進展與趨勢，也與 NLP 的研究社群密切互動。"
+  },
+  {
+    "objectID": "weeks/week-1.html#計算語言學-1",
+    "href": "weeks/week-1.html#計算語言學-1",
+    "title": "Week1 Orientation",
+    "section": "計算語言學",
+    "text": "計算語言學\n\n\n漢語的雙音節化是怎麼演化的 （computational historical linguistics）\n新詞 (neologism)、新構式 (constructions) 是怎麼在社群中突現、傳遞、消亡的 （computational sociolinguistics）\n面對完全沒有接觸過的語言，如何理解與編寫語法系統？（computational linguistic typology/ xenolinguistics）\n……. (你的想法？)"
+  },
+  {
+    "objectID": "weeks/week-1.html#從語言的處理到理解",
+    "href": "weeks/week-1.html#從語言的處理到理解",
+    "title": "Week1 Orientation",
+    "section": "從語言的處理到理解",
+    "text": "從語言的處理到理解\nFrom Natural Language Processing to National Language Understanding\n\n對於處理與理解，都是操作型定義 (operationalized)。"
+  },
+  {
+    "objectID": "weeks/week-1.html#傳統自然語言處理的發展",
+    "href": "weeks/week-1.html#傳統自然語言處理的發展",
+    "title": "Week1 Orientation",
+    "section": "傳統自然語言處理的發展",
+    "text": "傳統自然語言處理的發展\n\n\n\n中文 AI 知識庫與自然語言處理核心套件研討會"
+  },
+  {
+    "objectID": "weeks/week-1.html#個人觀點",
+    "href": "weeks/week-1.html#個人觀點",
+    "title": "Week1 Orientation",
+    "section": "(個人觀點)",
+    "text": "(個人觀點)\n\n\n(形式)語言學與傳統自然語言處理中的 Modularity 預設， 是好用的虛構 (useful fiction, Haugen and Dil, 1972)，方便整理知識，但非真實的語言現象。\n語言：人類，爲了溝通目的，在時空脈絡下，發展出的形意符號系統。 (cultural Species; form-meaning pairing; symbolic; self-adaptive complex system; situated and embodied cognition; etc.)\n符碼本質是形意映射，而指涉意義是約定俗成、很吃情境的。因此符碼運算與表徵是給人看的。語言的理解，涉及到更複雜的連續的過程，而非一個分段、分解的過程。\n語言學不等於 rule-based。"
+  },
+  {
+    "objectID": "weeks/week-1.html#大型預訓練語言模型",
+    "href": "weeks/week-1.html#大型預訓練語言模型",
+    "title": "Week1 Orientation",
+    "section": "大型預訓練語言模型",
+    "text": "大型預訓練語言模型\npre-trained Large Language Models (pre-LLMs)\n\n改變了(目前)的自然語言處理研究方向"
+  },
+  {
+    "objectID": "weeks/week-1.html#gpt-3-and-beyond",
+    "href": "weeks/week-1.html#gpt-3-and-beyond",
+    "title": "Week1 Orientation",
+    "section": "GPT-3 and Beyond",
+    "text": "GPT-3 and Beyond\n很清楚的科普介紹"
+  },
+  {
+    "objectID": "weeks/week-1.html#post-ai-nlp-in-context-learning-prompt-training",
+    "href": "weeks/week-1.html#post-ai-nlp-in-context-learning-prompt-training",
+    "title": "Week1 Orientation",
+    "section": "post-AI NLP: in-context learning (prompt-training)",
+    "text": "post-AI NLP: in-context learning (prompt-training)\na new paradigm of NLP that is based on the recent advances in AI, especially in the field of language modeling.\n\nRecently, we have seen dramatic advances in natural language processing (NLP) driven by huge pre-trained language models such as GPT-3 and DALLE-2. Instead of building many small task-specific models, there is a movement to create and use these more all-purpose huge language models for many NLP applications.\n\nThe most intriguing finding is that these models employ a new learning paradigm: in-context learning, where they learn to do a downstream task simply by conditioning on a prompt consisting of a few input-output examples without any parameter updates"
+  },
+  {
+    "objectID": "weeks/week-1.html#如何影響教學",
+    "href": "weeks/week-1.html#如何影響教學",
+    "title": "Week1 Orientation",
+    "section": "如何影響教學",
+    "text": "如何影響教學\n(順便介紹助教群 😄)"
+  },
+  {
+    "objectID": "weeks/week-1.html#爲什麼我們可以放心或應該擔心",
+    "href": "weeks/week-1.html#爲什麼我們可以放心或應該擔心",
+    "title": "Week1 Orientation",
+    "section": "爲什麼我們可以放心（或應該擔心）？",
+    "text": "爲什麼我們可以放心（或應該擔心）？\naka. 無中生有，跟真的一樣"
+  },
+  {
+    "objectID": "weeks/week-1.html#我們怎麼實作這門課",
+    "href": "weeks/week-1.html#我們怎麼實作這門課",
+    "title": "Week1 Orientation",
+    "section": "我們怎麼實作這門課？",
+    "text": "我們怎麼實作這門課？\n\n我們的主要學習重點不會放在自然語言處理中的機器學習模型原理 (請大家在其他的課程中並行學習)，而是放在語言學理論與自然語言處理的關係。\n選擇有語言學背景的教材 (如 Jurafsky & Martin SLP3, Christopher Potts cs224u, etc.) 來進行課程的教學，並補充不同的觀點。\n\n\n\n\n\n\n\nWarning\n\n\n\n這是沒有教科書的學門\n\n\n\n實作部分側重應用。"
+  },
+  {
+    "objectID": "weeks/week-1.html#看看當前的研究教學",
+    "href": "weeks/week-1.html#看看當前的研究教學",
+    "title": "Week1 Orientation",
+    "section": "看看當前的研究教學",
+    "text": "看看當前的研究教學\nIntroduction and course overview"
+  },
+  {
+    "objectID": "weeks/week-2.html",
+    "href": "weeks/week-2.html",
+    "title": "Week 2 Introduction",
+    "section": "",
+    "text": "實務應用上會使用 SOTA 的工具。科學探索上要學習背後的理論歷史。\n\n\n\n\n自然語言處理和計算語言學的異同\n但兩者的基礎類似 (機器學習、程式能力、演算法)\n\n前者目前更側重語言模型的工程訓練\n後者偏向邏輯推理與模組解析的語言理論研究\n\n\n\n\n\n\nNLP 簡史\n語言理論與深度學習\n入門實習\n\n\n\n\n\n\nimage source\n\n\n\n\n\n\n在大數據大演算力的時代，auto-regressive LLMs (以 chatGPT (Brown et al. 2020) 爲代表) 改變了當前 NLP 生態的發展方向。 \n\n\n\n\nNLP Process\n\n\n\n\nNLP Process with a Language Model\n\n\nimage source\n\n\n\n\n\nLearning from a few examples in context: 將 \\(X\\) 以及可能支持其預測 \\(Y\\) 的一些 context（可能是其他標記數據，背景知識，相關文檔等）一起輸入模型中，實現對 \\(Y\\) 的預測。\n當下學習，不重新調參數。Different from supervised learning requiring a training stage that uses backward gradients to update model parameters, ICL does not conduct parameter updates and directly performs predictions on the pretrained language models.\n\n\n\n\n\n\n\\(A:B=C:?\\)\n\n\n\n\n\n\nImportant\n\n\n\n\n會用自然語言寫 prompting templates、排序與挑選脈絡，變成一種解析技能。(Zhou et al. 2022)\n\n\n\n\n\n\n邏輯推理是機器可學習的嗎？\n\na chain of thought (i.e., a series of intermediate reasoning steps) significantly improves the ability of large language models to perform complex reasoning.(Wei et al. 2022)\n看看解語言謎題的結果 Translation Puzzles are In‑context Learning Tasks\n\n\n\n\n\n\n\n\n語言模型從大量語料中學習語詞的機率分佈 (e.g., how likely a word or sequence can occur in the context).\nTransformer-based language models。GPT-3 和 BERT 是其中具代表性的。\n目前火紅的 chatGPT (Brown et al. 2020) (GPT-3 variants) 還利用人工反饋之強化學習微調 pre-trained on a huge corpus of web and book data and fine-tuned with human conversation examples through supervised learning and reinforcement learning from human feedback (RLHF).\n\n\n\n\n\n\n\n是一種 encoder-decoder 神經網路類型，\n\n\n\n\n\nTransformer 使用的注意力計算機制 (attention)，可以用來很好的處理序列數據 (e.g., 文本、語音、音樂)。\n注意力機制讓模型更去注意到序列元素之間的相關性。(e.g., He-Tom, apples-them) \n\n\nsource\n\n\n\n\n\n語言表達能力流暢 (儘管說的是真是假不確定)\n貌似可以進行討論 (但是背後推理機制不透明) making probabilistic predictions in the generation process based on the corpus it has been trained on, which can lead to false claims about facts. Typical hedging behavior of ChatGPT will certainly increase the safety of the system.\n不開源；非商業組織如大學，通常缺乏跟上語言模型快速發展所需的計算和財務資源。\n\n\n\n\n\n\n\n\n\n玩一題語奧 (NACLO, UKLO, Panini)。分組討論 prompt/in-context 的設計，比看看 ChrF 的效果。"
+  },
+  {
+    "objectID": "weeks/week-2.html#prellms-學到了什麼",
+    "href": "weeks/week-2.html#prellms-學到了什麼",
+    "title": "Week 2 Introduction",
+    "section": "preLLMs 學到了什麼？",
+    "text": "preLLMs 學到了什麼？\n\n學習到的不僅僅是鄰近字串機率，還有一些結構性的知識。 以許多語言的 long-distance number agreement 為例。(Baroni 2021):p8\n如果先瞭解語言怎麼被我們學習到的 usage-based theory of language acquisition\n\n結構性的東西，在一定的數據學習之後，會 emerged。不需要預先規劃與給定。\n以 Papadimitriou and Jurafsky EMNLP 2020 爲例。\n\n這就是爲何形式語言學與認知功能語言學的震驚程度不同 😆"
+  },
+  {
+    "objectID": "weeks/week-2.html#語言學與機器學習的關係-imo",
+    "href": "weeks/week-2.html#語言學與機器學習的關係-imo",
+    "title": "Week 2 Introduction",
+    "section": "語言學與機器學習的關係 (IMO)",
+    "text": "語言學與機器學習的關係 (IMO)\n\n規則學習 | 形式語言學 (formal syntax)\n特徵學習 | 統計語言學 (statistical linguistics)\n深度學習 | 認知與功能語言學 (cognitive/functional linguistics)"
+  },
+  {
+    "objectID": "weeks/week-2.html#理論語言學-theorectical-linguistics",
+    "href": "weeks/week-2.html#理論語言學-theorectical-linguistics",
+    "title": "Week 2 Introduction",
+    "section": "理論語言學 | Theorectical Linguistics",
+    "text": "理論語言學 | Theorectical Linguistics\n(mostly known as Formal Syntax, or Generative Grammar)1\n\n\n生成語法預設語言是個由有限遞迴規則組成的形式系統， 可以用來生成所有可能的合法句子。\n大部分所謂的語言學理論，都是在生成語法的架構之下，主題包括：\n\nLearnability\nGeneralization given insufficient data\nCentrality of syntactic structure\n. ."
+  },
+  {
+    "objectID": "weeks/week-2.html#認知功能語言學-cognitivefunctional-linguistics",
+    "href": "weeks/week-2.html#認知功能語言學-cognitivefunctional-linguistics",
+    "title": "Week 2 Introduction",
+    "section": "認知功能語言學 | Cognitive/Functional Linguistics",
+    "text": "認知功能語言學 | Cognitive/Functional Linguistics\n\n晚近才引入 NLP 的解釋\nLanguage as a complex system"
+  },
+  {
+    "objectID": "weeks/week-2.html#這些都蠻進階的但我們慢慢從幾個重要的語言面向開始",
+    "href": "weeks/week-2.html#這些都蠻進階的但我們慢慢從幾個重要的語言面向開始",
+    "title": "Week 2 Introduction",
+    "section": "這些都蠻進階的，但我們慢慢從幾個重要的語言面向開始。",
+    "text": "這些都蠻進階的，但我們慢慢從幾個重要的語言面向開始。\n\n詞彙\n句法\n語意\n語音與多模態\n\n\n\n\n\n\n\nWarning\n\n\n\n探究這些現象的語言學理論背景是什麼？又怎麼連接到 NLP 的工程實踐？"
+  },
+  {
+    "objectID": "weeks/week-2.html#我認爲-accord-with-lecun-carmack-ii",
+    "href": "weeks/week-2.html#我認爲-accord-with-lecun-carmack-ii",
+    "title": "Week 2 Introduction",
+    "section": "我認爲 (accord with LeCun, Carmack II)",
+    "text": "我認爲 (accord with LeCun, Carmack II)\n\n目前的 LLM (Generative AI) 不太是 GAI (General AI) 的實踐方向，但是可以當作一個 IA 謹慎使用。\n目前來說 (2023 上半年)，讓 LLM 發展更好一點，各司其職是個方法 😁\n\ntoolTransformer； 事實與邏輯的學習 perplexity.ai"
+  },
+  {
+    "objectID": "weeks/week-2.html#但發展速度真的很快",
+    "href": "weeks/week-2.html#但發展速度真的很快",
+    "title": "Week 2 Introduction",
+    "section": "但發展速度真的很快",
+    "text": "但發展速度真的很快\nmultimodal LLM"
+  },
+  {
+    "objectID": "weeks/week-2.html#分出兩種-nlp",
+    "href": "weeks/week-2.html#分出兩種-nlp",
+    "title": "Week 2 Introduction",
+    "section": "分出兩種 NLP",
+    "text": "分出兩種 NLP\n\n\n[1]（計算語言學傳統）利用計算模型與工具， 以人懂的方式 （符碼運算）解析與瞭解語言 (及其他模態)。\n[2]（post-LLM NLP 導向）以電腦會就好（張量運算）的方式，開發與調整模型的 (驚人的) 落地應用。\n\n\n[1] 提供模型挑戰與複雜性 (e.g., 辯論、認錯、同理、意識, …)； [2] 反饋給（語言）理論發展範式的合理性，並且改變社會發展。"
+  },
+  {
+    "objectID": "weeks/week-2.html#回到我們課程設計上",
+    "href": "weeks/week-2.html#回到我們課程設計上",
+    "title": "Week 2 Introduction",
+    "section": "回到我們課程設計上",
+    "text": "回到我們課程設計上\n\n[Lecture] 講解「與 NLP 相關的語言學理論」\n\nlinguistically-oriented DNN analysis (cf. BlackBox NLP 系列研討會; Computation in Linguistics 協會)\n(ML 課程搭配)\n\n[Lab] 透過實作練習與工具使用\n\n語言模組解析 via spacy\n語言模型應用 via Hugging Face (transformers)"
+  },
+  {
+    "objectID": "weeks/week-2.html#section",
+    "href": "weeks/week-2.html#section",
+    "title": "Week 2 Introduction",
+    "section": "",
+    "text": "References\n\n\nBaroni, Marco. 2021. “On the Gap Between Computational and Theoretical Linguistics.” https://www.virtual2021.eacl.org/plenary_session_keynote_by_marco_baroni.html.\n\n\nBrown, Tom, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared D Kaplan, Prafulla Dhariwal, Arvind Neelakantan, et al. 2020. “Language Models Are Few-Shot Learners.” Advances in Neural Information Processing Systems 33: 1877–1901.\n\n\nDong, Qingxiu, Lei Li, Damai Dai, Ce Zheng, Zhiyong Wu, Baobao Chang, Xu Sun, Jingjing Xu, and Zhifang Sui. 2022. “A Survey for in-Context Learning.” arXiv Preprint arXiv:2301.00234.\n\n\nWei, Jason, Xuezhi Wang, Dale Schuurmans, Maarten Bosma, Ed Chi, Quoc Le, and Denny Zhou. 2022. “Chain of Thought Prompting Elicits Reasoning in Large Language Models.” arXiv Preprint arXiv:2201.11903.\n\n\nZhou, Yongchao, Andrei Ioan Muresanu, Ziwen Han, Keiran Paster, Silviu Pitis, Harris Chan, and Jimmy Ba. 2022. “Large Language Models Are Human-Level Prompt Engineers.” arXiv Preprint arXiv:2211.01910.\n\n\n======= ::: {style=“font-size: 0.875em;”} Back to course schedule ⏎ :::"
+  },
+  {
+    "objectID": "weeks/week3.html",
+    "href": "weeks/week3.html",
+    "title": "Week 3 Word",
+    "section": "",
+    "text": "詞彙、構詞與計算\n\n文本處理：文本正則化、語料庫與程式概念工具\nWordhood： many perspectives\n[Lab] Corpus processing skills\n\n\n\nLinguistics for NLP\n\n\n\n\nLanguage and Text\n\n\n文本處理是自然語言處理的基礎工作，是一種對文本進行分析、處理、編輯、轉換的技術。\n\n很適合用來搭配程式學習。\n\n文本正則 (text normalization) 是一種對文本進行 標準化 的轉換任務。\n\n\n\n標準化在此意義是對當下任務更便捷、更容易處理的意思。\n\n\n\n\ntext normalization tasks\n\n\ntokenization ：將文本分割成一個個的（詞符）單位。\nlemmatization：將不同表面形式的詞彙還原成相同詞根。\nstemming ：簡化版的 lemmatization，只把後綴拿掉。\n\n\n\n\n\n\n有時候，如處理古漢語，還需要斷句 sentence segmentation。\n\n\n\n\n\n\n\n\n\n\n\n比較：前處理任務「比較」不涉及語言學知識。\n\n\n\n- case folding：將所有字母轉換成小寫。\n- stopword removal：去除停用詞。\n\n\n\n\n\nTokenization vs Word Segmentation\n\n\nWord segmentation 貌似 word-based tokenization，但在中文與一些語言的脈絡中，它們不是完全一樣的概念。\n主要的差異點在於 wordhood 的概念是不定的、使用中的語意決定的。\n\n\n\n\n\n# Chinese\nimport jieba\njieba.lcut('還要如此費工，我認爲是duck可不必')\n# ['還要', '如此', '費工', '，', '我認', '爲', '是', 'duck', '可', '不必']\n\n# Japanese\nimport nagisa\ntext = 'Pythonで簡単に使えるツールです'\ndoc = nagisa.tagging(text)\ndoc.words\n# ['Python', 'で', '簡単', 'に', '使える', 'ツール', 'です']\n\n# Korean\nimport konlpy\nphrase = \"아버지가방에들어가신다\"\nfrom konlpy.tag import Hannanum\nhannanum = Hannanum()\nhannanum.morphs(phrase)\n# ['아버지가방에들어가', '이', '시ㄴ다']\n\n# Thai\nimport tltk\nphrase = \"\"\"สำนักงานเขตจตุจักรชี้แจงว่า ได้นำป้ายประกาศเตือนปลิงไปปักตามแหล่งน้ำ \nในเขตอำเภอเมือง จังหวัดอ่างทอง หลังจากนายสุกิจ อายุ 65 ปี ถูกปลิงกัดแล้วไม่ได้ไปพบแพทย์\"\"\"\npieces = tltk.nlp.pos_tag(phrase)\npieces\n# [[('สำนักงาน', 'NOUN'),\n#   ('เขต', 'NOUN'),\n#   ('จตุจักร', 'PROPN'),\n#   ('ชี้แจง', 'VERB'),\n#   ('ว่า', 'SCONJ'),\n#   ('<s/>', 'PUNCT')],\n#  ...\n\n\n\ndata and tools\n要進行文本的處理，我們需要（大量）語料與好用的程式工具。\n\n\n\nCorpus and Corpora\n\n語料庫 是一種重要的語言資源(language resource) 。\n文本語料庫是較常被使用的語言資源，它不僅是一個文本的集合 (collection of texts)，藉由標記 (annotation)，也是語言知識外顯化的一種形式。\n\n\n\n\n\n\n\nTip\n\n\n\n資料科學與語料分析:方法與實務：語言學角度的語料庫方法教科書\n\n\n\n\n\nLanguage Laws\n有了語料庫，我們就可以進行語言學的量化研究，例如發現語言法則。\n\n\n\n\n\n\nImportant\n\n\n\n要先知道 type (通常用 \\(V\\) 表示) 與 token (通常用 \\(N\\) 表示) 的差別。前者是所觀察的語料中字詞的種類，後者是字詞的總數。 \\(|V|\\) 則表示種類的數量 (vocabulary size)。\n\n\n\n\n\n\n\nZipf’s law：在給定的語料中，對於任意一個語詞，其頻率 (frequency) 的排名（rank）和頻率的乘積大致是一個常數。\nHeaps’ law (Herdan’s law)：在給定的語料中，(\\(|V|\\)) 大致是語料大小 (N) 的一個指數函數。\n\n\\(|V| = kN^{\\beta}\\), where \\(k\\) and \\(\\beta\\) are positive constants, and 0 < \\(\\beta\\) < 1\n\n\nMenzerath–Altmann law：the increase of the size of a linguistic construct results in a decrease of the size of its constituents.\n\n\n\n\n\n\n\n\n\n\n\nzip’s law\n\n\n\n\n\n\n\n\n先想一下怎麼實作。請 chatGPT 當程式助教，完成 Heap’s Law 的實驗觀察。\n\n\nCode\n# your code here"
+  },
+  {
+    "objectID": "weeks/week3.html#練習",
+    "href": "weeks/week3.html#練習",
+    "title": "Week 3 Word",
+    "section": "練習",
+    "text": "練習\nCorpus processing skills via command line (bash)"
+  },
+  {
+    "objectID": "weeks/week3.html#常用的-subword-based-tokenization-方法",
+    "href": "weeks/week3.html#常用的-subword-based-tokenization-方法",
+    "title": "Week 3 Word",
+    "section": "常用的 Subword-based tokenization 方法",
+    "text": "常用的 Subword-based tokenization 方法\n\nSubword-based tokenization 是目前較被使用的方法，因為它可以\n\n處理 word-based 的問題（very large vocabulary size, large number of OOV tokens, and different meaning of very similar words）\n也可以處理 character-based 的問題（very long sequences and less meaningful individual tokens）。\n\n常用的方法有：\n\nbyte-pair encoding (BPE) (> GPT family)\nwordpiece (> BERT)\nunigram language modeling\nSentencee piece"
+  },
+  {
+    "objectID": "weeks/week3.html#byte-pair-encoding-bpe",
+    "href": "weeks/week3.html#byte-pair-encoding-bpe",
+    "title": "Week 3 Word",
+    "section": "Byte-pair encoding (BPE)",
+    "text": "Byte-pair encoding (BPE)\nSubword-based tokenization algorithm (Sennrich, Haddow, and Birch 2015)\n\ntoken learner and token segmenter\n\n\n\n\nLearner 做的事\n\n\n\n我們用原作者的投影片來說明"
+  },
+  {
+    "objectID": "weeks/week3.html#練習-2",
+    "href": "weeks/week3.html#練習-2",
+    "title": "Week 3 Word",
+    "section": "練習",
+    "text": "練習\n使用 HuggingFace 的 tokenizer"
+  },
+  {
+    "objectID": "weeks/week3.html#word-vs-morpheme",
+    "href": "weeks/week3.html#word-vs-morpheme",
+    "title": "Week 3 Word",
+    "section": "Word vs Morpheme",
+    "text": "Word vs Morpheme\n\nmorpheme：語言中最小的意義單位。\nword：語言中最小的概念單位。"
+  },
+  {
+    "objectID": "weeks/week3.html#中文的詞素概念",
+    "href": "weeks/week3.html#中文的詞素概念",
+    "title": "Week 3 Word",
+    "section": "中文的詞素概念",
+    "text": "中文的詞素概念"
+  },
+  {
+    "objectID": "weeks/week3.html#中文斷詞問題",
+    "href": "weeks/week3.html#中文斷詞問題",
+    "title": "Week 3 Word",
+    "section": "中文斷詞問題",
+    "text": "中文斷詞問題\nChinese word segmentation: principles and practices"
+  },
+  {
+    "objectID": "weeks/week3.html#爲什麼現在的-chatgpt-不太會斷算詞",
+    "href": "weeks/week3.html#爲什麼現在的-chatgpt-不太會斷算詞",
+    "title": "Week 3 Word",
+    "section": "爲什麼「現在的」 chatGPT 不太會斷/算詞？",
+    "text": "爲什麼「現在的」 chatGPT 不太會斷/算詞？"
   }
 ]
