@@ -1,66 +1,10 @@
 [
   {
-    "objectID": "weeks/week3.html",
-    "href": "weeks/week3.html",
-    "title": "Week 3 Word",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "計算語言學與語言學理論",
     "section": "",
-    "text": "詞彙、構詞與計算\n\n文本處理：文本正則化、語料庫與程式概念工具\nWordhood： many perspectives\n[Lab] Corpus processing skills\n\n\n\nLinguistics for NLP\n\n\n\n\nLanguage and Text\n\n\n文本處理是自然語言處理的基礎工作，是一種對文本進行分析、處理、編輯、轉換的技術。\n\n很適合用來搭配程式學習。\n\n文本正則 (text normalization) 是一種對文本進行 標準化 的轉換任務。\n\n\n\n標準化在此意義是對當下任務更便捷、更容易處理的意思。\n\n\n\n\ntext normalization tasks\n\n\ntokenization ：將文本分割成一個個的（詞符）單位。\nlemmatization：將不同表面形式的詞彙還原成相同詞根。\nstemming ：簡化版的 lemmatization，只把後綴拿掉。\n\n\n\n\n\n\n有時候，如處理古漢語，還需要斷句 sentence segmentation。\n\n\n\n\n\n\n\n\n\n\n\n比較：前處理任務「比較」不涉及語言學知識。\n\n\n\n- case folding：將所有字母轉換成小寫。\n- stopword removal：去除停用詞。\n\n\n\n\n\nTokenization vs Word Segmentation\n\n\nWord segmentation 貌似 word-based tokenization，但在中文與一些語言的脈絡中，它們不是完全一樣的概念。\n主要的差異點在於 wordhood 的概念是不定的、使用中的語意決定的。\n\n\n\n\n\n# Chinese\nimport jieba\njieba.lcut('還要如此費工，我認爲是duck可不必')\n# ['還要', '如此', '費工', '，', '我認', '爲', '是', 'duck', '可', '不必']\n\n# Japanese\nimport nagisa\ntext = 'Pythonで簡単に使えるツールです'\ndoc = nagisa.tagging(text)\ndoc.words\n# ['Python', 'で', '簡単', 'に', '使える', 'ツール', 'です']\n\n# Korean\nimport konlpy\nphrase = \"아버지가방에들어가신다\"\nfrom konlpy.tag import Hannanum\nhannanum = Hannanum()\nhannanum.morphs(phrase)\n# ['아버지가방에들어가', '이', '시ㄴ다']\n\n# Thai\nimport tltk\nphrase = \"\"\"สำนักงานเขตจตุจักรชี้แจงว่า ได้นำป้ายประกาศเตือนปลิงไปปักตามแหล่งน้ำ \nในเขตอำเภอเมือง จังหวัดอ่างทอง หลังจากนายสุกิจ อายุ 65 ปี ถูกปลิงกัดแล้วไม่ได้ไปพบแพทย์\"\"\"\npieces = tltk.nlp.pos_tag(phrase)\npieces\n# [[('สำนักงาน', 'NOUN'),\n#   ('เขต', 'NOUN'),\n#   ('จตุจักร', 'PROPN'),\n#   ('ชี้แจง', 'VERB'),\n#   ('ว่า', 'SCONJ'),\n#   ('<s/>', 'PUNCT')],\n#  ...\n\n\n\ndata and tools\n要進行文本的處理，我們需要（大量）語料與好用的程式工具。\n\n\n\nCorpus and Corpora\n\n語料庫 是一種重要的語言資源(language resource) 。\n文本語料庫是較常被使用的語言資源，它不僅是一個文本的集合 (collection of texts)，藉由標記 (annotation)，也是語言知識外顯化的一種形式。\n\n\n\n\n\n\n\nTip\n\n\n\n資料科學與語料分析:方法與實務：語言學角度的語料庫方法教科書\n\n\n\n\n\nLanguage Laws\n有了語料庫，我們就可以進行語言學的量化研究，例如發現語言法則。\n\n\n\n\n\n\nImportant\n\n\n\n要先知道 type (通常用 \\(V\\) 表示) 與 token (通常用 \\(N\\) 表示) 的差別。前者是所觀察的語料中字詞的種類，後者是字詞的總數。 \\(|V|\\) 則表示種類的數量 (vocabulary size)。\n\n\n\n\n\n\n\nZipf’s law：在給定的語料中，對於任意一個語詞，其頻率 (frequency) 的排名（rank）和頻率的乘積大致是一個常數。\nHeaps’ law (Herdan’s law)：在給定的語料中，(\\(|V|\\)) 大致是語料大小 (N) 的一個指數函數。\n\n\\(|V| = kN^{\\beta}\\), where \\(k\\) and \\(\\beta\\) are positive constants, and 0 < \\(\\beta\\) < 1\n\n\nMenzerath–Altmann law：the increase of the size of a linguistic construct results in a decrease of the size of its constituents.\n\n\n\n\n\n\n\n\n\n\n\nzip’s law\n\n\n\n\n\n\n\n\n先想一下怎麼實作。請 chatGPT 當程式助教，完成 Heap’s Law 的實驗觀察。\n\n\nCode\n# your code here"
-  },
-  {
-    "objectID": "weeks/week3.html#練習",
-    "href": "weeks/week3.html#練習",
-    "title": "Week 3 Word",
-    "section": "練習",
-    "text": "練習\nCorpus processing skills via command line (bash)"
-  },
-  {
-    "objectID": "weeks/week3.html#常用的-subword-based-tokenization-方法",
-    "href": "weeks/week3.html#常用的-subword-based-tokenization-方法",
-    "title": "Week 3 Word",
-    "section": "常用的 Subword-based tokenization 方法",
-    "text": "常用的 Subword-based tokenization 方法\n\nSubword-based tokenization 是目前較被使用的方法，因為它可以\n\n處理 word-based 的問題（very large vocabulary size, large number of OOV tokens, and different meaning of very similar words）\n也可以處理 character-based 的問題（very long sequences and less meaningful individual tokens）。\n\n常用的方法有：\n\nbyte-pair encoding (BPE) (> GPT family)\nwordpiece (> BERT)\nunigram language modeling\nSentencee piece"
-  },
-  {
-    "objectID": "weeks/week3.html#byte-pair-encoding-bpe",
-    "href": "weeks/week3.html#byte-pair-encoding-bpe",
-    "title": "Week 3 Word",
-    "section": "Byte-pair encoding (BPE)",
-    "text": "Byte-pair encoding (BPE)\nSubword-based tokenization algorithm (Sennrich, Haddow, and Birch 2015)\n\ntoken learner and token segmenter\n\n\n\n\nLearner 做的事\n\n\n\n我們用原作者的投影片來說明"
-  },
-  {
-    "objectID": "weeks/week3.html#練習-2",
-    "href": "weeks/week3.html#練習-2",
-    "title": "Week 3 Word",
-    "section": "練習",
-    "text": "練習\n使用 HuggingFace 的 tokenizer"
-  },
-  {
-    "objectID": "weeks/week3.html#word-vs-morpheme",
-    "href": "weeks/week3.html#word-vs-morpheme",
-    "title": "Week 3 Word",
-    "section": "Word vs Morpheme",
-    "text": "Word vs Morpheme\n\nmorpheme：語言中最小的意義單位。\nword：語言中最小的概念單位。"
-  },
-  {
-    "objectID": "weeks/week3.html#中文的詞素概念",
-    "href": "weeks/week3.html#中文的詞素概念",
-    "title": "Week 3 Word",
-    "section": "中文的詞素概念",
-    "text": "中文的詞素概念"
-  },
-  {
-    "objectID": "weeks/week3.html#中文斷詞問題",
-    "href": "weeks/week3.html#中文斷詞問題",
-    "title": "Week 3 Word",
-    "section": "中文斷詞問題",
-    "text": "中文斷詞問題\nChinese word segmentation: principles and practices"
-  },
-  {
-    "objectID": "weeks/week3.html#爲什麼現在的-chatgpt-不太會斷算詞",
-    "href": "weeks/week3.html#爲什麼現在的-chatgpt-不太會斷算詞",
-    "title": "Week 3 Word",
-    "section": "爲什麼「現在的」 chatGPT 不太會斷/算詞？",
-    "text": "爲什麼「現在的」 chatGPT 不太會斷/算詞？"
+    "text": "週次\n日期\n主題\n預習 📖\n投影片\n助教課\n課堂練習\n作業\n\n\n\n\n1\n02/23\n課程導論\n\norientation\n\n\n\n\n\n2\n03/02\n計算語言學導論\n\n\nslides\ncolab\nHW1\n\n\n3\n03/09\n計算構詞與詞彙 (1)\nslp3-02\nw3\nslides\ncolab\n\n\n\n4\n03/16\n計算構詞與詞彙 (2)\nslp3-23\n\n\n\n\n\n\n5\n03/23\n計算構詞與詞彙 (3)\nslp3-21\n\n\n\n\n\n\n6\n03/30\n計算構詞與詞彙 (4)\nslp3-25\n\n\n\n\n\n\n7\n04/06\n句法理論與剖析器\nslp3-18; (Linzen and Baroni, 2021)\n\n\n\n\n\n\n8\n04/13\n認知語法與計算\ncognitive linguistics meets computational linguistics\n\n\n\n\n\n\n9\n04/20\n語意表徵 (1)\nslp3-06\n\n\n\n\n\n\n10\n04/27\n語意表徵 (2)\nslp3-10\n\n\n\n\n\n\n11\n05/04\n語意表徵 (3) & 業師分享\nslp3-11\n\n\n\n\n\n\n12\n05/11\n語意表徵 (4)\nslp3-22\n\n\n\n\n\n\n13\n05/18\nBakeoff practice\n\n\n\n\n\n\n\n14\n05/25\n語音、多模態與言談分析\nslp3-15; slp3-28\n\n\n\n\n\n\n15\n06/01\n綜合討論\n\n\n\n\n\n\n\n16\n06/08\n期末報告"
   },
   {
     "objectID": "project-tips-resources.html",
