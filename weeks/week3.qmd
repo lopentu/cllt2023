@@ -1,0 +1,337 @@
+---
+title: "Week 3 Word"
+author: "謝舒凱 台大語言所"
+format: 
+    revealjs:
+      slide-number: true
+      preview-links: auto
+      chalkboard: true
+      multiplex: true
+      logo: /images/logo_round.png
+    html:
+        code-fold: true
+bibliography: ../cllt.bib
+---
+
+
+
+# 今天主題
+**詞彙、構詞與計算**
+
+- 文本處理：文本正則化、語料庫與程式概念工具
+
+- Wordhood： many perspectives
+
+- [Lab] Corpus processing skills 
+
+
+
+## 語言學：給自然語言處理的印象
+[Linguistics for NLP]{.tiny-text}
+
+![](../images/NLP-Pyramid.png){width=80%}
+
+
+## 語言與文本
+[Language and Text]{.tiny-text}
+
+::: {.incremental}
+- 文本處理是自然語言處理的基礎工作，是一種對文本進行分析、處理、編輯、轉換的技術。
+
+    - 很適合用來搭配程式學習。
+
+- 文本正則 ([text normalization]{.blue-text}) 是一種對文本進行 *標準化* 的轉換任務。
+:::
+
+
+::: notes
+標準化在此意義是對當下任務更便捷、更容易處理的意思。
+:::
+
+
+## 文本正則化
+[text normalization tasks]{.tiny-text}
+
+:::{.incremental}
+
+- **tokenization** ：將文本分割成一個個的（詞符）單位。
+
+- **lemmatization**：將不同表面形式的詞彙還原成相同詞根。
+
+- **stemming** ：簡化版的 **lemmatization**，只把後綴拿掉。
+
+:::
+
+## 
+
+- 有時候，如處理古漢語，還需要斷句 **sentence segmentation**。
+
+
+![](../images/sentSeg.jpeg){width="80%"}
+
+
+
+
+
+## 文本正則化和前處理
+
+
+
+::: {.callout-important} 
+## 比較：前處理任務「比較」不涉及語言學知識。   
+    - case folding：將所有字母轉換成小寫。
+    - stopword removal：去除停用詞。
+:::
+
+
+
+
+## 切符和斷詞
+**Tokenization vs Word Segmentation**
+
+::: {.incremental}
+- Word segmentation 貌似 word-based tokenization，但在中文與一些語言的脈絡中，它們不是完全一樣的概念。
+
+- 主要的差異點在於 wordhood 的概念是不定的、使用中的語意決定的。
+
+:::
+
+
+## East Asian languages
+
+```python
+# Chinese
+import jieba
+jieba.lcut('還要如此費工，我認爲是duck可不必')
+# ['還要', '如此', '費工', '，', '我認', '爲', '是', 'duck', '可', '不必']
+
+# Japanese
+import nagisa
+text = 'Pythonで簡単に使えるツールです'
+doc = nagisa.tagging(text)
+doc.words
+# ['Python', 'で', '簡単', 'に', '使える', 'ツール', 'です']
+
+# Korean
+import konlpy
+phrase = "아버지가방에들어가신다"
+from konlpy.tag import Hannanum
+hannanum = Hannanum()
+hannanum.morphs(phrase)
+# ['아버지가방에들어가', '이', '시ㄴ다']
+
+# Thai
+import tltk
+phrase = """สำนักงานเขตจตุจักรชี้แจงว่า ได้นำป้ายประกาศเตือนปลิงไปปักตามแหล่งน้ำ 
+ในเขตอำเภอเมือง จังหวัดอ่างทอง หลังจากนายสุกิจ อายุ 65 ปี ถูกปลิงกัดแล้วไม่ได้ไปพบแพทย์"""
+pieces = tltk.nlp.pos_tag(phrase)
+pieces
+# [[('สำนักงาน', 'NOUN'),
+#   ('เขต', 'NOUN'),
+#   ('จตุจักร', 'PROPN'),
+#   ('ชี้แจง', 'VERB'),
+#   ('ว่า', 'SCONJ'),
+#   ('<s/>', 'PUNCT')],
+#  ...
+
+```
+
+
+
+## 語言資源與工具
+[data and tools]{.tiny-text}
+
+要進行文本的處理，我們需要（大量）語料與好用的程式工具。
+
+
+## 語料庫
+[Corpus and Corpora]{.tiny-text}
+
+- **語料庫** 是一種重要的[語言資源]{.blue-text}(language resource) 。
+
+- 文本語料庫是較常被使用的語言資源，它不僅是一個文本的集合 (collection of texts)，藉由標記 (annotation)，也是語言知識外顯化的一種形式。
+
+::: {.callout-tip}
+[資料科學與語料分析:方法與實務](https://lopentu.github.io/corpus-book/?chap=%E8%AA%9E%E6%96%99%E8%99%95%E7%90%86%E6%96%B9%E6%B3%95%E5%B0%8E%E8%AB%96)：語言學角度的語料庫方法教科書
+
+:::
+
+## 字詞分佈法則
+[Language Laws]{.tiny-text}
+
+有了語料庫，我們就可以進行語言學的量化研究，例如發現語言法則。
+
+::: {.callout-important}
+要先知道 `type` (通常用 $V$ 表示) 與 `token` (通常用 $N$ 表示) 的差別。前者是所觀察的語料中字詞的種類，後者是字詞的總數。
+$|V|$ 則表示種類的數量 (vocabulary size)。
+:::
+
+
+## 幾個已證實的著名的法則
+:::{.incremental}
+
+- [Zipf's law](https://www.wikiwand.com/en/Zipf's_law)：在給定的語料中，對於任意一個語詞，其頻率 (frequency) 的排名（rank）和頻率的乘積大致是一個常數。
+
+
+- Heaps' law (Herdan's law)：在給定的語料中，($|V|$) 大致是語料大小 (N) 的一個指數函數。
+
+$|V| = kN^{\beta}$, where $k$ and $\beta$ are positive constants, and 0 < $\beta$ < 1 
+
+<!-- - Zipf-Mandelbrot law： -->
+
+- [Menzerath–Altmann law](https://www.wikiwand.com/en/Menzerath%27s_law)：the increase of the size of a linguistic construct results in a decrease of the size of its constituents.
+
+
+:::
+
+## 
+
+::: {layout-ncol=2}
+![zip's law](../images/Zipf_30wiki_en_labels.png){width=50%}
+
+:::
+
+
+
+
+## 練習 1
+先想一下怎麼實作。請 `chatGPT` 當程式助教，完成 Heap's Law 的實驗觀察。
+
+```{python}
+# your code here
+```
+
+
+
+# 正則表達式
+
+
+- 正則表達式 (Regular Expression) 是常應用在文本正則化任務的強大的**程式工具**。
+
+- 我們可以用正則表達式來描述一個字串的模式。
+
+- 一起來看本週大家已經[預習的章節](https://web.stanford.edu/~jurafsky/slp3/2.pdf) :laughing:
+
+
+# 指令列
+另外一個好用的計算工具是指令列。
+
+- 可參閱 [指令列入門](https://langsci-edu.github.io/HoCoML/cmd/cmd4linguist.html#1)
+
+
+## 練習
+Corpus processing skills via command line (`bash`)
+
+
+
+
+
+
+# 切符演算 | Tokenization algorithms 
+> a way of splitting a string into tokens and assigning an identifier to each token before feeding it to the DNN model (e.g., Transformer).
+
+
+- 可以是 **word-based**：將文本切成一個個的詞彙單位；**subword-based**：切成子詞彙單位； 或者是 **character-based**：切成字元單位。(這裡的字元單位是指一個個的字母或標點符號，而不是中文字。)
+
+
+
+![](../images/tokenization.jpeg){width="80%"}
+
+
+
+
+::: notes
+[source](https://www.freecodecamp.org/news/evolution-of-tokenization/)
+:::
+
+
+
+
+
+
+## 常用的 Subword-based tokenization 方法
+
+- Subword-based tokenization 是目前較被使用的方法，因為它可以
+    - 處理 word-based 的問題（very large vocabulary size, large number of OOV tokens, and different meaning of very similar words）
+    
+    - 也可以處理 character-based 的問題（very long sequences and less meaningful individual tokens）。
+
+- 常用的方法有：
+    - byte-pair encoding (BPE) (> GPT family)
+    - wordpiece (> BERT)
+    - unigram language modeling
+    - Sentencee piece
+
+
+
+
+## Byte-pair encoding (BPE)
+**Subword-based tokenization algorithm** [@sennrich2015neural]
+
+- token learner and token segmenter
+
+![Learner 做的事](../images/bpe.png){width="80%"}
+
+- 我們用[原作者的投影片](https://web.stanford.edu/~jurafsky/slp3/slides/2_TextProc_Mar_25_2021.pdf)來說明
+
+
+
+
+
+
+
+## 練習
+[使用 HuggingFace 的 tokenizer](https://www.freecodecamp.org/news/train-algorithms-from-scratch-with-hugging-face/)
+
+
+
+
+<!-- 
+
+# String comparison
+## Minimum Edit Distance (MED)
+ -->
+
+
+
+
+# Wordhood: a linguistic perspective
+
+- 詞的問題，可以帶出一個很本質的問題。
+
+- 詞是動態的形意結合，詞的組合不是符碼的靜態結合。
+
+- 粘合 vs 隼合
+
+## Word vs Morpheme
+
+- **morpheme**：語言中最小的意義單位。
+- **word**：語言中最小的概念單位。
+
+
+## 中文的詞素概念
+
+
+
+
+## 中文斷詞問題
+Chinese word segmentation: principles and practices
+<!-- guideline advertise -->
+
+::: {layout-ncol=2}
+![](../images/book.png){width=50%}
+![](../images/routledge.webp){width=50%}
+:::
+
+
+
+## 爲什麼「現在的」 chatGPT 不太會斷/算詞？
+
+![](../images/chat.png){width=80%}
+ 
+
+
+# Wordhood: a linguistic typological perspective
+下週再繼續
+
+

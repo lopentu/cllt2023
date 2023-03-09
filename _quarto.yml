@@ -59,6 +59,8 @@ website:
             text: "Week 1"
           - href: weeks/week-2.qmd
             text: "Week 2"
+          - href: weeks/week3.qmd
+            text: "Week 3"
             
       - section: "補充說明"
         # contents:
@@ -76,17 +78,21 @@ website:
 format:
   html:
     highlight-style: a11y
-    theme:
+    # theme:
       # light: flatly>
-      dark: darkly
-      light: [cosmo, theme.scss]
+      # dark: darkly
+      # light: [cosmo, theme.scss]
       # dark: [cosmo, theme-dark.scss]
-    mainfont: "Atkinson Hyperlegible"
+    # mainfont: "Atkinson Hyperlegible"
+    theme: [yeti,my_styles.scss]
+    # css: styles.css
+    css: [styles.css, sydney-fonts.css]
+    mainfont: Nunito 
     code-copy: true
     code-overflow: wrap
     toc: true
-from: markdown+emoji
 
+from: markdown+emoji
 freeze: auto
 
-editor: visual
+# editor: visual

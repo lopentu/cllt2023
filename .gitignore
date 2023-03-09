@@ -131,3 +131,5 @@ dmypy.json
 /.quarto/
 !docs/site_libs/revealjs/dist
 
+
+/.luarc.json
