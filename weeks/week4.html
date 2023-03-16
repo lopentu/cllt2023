@@ -193,10 +193,14 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#詞意的-概念-結構" id="toc-詞意的-概念-結構" class="nav-link" data-scroll-target="#詞意的-概念-結構">詞意的 (概念) 結構</a></li>
   </ul></li>
   <li><a href="#業配-兩本好書" id="toc-業配-兩本好書" class="nav-link" data-scroll-target="#業配-兩本好書">(業配) 兩本好書</a></li>
-  <li><a href="#詞義的計算表徵" id="toc-詞義的計算表徵" class="nav-link" data-scroll-target="#詞義的計算表徵">詞義的計算表徵</a></li>
+  <li><a href="#詞義的計算表徵" id="toc-詞義的計算表徵" class="nav-link" data-scroll-target="#詞義的計算表徵">詞義的計算表徵</a>
+  <ul class="collapse">
+  <li><a href="#附帶一題" id="toc-附帶一題" class="nav-link" data-scroll-target="#附帶一題">附帶一題</a></li>
+  </ul></li>
   <li><a href="#計算詞彙語意資源" id="toc-計算詞彙語意資源" class="nav-link" data-scroll-target="#計算詞彙語意資源">計算詞彙語意資源</a>
   <ul class="collapse">
   <li><a href="#專有名詞的語意" id="toc-專有名詞的語意" class="nav-link" data-scroll-target="#專有名詞的語意">專有名詞的語意</a></li>
+  <li><a href="#專有名詞的語意-1" id="toc-專有名詞的語意-1" class="nav-link" data-scroll-target="#專有名詞的語意-1">專有名詞的語意</a></li>
   <li><a href="#詞義的計算與應用-1-詞義消歧" id="toc-詞義的計算與應用-1-詞義消歧" class="nav-link" data-scroll-target="#詞義的計算與應用-1-詞義消歧">詞義的計算與應用 (1): 詞義消歧</a></li>
   <li><a href="#glossbert" id="toc-glossbert" class="nav-link" data-scroll-target="#glossbert"><code>GlossBert</code></a></li>
   <li><a href="#gpt4-的詞義消歧能力" id="toc-gpt4-的詞義消歧能力" class="nav-link" data-scroll-target="#gpt4-的詞義消歧能力">GPT4 的詞義消歧能力</a></li>
@@ -348,6 +352,26 @@ Important
 <li><p>[人類] as a set of logical rules, or semantic features (<code>semantic frames</code>, <code>semantic roles</code>, <code>semantic networks</code> and <code>semantic graphs</code>, etc) <span class="red">symbolically</span> implemented</p></li>
 <li><p>[機器] as a point in semantic space (<code>embeddings</code> and <code>contextual embeddings</code>) <span class="red">sub-symbolically</span> implemented</p></li>
 </ul>
+<section id="附帶一題" class="level2">
+<h2 class="anchored" data-anchor-id="附帶一題">附帶一題</h2>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>機器(深度)學習課程</p>
+<ul>
+<li><p><strong>中文</strong> 以李宏毅老師 2021 年的課程優先（參考此份<a href="https://www.youtube.com/playlist?list=PLJV_el3uVTsMhtt7_Y6sgTHGHp1Vb2P2J">播放清單</a>，再往 2022-23 參考。（感謝建成提供）</p></li>
+<li><p><strong>英文</strong> <a href="https://ntunlpsg.github.io/ce7455_deep-nlp-20/">NTU: Deep Learning for Natural Language Processing: From Theory to Practice</a>； <a href="http://introtodeeplearning.com/">MIT introduction to Deep Learning</a> 都還不錯。</p></li>
+</ul>
+</div>
+</div>
+</section>
 </section>
 <section id="計算詞彙語意資源" class="level1">
 <h1>計算詞彙語意資源</h1>
@@ -377,13 +401,20 @@ Note
 <h2 class="anchored" data-anchor-id="專有名詞的語意">專有名詞的語意</h2>
 <p><span class="green">semantic issues of Proper Names</span></p>
 <ul>
-<li>taxonymy</li>
-<li>辨識</li>
-<li>wordhood vs properhood</li>
+<li>Named Entity Taxonymy</li>
+<li>專名辨識任務 (<code>Named Entity Recognition</code>, NER)</li>
 </ul>
 <blockquote class="blockquote">
 <p>Millian theorists claim that proper names do not possess a lexical meaning but directly refer to a certain entity,Fregean scholars assert that proper names do carry meanings, and the problem is just about the “meaning” employed.</p>
 </blockquote>
+</section>
+<section id="專有名詞的語意-1" class="level2">
+<h2 class="anchored" data-anchor-id="專有名詞的語意-1">專有名詞的語意</h2>
+<p><span class="green">wordhood vs properhood</span></p>
+<ul>
+<li>專名有詞意嗎？</li>
+<li>專名的詞意有規律嗎？</li>
+</ul>
 </section>
 <section id="詞義的計算與應用-1-詞義消歧" class="level2">
 <h2 class="anchored" data-anchor-id="詞義的計算與應用-1-詞義消歧">詞義的計算與應用 (1): 詞義消歧</h2>

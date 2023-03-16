@@ -116,6 +116,18 @@ homonymy
 - [機器] as a point in semantic space (`embeddings` and `contextual embeddings`) [sub-symbolically]{.red} implemented
 
 
+## 附帶一題
+:::{.callout-note}
+
+機器(深度)學習課程
+
+- **中文** 以李宏毅老師 2021 年的課程優先（參考此份[播放清單](https://www.youtube.com/playlist?list=PLJV_el3uVTsMhtt7_Y6sgTHGHp1Vb2P2J)，再往 2022-23 參考。（感謝建成提供）
+
+- **英文** [NTU: Deep Learning for Natural Language Processing: From Theory to Practice](https://ntunlpsg.github.io/ce7455_deep-nlp-20/)； [MIT introduction to Deep Learning](http://introtodeeplearning.com/) 都還不錯。
+
+:::
+
+
   
 
 # 計算詞彙語意資源
@@ -134,14 +146,17 @@ homonymy
 ## 專有名詞的語意
 [semantic issues of Proper Names]{.green}
 
-- taxonymy
-- 辨識
-- wordhood vs properhood
+- Named Entity Taxonymy
+- 專名辨識任務 (`Named Entity Recognition`, NER) 
+
 
 > Millian theorists claim that proper names do not possess a lexical meaning but directly refer to a certain entity,Fregean scholars assert that proper names do carry meanings, and the problem is just about the “meaning” employed.
 
+## 專有名詞的語意
+[wordhood vs properhood]{.green}
 
-
+- 專名有詞意嗎？
+- 專名的詞意有規律嗎？
 
 
 ## 詞義的計算與應用 (1): 詞義消歧   
