@@ -1,0 +1,211 @@
+---
+title: "Week 4 Word Meaning"
+author: "謝舒凱 台大語言所"
+format: 
+    revealjs:
+      slide-number: true
+      preview-links: auto
+      chalkboard: true
+      multiplex: true
+      logo: /images/logo_round.png
+    html:
+        code-fold: true
+bibliography: ../cllt.bib
+---
+
+# 今天主題
+
+- 詞義的概念
+- 詞彙語意資源
+- 詞義的計算與應用 (feat.GPT4 的詞義理解能力)
+
+
+
+
+# 詞意的概念
+[word sense]{.blue}
+
+- 詞意是指詞彙在不同語境下的不同使用意義 (meaning in usage)
+    - a *discrete* representation of one aspect of the meaning of a word.
+
+- 詞義是指詞彙在不同語境下的不同指涉意義 (meaning in reference)
+
+- 研究這個領域的分支：詞彙語意學 (lexical semantics)
+
+:::{.callout-note}
+**word meaning** (詞義) vs **word sense** (詞意)?
+但通常混用了。
+:::
+
+
+
+## 多義與歧義
+[polysemy and ambiguity]{.green}
+
+- 多義 (polysemy): 同一詞彙在不同語境下有不同的使用意義
+
+
+
+:::{.callout-important}
+homonymy
+:::
+
+
+
+## 詞意的區辨 
+
+- **zeugma** (*共軛修飾法*)
+
+
+## (中文詞網) 詞意區辨原則
+
+- 一義一項
+- 一物一義
+- 一事一義
+- 義不隨境遷
+- 義面由觀點何語境決定 
+
+
+## 詞意與義面
+[sense and meaning facet]{.green}
+
+
+
+
+
+## 詞意的粒度
+[word sense granularity]{.green}
+
+- Killagraf "I don't believe in word sensse"
+
+- 細粒度 fine-grained (`WordNet`) vs 粗粒度 coarse-grained word senses (e.g., `OntoNotes`))
+
+
+
+## 詞意的（規則）結構
+[sense alternation]{.green}
+
+- 規則多義 (regular polysemy)
+
+- 隱喻、比喻 (metaphor, metonymy, etc)
+
+
+
+
+## 詞意的 (概念) 結構 
+[qualia structure]{.green}
+
+
+
+
+# (業配) 兩本好書
+
+::: {layout-ncol=2}
+![](../images/lexicon.png)
+![](../images/gl.jpeg){width="35%"}
+索取
+:::
+
+
+
+# 詞義的計算表徵
+[word sense representation]{.green}
+
+- [人類] as a set of logical rules, or semantic features (`semantic frames`, `semantic roles`, `semantic networks` and `semantic graphs`, etc) [symbolically]{.red} implemented
+
+- [機器] as a point in semantic space (`embeddings` and `contextual embeddings`) [sub-symbolically]{.red} implemented
+
+
+  
+
+# 計算詞彙語意資源
+
+- [WordNet](https://wordnet.princeton.edu/) 
+
+- [FrameNet](https://framenet.icsi.berkeley.edu/fndrupal/)
+    - [Recent tutorial on LREC2022](https://lrec2022.lrec-conf.org/media/filer_public/58/44/5844e9e7-466f-489c-9a8a-8b656fe3788f/semanticalignmenttutorial-slides_final.pdf)
+
+:::{.callout-note}
+- [ConceptNet](https://conceptnet.io/) 
+<!-- relation 下次再談 -->
+:::
+
+
+## 專有名詞的語意
+[semantic issues of Proper Names]{.green}
+
+- taxonymy
+- 辨識
+- wordhood vs properhood
+
+> Millian theorists claim that proper names do not possess a lexical meaning but directly refer to a certain entity,Fregean scholars assert that proper names do carry meanings, and the problem is just about the “meaning” employed.
+
+
+
+
+
+## 詞義的計算與應用 (1): 詞義消歧   
+`word sense disambiguation` (WSD)
+
+- 決定詞彙在句子中的最合的詞意
+
+- 只做一個詞 (lexical sample) 和全部做 (all-words task)
+
+- 演算
+    - Baseline: 挑頻率最高的（在 wordnet 排第一個的詞意）
+    - 通常都是使用 supervised learning (e.g., **nearest neighbors with contextual embeddings**)
+    - 也有所謂 knowledge-based 的方法 (e.g., **Lesk algorithm** 比對字典釋義共享詞彙數量)
+
+
+## `GlossBert`
+
+![](../images/glossbert.png)
+
+
+
+
+## GPT4 的詞義消歧能力 
+![](../images/wsd.png)
+
+
+
+## 詞義的計算與應用 (2): 詞意推導
+`word sense induction` (WSI)
+
+- unsupervised machine learning (不使用 wordnet 的詞意資源當答案)
+
+- **agglomerative clustering**
+
+
+## GPT4 的詞義推導能力
+![](../images/senseInduction.png) 
+
+
+## 詞義的計算與應用 (3): 詞意理解與行動 
+
+<!-- paclic -->
+
+## GPT4 的詞義語用能力
+![](../images/sense2action.png)
+
+## 詞義的計算與應用 (4): 詞意角色標註 
+`semantic role labeling` (SRL)
+
+
+## 任務評測
+[Evaluation]{.green}
+
+- 
+
+- 代表性的會議與前瞻任務 bakeoff [`SemEval`](https://semeval.github.io/): International Workshop on Semantic Evaluation
+
+
+# 中文計算詞彙語意教學
+[ROCLING 2022, Tutorial](https://docs.google.com/presentation/d/19wp2BP4K6cFm2V9PG89NijetqxCYplalfQNiLKBFQZw/edit?usp=sharing)
+
+
+
+# 課堂練習
+如何測試 GPT4 的語意理解能力？
+
+

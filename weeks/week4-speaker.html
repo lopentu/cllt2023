@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.2.335">
 
   <meta name="author" content="謝舒凱 台大語言所">
-  <title>Computational linguisics and linguistic theories - Spring 2023 - Week 2 Introduction</title>
+  <title>Computational linguisics and linguistic theories - Spring 2023 - Week 4 Word Meaning</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -27,25 +27,6 @@
       width: 0.8em;
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
-    }
-    div.csl-bib-body { }
-    div.csl-entry {
-      clear: both;
-    }
-    .hanging div.csl-entry {
-      margin-left:2em;
-      text-indent:-2em;
-    }
-    div.csl-left-margin {
-      min-width:2em;
-      float:left;
-    }
-    div.csl-right-inline {
-      margin-left:2em;
-      padding-left:1em;
-    }
-    div.csl-indent {
-      margin-left: 2em;
     }
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css" id="theme">
@@ -339,7 +320,7 @@
       margin-right: 0; 
     }
   </style>
-<meta property="og:title" content="Computational linguisics and linguistic theories - Spring 2023 - Week 2 Introduction">
+<meta property="og:title" content="Computational linguisics and linguistic theories - Spring 2023 - Week 4 Word Meaning">
 <meta property="og:site-name" content="Computational linguisics and linguistic theories - Spring 2023">
 </head>
 <body class="quarto-light">
@@ -347,7 +328,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Week 2 Introduction</h1>
+  <h1 class="title">Week 4 Word Meaning</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -358,91 +339,47 @@
 </div>
 
 </section>
+<section id="今天主題" class="title-slide slide level1 center">
+<h1>今天主題</h1>
+<ul>
+<li>詞義的概念</li>
+<li>詞彙語意資源</li>
+<li>詞義的計算與應用 (feat.GPT4 的詞義理解能力)</li>
+</ul>
+</section>
+
 <section>
-<section id="計算語言學入門" class="title-slide slide level1 center">
-<h1>計算語言學入門</h1>
-<blockquote>
-<p>實務應用上會使用 SOTA 的工具。科學探索上要學習背後的理論歷史。</p>
-</blockquote>
-</section>
-<section id="上週重點" class="slide level2">
-<h2>上週重點</h2>
+<section id="詞意的概念" class="title-slide slide level1 center">
+<h1>詞意的概念</h1>
+<p><span class="blue">word sense</span></p>
 <ul>
-<li><p>自然語言處理和計算語言學的異同</p></li>
-<li><p>但兩者的基礎類似 (機器學習、程式能力、演算法)</p>
+<li><p>詞意是指詞彙在不同語境下的不同使用意義 (meaning in usage)</p>
 <ul>
-<li>前者目前更側重語言模型的工程訓練</li>
-<li>後者偏向邏輯推理與模組解析的語言理論研究</li>
+<li>a <em>discrete</em> representation of one aspect of the meaning of a word.</li>
 </ul></li>
+<li><p>詞義是指詞彙在不同語境下的不同指涉意義 (meaning in reference)</p></li>
+<li><p>研究這個領域的分支：詞彙語意學 (lexical semantics)</p></li>
 </ul>
+<div class="callout callout-note callout-captioned callout-style-default">
+<div class="callout-body">
+<div class="callout-caption">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>word meaning</strong> (詞義) vs <strong>word sense</strong> (詞意)? 但通常混用了。</p>
+</div>
+</div>
+</div>
 </section>
-<section id="本週課程" class="slide level2">
-<h2>本週課程</h2>
+<section id="多義與歧義" class="slide level2">
+<h2>多義與歧義</h2>
+<p><span class="green">polysemy and ambiguity</span></p>
 <ul>
-<li><p>NLP 簡史</p></li>
-<li><p>語言理論與深度學習</p></li>
-<li><p>入門實習</p></li>
+<li>多義 (polysemy): 同一詞彙在不同語境下有不同的使用意義</li>
 </ul>
-</section>
-<section id="timeline-of-nlp" class="slide level2">
-<h2>Timeline of NLP</h2>
-
-<img data-src="../images/nlp-history.webp" style="width:80.0%" class="r-stretch"><aside class="notes">
-<p><a href="https://medium.com/nlplanet/a-brief-timeline-of-nlp-bc45b640f07d">image source</a></p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="timeline-nlp-during-the-deep-learning-era" class="slide level2">
-<h2>Timeline NLP during the Deep Learning Era</h2>
-<p><img data-src="../images/llm.png" style="width:90.0%"></p>
-<ul>
-<li>在大數據大演算力的時代，<strong>auto-regressive LLMs</strong> (以 <code>chatGPT</code> <span class="citation" data-cites="brown2020language">(<a href="#/section" role="doc-biblioref" onclick="">Brown et al. 2020</a>)</span> 爲代表) <strong>改變了當前 NLP 生態的發展方向</strong>。 <img data-src="../images/autoreg.svg" style="width:40.0%"></li>
-</ul>
-</section>
-<section id="從這樣" class="slide level2">
-<h2>從這樣</h2>
-<p>NLP Process</p>
-
-<img data-src="../images/pipe.png" style="width:90.0%" class="r-stretch"></section>
-<section id="變到這樣" class="slide level2">
-<h2>變到這樣</h2>
-<p>NLP Process with a Language Model</p>
-
-<img data-src="../images/llm-nlp.png" class="r-stretch"><aside class="notes">
-<p><a href="https://miro.medium.com/v2/resize:fit:1400/0*9cIphEN4LvZnkkI5.png">image source</a></p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="到晚近的-in-context-learning-icl-dong2022survey" class="slide level2">
-<h2>到晚近的 in-context learning (ICL, <span class="citation" data-cites="dong2022survey">(<a href="#/section" role="doc-biblioref" onclick="">Dong et al. 2022</a>)</span>)</h2>
-<ul>
-<li><p><strong>Learning from a few examples in context</strong>: 將 <span class="math inline">\(X\)</span> 以及可能支持其預測 <span class="math inline">\(Y\)</span> 的一些 context（可能是其他標記數據，背景知識，相關文檔等）一起輸入模型中，實現對 <span class="math inline">\(Y\)</span> 的預測。</p></li>
-<li><p>當下學習，不重新調參數。Different from supervised learning requiring a training stage that uses backward gradients to update model parameters, ICL does not conduct parameter updates and directly performs predictions on the pretrained language models.</p></li>
-</ul>
-<!-- > 不管如何，這些模型都是在做一件事：預測下一個單詞。(Copilot AI, 2023) -->
-</section>
-<section id="learn-from-analogy" class="slide level2">
-<h2>Learn from analogy</h2>
-
-<img data-src="../images/icl.png" class="r-stretch"><p><span class="math inline">\(A:B=C:?\)</span></p>
 <div class="callout callout-important callout-captioned callout-style-default">
 <div class="callout-body">
 <div class="callout-caption">
@@ -452,260 +389,177 @@
 <p><strong>Important</strong></p>
 </div>
 <div class="callout-content">
-<ul>
-<li>會用自然語言寫 <code>prompting templates</code>、排序與挑選脈絡，變成一種解析技能。<span class="citation" data-cites="zhou2022large">(<a href="#/section" role="doc-biblioref" onclick="">Zhou et al. 2022</a>)</span></li>
-</ul>
+<p>homonymy</p>
 </div>
 </div>
 </div>
 </section>
-<section id="一個語言學相關的有趣的延伸研究" class="slide level2">
-<h2>一個語言學相關的有趣的延伸研究</h2>
-<p>邏輯推理是機器可學習的嗎？</p>
+<section id="詞意的區辨" class="slide level2">
+<h2>詞意的區辨</h2>
 <ul>
-<li><p>a <strong>chain of thought</strong> (i.e., a series of intermediate reasoning steps) significantly improves the ability of large language models to perform complex reasoning.<span class="citation" data-cites="wei2022chain">(<a href="#/section" role="doc-biblioref" onclick="">Wei et al. 2022</a>)</span></p></li>
-<li><p>看看解語言謎題的結果 <a href="https://vamvas.ch/translation-puzzles-are-in-context-learning-tasks">Translation Puzzles are In‑context Learning Tasks</a></p></li>
-</ul>
-
-<img data-src="../images/chickasaw.png" style="border: 1px solid black;" data-align="center," class="r-stretch"></section>
-<section id="先做基本的理解" class="slide level2">
-<h2>先做基本的理解</h2>
-<h4 id="預訓練大型語言模型-pre-trained-large-language-models">預訓練大型語言模型 (Pre-trained Large Language Models)</h4>
-<ul>
-<li><p>語言模型從大量語料中學習語詞的機率分佈 (e.g., how likely a word or sequence can occur in the context).</p></li>
-<li><p>Transformer-based language models。GP<strong>T</strong>-3 和 BER<strong>T</strong> 是其中具代表性的。</p></li>
-<li><p>目前火紅的 <code>chatGPT</code> <span class="citation" data-cites="brown2020language">(<a href="#/section" role="doc-biblioref" onclick="">Brown et al. 2020</a>)</span> (GPT-3 variants) 還利用人工反饋之強化學習微調 pre-trained on a huge corpus of web and book data and fine-tuned with human conversation examples through supervised learning and reinforcement learning from human feedback (RLHF).</p></li>
+<li><strong>zeugma</strong> (<em>共軛修飾法</em>)</li>
 </ul>
 </section>
-<section id="transformer-架構" class="slide level2">
-<h2>Transformer 架構</h2>
-
-<img data-src="../images/transformer.png" style="width:80.0%" class="r-stretch"><ul>
-<li>是一種 encoder-decoder 神經網路類型，</li>
+<section id="中文詞網-詞意區辨原則" class="slide level2">
+<h2>(中文詞網) 詞意區辨原則</h2>
+<ul>
+<li>一義一項</li>
+<li>一物一義</li>
+<li>一事一義</li>
+<li>義不隨境遷</li>
+<li>義面由觀點何語境決定</li>
 </ul>
 </section>
-<section id="transformer-based-language-models" class="slide level2">
-<h2>Transformer-based Language Models</h2>
-<ul>
-<li><p><code>Transformer</code> 使用的<span style="color:red;">注意力計算機制</span> (attention)，可以用來很好的處理序列數據 (e.g., 文本、語音、音樂)。</p></li>
-<li><p>注意力機制讓模型更去注意到序列元素之間的相關性。(e.g., <em>He-Tom</em>, <em>apples-them</em>) <img data-src="../images/attention.webp" style="width:50.0%"></p></li>
-</ul>
-<aside class="notes">
-<p><a href="https://bootcamp.uxdesign.cc/how-chatgpt-really-works-explained-for-non-technical-people-71efb078a5c9">source</a></p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
+<section id="詞意與義面" class="slide level2">
+<h2>詞意與義面</h2>
+<p><span class="green">sense and meaning facet</span></p>
 </section>
-<section id="問題與討論" class="slide level2">
-<h2>問題與討論</h2>
+<section id="詞意的粒度" class="slide level2">
+<h2>詞意的粒度</h2>
+<p><span class="green">word sense granularity</span></p>
 <ul>
-<li><p>語言表達能力流暢 (儘管說的是真是假不確定)</p></li>
-<li><p>貌似可以進行討論 (但是背後推理機制不透明) making probabilistic predictions in the generation process based on the corpus it has been trained on, which can lead to false claims about facts. Typical hedging behavior of ChatGPT will certainly increase the safety of the system.</p></li>
-<li><p>不開源；非商業組織如大學，通常缺乏跟上語言模型快速發展所需的計算和財務資源。</p></li>
+<li><p>Killagraf “I don’t believe in word sensse”</p></li>
+<li><p>細粒度 fine-grained (<code>WordNet</code>) vs 粗粒度 coarse-grained word senses (e.g., <code>OntoNotes</code>))</p></li>
 </ul>
 </section>
-<section id="以一個討論的場景爲例" class="slide level2">
-<h2>以一個討論的場景爲例</h2>
-
-<img data-src="../images/wife.png" style="width:80.0%" class="r-stretch"></section>
-<section id="課堂練習" class="slide level2">
-<h2>課堂練習</h2>
+<section id="詞意的規則結構" class="slide level2">
+<h2>詞意的（規則）結構</h2>
+<p><span class="green">sense alternation</span></p>
 <ul>
-<li>玩一題語奧 (<a href="https://www.nacloweb.org/past_competitions.php"><code>NACLO</code></a>, <a href="https://www.uklo.org/past-exam-papers/"><code>UKLO</code></a>, <a href="https://ltrc.iiit.ac.in/nlpmt/plo/#/resource/"><code>Panini</code></a>)。分組討論 prompt/in-context 的設計，比看看 <code>ChrF</code> 的效果。</li>
+<li><p>規則多義 (regular polysemy)</p></li>
+<li><p>隱喻、比喻 (metaphor, metonymy, etc)</p></li>
 </ul>
-<!-- demo prompt/in-context -->
+</section>
+<section id="詞意的-概念-結構" class="slide level2">
+<h2>詞意的 (概念) 結構</h2>
+<p><span class="green">qualia structure</span></p>
 </section></section>
+<section id="業配-兩本好書" class="title-slide slide level1 center">
+<h1>(業配) 兩本好書</h1>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img data-src="../images/lexicon.png"> <img data-src="../images/gl.jpeg" style="width:35.0%"> 索取</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="詞義的計算表徵" class="title-slide slide level1 center">
+<h1>詞義的計算表徵</h1>
+<p><span class="green">word sense representation</span></p>
+<ul>
+<li><p>[人類] as a set of logical rules, or semantic features (<code>semantic frames</code>, <code>semantic roles</code>, <code>semantic networks</code> and <code>semantic graphs</code>, etc) <span class="red">symbolically</span> implemented</p></li>
+<li><p>[機器] as a point in semantic space (<code>embeddings</code> and <code>contextual embeddings</code>) <span class="red">sub-symbolically</span> implemented</p></li>
+</ul>
+</section>
+
 <section>
-<section id="與語言學的工作爲何漸行漸遠" class="title-slide slide level1 center">
-<h1>與語言學的工作爲何漸行漸遠？</h1>
+<section id="計算詞彙語意資源" class="title-slide slide level1 center">
+<h1>計算詞彙語意資源</h1>
+<ul>
+<li><p><a href="https://wordnet.princeton.edu/">WordNet</a></p></li>
+<li><p><a href="https://framenet.icsi.berkeley.edu/fndrupal/">FrameNet</a></p>
+<ul>
+<li><a href="https://lrec2022.lrec-conf.org/media/filer_public/58/44/5844e9e7-466f-489c-9a8a-8b656fe3788f/semanticalignmenttutorial-slides_final.pdf">Recent tutorial on LREC2022</a></li>
+</ul></li>
+</ul>
+<div class="callout callout-note callout-captioned callout-style-default">
+<div class="callout-body">
+<div class="callout-caption">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<ul>
+<li><a href="https://conceptnet.io/">ConceptNet</a> <!-- relation 下次再談 --></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="專有名詞的語意" class="slide level2">
+<h2>專有名詞的語意</h2>
+<p><span class="green">semantic issues of Proper Names</span></p>
+<ul>
+<li>taxonymy</li>
+<li>辨識</li>
+<li>wordhood vs properhood</li>
+</ul>
 <blockquote>
-<p>DNNs’ input data and architectures are not based on the symbolic representations familiar with linguistics, such as a parse trees or logical formulas. Instead, DNNs learn to encode words and sentences as vectors (sequences of real-numbers)…</p>
+<p>Millian theorists claim that proper names do not possess a lexical meaning but directly refer to a certain entity,Fregean scholars assert that proper names do carry meanings, and the problem is just about the “meaning” employed.</p>
 </blockquote>
 </section>
-<section id="prellms-學到了什麼" class="slide level2">
-<h2>preLLMs 學到了什麼？</h2>
+<section id="詞義的計算與應用-1-詞義消歧" class="slide level2">
+<h2>詞義的計算與應用 (1): 詞義消歧</h2>
+<p><code>word sense disambiguation</code> (WSD)</p>
 <ul>
-<li><p>學習到的不僅僅是鄰近字串機率，還有一些結構性的知識。 以許多語言的 <code>long-distance number agreement</code> 為例。<span class="citation" data-cites="baroni2021">(<a href="#/section" role="doc-biblioref" onclick="">Baroni 2021</a>)</span>:p8</p></li>
-<li><p>如果先瞭解語言怎麼被我們學習到的 usage-based theory of language acquisition</p>
+<li><p>決定詞彙在句子中的最合的詞意</p></li>
+<li><p>只做一個詞 (lexical sample) 和全部做 (all-words task)</p></li>
+<li><p>演算</p>
 <ul>
-<li>結構性的東西，在一定的數據學習之後，會 emerged。不需要預先規劃與給定。</li>
-<li>以 Papadimitriou and Jurafsky EMNLP 2020 爲例。</li>
-</ul></li>
-<li><p>這就是爲何形式語言學與認知功能語言學的震驚程度不同 <span class="emoji" data-emoji="laughing">😆</span></p></li>
-</ul>
-<!-- no linguist in our learning process -->
-</section>
-<section id="語言學與機器學習的關係-imo" class="slide level2">
-<h2>語言學與機器學習的關係 (IMO)</h2>
-<ul>
-<li><p>規則學習 | 形式語言學 (formal syntax)</p></li>
-<li><p>特徵學習 | 統計語言學 (statistical linguistics)</p></li>
-<li><p>深度學習 | 認知與功能語言學 (cognitive/functional linguistics)</p></li>
-</ul>
-</section></section>
-<section>
-<section id="模型與語言理論之間的關係曖昧" class="title-slide slide level1 center">
-<h1>模型與語言理論之間的關係曖昧</h1>
-<ul>
-<li>背後有不同的哲學思潮，我們日後慢慢帶入。</li>
-</ul>
-</section>
-<section id="理論語言學-theorectical-linguistics" class="slide level2">
-<h2>理論語言學 | Theorectical Linguistics</h2>
-<p>(mostly known as Formal Syntax, or Generative Grammar)<sup>1</sup></p>
-<p><img data-src="../images/ling.png" style="width:70.0%"></p>
-<ul>
-<li><p>生成語法預設語言是個由有限遞迴規則組成的形式系統， 可以用來生成所有可能的合法句子。</p></li>
-<li><p>大部分所謂的語言學理論，都是在生成語法的架構之下，主題包括：</p>
-<ul>
-<li>Learnability</li>
-<li>Generalization given insufficient data</li>
-<li>Centrality of syntactic structure</li>
-<li>. .</li>
+<li>Baseline: 挑頻率最高的（在 wordnet 排第一個的詞意）</li>
+<li>通常都是使用 supervised learning (e.g., <strong>nearest neighbors with contextual embeddings</strong>)</li>
+<li>也有所謂 knowledge-based 的方法 (e.g., <strong>Lesk algorithm</strong> 比對字典釋義共享詞彙數量)</li>
 </ul></li>
 </ul>
-<aside><ol class="aside-footnotes"><li id="fn1"><p>以上採自 <span class="citation" data-cites="baroni2021">(<a href="#/section" role="doc-biblioref" onclick="">Baroni 2021</a>)</span> 的觀點</p></li></ol></aside></section>
-<section id="認知功能語言學-cognitivefunctional-linguistics" class="slide level2">
-<h2>認知功能語言學 | Cognitive/Functional Linguistics</h2>
-<ul>
-<li><p>晚近才引入 NLP 的解釋</p></li>
-<li><p>Language as a complex system</p></li>
-</ul>
 </section>
-<section id="這些都蠻進階的但我們慢慢從幾個重要的語言面向開始" class="slide level2">
-<h2>這些都蠻進階的，但我們慢慢從幾個重要的語言面向開始。</h2>
-<ul>
-<li>詞彙</li>
-<li>句法</li>
-<li>語意</li>
-<li>語音與多模態</li>
-</ul>
-<div class="callout callout-warning callout-captioned callout-style-default">
-<div class="callout-body">
-<div class="callout-caption">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Warning</strong></p>
-</div>
-<div class="callout-content">
-<p>探究這些現象的語言學理論背景是什麼？又怎麼連接到 NLP 的工程實踐？</p>
-</div>
-</div>
-</div>
-</section>
-<section id="我認爲-accord-with-lecun-carmack-ii" class="slide level2">
-<h2>我認爲 (accord with LeCun, Carmack II)</h2>
-<ul>
-<li><p>目前的 LLM (Generative AI) 不太是 GAI (General AI) 的實踐方向，但是可以當作一個 IA 謹慎使用。</p></li>
-<li><p>目前來說 (2023 上半年)，讓 LLM 發展更好一點，各司其職是個方法 <span class="emoji" data-emoji="grin">😁</span></p></li>
-</ul>
-<p><code>toolTransformer</code>； 事實與邏輯的學習 <a href="https://www.perplexity.ai/?s=u&amp;uuid=91d2c8ce-f610-4972-942e-cb60e6058b78">perplexity.ai</a></p>
-</section>
-<section id="但發展速度真的很快" class="slide level2">
-<h2>但發展速度真的很快</h2>
-<p>multimodal LLM</p>
+<section id="glossbert" class="slide level2">
+<h2><code>GlossBert</code></h2>
 
-<img data-src="../images/multillm.png" style="width:80.0%" class="r-stretch"></section>
-<section id="分出兩種-nlp" class="slide level2">
-<h2>分出兩種 NLP</h2>
-<div>
+<img data-src="../images/glossbert.png" class="r-stretch"></section>
+<section id="gpt4-的詞義消歧能力" class="slide level2">
+<h2>GPT4 的詞義消歧能力</h2>
+
+<img data-src="../images/wsd.png" class="r-stretch"></section>
+<section id="詞義的計算與應用-2-詞意推導" class="slide level2">
+<h2>詞義的計算與應用 (2): 詞意推導</h2>
+<p><code>word sense induction</code> (WSI)</p>
 <ul>
-<li class="fragment"><p>[1]（計算語言學傳統）利用計算模型與工具， 以人懂的方式 <span style="color:red;">（符碼運算）</span>解析與瞭解語言 (及其他模態)。</p></li>
-<li class="fragment"><p>[2]（post-LLM NLP 導向）以電腦會就好<span style="color:red;">（張量運算）</span>的方式，開發與調整模型的 (驚人的) 落地應用。</p></li>
+<li><p>unsupervised machine learning (不使用 wordnet 的詞意資源當答案)</p></li>
+<li><p><strong>agglomerative clustering</strong></p></li>
 </ul>
-</div>
-<p>[1] 提供模型挑戰與複雜性 (e.g., 辯論、認錯、同理、意識, …)； [2] 反饋給（語言）理論發展範式的合理性，並且改變社會發展。</p>
 </section>
-<section id="回到我們課程設計上" class="slide level2">
-<h2>回到我們課程設計上</h2>
+<section id="gpt4-的詞義推導能力" class="slide level2">
+<h2>GPT4 的詞義推導能力</h2>
+
+<img data-src="../images/senseInduction.png" class="r-stretch"></section>
+<section id="詞義的計算與應用-3-詞意理解與行動" class="slide level2">
+<h2>詞義的計算與應用 (3): 詞意理解與行動</h2>
+<!-- paclic -->
+</section>
+<section id="gpt4-的詞義語用能力" class="slide level2">
+<h2>GPT4 的詞義語用能力</h2>
+
+<img data-src="../images/sense2action.png" class="r-stretch"></section>
+<section id="詞義的計算與應用-4-詞意角色標註" class="slide level2">
+<h2>詞義的計算與應用 (4): 詞意角色標註</h2>
+<p><code>semantic role labeling</code> (SRL)</p>
+</section>
+<section id="任務評測" class="slide level2">
+<h2>任務評測</h2>
+<p><span class="green">Evaluation</span></p>
 <ul>
-<li>[Lecture] 講解「與 NLP 相關的語言學理論」
-<ul>
-<li><p>linguistically-oriented DNN analysis (cf.&nbsp;<a href="">BlackBox NLP 系列研討會</a>; <a href="https://blogs.umass.edu/scil/">Computation in Linguistics 協會</a>)</p></li>
-<li><p>(ML 課程搭配)</p></li>
-</ul></li>
-<li>[Lab] 透過實作練習與工具使用
-<ul>
-<li>語言模組解析 via <code>spacy</code></li>
-<li>語言模型應用 via <code>Hugging Face (transformers)</code></li>
-</ul></li>
+<li></li>
+<li>代表性的會議與前瞻任務 bakeoff <a href="https://semeval.github.io/"><code>SemEval</code></a>: International Workshop on Semantic Evaluation</li>
 </ul>
 </section></section>
-<section>
-<section id="程式環境與工具準備" class="title-slide slide level1 center">
-<h1>程式環境與工具準備</h1>
-<ul>
-<li>語料處理的基本功
-<ul>
-<li><code>bash</code> (shell script)</li>
-<li><code>python</code> (data processing)</li>
-<li><code>git</code> (version control)</li>
-<li><code>jupyter</code> (notebook)</li>
-<li><code>conda</code> (virtual environment)</li>
-</ul></li>
-<li>語料庫與程式工具
-<ul>
-<li><code>NLTK</code>, <code>spaCy</code>, and <code>flair</code></li>
-<li><code>ckip-core</code>, <code>hanlp</code>, and <code>jieba</code></li>
-<li><code>Hugging Face</code></li>
-<li><code>Keras</code>, <code>PyTorch</code> and <code>TensorFlow</code></li>
-<li><code>Gensim</code>, <code>fastText</code></li>
-<li><code>scikit-learn</code>, etc.</li>
-</ul></li>
-</ul>
-<div class="callout callout-tip callout-captioned callout-style-default">
-<div class="callout-body">
-<div class="callout-caption">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Tip</strong></p>
-</div>
-<div class="callout-content">
-<ul>
-<li><a href="https://lopentu.github.io/corpus-book/?chap=%E8%AA%9E%E6%96%99%E8%99%95%E7%90%86%E6%96%B9%E6%B3%95%E5%B0%8E%E8%AB%96">語料分析實務</a> 這本線上教材還沒完成，但是可以先看看。希望這學期前會完成讓大家可以參考。</li>
-</ul>
-</div>
-</div>
-</div>
+<section id="中文計算詞彙語意教學" class="title-slide slide level1 center">
+<h1>中文計算詞彙語意教學</h1>
+<p><a href="https://docs.google.com/presentation/d/19wp2BP4K6cFm2V9PG89NijetqxCYplalfQNiLKBFQZw/edit?usp=sharing">ROCLING 2022, Tutorial</a></p>
 </section>
-<section id="section" class="slide level2 smaller scrollable">
-<h2></h2>
-<h3 id="references">References</h3>
-<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
-<div id="ref-baroni2021" class="csl-entry" role="doc-biblioentry">
-Baroni, Marco. 2021. <span>“On the Gap Between Computational and Theoretical Linguistics.”</span> <a href="https://www.virtual2021.eacl.org/plenary_session_keynote_by_marco_baroni.html">https://www.virtual2021.eacl.org/plenary_session_keynote_by_marco_baroni.html</a>.
-</div>
-<div id="ref-brown2020language" class="csl-entry" role="doc-biblioentry">
-Brown, Tom, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared D Kaplan, Prafulla Dhariwal, Arvind Neelakantan, et al. 2020. <span>“Language Models Are Few-Shot Learners.”</span> <em>Advances in Neural Information Processing Systems</em> 33: 1877–1901.
-</div>
-<div id="ref-dong2022survey" class="csl-entry" role="doc-biblioentry">
-Dong, Qingxiu, Lei Li, Damai Dai, Ce Zheng, Zhiyong Wu, Baobao Chang, Xu Sun, Jingjing Xu, and Zhifang Sui. 2022. <span>“A Survey for in-Context Learning.”</span> <em>arXiv Preprint arXiv:2301.00234</em>.
-</div>
-<div id="ref-wei2022chain" class="csl-entry" role="doc-biblioentry">
-Wei, Jason, Xuezhi Wang, Dale Schuurmans, Maarten Bosma, Ed Chi, Quoc Le, and Denny Zhou. 2022. <span>“Chain of Thought Prompting Elicits Reasoning in Large Language Models.”</span> <em>arXiv Preprint arXiv:2201.11903</em>.
-</div>
-<div id="ref-zhou2022large" class="csl-entry" role="doc-biblioentry">
-Zhou, Yongchao, Andrei Ioan Muresanu, Ziwen Han, Keiran Paster, Silviu Pitis, Harris Chan, and Jimmy Ba. 2022. <span>“Large Language Models Are Human-Level Prompt Engineers.”</span> <em>arXiv Preprint arXiv:2211.01910</em>.
-</div>
-</div>
-<p>======= ::: {style=“font-size: 0.875em;”} Back to <a href="../" title="Course schedule">course schedule</a> ⏎ :::</p>
+
+<section id="課堂練習" class="title-slide slide level1 center">
+<h1>課堂練習</h1>
+<p>如何測試 GPT4 的語意理解能力？</p>
 
 
 <img src="../images/logo_round.png" class="slide-logo r-stretch"><div class="footer footer-default">
 
 </div>
-</section></section>
-
+</section>
     </div>
   </div>
 
@@ -742,7 +596,7 @@ Zhou, Yongchao, Andrei Ioan Muresanu, Ziwen Han, Keiran Paster, Silviu Pitis, Ha
 'autoAnimateUnmatched': true,
 'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
 'chalkboard': {"buttons":true},
-'multiplex': {"secret":null,"id":"60ba227ae1ec8484","url":"https://reveal-multiplex.glitch.me/"},
+'multiplex': {"secret":"16788902722468022452","id":"200b066a5e53d7a4","url":"https://reveal-multiplex.glitch.me/"},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -916,7 +770,7 @@ Zhou, Yongchao, Andrei Ioan Muresanu, Ziwen Han, Keiran Paster, Silviu Pitis, Ha
         plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
 
           RevealMath,
-          
+          RevealNotes,
           RevealSearch,
           RevealZoom
         ]
