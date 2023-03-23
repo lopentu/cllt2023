@@ -61,7 +61,10 @@ website:
             text: "Week 2"
           - href: weeks/week3.qmd
             text: "Week 3"
-            
+          - href: weeks/week4.qmd
+            text: "Week 4"
+          - href: weeks/week5.qmd
+            text: "Week 5"
       - section: "補充說明"
         # contents:
         #   - href: supplemental/slr-derivations.qmd

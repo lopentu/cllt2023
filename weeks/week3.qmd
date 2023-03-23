@@ -6,8 +6,7 @@ format:
       slide-number: true
       preview-links: auto
       chalkboard: true
-      multiplex: true
-      logo: /images/logo_round.png
+      logo: ../images/logo_round.png
     html:
         code-fold: true
 bibliography: ../cllt.bib
@@ -99,7 +98,7 @@ bibliography: ../cllt.bib
 
 ## East Asian languages
 
-```python
+```{{python}}
 # Chinese
 import jieba
 jieba.lcut('還要如此費工，我認爲是duck可不必')
@@ -197,7 +196,7 @@ $|V| = kN^{\beta}$, where $k$ and $\beta$ are positive constants, and 0 < $\beta
 ## 練習 1
 先想一下怎麼實作。請 `chatGPT` 當程式助教，完成 Heap's Law 的實驗觀察。
 
-```{python}
+```{{python}}
 # your code here
 ```
 

@@ -510,39 +510,39 @@
 </section>
 <section id="east-asian-languages" class="slide level2">
 <h2>East Asian languages</h2>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># Chinese</span></span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="im">import</span> jieba</span>
-<span id="cb2-3"><a href="#cb2-3"></a>jieba.lcut(<span class="st">'還要如此費工，我認爲是duck可不必'</span>)</span>
-<span id="cb2-4"><a href="#cb2-4"></a><span class="co"># ['還要', '如此', '費工', '，', '我認', '爲', '是', 'duck', '可', '不必']</span></span>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource {{python}} number-lines code-with-copy"><code class="sourceCode"><span id="cb2-1"><a href="#cb2-1"></a># Chinese</span>
+<span id="cb2-2"><a href="#cb2-2"></a>import jieba</span>
+<span id="cb2-3"><a href="#cb2-3"></a>jieba.lcut('還要如此費工，我認爲是duck可不必')</span>
+<span id="cb2-4"><a href="#cb2-4"></a># ['還要', '如此', '費工', '，', '我認', '爲', '是', 'duck', '可', '不必']</span>
 <span id="cb2-5"><a href="#cb2-5"></a></span>
-<span id="cb2-6"><a href="#cb2-6"></a><span class="co"># Japanese</span></span>
-<span id="cb2-7"><a href="#cb2-7"></a><span class="im">import</span> nagisa</span>
-<span id="cb2-8"><a href="#cb2-8"></a>text <span class="op">=</span> <span class="st">'Pythonで簡単に使えるツールです'</span></span>
-<span id="cb2-9"><a href="#cb2-9"></a>doc <span class="op">=</span> nagisa.tagging(text)</span>
+<span id="cb2-6"><a href="#cb2-6"></a># Japanese</span>
+<span id="cb2-7"><a href="#cb2-7"></a>import nagisa</span>
+<span id="cb2-8"><a href="#cb2-8"></a>text = 'Pythonで簡単に使えるツールです'</span>
+<span id="cb2-9"><a href="#cb2-9"></a>doc = nagisa.tagging(text)</span>
 <span id="cb2-10"><a href="#cb2-10"></a>doc.words</span>
-<span id="cb2-11"><a href="#cb2-11"></a><span class="co"># ['Python', 'で', '簡単', 'に', '使える', 'ツール', 'です']</span></span>
+<span id="cb2-11"><a href="#cb2-11"></a># ['Python', 'で', '簡単', 'に', '使える', 'ツール', 'です']</span>
 <span id="cb2-12"><a href="#cb2-12"></a></span>
-<span id="cb2-13"><a href="#cb2-13"></a><span class="co"># Korean</span></span>
-<span id="cb2-14"><a href="#cb2-14"></a><span class="im">import</span> konlpy</span>
-<span id="cb2-15"><a href="#cb2-15"></a>phrase <span class="op">=</span> <span class="st">"아버지가방에들어가신다"</span></span>
-<span id="cb2-16"><a href="#cb2-16"></a><span class="im">from</span> konlpy.tag <span class="im">import</span> Hannanum</span>
-<span id="cb2-17"><a href="#cb2-17"></a>hannanum <span class="op">=</span> Hannanum()</span>
+<span id="cb2-13"><a href="#cb2-13"></a># Korean</span>
+<span id="cb2-14"><a href="#cb2-14"></a>import konlpy</span>
+<span id="cb2-15"><a href="#cb2-15"></a>phrase = "아버지가방에들어가신다"</span>
+<span id="cb2-16"><a href="#cb2-16"></a>from konlpy.tag import Hannanum</span>
+<span id="cb2-17"><a href="#cb2-17"></a>hannanum = Hannanum()</span>
 <span id="cb2-18"><a href="#cb2-18"></a>hannanum.morphs(phrase)</span>
-<span id="cb2-19"><a href="#cb2-19"></a><span class="co"># ['아버지가방에들어가', '이', '시ㄴ다']</span></span>
+<span id="cb2-19"><a href="#cb2-19"></a># ['아버지가방에들어가', '이', '시ㄴ다']</span>
 <span id="cb2-20"><a href="#cb2-20"></a></span>
-<span id="cb2-21"><a href="#cb2-21"></a><span class="co"># Thai</span></span>
-<span id="cb2-22"><a href="#cb2-22"></a><span class="im">import</span> tltk</span>
-<span id="cb2-23"><a href="#cb2-23"></a>phrase <span class="op">=</span> <span class="st">"""สำนักงานเขตจตุจักรชี้แจงว่า ได้นำป้ายประกาศเตือนปลิงไปปักตามแหล่งน้ำ </span></span>
-<span id="cb2-24"><a href="#cb2-24"></a><span class="st">ในเขตอำเภอเมือง จังหวัดอ่างทอง หลังจากนายสุกิจ อายุ 65 ปี ถูกปลิงกัดแล้วไม่ได้ไปพบแพทย์"""</span></span>
-<span id="cb2-25"><a href="#cb2-25"></a>pieces <span class="op">=</span> tltk.nlp.pos_tag(phrase)</span>
+<span id="cb2-21"><a href="#cb2-21"></a># Thai</span>
+<span id="cb2-22"><a href="#cb2-22"></a>import tltk</span>
+<span id="cb2-23"><a href="#cb2-23"></a>phrase = """สำนักงานเขตจตุจักรชี้แจงว่า ได้นำป้ายประกาศเตือนปลิงไปปักตามแหล่งน้ำ </span>
+<span id="cb2-24"><a href="#cb2-24"></a>ในเขตอำเภอเมือง จังหวัดอ่างทอง หลังจากนายสุกิจ อายุ 65 ปี ถูกปลิงกัดแล้วไม่ได้ไปพบแพทย์"""</span>
+<span id="cb2-25"><a href="#cb2-25"></a>pieces = tltk.nlp.pos_tag(phrase)</span>
 <span id="cb2-26"><a href="#cb2-26"></a>pieces</span>
-<span id="cb2-27"><a href="#cb2-27"></a><span class="co"># [[('สำนักงาน', 'NOUN'),</span></span>
-<span id="cb2-28"><a href="#cb2-28"></a><span class="co">#   ('เขต', 'NOUN'),</span></span>
-<span id="cb2-29"><a href="#cb2-29"></a><span class="co">#   ('จตุจักร', 'PROPN'),</span></span>
-<span id="cb2-30"><a href="#cb2-30"></a><span class="co">#   ('ชี้แจง', 'VERB'),</span></span>
-<span id="cb2-31"><a href="#cb2-31"></a><span class="co">#   ('ว่า', 'SCONJ'),</span></span>
-<span id="cb2-32"><a href="#cb2-32"></a><span class="co">#   ('&lt;s/&gt;', 'PUNCT')],</span></span>
-<span id="cb2-33"><a href="#cb2-33"></a><span class="co">#  ...</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-27"><a href="#cb2-27"></a># [[('สำนักงาน', 'NOUN'),</span>
+<span id="cb2-28"><a href="#cb2-28"></a>#   ('เขต', 'NOUN'),</span>
+<span id="cb2-29"><a href="#cb2-29"></a>#   ('จตุจักร', 'PROPN'),</span>
+<span id="cb2-30"><a href="#cb2-30"></a>#   ('ชี้แจง', 'VERB'),</span>
+<span id="cb2-31"><a href="#cb2-31"></a>#   ('ว่า', 'SCONJ'),</span>
+<span id="cb2-32"><a href="#cb2-32"></a>#   ('&lt;s/&gt;', 'PUNCT')],</span>
+<span id="cb2-33"><a href="#cb2-33"></a>#  ...</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="語言資源與工具" class="slide level2">
 <h2>語言資源與工具</h2>
@@ -620,9 +620,7 @@
 <section id="練習-1" class="slide level2">
 <h2>練習 1</h2>
 <p>先想一下怎麼實作。請 <code>chatGPT</code> 當程式助教，完成 Heap’s Law 的實驗觀察。</p>
-<div class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># your code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource {{python}} number-lines code-with-copy"><code class="sourceCode"><span id="cb3-1"><a href="#cb3-1"></a># your code here</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section></section>
 <section id="正則表達式" class="title-slide slide level1 center">
 <h1>正則表達式</h1>
