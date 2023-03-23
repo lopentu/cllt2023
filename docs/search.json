@@ -271,5 +271,159 @@
     "title": "Exam 1",
     "section": "",
     "text": "Exam 1 will be released on Friday, Feb 4 at 9 am ET and must be completed by Mon, Feb 7 at 11:59 pm.\nThe exam will consist of two parts:\n\nPart 1 - Conceptual: Multiple choice questions on Sakai test and quizzes. This portion may only be submitted one time. Go here to complete Part 1 of the exam.\nPart 2 - Applied: Data analysis in RStudio and submitted in Gradescope (like a usual lab and homework). Go to the GitHub organization for the course and find the exam-1- repo to complete Part 3 of your exam. Add your answers to the exam-1.qmd file in your repo.\n\nBoth portions must be completed and submitted by Mon, Feb 7 at 11:59 pm. Late work will only be accepted in the case of of extenuating circumstances and notification from your academic dean.\n🍀 Good luck! 🍀\n\n\n\nBy taking this exam, you pledge to uphold the Duke Community Standard:\n\nI will not lie, cheat, or steal in my academic endeavors;\nI will conduct myself honorably in all my endeavors; and\nI will act if the Standard is compromised.\n\n\n\n\n\nThis is an individual assignment. Everything in your repository and on Sakai is for your eyes only.\nYou may not collaborate or communicate anything about this exam to anyone except the instructor and the head TA (Rick Presman). For example, you may not communicate with other students, other TAs, or post/solicit help on the internet, email or via any other method of communication.\nThe exam is open-book, open-note, so you may use any materials from class as you take the exam.\nOnly head TA and professor office hours will be held during the exam period.\nYou may not email the TAs questions about the exam.\nIf you have questions, direct message the professor or the head TA (Rick Presman) on Slack or post on Sakai Conversations for “Instructors in this site” only or attend my office hours (Monday, 10:30 am - 11:30 am).\n\n\n\n\n\nPart 1 - Conceptual: The answers to the multiple choice/short answer questions should be submitted under Test & Quizzes in Sakai.\nPart 2 - Applied: The PDF document for the data analysis portion must be uploaded to Gradescope.\n\nYou must submit a PDF to Gradescope that corresponds to the .qmd file on your GitHub repository in order to receive credit for this portion of the exam.\nYou must upload a PDF, not HTML. Any non-PDF submissions will not be graded.\nMark the pages associated with each question. If any answer for a question spans multiple pages, mark all associated pages.\nMake sure to associate the “Workflow & formatting” section with the first page.\nFailure to mark the pages in Gradescope will result in point deductions. Any pages that are not marked will not be graded.\nMake sure that your uploaded PDF document matches your .qmd and the PDF in your GitHub repository exactly. Points will be deducted for documents that are not reproducible."
+  },
+  {
+    "objectID": "weeks/week5.html",
+    "href": "weeks/week5.html",
+    "title": "Week 5 Word Meaning (II)",
+    "section": "",
+    "text": "詞彙關係、詞彙網路、知識本體\n事件語意與計算表徵"
+  },
+  {
+    "objectID": "weeks/week5.html#in-class-exercise.1",
+    "href": "weeks/week5.html#in-class-exercise.1",
+    "title": "Week 5 Word Meaning (II)",
+    "section": "In-class exercise.1",
+    "text": "In-class exercise.1\nCreate a tiny knowledge graph based on the news article in Chapter 21 of the textbook. 參考"
+  },
+  {
+    "objectID": "weeks/week5.html#relations-in-named-entity-tasks",
+    "href": "weeks/week5.html#relations-in-named-entity-tasks",
+    "title": "Week 5 Word Meaning (II)",
+    "section": "Relations in Named Entity Tasks",
+    "text": "Relations in Named Entity Tasks\n\nNamed entity recognition (NER) is the task of identifying and classifying named entities in text into pre-defined categories such as person names, organization names, locations, etc."
+  },
+  {
+    "objectID": "weeks/week5.html#regular-polysemy-detecection",
+    "href": "weeks/week5.html#regular-polysemy-detecection",
+    "title": "Week 5 Word Meaning (II)",
+    "section": "Regular Polysemy Detecection",
+    "text": "Regular Polysemy Detecection\nSemEval 2010-Task 8"
+  },
+  {
+    "objectID": "weeks/week5.html#qualia-structure",
+    "href": "weeks/week5.html#qualia-structure",
+    "title": "Week 5 Word Meaning (II)",
+    "section": "Qualia structure",
+    "text": "Qualia structure\n\n\n\nPustejovsky"
+  },
+  {
+    "objectID": "weeks/week5.html#rdf-resource-description-framework",
+    "href": "weeks/week5.html#rdf-resource-description-framework",
+    "title": "Week 5 Word Meaning (II)",
+    "section": "RDF (Resource Description Framework)",
+    "text": "RDF (Resource Description Framework)\n\nRDF is a standard metalanguage (W3 recommendation) for data interchange on the Web.\nRDF triples are the basic unit of data in RDF, a triple consists of < subject, predicate, object >\nRDF triples are used to describe resources (e.g., people, places, things, etc.) and their properties (e.g., name, age, etc.).\nDBpedia and Wikidata are two popular knowledge bases that use RDF triples to represent knowledge."
+  },
+  {
+    "objectID": "weeks/week5.html#relation-extraction-algorithms",
+    "href": "weeks/week5.html#relation-extraction-algorithms",
+    "title": "Week 5 Word Meaning (II)",
+    "section": "Relation Extraction Algorithms",
+    "text": "Relation Extraction Algorithms\nFive main classes of relation extraction algorithms:\n\nPattern-based (Hearst patterns)\nFeature-based supervised relation classifier\nNeural supervised relation classifiers\nSemi-/un- supervised"
+  },
+  {
+    "objectID": "weeks/week5.html#spanbert",
+    "href": "weeks/week5.html#spanbert",
+    "title": "Week 5 Word Meaning (II)",
+    "section": "SpanBERT",
+    "text": "SpanBERT\n(Joshi et al. 2020) exceeds BERT by 3.3% F1."
+  },
+  {
+    "objectID": "weeks/week5.html#semisupervised-relation-extraction",
+    "href": "weeks/week5.html#semisupervised-relation-extraction",
+    "title": "Week 5 Word Meaning (II)",
+    "section": "Semisupervised Relation Extraction",
+    "text": "Semisupervised Relation Extraction\nbootstrapping\n\nBootstrapping is a semi-supervised learning method that uses a small amount of labeled data to train a classifier, and then uses the classifier to label a large amount of unlabeled data."
+  },
+  {
+    "objectID": "weeks/week5.html#semisupervised-relation-extraction-1",
+    "href": "weeks/week5.html#semisupervised-relation-extraction-1",
+    "title": "Week 5 Word Meaning (II)",
+    "section": "Semisupervised Relation Extraction",
+    "text": "Semisupervised Relation Extraction\nDistant Supervision\n\nDistant supervision is a semi-supervised learning method that uses a large amount of unlabeled data and a small amount of labeled data to train a classifier."
+  },
+  {
+    "objectID": "weeks/week5.html#evaluation-metrics",
+    "href": "weeks/week5.html#evaluation-metrics",
+    "title": "Week 5 Word Meaning (II)",
+    "section": "Evaluation Metrics",
+    "text": "Evaluation Metrics"
+  },
+  {
+    "objectID": "weeks/week5.html#實務運用上的練習",
+    "href": "weeks/week5.html#實務運用上的練習",
+    "title": "Week 5 Word Meaning (II)",
+    "section": "實務運用上的練習",
+    "text": "實務運用上的練習\n\n\n\n\n\n\nTip\n\n\n\nExtract money and currency values (entities labelled as MONEY) and find the noun phrase they are referring to - for example: “Net income was $9.4 million compared to the prior year of $2.7 million.”\n$9.4 million → Net income.\n$2.7 million → the prior year"
+  },
+  {
+    "objectID": "weeks/week5.html#一般解法",
+    "href": "weeks/week5.html#一般解法",
+    "title": "Week 5 Word Meaning (II)",
+    "section": "一般解法",
+    "text": "一般解法\n\nStep 1: use spaCy’s named entity recognizer to extract money and currency values (entities labelled as MONEY)\nStep2: use spaCy’s dependency parser to find the noun phrase they are referring to."
+  },
+  {
+    "objectID": "weeks/week5.html#gpt4-解法",
+    "href": "weeks/week5.html#gpt4-解法",
+    "title": "Week 5 Word Meaning (II)",
+    "section": "GPT4 解法",
+    "text": "GPT4 解法"
+  },
+  {
+    "objectID": "weeks/week5.html#實務練習二",
+    "href": "weeks/week5.html#實務練習二",
+    "title": "Week 5 Word Meaning (II)",
+    "section": "實務練習二",
+    "text": "實務練習二\n\n用 wordnet 做知識圖譜，week5.ipnb\n計算詞彙的詞意頻率"
+  },
+  {
+    "objectID": "weeks/week5.html#event-types-aktionsart-lexical-aspect",
+    "href": "weeks/week5.html#event-types-aktionsart-lexical-aspect",
+    "title": "Week 5 Word Meaning (II)",
+    "section": "Event types (Aktionsart; Lexical Aspect)",
+    "text": "Event types (Aktionsart; Lexical Aspect)\n\n\nstate, activitis, accomplishments, achievements, semelfactives\n\n\n\n\n\n\n\nTip\n\n\n\nAktionsart is a German term that refers to the type of action that a verb expresses."
+  },
+  {
+    "objectID": "weeks/week5.html#event-representation",
+    "href": "weeks/week5.html#event-representation",
+    "title": "Week 5 Word Meaning (II)",
+    "section": "Event Representation",
+    "text": "Event Representation\n\nEvent representation is the task of representing events in a structured format."
+  },
+  {
+    "objectID": "weeks/week5.html#event-extraction",
+    "href": "weeks/week5.html#event-extraction",
+    "title": "Week 5 Word Meaning (II)",
+    "section": "Event Extraction",
+    "text": "Event Extraction\n\nEvent extraction is the task of identifying mentions of events and classifying them in text.\nan event mention is a span of text (expressions) that refers to an event that can be assigned to a particular point or interval in time."
+  },
+  {
+    "objectID": "weeks/week5.html#chinese-framenet",
+    "href": "weeks/week5.html#chinese-framenet",
+    "title": "Week 5 Word Meaning (II)",
+    "section": "Chinese FrameNet",
+    "text": "Chinese FrameNet\n\n(中國) Chinese FrameNet project (CFN) by the State Key Laboratory of Intelligent Technology and Systems at Tsinghua University in Beijing. 失效的計劃連接\n(台灣) NTU 半自動生成版\n(香港) 中文 VerbNet"
+  },
+  {
+    "objectID": "weeks/week5.html#以-caused-motion-為例",
+    "href": "weeks/week5.html#以-caused-motion-為例",
+    "title": "Week 5 Word Meaning (II)",
+    "section": "以 CAUSED-MOTION 為例",
+    "text": "以 CAUSED-MOTION 為例"
+  },
+  {
+    "objectID": "weeks/week5.html#frames-constructions-and-framenet",
+    "href": "weeks/week5.html#frames-constructions-and-framenet",
+    "title": "Week 5 Word Meaning (II)",
+    "section": "Frames, constructions, and FrameNet",
+    "text": "Frames, constructions, and FrameNet\nCharles J. Fillmore 過世前的經典論文"
+  },
+  {
+    "objectID": "weeks/week5.html#延伸出來的認知語言研究",
+    "href": "weeks/week5.html#延伸出來的認知語言研究",
+    "title": "Week 5 Word Meaning (II)",
+    "section": "延伸出來的認知語言研究",
+    "text": "延伸出來的認知語言研究\n視角 (perspective) 怎麼反應在語言上？\n\n\n\ncommercial_event frame"
   }
 ]
