@@ -172,6 +172,7 @@
     "href": "weeks/week7.html",
     "title": "Week 7 Syntax",
     "section": "",
+<<<<<<< HEAD
     "text": "句法理論與計算表徵\n\n\n\n\n句法對於 NLP/NLU 很重要，因爲它涉及語言在表層的結構運作。\n但是 (形式) 句法在近代語言學發展史中佔據了很大（太大！）的一部分\n\n\n\n\n\n\n\nWarning\n\n\n\nN.Chomsky 對於語料庫，一直到現在的 LLM 的（鄙視）態度都一樣的，爲什麼呢？ 2012 on corpus linguistics; 2023 on chatGPT\n\n\n\n\n\n不同的數學哲學\n\n\n\n\n\n世紀論辯快要發生（結束）？\n\n\n\n\n\nFormal syntax/Geneartive Grammar\nTheory\n\n【句法】是第一順位。In generative grammar, pride of place is given to syntax, 也具備自己的【獨立模組】。\n【形式觀】：心智中的句法運算可以完全獨立於意義之外。\n\nData\n\ntop-down，有限規則駕馭無限表達，重點在掌握 competence 而非 performace。\n內省式語感判斷 rely on introspective judgments as their primary source of data.\nthe poverty-of-stimulus hypothesis (“the child has no data”).\n\n\n\n\n兩種在計算語言學上常使用的句法表徵 (representation)：\n- dependency \n- constituency"
   },
   {
@@ -236,6 +237,9 @@
     "title": "Week 6 Word Meaning (III)",
     "section": "多模態的情感計算",
     "text": "多模態的情感計算\nmultimodal affective computing"
+=======
+    "text": "週次\n日期\n主題\n預習 📖\n投影片\n助教課\n課堂練習\n作業\n\n\n\n\n1\n02/23\n課程導論\n\norientation\n\n\n\n\n\n2\n03/02\n計算語言學導論\n\nw2\nslides\ncolab\nHW1, HW1_Ans\n\n\n3\n03/09\n計算構詞與詞彙 (1)\nslp3-02\nw3\nslides\ncolab\nHW2, HW2_Ans\n\n\n4\n03/16\n計算構詞與詞彙 (2)\nslp3-23\nw4\n\ncolab\nHW3, HW3_Ans\n\n\n5\n03/23\n計算構詞與詞彙 (3)\nslp3-21\nw5\nguidline\ncolab, gsheet\nHW4\n\n\n6\n03/30\n計算構詞與詞彙 (4)\nslp3-25\nw6\n\ncolab\nHW5\n\n\n7\n04/06\n句法理論與剖析器\nslp3-18; (Linzen and Baroni, 2021)\n\n\n\n\n\n\n8\n04/13\n認知語法與計算\ncognitive linguistics meets computational linguistics\n\n\n\n\n\n\n9\n04/20\n語意表徵 (1)\nslp3-06\n\n\n\n\n\n\n10\n04/27\n語意表徵 (2)\nslp3-10\n\n\n\n\n\n\n11\n05/04\n語意表徵 (3) & 業師分享\nslp3-11\n\n\n\n\n\n\n12\n05/11\n語意表徵 (4)\nslp3-22\n\n\n\n\n\n\n13\n05/18\nBakeoff practice\n\n\n\n\n\n\n\n14\n05/25\n語音、多模態與言談分析\nslp3-15; slp3-28\n\n\n\n\n\n\n15\n06/01\n綜合討論\n\n\n\n\n\n\n\n16\n06/08\n期末報告"
+>>>>>>> 5df83516aa504510ede50f845d5c32518bc23750
   },
   {
     "objectID": "project-tips-resources.html",
