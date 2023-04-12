@@ -1,441 +1,14 @@
 [
   {
-    "objectID": "weeks/week3.html",
-    "href": "weeks/week3.html",
-    "title": "Week 3 Word",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "計算語言學與語言學理論",
     "section": "",
-    "text": "詞彙、構詞與計算\n\n文本處理：文本正則化、語料庫與程式概念工具\nWordhood： many perspectives\n[Lab] Corpus processing skills\n\n\n\nLinguistics for NLP\n\n\n\n\nLanguage and Text\n\n\n文本處理是自然語言處理的基礎工作，是一種對文本進行分析、處理、編輯、轉換的技術。\n\n很適合用來搭配程式學習。\n\n文本正則 (text normalization) 是一種對文本進行 標準化 的轉換任務。\n\n\n\n標準化在此意義是對當下任務更便捷、更容易處理的意思。\n\n\n\n\ntext normalization tasks\n\n\ntokenization ：將文本分割成一個個的（詞符）單位。\nlemmatization：將不同表面形式的詞彙還原成相同詞根。\nstemming ：簡化版的 lemmatization，只把後綴拿掉。\n\n\n\n\n\n\n有時候，如處理古漢語，還需要斷句 sentence segmentation。\n\n\n\n\n\n\n\n\n\n\n\n比較：前處理任務「比較」不涉及語言學知識。\n\n\n\n- case folding：將所有字母轉換成小寫。\n- stopword removal：去除停用詞。\n\n\n\n\n\nTokenization vs Word Segmentation\n\n\nWord segmentation 貌似 word-based tokenization，但在中文與一些語言的脈絡中，它們不是完全一樣的概念。\n主要的差異點在於 wordhood 的概念是不定的、使用中的語意決定的。\n\n\n\n\n\n```{python}\n# Chinese\nimport jieba\njieba.lcut('還要如此費工，我認爲是duck可不必')\n# ['還要', '如此', '費工', '，', '我認', '爲', '是', 'duck', '可', '不必']\n\n# Japanese\nimport nagisa\ntext = 'Pythonで簡単に使えるツールです'\ndoc = nagisa.tagging(text)\ndoc.words\n# ['Python', 'で', '簡単', 'に', '使える', 'ツール', 'です']\n\n# Korean\nimport konlpy\nphrase = \"아버지가방에들어가신다\"\nfrom konlpy.tag import Hannanum\nhannanum = Hannanum()\nhannanum.morphs(phrase)\n# ['아버지가방에들어가', '이', '시ㄴ다']\n\n# Thai\nimport tltk\nphrase = \"\"\"สำนักงานเขตจตุจักรชี้แจงว่า ได้นำป้ายประกาศเตือนปลิงไปปักตามแหล่งน้ำ \nในเขตอำเภอเมือง จังหวัดอ่างทอง หลังจากนายสุกิจ อายุ 65 ปี ถูกปลิงกัดแล้วไม่ได้ไปพบแพทย์\"\"\"\npieces = tltk.nlp.pos_tag(phrase)\npieces\n# [[('สำนักงาน', 'NOUN'),\n#   ('เขต', 'NOUN'),\n#   ('จตุจักร', 'PROPN'),\n#   ('ชี้แจง', 'VERB'),\n#   ('ว่า', 'SCONJ'),\n#   ('&lt;s/&gt;', 'PUNCT')],\n#  ...\n\n```\n\n\n\ndata and tools\n要進行文本的處理，我們需要（大量）語料與好用的程式工具。\n\n\n\nCorpus and Corpora\n\n語料庫 是一種重要的語言資源(language resource) 。\n文本語料庫是較常被使用的語言資源，它不僅是一個文本的集合 (collection of texts)，藉由標記 (annotation)，也是語言知識外顯化的一種形式。\n\n\n\n\n\n\n\nTip\n\n\n\n資料科學與語料分析:方法與實務：語言學角度的語料庫方法教科書\n\n\n\n\n\nLanguage Laws\n有了語料庫，我們就可以進行語言學的量化研究，例如發現語言法則。\n\n\n\n\n\n\nImportant\n\n\n\n要先知道 type (通常用 \\(V\\) 表示) 與 token (通常用 \\(N\\) 表示) 的差別。前者是所觀察的語料中字詞的種類，後者是字詞的總數。 \\(|V|\\) 則表示種類的數量 (vocabulary size)。\n\n\n\n\n\n\n\nZipf’s law：在給定的語料中，對於任意一個語詞，其頻率 (frequency) 的排名（rank）和頻率的乘積大致是一個常數。\nHeaps’ law (Herdan’s law)：在給定的語料中，(\\(|V|\\)) 大致是語料大小 (N) 的一個指數函數。\n\n\\(|V| = kN^{\\beta}\\), where \\(k\\) and \\(\\beta\\) are positive constants, and 0 &lt; \\(\\beta\\) &lt; 1\n\n\nMenzerath–Altmann law：the increase of the size of a linguistic construct results in a decrease of the size of its constituents.\n\n\n\n\n\n\n\n\n\n\n\nzip’s law\n\n\n\n\n\n\n\n\n先想一下怎麼實作。請 chatGPT 當程式助教，完成 Heap’s Law 的實驗觀察。\n```{python}\n# your code here\n```"
-  },
-  {
-    "objectID": "weeks/week3.html#語言學給自然語言處理的印象",
-    "href": "weeks/week3.html#語言學給自然語言處理的印象",
-    "title": "Week 3 Word",
-    "section": "",
-    "text": "Linguistics for NLP"
-  },
-  {
-    "objectID": "weeks/week3.html#語言與文本",
-    "href": "weeks/week3.html#語言與文本",
-    "title": "Week 3 Word",
-    "section": "",
-    "text": "Language and Text\n\n\n文本處理是自然語言處理的基礎工作，是一種對文本進行分析、處理、編輯、轉換的技術。\n\n很適合用來搭配程式學習。\n\n文本正則 (text normalization) 是一種對文本進行 標準化 的轉換任務。\n\n\n\n標準化在此意義是對當下任務更便捷、更容易處理的意思。"
-  },
-  {
-    "objectID": "weeks/week3.html#文本正則化",
-    "href": "weeks/week3.html#文本正則化",
-    "title": "Week 3 Word",
-    "section": "",
-    "text": "text normalization tasks\n\n\ntokenization ：將文本分割成一個個的（詞符）單位。\nlemmatization：將不同表面形式的詞彙還原成相同詞根。\nstemming ：簡化版的 lemmatization，只把後綴拿掉。"
-  },
-  {
-    "objectID": "weeks/week3.html#section",
-    "href": "weeks/week3.html#section",
-    "title": "Week 3 Word",
-    "section": "",
-    "text": "有時候，如處理古漢語，還需要斷句 sentence segmentation。"
-  },
-  {
-    "objectID": "weeks/week3.html#文本正則化和前處理",
-    "href": "weeks/week3.html#文本正則化和前處理",
-    "title": "Week 3 Word",
-    "section": "",
-    "text": "比較：前處理任務「比較」不涉及語言學知識。\n\n\n\n- case folding：將所有字母轉換成小寫。\n- stopword removal：去除停用詞。"
-  },
-  {
-    "objectID": "weeks/week3.html#切符和斷詞",
-    "href": "weeks/week3.html#切符和斷詞",
-    "title": "Week 3 Word",
-    "section": "",
-    "text": "Tokenization vs Word Segmentation\n\n\nWord segmentation 貌似 word-based tokenization，但在中文與一些語言的脈絡中，它們不是完全一樣的概念。\n主要的差異點在於 wordhood 的概念是不定的、使用中的語意決定的。"
-  },
-  {
-    "objectID": "weeks/week3.html#east-asian-languages",
-    "href": "weeks/week3.html#east-asian-languages",
-    "title": "Week 3 Word",
-    "section": "",
-    "text": "```{python}\n# Chinese\nimport jieba\njieba.lcut('還要如此費工，我認爲是duck可不必')\n# ['還要', '如此', '費工', '，', '我認', '爲', '是', 'duck', '可', '不必']\n\n# Japanese\nimport nagisa\ntext = 'Pythonで簡単に使えるツールです'\ndoc = nagisa.tagging(text)\ndoc.words\n# ['Python', 'で', '簡単', 'に', '使える', 'ツール', 'です']\n\n# Korean\nimport konlpy\nphrase = \"아버지가방에들어가신다\"\nfrom konlpy.tag import Hannanum\nhannanum = Hannanum()\nhannanum.morphs(phrase)\n# ['아버지가방에들어가', '이', '시ㄴ다']\n\n# Thai\nimport tltk\nphrase = \"\"\"สำนักงานเขตจตุจักรชี้แจงว่า ได้นำป้ายประกาศเตือนปลิงไปปักตามแหล่งน้ำ \nในเขตอำเภอเมือง จังหวัดอ่างทอง หลังจากนายสุกิจ อายุ 65 ปี ถูกปลิงกัดแล้วไม่ได้ไปพบแพทย์\"\"\"\npieces = tltk.nlp.pos_tag(phrase)\npieces\n# [[('สำนักงาน', 'NOUN'),\n#   ('เขต', 'NOUN'),\n#   ('จตุจักร', 'PROPN'),\n#   ('ชี้แจง', 'VERB'),\n#   ('ว่า', 'SCONJ'),\n#   ('&lt;s/&gt;', 'PUNCT')],\n#  ...\n\n```"
-  },
-  {
-    "objectID": "weeks/week3.html#語言資源與工具",
-    "href": "weeks/week3.html#語言資源與工具",
-    "title": "Week 3 Word",
-    "section": "",
-    "text": "data and tools\n要進行文本的處理，我們需要（大量）語料與好用的程式工具。"
-  },
-  {
-    "objectID": "weeks/week3.html#語料庫",
-    "href": "weeks/week3.html#語料庫",
-    "title": "Week 3 Word",
-    "section": "",
-    "text": "Corpus and Corpora\n\n語料庫 是一種重要的語言資源(language resource) 。\n文本語料庫是較常被使用的語言資源，它不僅是一個文本的集合 (collection of texts)，藉由標記 (annotation)，也是語言知識外顯化的一種形式。\n\n\n\n\n\n\n\nTip\n\n\n\n資料科學與語料分析:方法與實務：語言學角度的語料庫方法教科書"
-  },
-  {
-    "objectID": "weeks/week3.html#字詞分佈法則",
-    "href": "weeks/week3.html#字詞分佈法則",
-    "title": "Week 3 Word",
-    "section": "",
-    "text": "Language Laws\n有了語料庫，我們就可以進行語言學的量化研究，例如發現語言法則。\n\n\n\n\n\n\nImportant\n\n\n\n要先知道 type (通常用 \\(V\\) 表示) 與 token (通常用 \\(N\\) 表示) 的差別。前者是所觀察的語料中字詞的種類，後者是字詞的總數。 \\(|V|\\) 則表示種類的數量 (vocabulary size)。"
-  },
-  {
-    "objectID": "weeks/week3.html#幾個已證實的著名的法則",
-    "href": "weeks/week3.html#幾個已證實的著名的法則",
-    "title": "Week 3 Word",
-    "section": "",
-    "text": "Zipf’s law：在給定的語料中，對於任意一個語詞，其頻率 (frequency) 的排名（rank）和頻率的乘積大致是一個常數。\nHeaps’ law (Herdan’s law)：在給定的語料中，(\\(|V|\\)) 大致是語料大小 (N) 的一個指數函數。\n\n\\(|V| = kN^{\\beta}\\), where \\(k\\) and \\(\\beta\\) are positive constants, and 0 &lt; \\(\\beta\\) &lt; 1\n\n\nMenzerath–Altmann law：the increase of the size of a linguistic construct results in a decrease of the size of its constituents."
-  },
-  {
-    "objectID": "weeks/week3.html#section-1",
-    "href": "weeks/week3.html#section-1",
-    "title": "Week 3 Word",
-    "section": "",
-    "text": "zip’s law"
-  },
-  {
-    "objectID": "weeks/week3.html#練習-1",
-    "href": "weeks/week3.html#練習-1",
-    "title": "Week 3 Word",
-    "section": "",
-    "text": "先想一下怎麼實作。請 chatGPT 當程式助教，完成 Heap’s Law 的實驗觀察。\n```{python}\n# your code here\n```"
-  },
-  {
-    "objectID": "weeks/week3.html#練習",
-    "href": "weeks/week3.html#練習",
-    "title": "Week 3 Word",
-    "section": "練習",
-    "text": "練習\nCorpus processing skills via command line (bash)"
-  },
-  {
-    "objectID": "weeks/week3.html#常用的-subword-based-tokenization-方法",
-    "href": "weeks/week3.html#常用的-subword-based-tokenization-方法",
-    "title": "Week 3 Word",
-    "section": "常用的 Subword-based tokenization 方法",
-    "text": "常用的 Subword-based tokenization 方法\n\nSubword-based tokenization 是目前較被使用的方法，因為它可以\n\n處理 word-based 的問題（very large vocabulary size, large number of OOV tokens, and different meaning of very similar words）\n也可以處理 character-based 的問題（very long sequences and less meaningful individual tokens）。\n\n常用的方法有：\n\nbyte-pair encoding (BPE) (&gt; GPT family)\nwordpiece (&gt; BERT)\nunigram language modeling\nSentencee piece"
-  },
-  {
-    "objectID": "weeks/week3.html#byte-pair-encoding-bpe",
-    "href": "weeks/week3.html#byte-pair-encoding-bpe",
-    "title": "Week 3 Word",
-    "section": "Byte-pair encoding (BPE)",
-    "text": "Byte-pair encoding (BPE)\nSubword-based tokenization algorithm (Sennrich, Haddow, and Birch 2015)\n\ntoken learner and token segmenter\n\n\n\n\nLearner 做的事\n\n\n\n我們用原作者的投影片來說明"
-  },
-  {
-    "objectID": "weeks/week3.html#練習-2",
-    "href": "weeks/week3.html#練習-2",
-    "title": "Week 3 Word",
-    "section": "練習",
-    "text": "練習\n使用 HuggingFace 的 tokenizer"
-  },
-  {
-    "objectID": "weeks/week3.html#word-vs-morpheme",
-    "href": "weeks/week3.html#word-vs-morpheme",
-    "title": "Week 3 Word",
-    "section": "Word vs Morpheme",
-    "text": "Word vs Morpheme\n\nmorpheme：語言中最小的意義單位。\nword：語言中最小的概念單位。"
-  },
-  {
-    "objectID": "weeks/week3.html#中文的詞素概念",
-    "href": "weeks/week3.html#中文的詞素概念",
-    "title": "Week 3 Word",
-    "section": "中文的詞素概念",
-    "text": "中文的詞素概念"
-  },
-  {
-    "objectID": "weeks/week3.html#中文斷詞問題",
-    "href": "weeks/week3.html#中文斷詞問題",
-    "title": "Week 3 Word",
-    "section": "中文斷詞問題",
-    "text": "中文斷詞問題\nChinese word segmentation: principles and practices"
-  },
-  {
-    "objectID": "weeks/week3.html#爲什麼現在的-chatgpt-不太會斷算詞有不合理嗎",
-    "href": "weeks/week3.html#爲什麼現在的-chatgpt-不太會斷算詞有不合理嗎",
-    "title": "Week 3 Word",
-    "section": "爲什麼「現在的」 chatGPT 不太會斷/算詞？有不合理嗎？",
-    "text": "爲什麼「現在的」 chatGPT 不太會斷/算詞？有不合理嗎？"
-  },
-  {
-    "objectID": "weeks/week3.html#section-2",
-    "href": "weeks/week3.html#section-2",
-    "title": "Week 3 Word",
-    "section": "",
-    "text": "Caution\n\n\n\n\nIn polysynthetic languages like Inuktitut or Mohawk, words can be very long and complex, consisting of multiple morphemes that would be considered separate words in English."
-  },
-  {
-    "objectID": "weeks/week3.html#wordhood-issues",
-    "href": "weeks/week3.html#wordhood-issues",
-    "title": "Week 3 Word",
-    "section": "Wordhood issues",
-    "text": "Wordhood issues\n\n從不同語言學的領域（phonological-prosodic/morphological-grammatical/sociolinguitic）來看 word，也難有一定的詞(的界線)。 (e.g., hao-le-mei in Mandarin Chinese)\n\n\n\n語言特性的影響使得在表層形式的詞長不穩定，距離也不明確。(e.g., Er gibt nicht auf. in German; 離合詞 in Chinese) &gt; In agglutinative languages, for example, multiple morphemes are combined into single words, making it difficult to determine where one word ends and another begins. In these cases, the term for ‘word’ might encompass a broader concept than in English.\n有時當詞素，有時當詞 a morpheme behaves like a word on one subset of wordhood parameters but like a bound item on another. (Zingler 2020)"
-  },
-  {
-    "objectID": "weeks/week7.html",
-    "href": "weeks/week7.html",
-    "title": "Week 7 Syntax",
-    "section": "",
-    "text": "句法理論與計算表徵\n\n\n\n\n句法對於 NLP/NLU 很重要，因爲它涉及語言在表層的結構運作。\n但是 (形式) 句法在近代語言學發展史中佔據了很大（太大！）的一部分\n\n\n\n\n\n\n\nWarning\n\n\n\nN.Chomsky 對於語料庫，一直到現在的 LLM 的（鄙視）態度都一樣的，爲什麼呢？ 2012 on corpus linguistics; 2023 on chatGPT\n\n\n\n\n\n不同的數學哲學\n\n\n\n\n\n世紀論辯快要發生（結束）？\n\n\n\n\n\nFormal syntax/Geneartive Grammar\nTheory\n\n【句法】是第一順位。In generative grammar, pride of place is given to syntax, 也具備自己的【獨立模組】。\n【形式觀】：心智中的句法運算可以完全獨立於意義之外。\n\nData\n\ntop-down，有限規則駕馭無限表達，重點在掌握 competence 而非 performace。\n內省式語感判斷 rely on introspective judgments as their primary source of data.\nthe poverty-of-stimulus hypothesis (“the child has no data”).\n\n\n\n\n兩種在計算語言學上常使用的句法表徵 (representation)：\n- dependency \n- constituency"
-  },
-  {
-    "objectID": "weeks/week7.html#句法-syntax",
-    "href": "weeks/week7.html#句法-syntax",
-    "title": "Week 7 Syntax",
-    "section": "",
-    "text": "句法對於 NLP/NLU 很重要，因爲它涉及語言在表層的結構運作。\n但是 (形式) 句法在近代語言學發展史中佔據了很大（太大！）的一部分\n\n\n\n\n\n\n\nWarning\n\n\n\nN.Chomsky 對於語料庫，一直到現在的 LLM 的（鄙視）態度都一樣的，爲什麼呢？ 2012 on corpus linguistics; 2023 on chatGPT\n\n\n\n\n\n不同的數學哲學\n\n\n\n\n\n世紀論辯快要發生（結束）？"
-  },
-  {
-    "objectID": "weeks/week7.html#形式句法",
-    "href": "weeks/week7.html#形式句法",
-    "title": "Week 7 Syntax",
-    "section": "",
-    "text": "Formal syntax/Geneartive Grammar\nTheory\n\n【句法】是第一順位。In generative grammar, pride of place is given to syntax, 也具備自己的【獨立模組】。\n【形式觀】：心智中的句法運算可以完全獨立於意義之外。\n\nData\n\ntop-down，有限規則駕馭無限表達，重點在掌握 competence 而非 performace。\n內省式語感判斷 rely on introspective judgments as their primary source of data.\nthe poverty-of-stimulus hypothesis (“the child has no data”)."
-  },
-  {
-    "objectID": "weeks/week7.html#句法的計算表徵",
-    "href": "weeks/week7.html#句法的計算表徵",
-    "title": "Week 7 Syntax",
-    "section": "",
-    "text": "兩種在計算語言學上常使用的句法表徵 (representation)：\n- dependency \n- constituency"
-  },
-  {
-    "objectID": "weeks/week7.html#modeling-constituency",
-    "href": "weeks/week7.html#modeling-constituency",
-    "title": "Week 7 Syntax",
-    "section": "Modeling constituency",
-    "text": "Modeling constituency\n\n目前最爲廣泛用來 model constituency 的形式系統叫做 Context-free Grammar (CfG)， 在語言學中稱 Phrase Structure Grammar (PSG) 。\n由 Chomsky 在 1950 年代提出，是一種用來描述語言句法結構的形式系統。"
-  },
-  {
-    "objectID": "weeks/week7.html#context-free-grammar",
-    "href": "weeks/week7.html#context-free-grammar",
-    "title": "Week 7 Syntax",
-    "section": "Context-free Grammar",
-    "text": "Context-free Grammar\n\na set of rules (or productions) that describe how to construct a sentence from smaller units.\n形式上定義，CfG 是一個四元組 (4-tuple) \\((N, \\Sigma, R, S)\\)，其中：\n\n\\(N\\) 是一個有限集合，稱為 non-terminal symbols，代表句法結構的組成部分。\n\\(\\Sigma\\) 是一個有限集合，稱為 terminal symbols，代表句子中的詞。\n\\(R\\) 是一個有限集合，稱為 rules，代表句法結構的生成規則。\n\\(S\\) 是一個 \\(N\\) 中的元素，稱為 start symbol，代表句子的根節點。"
-  },
-  {
-    "objectID": "weeks/week7.html#例子",
-    "href": "weeks/week7.html#例子",
-    "title": "Week 7 Syntax",
-    "section": "例子",
-    "text": "例子\n\n\n\n妳快把我笑死了\n\n\n如何解析以下句子？\n\n他說得都不對"
-  },
-  {
-    "objectID": "weeks/week7.html#處理形式上的各種空缺問題",
-    "href": "weeks/week7.html#處理形式上的各種空缺問題",
-    "title": "Week 7 Syntax",
-    "section": "處理形式上的各種空缺問題",
-    "text": "處理形式上的各種空缺問題\n動詞的論元脫落有不同的符碼標記\n\n移位 (那個蘋果，我扔了)\n隱含（她打算打網球）\n空格（他買了兩根香蕉，給了他朋友一根）"
-  },
-  {
-    "objectID": "weeks/week7.html#parsing",
-    "href": "weeks/week7.html#parsing",
-    "title": "Week 7 Syntax",
-    "section": "Parsing",
-    "text": "Parsing\n句法剖析\n\n(自動地) 把一個句子 (a string of word) 映射到其對應的句法結構 (a parse tree)，就叫做 parsing。"
-  },
-  {
-    "objectID": "weeks/week7.html#treebanks",
-    "href": "weeks/week7.html#treebanks",
-    "title": "Week 7 Syntax",
-    "section": "Treebanks",
-    "text": "Treebanks\n\n一個 treebank 是一個語料庫，其中的每個句子都有一個對應的句法樹 (parse tree)。\n這些句法樹通常是由訓練過的語言學家標註、或修訂過的。\n\n\n\nPenn Treebank\nCKIP Treebank"
-  },
-  {
-    "objectID": "weeks/week7.html#例子-1",
-    "href": "weeks/week7.html#例子-1",
-    "title": "Week 7 Syntax",
-    "section": "例子",
-    "text": "例子"
-  },
-  {
-    "objectID": "weeks/week7.html#formal-language-and-chomsky-normal-form",
-    "href": "weeks/week7.html#formal-language-and-chomsky-normal-form",
-    "title": "Week 7 Syntax",
-    "section": "Formal language and Chomsky normal form",
-    "text": "Formal language and Chomsky normal form\n\nIt is useful to have a normal from (i.e., each of the production/rule taks a particular form) for formal languages, so that we can compare different formal languages and their grammars.\nChomsky normal form (CNF) is a normal form for context-free grammars.\n\nA grammar is in CNF if all its rules are of the form:\n\n\\(A \\rightarrow BC\\)\n\\(A \\rightarrow a\\)\n\\(S \\rightarrow \\epsilon\\)\n\n\n\ncf. 形式語言的計算理論\n\nChomsky-adjunction"
-  },
-  {
-    "objectID": "weeks/week7.html#structural-ambiguity",
-    "href": "weeks/week7.html#structural-ambiguity",
-    "title": "Week 7 Syntax",
-    "section": "Structural Ambiguity",
-    "text": "Structural Ambiguity\n結構歧義\n\n一個句子的句法結構可能有多種不同的解析方式，這就是結構歧義 (structural ambiguity)。\n最常見的結構歧義類型：附加 (attachment ambiguity) 和並列 (coordination ambiguity)。\n\n\nI shot an elephant in my pajamas"
-  },
-  {
-    "objectID": "weeks/week7.html#練習中文歧義句",
-    "href": "weeks/week7.html#練習中文歧義句",
-    "title": "Week 7 Syntax",
-    "section": "練習中文歧義句",
-    "text": "練習中文歧義句\n\n\\(VP + NP_{1} + de + NP_{2}\\)\n\\(A + NP_{1} + NP_{2}\\)"
-  },
-  {
-    "objectID": "weeks/week7.html#cky-parsing-algorithms",
-    "href": "weeks/week7.html#cky-parsing-algorithms",
-    "title": "Week 7 Syntax",
-    "section": "CKY Parsing algorithms",
-    "text": "CKY Parsing algorithms\n\nDynamic Programming\nEvaluation"
-  },
-  {
-    "objectID": "weeks/week7.html#defining-dependencies",
-    "href": "weeks/week7.html#defining-dependencies",
-    "title": "Week 7 Syntax",
-    "section": "Defining dependencies",
-    "text": "Defining dependencies\n\n\n\n由法國語言學家 Lucien Tesnière 提出。\n對於語序較爲自由的、構詞豐富的 (morphologically rich languages) 語言，rule-based approach 很難應付。(以 polymorphic languages 爲例)\n此外，找到了主要語 (head) 及其依存 (dependent) 有助於語意剖析 (semantic parsing)。（可以容納句法和語意結構並存）\n\n(Gerdes, Hajičová, and Wanner 2013)"
-  },
-  {
-    "objectID": "weeks/week7.html#動詞的配價理論",
-    "href": "weeks/week7.html#動詞的配價理論",
-    "title": "Week 7 Syntax",
-    "section": "動詞的配價理論",
-    "text": "動詞的配價理論\n主要語或中心語\n\n來自化學元素的類比：句子像是分子，由原子組成，而原子的核心是配價 (valence) （按一定的價結合在一起）。\n動詞是中心，所有成分都是環繞着中心動詞開展的。\n價數、價質（semantic roles）、價形 (syntactic position)"
-  },
-  {
-    "objectID": "weeks/week7.html#dependency-的形式定義",
-    "href": "weeks/week7.html#dependency-的形式定義",
-    "title": "Week 7 Syntax",
-    "section": "Dependency 的形式定義",
-    "text": "Dependency 的形式定義\n\n一個句子的 dependency tree 是一個有向無環圖，其中每個節點代表一個詞，每個邊代表一個依存關係 (dependency relation)。\n依存關係是一個非對稱的二元關係，其中一個元素是 head，另一個元素是 dependent。\n\n\n\n\n\n\n\n\nTip\n\n\n\n非對稱的關係也帶出了階層的概念，此外，每個元素都可能同時支配與被支配。"
-  },
-  {
-    "objectID": "weeks/week7.html#幾個概念",
-    "href": "weeks/week7.html#幾個概念",
-    "title": "Week 7 Syntax",
-    "section": "幾個概念",
-    "text": "幾個概念\n\nHead-Dependent 的箭頭方向：the origin word is the Head and the destination word is Dependent. (e.g., ‘prefer’ is Head & ‘I’ is Dependent.)\nRoot: Word which is the root of our parse tree. (It is ‘prefer’ in the above example).\nGrammar Functions and Arcs: Tags between each Head-Dependent pair is a grammar function determining the relation between the Head & Dependent. The arrowhead carrying the tag is called an Arc."
-  },
-  {
-    "objectID": "weeks/week7.html#dependency-relations",
-    "href": "weeks/week7.html#dependency-relations",
-    "title": "Week 7 Syntax",
-    "section": "Dependency relations",
-    "text": "Dependency relations\n\n\n關係種類有很多分類方式，這裏採取 Universal Dependencies 的分類方式。\n\n\n\n\nUniversal Dependencies"
-  },
-  {
-    "objectID": "weeks/week7.html#dependency-formalisms",
-    "href": "weeks/week7.html#dependency-formalisms",
-    "title": "Week 7 Syntax",
-    "section": "Dependency Formalisms",
-    "text": "Dependency Formalisms\n\n圖論上來看，dependencies can be represented as a directed graph \\(G= (V, A)\\) where V(set of vertices) represents words (and punctuation marks as well) in the sentence & A( set of arcs) represent the grammar relationship between elements of V.\n\n\n\nA dependency parse tree is the directed graph which has the below features:\n\nRoot 沒有傳入的弧 (incoming arc) (can only be Head in Head-Dependent pair)\n除了 root 之外的每一個節點，應該都只有一條傳入的弧 (Only one Parent/Head)\n從 root 到每一個節點都只有一條路。"
-  },
-  {
-    "objectID": "weeks/week7.html#projectivity",
-    "href": "weeks/week7.html#projectivity",
-    "title": "Week 7 Syntax",
-    "section": "Projectivity",
-    "text": "Projectivity\n\nProjective arc: An arc/arrows_with_tag are projective when ‘Head’ associated with the arc has a path to reach each word that lies between ‘Head’ & ‘Dependent’.\n\n以 (18.2) 爲例，the 和 flights 的 arc 是 projective，因爲在此的 Head (即 flights) 到它的 Dependent (即 the) 之間有個 morning 這個詞， Head 也有路可到得了。\n同樣地，‘canceled’ (HEAD) 到 ‘flights’ (DEPENDENT) 這條 arc 也是 projective，因爲 Head 有路可到達它和其 Dependent 之間的詞。(i.e., ‘the’ (canceled \\(\\rightarrow\\) flights \\(\\rightarrow\\) the) 以及 ‘morning’ (canceled \\(\\rightarrow\\) flights \\(\\rightarrow\\) morning))\n\n\nProjective parse tree: A parse tree with all its arcs projective. The above tree is projective; A tree with at least one of the arcs as non-projective is called non-projective parse tree."
-  },
-  {
-    "objectID": "weeks/week7.html#practice",
-    "href": "weeks/week7.html#practice",
-    "title": "Week 7 Syntax",
-    "section": "Practice",
-    "text": "Practice\n以下這個 dependency parse tree 是 projective or non-projective?"
-  },
-  {
-    "objectID": "weeks/week7.html#graph-based-dependency-parsing-1",
-    "href": "weeks/week7.html#graph-based-dependency-parsing-1",
-    "title": "Week 7 Syntax",
-    "section": "Graph-based Dependency Parsing",
-    "text": "Graph-based Dependency Parsing\n歸結到兩個問題：\n[1] assigning a score to each edge 給邊分數\n[2] finding the best parse tree given the scores of all potential edges. 找出最好的依存樹"
-  },
-  {
-    "objectID": "weeks/week7.html#chu-liuedmonds-algorithm",
-    "href": "weeks/week7.html#chu-liuedmonds-algorithm",
-    "title": "Week 7 Syntax",
-    "section": "Chu-Liu/Edmonds’ Algorithm",
-    "text": "Chu-Liu/Edmonds’ Algorithm\n解 [2] 的方法\n\nIt turns out that finding the best dependency parse for \\(S\\) is equivalent to finding the maximum spanning tree over \\(G\\).\n\n\nChu-Liu/Edmonds’ Algorithm is a greedy algorithm for finding the maximum spanning tree of a graph."
-  },
-  {
-    "objectID": "weeks/week7.html#先要瞭解何謂最大擴張樹-maximum-spanning-tree",
-    "href": "weeks/week7.html#先要瞭解何謂最大擴張樹-maximum-spanning-tree",
-    "title": "Week 7 Syntax",
-    "section": "先要瞭解何謂最大擴張樹 (Maximum Spanning Tree)",
-    "text": "先要瞭解何謂最大擴張樹 (Maximum Spanning Tree)\n\n\n\nMST"
-  },
-  {
-    "objectID": "weeks/week7.html#舉例",
-    "href": "weeks/week7.html#舉例",
-    "title": "Week 7 Syntax",
-    "section": "舉例",
-    "text": "舉例"
-  },
-  {
-    "objectID": "weeks/week7.html#evaluation",
-    "href": "weeks/week7.html#evaluation",
-    "title": "Week 7 Syntax",
-    "section": "Evaluation",
-    "text": "Evaluation\n理想上的 exact match 指標是不太可行的。\n\nLabeled Attachment Score (LAS): the ratio of correctly detected Head-Dependent pairs along with their tag / total Head-Dependent pairs in testing data.\nUnlabeled Attachment Score (UAS): the ratio of correctly detected Head_Dependent pairs (irrespective of the tag) / total Head-Dependent pairs in testing data.\n\n\n\nReference 指的是標準答案，System 指的是系統生成的答案。\nTotal head-dependent pairs 指的是句子中所有的 Head-Dependent pair, 不管在 Reference 或 System 都是 6 。\nTotal Head-Dependent pairs correctly detected with tags = 4 (因爲 System 中的 nsubj 和 det 都是正確的)。\nTotal Head-Dependent pairs correctly detected = 5 (因爲只管 pairs，不管 tags，所以 book \\(\\rightarrow\\) flight 也算)。"
-  },
-  {
-    "objectID": "weeks/week6.html",
-    "href": "weeks/week6.html",
-    "title": "Week 6 Word Meaning (III)",
-    "section": "",
-    "text": "詞彙的情感意義\n自動情緒分析 sentiment analysis"
-  },
-  {
-    "objectID": "weeks/week6.html#這個範式轉移還在迅速發生中",
-    "href": "weeks/week6.html#這個範式轉移還在迅速發生中",
-    "title": "Week 6 Word Meaning (III)",
-    "section": "這個範式轉移還在迅速發生中",
-    "text": "這個範式轉移還在迅速發生中\nPretrain, Prompt, and Predict (P. Liu et al. 2023)\n\n\n\nParadigm shift in NLP"
-  },
-  {
-    "objectID": "weeks/week6.html#llm-2023-",
-    "href": "weeks/week6.html#llm-2023-",
-    "title": "Week 6 Word Meaning (III)",
-    "section": "LLM 2023-",
-    "text": "LLM 2023-\n\n\n\n語言與知識資源作爲一種符碼專家模式是合理的 (在產學攻防的脈絡亦有其意義)。目前又稱 neuro-symbolic approach。\n接下來的 Bakeoff (week 13) 我們會讓大家練習實作這個方向。"
-  },
-  {
-    "objectID": "weeks/week6.html#今天的打算",
-    "href": "weeks/week6.html#今天的打算",
-    "title": "Week 6 Word Meaning (III)",
-    "section": "今天的打算",
-    "text": "今天的打算\n\n我們一起讀過 SLP-chap 25。\nFrameNet data analysis"
-  },
-  {
-    "objectID": "weeks/week6.html#相關的整組概念",
-    "href": "weeks/week6.html#相關的整組概念",
-    "title": "Week 6 Word Meaning (III)",
-    "section": "相關的整組概念",
-    "text": "相關的整組概念\n包括了 deceptive opinions (詐騙意見)、emotion (情緒)、sentiment (情感)、subjectivity (主觀性)、stance (立場)、trustworthiness (可信度)、polarity (極性)、irony (反諷)、sarcasm (嘲笑)、humor (幽默)、propaganda (宣傳)、bias (偏見)、aggression (侵略性)、toxicity (毒性)、evaluation、appraisal、affect、mood、feelings、beliefs intention 等等。\n\n\n\n\n\n\nImportant\n\n\n\n先做概念的區分、實用出發的詞意區分，再來做實際的應用。"
-  },
-  {
-    "objectID": "weeks/week6.html#比較常討論的情感分析",
-    "href": "weeks/week6.html#比較常討論的情感分析",
-    "title": "Week 6 Word Meaning (III)",
-    "section": "比較常討論的情感分析",
-    "text": "比較常討論的情感分析\n\nsentiment is defined as an attitude, thought, or judgment prompted by feeling, whereas opinion is defined as a view, judgment, or appraisal formed in the mind about a particular matter.(B. Liu 2020)\n\n\n\n\n\n\n\nsentiment 和 opinion 在語言使用上的差異\n\n\n\n\n我有點擔心今年全球的經濟。（我也是/我也蠻擔心的）\n我認爲今年的經濟不會很好。（我同意/不同意）"
-  },
-  {
-    "objectID": "weeks/week6.html#levels-of-analysis",
-    "href": "weeks/week6.html#levels-of-analysis",
-    "title": "Week 6 Word Meaning (III)",
-    "section": "Levels of Analysis",
-    "text": "Levels of Analysis\n\ndocument-level (文檔級)\nsentence-level (句子級)\naspect-level (方面級)\n\n實作上大部分都當成（類別 class、極度 polarity）分類問題。Aspect-based Sentiment Analysis 難度更高一點 (Zhang et al. 2022)。\n\n\n\nABSA"
-  },
-  {
-    "objectID": "weeks/week6.html#但可能也沒那麼難了",
-    "href": "weeks/week6.html#但可能也沒那麼難了",
-    "title": "Week 6 Word Meaning (III)",
-    "section": "但可能也沒那麼難了",
-    "text": "但可能也沒那麼難了"
-  },
-  {
-    "objectID": "weeks/week6.html#多模態的情感計算",
-    "href": "weeks/week6.html#多模態的情感計算",
-    "title": "Week 6 Word Meaning (III)",
-    "section": "多模態的情感計算",
-    "text": "多模態的情感計算\nmultimodal affective computing"
+    "text": "週次\n日期\n主題\n預習 📖\n投影片\n助教課\n課堂練習\n作業\n\n\n\n\n1\n02/23\n課程導論\n\norientation\n\n\n\n\n\n2\n03/02\n計算語言學導論\n\nw2\nslides\ncolab\nHW1, HW1_Ans\n\n\n3\n03/09\n計算構詞與詞彙 (1)\nslp3-02\nw3\nslides\ncolab\nHW2, HW2_Ans\n\n\n4\n03/16\n計算構詞與詞彙 (2)\nslp3-23\nw4\n\ncolab\nHW3, HW3_Ans\n\n\n5\n03/23\n計算構詞與詞彙 (3)\nslp3-21\nw5\nguidline\ncolab, gsheet\nHW4\n\n\n6\n03/30\n計算構詞與詞彙 (4)\nslp3-25\nw6\n\ncolab\nHW5\n\n\n7\n04/06\n句法理論與剖析器\nslp3-18; (Linzen and Baroni, 2021)\nw7\nslides\n\nHW6\n\n\n8\n04/13\n認知語法與計算\ncognitive linguistics meets computational linguistics\n\n\n\n\n\n\n9\n04/20\n語意表徵 (1)\nslp3-06\n\n\n\n\n\n\n10\n04/27\n語意表徵 (2)\nslp3-10\n\n\n\n\n\n\n11\n05/04\n語意表徵 (3) & 業師分享\nslp3-11\n\n\n\n\n\n\n12\n05/11\n語意表徵 (4)\nslp3-22\n\n\n\n\n\n\n13\n05/18\nBakeoff practice\n\n\n\n\n\n\n\n14\n05/25\n語音、多模態與言談分析\nslp3-15; slp3-28\n\n\n\n\n\n\n15\n06/01\n綜合討論\n\n\n\n\n\n\n\n16\n06/08\n期末報告"
   },
   {
     "objectID": "project-tips-resources.html",
     "href": "project-tips-resources.html",
-    "title": "Project tips + resources",
-    "section": "",
-    "text": "R Data Sources for Regression Analysis\nFiveThirtyEight data\nTidyTuesday\n\n\n\n\n\nWorld Health Organization\nThe National Bureau of Economic Research\nInternational Monetary Fund\nGeneral Social Survey\nUnited Nations Data\nUnited Nations Statistics Division\nU.K. Data\nU.S. Data\nU.S. Census Data\nEuropean Statistics\nStatistics Canada\nPew Research\nUNICEF\nCDC\nWorld Bank\nElection Studies"
-  },
-  {
-    "objectID": "project-tips-resources.html#data-sources",
-    "href": "project-tips-resources.html#data-sources",
     "title": "Project tips + resources",
     "section": "",
     "text": "R Data Sources for Regression Analysis\nFiveThirtyEight data\nTidyTuesday\n\n\n\n\n\nWorld Health Organization\nThe National Bureau of Economic Research\nInternational Monetary Fund\nGeneral Social Survey\nUnited Nations Data\nUnited Nations Statistics Division\nU.K. Data\nU.S. Data\nU.S. Census Data\nEuropean Statistics\nStatistics Canada\nPew Research\nUNICEF\nCDC\nWorld Bank\nElection Studies"
@@ -452,7 +25,7 @@
     "href": "project-tips-resources.html#formatting-communication-tips",
     "title": "Project tips + resources",
     "section": "Formatting + communication tips",
-    "text": "Formatting + communication tips\n\nSuppress Code, Warnings, & Messages\n\nInclude the following code in a code chunk at the top of your .qmd file to suppress all code, warnings, and other messages. Use the code chunk header {r set-up, include = FALSE} to suppress this set up code.\n\nknitr::opts_chunk$set(echo = FALSE,\n                      warning = FALSE, \n                      message = FALSE)\n\n\nHeaders\n\nUse headers to clearly label each section.\nInspect the document outline to review your headers and sub-headers.\n\n\n\nReferences\n\nInclude all references in a section called “References” at the end of the report.\nThis course does not have specific requirements for formatting citations and references.\n\n\n\nAppendix\n\nIf you have additional work that does not fit or does not belong in the body of the report, you may put it at the end of the document in section called “Appendix”.\nThe items in the appendix should be properly labeled.\nThe appendix should only be for additional material. The reader should be able to fully understand your report without viewing content in the appendix.\n\n\n\nResize figures\nResize plots and figures, so you have more space for the narrative.\n\n\nArranging plots\nArrange plots in a grid, instead of one after the other. This is especially useful when displaying plots for exploratory data analysis and to check assumptions.\nIf you’re using ggplot2 functions, the patchwork package makes it easy to arrange plots in a grid. See the documentation and examples here.\n\n\nPlot titles and axis labels\nBe sure all plot titles and axis labels are visible and easy to read.\n\nUse informative titles, not variable names, for titles and axis labels.\n\n❌ NO! The x-axis is hard to read because the names overlap.\n\nggplot(data = mpg, aes(x = manufacturer)) +\n  geom_bar()\n\n\n\n\n✅ YES! Names are readable\n\nggplot(data = mpg, aes(y = manufacturer)) +\n  geom_bar()\n\n\n\n\n\n\nDo a little more to make the plot look professional!\n\nInformative title and axis labels\nFlipped coordinates to make names readable\nArranged bars based on count\nCapitalized manufacturer names\nOptional: Added color - Use a coordinated color scheme throughout paper / presentation\nOptional: Applied a theme - Use same theme throughout paper / presentation\n\n\nmpg %&gt;%\n  count(manufacturer) %&gt;%\n  mutate(manufacturer = str_to_title(manufacturer)) %&gt;%\n  ggplot(aes(y = fct_reorder(manufacturer,n), x = n)) +\n  geom_bar(stat = \"identity\", fill = \"steelblue\") +\n  labs(x = \"Manufacturer\", \n       y = \"Count\", \n       title = \"The most common manufacturer is Dodge\") +\n  theme_minimal() \n\n\n\n\n\n\nTables and model output\n\nUse the kable function from the knitr package to neatly output all tables and model output. This will also ensure all model coefficients are displayed.\n\nUse the digits argument to display only 3 or 4 significant digits.\nUse the caption argument to add captions to your table.\n\n\n\nmodel &lt;- lm(mpg ~ hp, data = mtcars)\ntidy(model) %&gt;%\n  kable(digits = 3)\n\n\n\n\nterm\nestimate\nstd.error\nstatistic\np.value\n\n\n\n\n(Intercept)\n30.099\n1.634\n18.421\n0\n\n\nhp\n-0.068\n0.010\n-6.742\n0\n\n\n\n\n\n\n\nGuidelines for communicating results\n\nDon’t use variable names in your narrative! Use descriptive terms, so the reader understands your narrative without relying on the data dictionary.\n\n❌ There is a negative linear relationship between mpg and hp.\n✅ There is a negative linear relationship between a car’s fuel economy (in miles per gallon) and its horsepower.\n\nKnow your audience: Your report should be written for a general audience who has an understanding of statistics at the level of STA 210.\nAvoid subject matter jargon: Don’t assume the audience knows all of the specific terminology related to your subject area. If you must use jargon, include a brief definition the first time you introduce a term.\nTell the “so what”: Your report and presentation should be more than a list of interpretations and technical definitions. Focus on what the results mean, i.e. what you want the audience to know about your topic after reading your report or viewing your presentation.\n\n❌ For every one unit increase in horsepower, we expect the miles per gallon to decrease by 0.068 units, on average.\n✅ If the priority is to have good fuel economy, then one should choose a car with lower horsepower. Based on our model, the fuel economy is expected to decrease, on average, by 0.68 miles per gallon for every 10 additional horsepower.\n\nTell a story: All visualizations, tables, model output, and narrative should tell a cohesive story!\nUse one voice: Though multiple people are writing the report, it should read as if it’s from a single author. At least one team member should read through the report before submission to ensure it reads like a cohesive document."
+    "text": "Formatting + communication tips\n\nSuppress Code, Warnings, & Messages\n\nInclude the following code in a code chunk at the top of your .qmd file to suppress all code, warnings, and other messages. Use the code chunk header {r set-up, include = FALSE} to suppress this set up code.\n\nknitr::opts_chunk$set(echo = FALSE,\n                      warning = FALSE, \n                      message = FALSE)\n\n\nHeaders\n\nUse headers to clearly label each section.\nInspect the document outline to review your headers and sub-headers.\n\n\n\nReferences\n\nInclude all references in a section called “References” at the end of the report.\nThis course does not have specific requirements for formatting citations and references.\n\n\n\nAppendix\n\nIf you have additional work that does not fit or does not belong in the body of the report, you may put it at the end of the document in section called “Appendix”.\nThe items in the appendix should be properly labeled.\nThe appendix should only be for additional material. The reader should be able to fully understand your report without viewing content in the appendix.\n\n\n\nResize figures\nResize plots and figures, so you have more space for the narrative.\n\n\nArranging plots\nArrange plots in a grid, instead of one after the other. This is especially useful when displaying plots for exploratory data analysis and to check assumptions.\nIf you’re using ggplot2 functions, the patchwork package makes it easy to arrange plots in a grid. See the documentation and examples here.\n\n\nPlot titles and axis labels\nBe sure all plot titles and axis labels are visible and easy to read.\n\nUse informative titles, not variable names, for titles and axis labels.\n\n❌ NO! The x-axis is hard to read because the names overlap.\n\nggplot(data = mpg, aes(x = manufacturer)) +\n  geom_bar()\n\n\n\n\n✅ YES! Names are readable\n\nggplot(data = mpg, aes(y = manufacturer)) +\n  geom_bar()\n\n\n\n\n\n\nDo a little more to make the plot look professional!\n\nInformative title and axis labels\nFlipped coordinates to make names readable\nArranged bars based on count\nCapitalized manufacturer names\nOptional: Added color - Use a coordinated color scheme throughout paper / presentation\nOptional: Applied a theme - Use same theme throughout paper / presentation\n\n\nmpg %>%\n  count(manufacturer) %>%\n  mutate(manufacturer = str_to_title(manufacturer)) %>%\n  ggplot(aes(y = fct_reorder(manufacturer,n), x = n)) +\n  geom_bar(stat = \"identity\", fill = \"steelblue\") +\n  labs(x = \"Manufacturer\", \n       y = \"Count\", \n       title = \"The most common manufacturer is Dodge\") +\n  theme_minimal() \n\n\n\n\n\n\nTables and model output\n\nUse the kable function from the knitr package to neatly output all tables and model output. This will also ensure all model coefficients are displayed.\n\nUse the digits argument to display only 3 or 4 significant digits.\nUse the caption argument to add captions to your table.\n\n\n\nmodel <- lm(mpg ~ hp, data = mtcars)\ntidy(model) %>%\n  kable(digits = 3)\n\n\n\n\nterm\nestimate\nstd.error\nstatistic\np.value\n\n\n\n\n(Intercept)\n30.099\n1.634\n18.421\n0\n\n\nhp\n-0.068\n0.010\n-6.742\n0\n\n\n\n\n\n\n\nGuidelines for communicating results\n\nDon’t use variable names in your narrative! Use descriptive terms, so the reader understands your narrative without relying on the data dictionary.\n\n❌ There is a negative linear relationship between mpg and hp.\n✅ There is a negative linear relationship between a car’s fuel economy (in miles per gallon) and its horsepower.\n\nKnow your audience: Your report should be written for a general audience who has an understanding of statistics at the level of STA 210.\nAvoid subject matter jargon: Don’t assume the audience knows all of the specific terminology related to your subject area. If you must use jargon, include a brief definition the first time you introduce a term.\nTell the “so what”: Your report and presentation should be more than a list of interpretations and technical definitions. Focus on what the results mean, i.e. what you want the audience to know about your topic after reading your report or viewing your presentation.\n\n❌ For every one unit increase in horsepower, we expect the miles per gallon to decrease by 0.068 units, on average.\n✅ If the priority is to have good fuel economy, then one should choose a car with lower horsepower. Based on our model, the fuel economy is expected to decrease, on average, by 0.68 miles per gallon for every 10 additional horsepower.\n\nTell a story: All visualizations, tables, model output, and narrative should tell a cohesive story!\nUse one voice: Though multiple people are writing the report, it should read as if it’s from a single author. At least one team member should read through the report before submission to ensure it reads like a cohesive document."
   },
   {
     "objectID": "project-tips-resources.html#additional-resources",
@@ -609,13 +182,6 @@
     "text": "Go to your Files tab, check the box next to the file you want to download, then click on the blue gear icon on the Files tab to reveal the drop down menu, and select Export… If you have selected multiple files to export, RStudio will zip them up into a single zip file for you. If you’ve selected just a single file, it will only download that. The downloaded file will go to wherever files you download off the internet goes on your computer (usually your Downloads folder)."
   },
   {
-    "objectID": "course-faq.html#how-do-i-export-my-assignment-pdf-from-rstudio-to-upload-to-gradescope",
-    "href": "course-faq.html#how-do-i-export-my-assignment-pdf-from-rstudio-to-upload-to-gradescope",
-    "title": "FAQ",
-    "section": "",
-    "text": "Go to your Files tab, check the box next to the file you want to download, then click on the blue gear icon on the Files tab to reveal the drop down menu, and select Export… If you have selected multiple files to export, RStudio will zip them up into a single zip file for you. If you’ve selected just a single file, it will only download that. The downloaded file will go to wherever files you download off the internet goes on your computer (usually your Downloads folder)."
-  },
-  {
     "objectID": "course-faq.html#how-can-i-submit-my-assignment-to-gradescope",
     "href": "course-faq.html#how-can-i-submit-my-assignment-to-gradescope",
     "title": "FAQ",
@@ -733,5 +299,257 @@
     "title": "Exam 1",
     "section": "",
     "text": "Part 1 - Conceptual: The answers to the multiple choice/short answer questions should be submitted under Test & Quizzes in Sakai.\nPart 2 - Applied: The PDF document for the data analysis portion must be uploaded to Gradescope.\n\nYou must submit a PDF to Gradescope that corresponds to the .qmd file on your GitHub repository in order to receive credit for this portion of the exam.\nYou must upload a PDF, not HTML. Any non-PDF submissions will not be graded.\nMark the pages associated with each question. If any answer for a question spans multiple pages, mark all associated pages.\nMake sure to associate the “Workflow & formatting” section with the first page.\nFailure to mark the pages in Gradescope will result in point deductions. Any pages that are not marked will not be graded.\nMake sure that your uploaded PDF document matches your .qmd and the PDF in your GitHub repository exactly. Points will be deducted for documents that are not reproducible."
+  },
+  {
+    "objectID": "weeks/week7.html#defining-dependencies",
+    "href": "weeks/week7.html#defining-dependencies",
+    "title": "Week 7 Syntax",
+    "section": "Defining dependencies",
+    "text": "Defining dependencies\n\n\n\n由法國語言學家 Lucien Tesnière 提出。\n對於語序較爲自由的、構詞豐富的 (morphologically rich languages) 語言，rule-based approach 很難應付。(以 polymorphic languages 爲例)\n此外，找到了主要語 (head) 及其依存 (dependent) 有助於語意剖析 (semantic parsing)。（可以容納句法和語意結構並存）\n\n(Gerdes, Hajičová, and Wanner 2013)"
+  },
+  {
+    "objectID": "weeks/week7.html#dependency",
+    "href": "weeks/week7.html#dependency",
+    "title": "Week 7 Syntax",
+    "section": "",
+    "text": "一個句子的句法結構可以用一個有向圖 (directed graph) 來表示\n這個圖的節點 (node) 就是句子中的詞 (word)\n這個圖的邊 (edge) 就是詞與詞之間的依存關係 (dependency relation)\n這個圖的根 (root) 就是句子的主語 (subject)\n這個圖的根以外的節點 (non-root node) 就是句子的修飾語 (modifier)\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(subplot_kw={'projection': 'polar'})\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()"
+  },
+  {
+    "objectID": "weeks/week7.html#dependency-的定義",
+    "href": "weeks/week7.html#dependency-的定義",
+    "title": "Week 7 Syntax",
+    "section": "Dependency 的定義",
+    "text": "Dependency 的定義\n\n一個句子的 dependency tree 是一個有向無環圖，其中每個節點代表一個詞，每個邊代表一個依存關係 (dependency relation)。\n依存關係是一個二元關係，其中一個元素是 head，另一個元素是 dependent。"
+  },
+  {
+    "objectID": "weeks/week7.html#comparison",
+    "href": "weeks/week7.html#comparison",
+    "title": "Week 7 Syntax",
+    "section": "Comparison",
+    "text": "Comparison"
+  },
+  {
+    "objectID": "weeks/week7.html#constituency-的定義",
+    "href": "weeks/week7.html#constituency-的定義",
+    "title": "Week 7 Syntax",
+    "section": "## Constituency 的定義",
+    "text": "## Constituency 的定義\n\n\n\n\n\n\nCaution\n\n\n\n從世界語言來看，這個概念是很值得爭議的。"
+  },
+  {
+    "objectID": "weeks/week7.html#section",
+    "href": "weeks/week7.html#section",
+    "title": "Week 7 Syntax",
+    "section": "",
+    "text": "each node is connected to other nodes through directed edges, which indicate the dependency between the words. The direction of the edge typically goes from the head (governor) to the dependent (modifier).\nThis representation helps to identify the structure and hierarchical relations within a sentence, making it easier to understand and process."
+  },
+  {
+    "objectID": "weeks/week7.html#modeling-constituency",
+    "href": "weeks/week7.html#modeling-constituency",
+    "title": "Week 7 Syntax",
+    "section": "Modeling constituency",
+    "text": "Modeling constituency\n\n目前最爲廣泛用來 model constituency 的形式系統叫做 Context-free Grammar (CfG)， 在語言學中稱 Phrase Structure Grammar (PSG) 。\n由 Chomsky 在 1950 年代提出，是一種用來描述語言句法結構的形式系統。"
+  },
+  {
+    "objectID": "weeks/week7.html#context-free-grammar",
+    "href": "weeks/week7.html#context-free-grammar",
+    "title": "Week 7 Syntax",
+    "section": "Context-free Grammar",
+    "text": "Context-free Grammar\n\na set of rules (or productions) that describe how to construct a sentence from smaller units.\n形式上定義，CfG 是一個四元組 (4-tuple) \\((N, \\Sigma, R, S)\\)，其中：\n\n\\(N\\) 是一個有限集合，稱為 non-terminal symbols，代表句法結構的組成部分。\n\\(\\Sigma\\) 是一個有限集合，稱為 terminal symbols，代表句子中的詞。\n\\(R\\) 是一個有限集合，稱為 rules，代表句法結構的生成規則。\n\\(S\\) 是一個 \\(N\\) 中的元素，稱為 start symbol，代表句子的根節點。"
+  },
+  {
+    "objectID": "weeks/week7.html#例子",
+    "href": "weeks/week7.html#例子",
+    "title": "Week 7 Syntax",
+    "section": "例子",
+    "text": "例子\n\n\n\n妳快把我笑死了\n\n\n如何解析以下句子？\n\n他說得都不對"
+  },
+  {
+    "objectID": "weeks/week7.html#parsing",
+    "href": "weeks/week7.html#parsing",
+    "title": "Week 7 Syntax",
+    "section": "Parsing",
+    "text": "Parsing\n句法剖析\n\n(自動地) 把一個句子 (a string of word) 映射到其對應的句法結構 (a parse tree)，就叫做 parsing。"
+  },
+  {
+    "objectID": "weeks/week7.html#treebanks",
+    "href": "weeks/week7.html#treebanks",
+    "title": "Week 7 Syntax",
+    "section": "Treebanks",
+    "text": "Treebanks\n\n一個 treebank 是一個語料庫，其中的每個句子都有一個對應的句法樹 (parse tree)。\n這些句法樹通常是由訓練過的語言學家標註、或修訂過的。\n\n\n\nPenn Treebank\nCKIP Treebank"
+  },
+  {
+    "objectID": "weeks/week7.html#例子-1",
+    "href": "weeks/week7.html#例子-1",
+    "title": "Week 7 Syntax",
+    "section": "例子",
+    "text": "例子"
+  },
+  {
+    "objectID": "weeks/week7.html#formal-language-and-chomsky-normal-form",
+    "href": "weeks/week7.html#formal-language-and-chomsky-normal-form",
+    "title": "Week 7 Syntax",
+    "section": "Formal language and Chomsky normal form",
+    "text": "Formal language and Chomsky normal form\n\nIt is useful to have a normal from (i.e., each of the production/rule taks a particular form) for formal languages, so that we can compare different formal languages and their grammars.\nChomsky normal form (CNF) is a normal form for context-free grammars.\n\nA grammar is in CNF if all its rules are of the form:\n\n\\(A \\rightarrow BC\\)\n\\(A \\rightarrow a\\)\n\\(S \\rightarrow \\epsilon\\)\n\n\n\ncf. 形式語言的計算理論\n\nChomsky-adjunction"
+  },
+  {
+    "objectID": "weeks/week7.html#structural-ambiguity",
+    "href": "weeks/week7.html#structural-ambiguity",
+    "title": "Week 7 Syntax",
+    "section": "Structural Ambiguity",
+    "text": "Structural Ambiguity\n結構歧義\n\n一個句子的句法結構可能有多種不同的解析方式，這就是結構歧義 (structural ambiguity)。\n最常見的結構歧義類型：附加 (attachment ambiguity) 和並列 (coordination ambiguity)。\n\n\nI shot an elephant in my pajamas"
+  },
+  {
+    "objectID": "weeks/week7.html#句法的計算表徵",
+    "href": "weeks/week7.html#句法的計算表徵",
+    "title": "Week 7 Syntax",
+    "section": "",
+    "text": "兩種在計算語言學上常使用的句法表徵 (representation)：\n- dependency \n- constituency"
+  },
+  {
+    "objectID": "weeks/week7.html#練習中文歧義句",
+    "href": "weeks/week7.html#練習中文歧義句",
+    "title": "Week 7 Syntax",
+    "section": "練習中文歧義句",
+    "text": "練習中文歧義句\n\n\\(VP + NP_{1} + de + NP_{2}\\)\n\\(A + NP_{1} + NP_{2}\\)"
+  },
+  {
+    "objectID": "weeks/week7.html#cky-parsing-algorithm",
+    "href": "weeks/week7.html#cky-parsing-algorithm",
+    "title": "Week 7 Syntax",
+    "section": "CKY Parsing algorithm",
+    "text": "CKY Parsing algorithm"
+  },
+  {
+    "objectID": "weeks/week7.html#dynamic-programming",
+    "href": "weeks/week7.html#dynamic-programming",
+    "title": "Week 7 Syntax",
+    "section": "Dynamic Programming",
+    "text": "Dynamic Programming"
+  },
+  {
+    "objectID": "weeks/week7.html#evaluation",
+    "href": "weeks/week7.html#evaluation",
+    "title": "Week 7 Syntax",
+    "section": "Evaluation",
+    "text": "Evaluation\n理想上的 exact match 指標是不太可行的。\n\nLabeled Attachment Score (LAS): the ratio of correctly detected Head-Dependent pairs along with their tag / total Head-Dependent pairs in testing data.\nUnlabeled Attachment Score (UAS): the ratio of correctly detected Head_Dependent pairs (irrespective of the tag) / total Head-Dependent pairs in testing data.\n\n\n\nReference 指的是標準答案，System 指的是系統生成的答案。\nTotal head-dependent pairs 指的是句子中所有的 Head-Dependent pair, 不管在 Reference 或 System 都是 6 。\nTotal Head-Dependent pairs correctly detected with tags = 4 (因爲 System 中的 nsubj 和 det 都是正確的)。\nTotal Head-Dependent pairs correctly detected = 5 (因爲只管 pairs，不管 tags，所以 book \\(\\rightarrow\\) flight 也算)。"
+  },
+  {
+    "objectID": "weeks/week7.html#dependency-relations",
+    "href": "weeks/week7.html#dependency-relations",
+    "title": "Week 7 Syntax",
+    "section": "Dependency relations",
+    "text": "Dependency relations\n\n\n關係種類有很多分類方式，這裏採取 Universal Dependencies 的分類方式。\n\n\n\n\nUniversal Dependencies"
+  },
+  {
+    "objectID": "weeks/week7.html#dependency-formalisms",
+    "href": "weeks/week7.html#dependency-formalisms",
+    "title": "Week 7 Syntax",
+    "section": "Dependency Formalisms",
+    "text": "Dependency Formalisms\n\n圖論上來看，dependencies can be represented as a directed graph \\(G= (V, A)\\) where V(set of vertices) represents words (and punctuation marks as well) in the sentence & A( set of arcs) represent the grammar relationship between elements of V.\n\n\n\nA dependency parse tree is the directed graph which has the below features:\n\nRoot 沒有傳入的弧 (incoming arc) (can only be Head in Head-Dependent pair)\n除了 root 之外的每一個節點，應該都只有一條傳入的弧 (Only one Parent/Head)\n從 root 到每一個節點都只有一條路。"
+  },
+  {
+    "objectID": "weeks/week7.html#projectivity",
+    "href": "weeks/week7.html#projectivity",
+    "title": "Week 7 Syntax",
+    "section": "Projectivity",
+    "text": "Projectivity\n\nProjective arc: An arc/arrows_with_tag are projective when ‘Head’ associated with the arc has a path to reach each word that lies between ‘Head’ & ‘Dependent’.\n\n以 (18.2) 爲例，the 和 flights 的 arc 是 projective，因爲在此的 Head (即 flights) 到它的 Dependent (即 the) 之間有個 morning 這個詞， Head 也有路可到得了。\n同樣地，‘canceled’ (HEAD) 到 ‘flights’ (DEPENDENT) 這條 arc 也是 projective，因爲 Head 有路可到達它和其 Dependent 之間的詞。(i.e., ‘the’ (canceled \\(\\rightarrow\\) flights \\(\\rightarrow\\) the) 以及 ‘morning’ (canceled \\(\\rightarrow\\) flights \\(\\rightarrow\\) morning))\n\n\nProjective parse tree: A parse tree with all its arcs projective. The above tree is projective; A tree with at least one of the arcs as non-projective is called non-projective parse tree."
+  },
+  {
+    "objectID": "weeks/week7.html#graph-based-dependency-parsing",
+    "href": "weeks/week7.html#graph-based-dependency-parsing",
+    "title": "Week 7 Syntax",
+    "section": "Graph-based Dependency Parsing",
+    "text": "Graph-based Dependency Parsing\nCreating dependency structures based on the use of maximum spanning tree methods from graph theory."
+  },
+  {
+    "objectID": "weeks/week7.html#chu-liuedmonds-algorithm",
+    "href": "weeks/week7.html#chu-liuedmonds-algorithm",
+    "title": "Week 7 Syntax",
+    "section": "Chu-Liu/Edmonds’ Algorithm",
+    "text": "Chu-Liu/Edmonds’ Algorithm\n解 [2] 的方法\n\nIt turns out that finding the best dependency parse for \\(S\\) is equivalent to finding the maximum spanning tree over \\(G\\).\n\n\nChu-Liu/Edmonds’ Algorithm is a greedy algorithm for finding the maximum spanning tree of a graph."
+  },
+  {
+    "objectID": "weeks/week7.html#evaluation-1",
+    "href": "weeks/week7.html#evaluation-1",
+    "title": "Week 7 Syntax",
+    "section": "Evaluation",
+    "text": "Evaluation\n理想上的 exact match 指標是不太可行的。\n\nLabeled Attachment Score (LAS): the ratio of correctly detected Head-Dependent pairs along with their tag / total Head-Dependent pairs in testing data.\nUnlabeled Attachment Score (UAS): the ratio of correctly detected Head_Dependent pairs (irrespective of the tag) / total Head-Dependent pairs in testing data.\n\n\n\nReference 指的是標準答案，System 指的是系統生成的答案。\nTotal head-dependent pairs 指的是句子中所有的 Head-Dependent pair, 不管在 Reference 或 System 都是 6 。\nTotal Head-Dependent pairs correctly detected with tags = 4 (因爲 System 中的 nsubj 和 det 都是正確的)。\nTotal Head-Dependent pairs correctly detected = 5 (因爲只管 pairs，不管 tags，所以 book \\(\\rightarrow\\) flight 也算)。"
+  },
+  {
+    "objectID": "weeks/week7.html#幾個概念",
+    "href": "weeks/week7.html#幾個概念",
+    "title": "Week 7 Syntax",
+    "section": "幾個概念",
+    "text": "幾個概念\n\nHead-Dependent 的箭頭方向：the origin word is the Head and the destination word is Dependent. (e.g., ‘prefer’ is Head & ‘I’ is Dependent.)\nRoot: Word which is the root of our parse tree. (It is ‘prefer’ in the above example).\nGrammar Functions and Arcs: Tags between each Head-Dependent pair is a grammar function determining the relation between the Head & Dependent. The arrowhead carrying the tag is called an Arc."
+  },
+  {
+    "objectID": "weeks/week7.html#practice",
+    "href": "weeks/week7.html#practice",
+    "title": "Week 7 Syntax",
+    "section": "Practice",
+    "text": "Practice\n以下這個 dependency parse tree 是 projective or non-projective?"
+  },
+  {
+    "objectID": "weeks/week7.html#先要瞭解何謂最大擴張樹-maximum-spanning-tree",
+    "href": "weeks/week7.html#先要瞭解何謂最大擴張樹-maximum-spanning-tree",
+    "title": "Week 7 Syntax",
+    "section": "先要瞭解何謂最大擴張樹 (Maximum Spanning Tree)",
+    "text": "先要瞭解何謂最大擴張樹 (Maximum Spanning Tree)\n\n\n\nMST"
+  },
+  {
+    "objectID": "weeks/week7.html#graph-based-dependency-parsing-1",
+    "href": "weeks/week7.html#graph-based-dependency-parsing-1",
+    "title": "Week 7 Syntax",
+    "section": "Graph-based Dependency Parsing",
+    "text": "Graph-based Dependency Parsing\n歸結到兩個問題：\n[1] assigning a score to each edge 給邊分數\n[2] finding the best parse tree given the scores of all potential edges. 找出最好的依存樹"
+  },
+  {
+    "objectID": "weeks/week7.html#舉例",
+    "href": "weeks/week7.html#舉例",
+    "title": "Week 7 Syntax",
+    "section": "舉例",
+    "text": "舉例"
+  },
+  {
+    "objectID": "weeks/week7.html#句法-syntax",
+    "href": "weeks/week7.html#句法-syntax",
+    "title": "Week 7 Syntax",
+    "section": "",
+    "text": "句法對於 NLP/NLU 很重要，因爲它涉及語言在表層的結構運作。\n但是 (形式) 句法在近代語言學發展史中佔據了很大（太大！）的一部分\n\n\n\n\n\n\n\nWarning\n\n\n\nN.Chomsky 對於語料庫，一直到現在的 LLM 的（鄙視）態度都一樣的，爲什麼呢？ 2012 on corpus linguistics; 2023 on chatGPT\n\n\n\n\n\n不同的數學哲學\n\n\n\n\n\n世紀論辯快要發生（結束）？"
+  },
+  {
+    "objectID": "weeks/week7.html#形式句法",
+    "href": "weeks/week7.html#形式句法",
+    "title": "Week 7 Syntax",
+    "section": "",
+    "text": "Formal syntax/Geneartive Grammar\nTheory\n\n【句法】是第一順位。In generative grammar, pride of place is given to syntax, 也具備自己的【獨立模組】。\n【形式觀】：心智中的句法運算可以完全獨立於意義之外。\n\nData\n\ntop-down，有限規則駕馭無限表達，重點在掌握 competence 而非 performace。\n內省式語感判斷 rely on introspective judgments as their primary source of data.\nthe poverty-of-stimulus hypothesis (“the child has no data”)."
+  },
+  {
+    "objectID": "weeks/week7.html#處理形式上的各種空缺問題",
+    "href": "weeks/week7.html#處理形式上的各種空缺問題",
+    "title": "Week 7 Syntax",
+    "section": "處理形式上的各種空缺問題",
+    "text": "處理形式上的各種空缺問題\n動詞的論元脫落有不同的符碼標記\n\n移位 (那個蘋果，我扔了)\n隱含（她打算打網球）\n空格（他買了兩根香蕉，給了他朋友一根）"
+  },
+  {
+    "objectID": "weeks/week7.html#cky-parsing-algorithms",
+    "href": "weeks/week7.html#cky-parsing-algorithms",
+    "title": "Week 7 Syntax",
+    "section": "CKY Parsing algorithms",
+    "text": "CKY Parsing algorithms\n\nDynamic Programming\nEvaluation"
+  },
+  {
+    "objectID": "weeks/week7.html#動詞的配價理論",
+    "href": "weeks/week7.html#動詞的配價理論",
+    "title": "Week 7 Syntax",
+    "section": "動詞的配價理論",
+    "text": "動詞的配價理論\n主要語或中心語\n\n來自化學元素的類比：句子像是分子，由原子組成，而原子的核心是配價 (valence) （按一定的價結合在一起）。\n動詞是中心，所有成分都是環繞着中心動詞開展的。\n價數、價質（semantic roles）、價形 (syntactic position)"
+  },
+  {
+    "objectID": "weeks/week7.html#dependency-的形式定義",
+    "href": "weeks/week7.html#dependency-的形式定義",
+    "title": "Week 7 Syntax",
+    "section": "Dependency 的形式定義",
+    "text": "Dependency 的形式定義\n\n一個句子的 dependency tree 是一個有向無環圖，其中每個節點代表一個詞，每個邊代表一個依存關係 (dependency relation)。\n依存關係是一個非對稱的二元關係，其中一個元素是 head，另一個元素是 dependent。\n\n\n\n\n\n\n\n\nTip\n\n\n\n非對稱的關係也帶出了階層的概念，此外，每個元素都可能同時支配與被支配。"
   }
 ]
