@@ -4,11 +4,7 @@
     "href": "index.html",
     "title": "計算語言學與語言學理論",
     "section": "",
-<<<<<<< HEAD
-    "text": "週次\n日期\n主題\n預習 📖\n投影片\n助教課\n課堂練習\n作業\n\n\n\n\n1\n02/23\n課程導論\n\norientation\n\n\n\n\n\n2\n03/02\n計算語言學導論\n\nw2\nslides\ncolab\nHW1, HW1_Ans\n\n\n3\n03/09\n計算構詞與詞彙 (1)\nslp3-02\nw3\nslides\ncolab\nHW2, HW2_Ans\n\n\n4\n03/16\n計算構詞與詞彙 (2)\nslp3-23\nw4\n\ncolab\nHW3, HW3_Ans\n\n\n5\n03/23\n計算構詞與詞彙 (3)\nslp3-21\nw5\nguidline\ncolab, gsheet\nHW4\n\n\n6\n03/30\n計算構詞與詞彙 (4)\nslp3-25\nw6\n\ncolab\nHW5\n\n\n7\n04/06\n句法理論與剖析器\nslp3-18; (Linzen and Baroni, 2021)\nw7\nslides\n\nHW6\n\n\n8\n04/13\n認知語法與計算\ncognitive linguistics meets computational linguistics\n\n\n\n\n\n\n9\n04/20\n語意表徵 (1): 分佈向量語意\nslp3-06\n\n\n\n\n\n\n10\n04/27\n語意表徵 (2): Neural Language Models and Pre-trained LLMs\nslp3-10\n\n\n\n\n\n\n11\n05/04\n語意表徵 (3): Prompt and Instruction Learning\nslp3-11\n\n\n\n\n\n\n12\n05/11\n語意表徵 (4): Prompt Engineering and LLM-based applications\n\n\n\n\n\n\n\n13\n05/18\nBakeoff (LLMs and LangChain practice)\n\n\n\n\n\n\n\n14\n05/25\n語音、多模態與言談分析 + 業師演講\nslp3-15; slp3-28\n\n\n\n\n\n\n15\n06/01\n綜合討論\n\n\n\n\n\n\n\n16\n06/08\n期末報告"
-=======
-    "text": "週次\n日期\n主題\n預習 📖\n投影片\n助教課\n課堂練習\n作業\n\n\n\n\n1\n02/23\n課程導論\n\norientation\n\n\n\n\n\n2\n03/02\n計算語言學導論\n\nw2\nslides\ncolab\nHW1, HW1_Ans\n\n\n3\n03/09\n計算構詞與詞彙 (1)\nslp3-02\nw3\nslides\ncolab\nHW2, HW2_Ans\n\n\n4\n03/16\n計算構詞與詞彙 (2)\nslp3-23\nw4\n\ncolab\nHW3, HW3_Ans\n\n\n5\n03/23\n計算構詞與詞彙 (3)\nslp3-21\nw5\nguidline\ncolab, gsheet\nHW4, HW4_Ans\n\n\n6\n03/30\n計算構詞與詞彙 (4)\nslp3-25\nw6\n\ncolab\nHW5, HW5_Ans\n\n\n7\n04/06\n句法理論與剖析器\nslp3-18; (Linzen and Baroni, 2021)\nw7\nslides\n\nHW6, HW6_Ans\n\n\n8\n04/13\n認知語法與計算\ncognitive linguistics meets computational linguistics\n\nslides\ncolab\nHW7\n\n\n9\n04/20\n語意表徵 (1)\nslp3-06\n\n\n\n\n\n\n10\n04/27\n語意表徵 (2)\nslp3-10\n\n\n\n\n\n\n11\n05/04\n語意表徵 (3) & 業師分享\nslp3-11\n\n\n\n\n\n\n12\n05/11\n語意表徵 (4)\nslp3-22\n\n\n\n\n\n\n13\n05/18\nBakeoff practice\n\n\n\n\n\n\n\n14\n05/25\n語音、多模態與言談分析\nslp3-15; slp3-28\n\n\n\n\n\n\n15\n06/01\n綜合討論\n\n\n\n\n\n\n\n16\n06/08\n期末報告"
->>>>>>> 934143818be99b05df97457e9b39c04c0a0ed0c7
+    "text": "週次\n日期\n主題\n預習 📖\n投影片\n助教課\n課堂練習\n作業\n\n\n\n\n1\n02/23\n課程導論\n\norientation\n\n\n\n\n\n2\n03/02\n計算語言學導論\n\nw2\nslides\ncolab\nHW1, HW1_Ans\n\n\n3\n03/09\n計算構詞與詞彙 (1)\nslp3-02\nw3\nslides\ncolab\nHW2, HW2_Ans\n\n\n4\n03/16\n計算構詞與詞彙 (2)\nslp3-23\nw4\n\ncolab\nHW3, HW3_Ans\n\n\n5\n03/23\n計算構詞與詞彙 (3)\nslp3-21\nw5\nguidline\ncolab, gsheet\nHW4\n\n\n6\n03/30\n計算構詞與詞彙 (4)\nslp3-25\nw6\n\ncolab\nHW5\n\n\n7\n04/06\n句法理論與剖析器\nslp3-18; (Linzen and Baroni, 2021)\nw7\nslides\n\nHW6\n\n\n8\n04/13\n認知語法與計算\ncognitive linguistics meets computational linguistics\n\nslides\ncolab\nHW7\n\n\n9\n04/20\n語意表徵 (1): 分佈向量語意\nslp3-06\n\nslides\ncolab\n\n\n\n10\n04/27\n語意表徵 (2): Neural Language Models and Pre-trained LLMs\nslp3-10\n\n\n\n\n\n\n11\n05/04\n語意表徵 (3): Prompt and Instruction Learning\nslp3-11\n\n\n\n\n\n\n12\n05/11\n語意表徵 (4): Prompt Engineering and LLM-based applications\n\n\n\n\n\n\n\n13\n05/18\nBakeoff (LLMs and LangChain practice)\n\n\n\n\n\n\n\n14\n05/25\n語音、多模態與言談分析 + 業師演講\nslp3-15; slp3-28\n\n\n\n\n\n\n15\n06/01\n綜合討論\n\n\n\n\n\n\n\n16\n06/08\n期末報告"
   },
   {
     "objectID": "project-tips-resources.html",
@@ -36,7 +32,7 @@
     "href": "project-tips-resources.html#formatting-communication-tips",
     "title": "Project tips + resources",
     "section": "Formatting + communication tips",
-    "text": "Formatting + communication tips\n\nSuppress Code, Warnings, & Messages\n\nInclude the following code in a code chunk at the top of your .qmd file to suppress all code, warnings, and other messages. Use the code chunk header {r set-up, include = FALSE} to suppress this set up code.\n\nknitr::opts_chunk$set(echo = FALSE,\n                      warning = FALSE, \n                      message = FALSE)\n\n\nHeaders\n\nUse headers to clearly label each section.\nInspect the document outline to review your headers and sub-headers.\n\n\n\nReferences\n\nInclude all references in a section called “References” at the end of the report.\nThis course does not have specific requirements for formatting citations and references.\n\n\n\nAppendix\n\nIf you have additional work that does not fit or does not belong in the body of the report, you may put it at the end of the document in section called “Appendix”.\nThe items in the appendix should be properly labeled.\nThe appendix should only be for additional material. The reader should be able to fully understand your report without viewing content in the appendix.\n\n\n\nResize figures\nResize plots and figures, so you have more space for the narrative.\n\n\nArranging plots\nArrange plots in a grid, instead of one after the other. This is especially useful when displaying plots for exploratory data analysis and to check assumptions.\nIf you’re using ggplot2 functions, the patchwork package makes it easy to arrange plots in a grid. See the documentation and examples here.\n\n\nPlot titles and axis labels\nBe sure all plot titles and axis labels are visible and easy to read.\n\nUse informative titles, not variable names, for titles and axis labels.\n\n❌ NO! The x-axis is hard to read because the names overlap.\n\nggplot(data = mpg, aes(x = manufacturer)) +\n  geom_bar()\n\n\n\n\n✅ YES! Names are readable\n\nggplot(data = mpg, aes(y = manufacturer)) +\n  geom_bar()\n\n\n\n\n\n\nDo a little more to make the plot look professional!\n\nInformative title and axis labels\nFlipped coordinates to make names readable\nArranged bars based on count\nCapitalized manufacturer names\nOptional: Added color - Use a coordinated color scheme throughout paper / presentation\nOptional: Applied a theme - Use same theme throughout paper / presentation\n\n\nmpg %&gt;%\n  count(manufacturer) %&gt;%\n  mutate(manufacturer = str_to_title(manufacturer)) %&gt;%\n  ggplot(aes(y = fct_reorder(manufacturer,n), x = n)) +\n  geom_bar(stat = \"identity\", fill = \"steelblue\") +\n  labs(x = \"Manufacturer\", \n       y = \"Count\", \n       title = \"The most common manufacturer is Dodge\") +\n  theme_minimal() \n\n\n\n\n\n\nTables and model output\n\nUse the kable function from the knitr package to neatly output all tables and model output. This will also ensure all model coefficients are displayed.\n\nUse the digits argument to display only 3 or 4 significant digits.\nUse the caption argument to add captions to your table.\n\n\n\nmodel &lt;- lm(mpg ~ hp, data = mtcars)\ntidy(model) %&gt;%\n  kable(digits = 3)\n\n\n\n\nterm\nestimate\nstd.error\nstatistic\np.value\n\n\n\n\n(Intercept)\n30.099\n1.634\n18.421\n0\n\n\nhp\n-0.068\n0.010\n-6.742\n0\n\n\n\n\n\n\n\nGuidelines for communicating results\n\nDon’t use variable names in your narrative! Use descriptive terms, so the reader understands your narrative without relying on the data dictionary.\n\n❌ There is a negative linear relationship between mpg and hp.\n✅ There is a negative linear relationship between a car’s fuel economy (in miles per gallon) and its horsepower.\n\nKnow your audience: Your report should be written for a general audience who has an understanding of statistics at the level of STA 210.\nAvoid subject matter jargon: Don’t assume the audience knows all of the specific terminology related to your subject area. If you must use jargon, include a brief definition the first time you introduce a term.\nTell the “so what”: Your report and presentation should be more than a list of interpretations and technical definitions. Focus on what the results mean, i.e. what you want the audience to know about your topic after reading your report or viewing your presentation.\n\n❌ For every one unit increase in horsepower, we expect the miles per gallon to decrease by 0.068 units, on average.\n✅ If the priority is to have good fuel economy, then one should choose a car with lower horsepower. Based on our model, the fuel economy is expected to decrease, on average, by 0.68 miles per gallon for every 10 additional horsepower.\n\nTell a story: All visualizations, tables, model output, and narrative should tell a cohesive story!\nUse one voice: Though multiple people are writing the report, it should read as if it’s from a single author. At least one team member should read through the report before submission to ensure it reads like a cohesive document."
+    "text": "Formatting + communication tips\n\nSuppress Code, Warnings, & Messages\n\nInclude the following code in a code chunk at the top of your .qmd file to suppress all code, warnings, and other messages. Use the code chunk header {r set-up, include = FALSE} to suppress this set up code.\n\nknitr::opts_chunk$set(echo = FALSE,\n                      warning = FALSE, \n                      message = FALSE)\n\n\nHeaders\n\nUse headers to clearly label each section.\nInspect the document outline to review your headers and sub-headers.\n\n\n\nReferences\n\nInclude all references in a section called “References” at the end of the report.\nThis course does not have specific requirements for formatting citations and references.\n\n\n\nAppendix\n\nIf you have additional work that does not fit or does not belong in the body of the report, you may put it at the end of the document in section called “Appendix”.\nThe items in the appendix should be properly labeled.\nThe appendix should only be for additional material. The reader should be able to fully understand your report without viewing content in the appendix.\n\n\n\nResize figures\nResize plots and figures, so you have more space for the narrative.\n\n\nArranging plots\nArrange plots in a grid, instead of one after the other. This is especially useful when displaying plots for exploratory data analysis and to check assumptions.\nIf you’re using ggplot2 functions, the patchwork package makes it easy to arrange plots in a grid. See the documentation and examples here.\n\n\nPlot titles and axis labels\nBe sure all plot titles and axis labels are visible and easy to read.\n\nUse informative titles, not variable names, for titles and axis labels.\n\n❌ NO! The x-axis is hard to read because the names overlap.\n\nggplot(data = mpg, aes(x = manufacturer)) +\n  geom_bar()\n\n\n\n\n✅ YES! Names are readable\n\nggplot(data = mpg, aes(y = manufacturer)) +\n  geom_bar()\n\n\n\n\n\n\nDo a little more to make the plot look professional!\n\nInformative title and axis labels\nFlipped coordinates to make names readable\nArranged bars based on count\nCapitalized manufacturer names\nOptional: Added color - Use a coordinated color scheme throughout paper / presentation\nOptional: Applied a theme - Use same theme throughout paper / presentation\n\n\nmpg %>%\n  count(manufacturer) %>%\n  mutate(manufacturer = str_to_title(manufacturer)) %>%\n  ggplot(aes(y = fct_reorder(manufacturer,n), x = n)) +\n  geom_bar(stat = \"identity\", fill = \"steelblue\") +\n  labs(x = \"Manufacturer\", \n       y = \"Count\", \n       title = \"The most common manufacturer is Dodge\") +\n  theme_minimal() \n\n\n\n\n\n\nTables and model output\n\nUse the kable function from the knitr package to neatly output all tables and model output. This will also ensure all model coefficients are displayed.\n\nUse the digits argument to display only 3 or 4 significant digits.\nUse the caption argument to add captions to your table.\n\n\n\nmodel <- lm(mpg ~ hp, data = mtcars)\ntidy(model) %>%\n  kable(digits = 3)\n\n\n\n\nterm\nestimate\nstd.error\nstatistic\np.value\n\n\n\n\n(Intercept)\n30.099\n1.634\n18.421\n0\n\n\nhp\n-0.068\n0.010\n-6.742\n0\n\n\n\n\n\n\n\nGuidelines for communicating results\n\nDon’t use variable names in your narrative! Use descriptive terms, so the reader understands your narrative without relying on the data dictionary.\n\n❌ There is a negative linear relationship between mpg and hp.\n✅ There is a negative linear relationship between a car’s fuel economy (in miles per gallon) and its horsepower.\n\nKnow your audience: Your report should be written for a general audience who has an understanding of statistics at the level of STA 210.\nAvoid subject matter jargon: Don’t assume the audience knows all of the specific terminology related to your subject area. If you must use jargon, include a brief definition the first time you introduce a term.\nTell the “so what”: Your report and presentation should be more than a list of interpretations and technical definitions. Focus on what the results mean, i.e. what you want the audience to know about your topic after reading your report or viewing your presentation.\n\n❌ For every one unit increase in horsepower, we expect the miles per gallon to decrease by 0.068 units, on average.\n✅ If the priority is to have good fuel economy, then one should choose a car with lower horsepower. Based on our model, the fuel economy is expected to decrease, on average, by 0.68 miles per gallon for every 10 additional horsepower.\n\nTell a story: All visualizations, tables, model output, and narrative should tell a cohesive story!\nUse one voice: Though multiple people are writing the report, it should read as if it’s from a single author. At least one team member should read through the report before submission to ensure it reads like a cohesive document."
   },
   {
     "objectID": "project-tips-resources.html#additional-resources",
@@ -331,8 +327,6 @@
     "title": "Exam 1",
     "section": "",
     "text": "Part 1 - Conceptual: The answers to the multiple choice/short answer questions should be submitted under Test & Quizzes in Sakai.\nPart 2 - Applied: The PDF document for the data analysis portion must be uploaded to Gradescope.\n\nYou must submit a PDF to Gradescope that corresponds to the .qmd file on your GitHub repository in order to receive credit for this portion of the exam.\nYou must upload a PDF, not HTML. Any non-PDF submissions will not be graded.\nMark the pages associated with each question. If any answer for a question spans multiple pages, mark all associated pages.\nMake sure to associate the “Workflow & formatting” section with the first page.\nFailure to mark the pages in Gradescope will result in point deductions. Any pages that are not marked will not be graded.\nMake sure that your uploaded PDF document matches your .qmd and the PDF in your GitHub repository exactly. Points will be deducted for documents that are not reproducible."
-<<<<<<< HEAD
-=======
   },
   {
     "objectID": "weeks/week7.html#defining-dependencies",
@@ -830,6 +824,341 @@
     "title": "Week 7 Syntax",
     "section": "",
     "text": "句法理論與計算表徵\n\n\n\n\n句法對於 NLP/NLU 很重要，因爲它涉及語言在表層的結構運作。\n但是 (形式) 句法在近代語言學發展史中佔據了很大（太大！）的一部分\n\n\n\n\n\n\n\nWarning\n\n\n\nN.Chomsky 對於語料庫，一直到現在的 LLM 的（鄙視）態度都一樣的，爲什麼呢？ 2012 on corpus linguistics; 2023 on chatGPT\n\n\n\n\n\n不同的數學哲學\n\n\n\n\n\n世紀論辯快要發生（結束）？\n\n\n\n\n\nFormal syntax/Geneartive Grammar\nTheory\n\n【句法】是第一順位。In generative grammar, pride of place is given to syntax, 也具備自己的【獨立模組】。\n【形式觀】：心智中的句法運算可以完全獨立於意義之外。\n\nData\n\ntop-down，有限規則駕馭無限表達，重點在掌握 competence 而非 performace。\n內省式語感判斷 rely on introspective judgments as their primary source of data.\nthe poverty-of-stimulus hypothesis (“the child has no data”).\n\n\n\n\n兩種在計算語言學上常使用的句法表徵 (representation)：\n- dependency \n- constituency"
->>>>>>> 934143818be99b05df97457e9b39c04c0a0ed0c7
+  },
+  {
+    "objectID": "weeks/week8.html",
+    "href": "weeks/week8.html",
+    "title": "Week 8: Cognitive Linguistics and NLP",
+    "section": "",
+    "text": "意義是一切！\n\n上週提到的形式語言學（形式語法與邏輯語意）在程式語言的編譯上具有很大的用途。\n語意學很長一段時間將重點放在具有真值 (truth value) 判斷的陳述句，同時開展了相當完整的邏輯與推導系統。\n但是，語言的使用者不只是要表達真實的意義，也要表達自己的情緒、態度、立場、意圖、想法、慾望等交際意義。"
+  },
+  {
+    "objectID": "weeks/week8.html#語言學到現在累積的幾個經驗",
+    "href": "weeks/week8.html#語言學到現在累積的幾個經驗",
+    "title": "Week 8: Cognitive Linguistics and NLP",
+    "section": "語言學到現在累積的幾個經驗",
+    "text": "語言學到現在累積的幾個經驗\n(Hsieh 2023)\n\n化約論 (reductionism) (複雜的問題可以通過分析其組成部分來解決) 在探究語言的意義上有很大的局限性。\n模塊觀 (modularist view) 是 useful fiction。例如把語意與語用分開處理，是教學方便。\n語法自主 (autonomy of syntax) 與內在天賦論 (innateness) 是可疑的。 \\(\\rightarrow\\) 語言學習是意義與交互作用中驅動的。句法與語意不可分，是在使用中湧現的產物。\n\n\n\n\n\n\n\nNote\n\n\n\n語言不僅是單一的物理現象、生理現象、社會現象，心理現象。它是人文化成的複雜系統。"
+  },
+  {
+    "objectID": "weeks/week8.html#語言學的認知假設",
+    "href": "weeks/week8.html#語言學的認知假設",
+    "title": "Week 8: Cognitive Linguistics and NLP",
+    "section": "語言學的認知假設",
+    "text": "語言學的認知假設\n認知語言學 (cognitive linguistics) ，或語言與認知\n\n在腦神經科學與認知科學的基礎下，80-90 年代，一些語言學家開始關注語言與人類認知之間的相互作用。\n\n\n核心觀點是語言不僅是一種抽象的符號系統，而且是與我們的思維、知識和經驗密切相關的複雜心智現象。"
+  },
+  {
+    "objectID": "weeks/week8.html#主要研究範疇",
+    "href": "weeks/week8.html#主要研究範疇",
+    "title": "Week 8: Cognitive Linguistics and NLP",
+    "section": "主要研究範疇",
+    "text": "主要研究範疇\n\n\n\n\n\n\nImportant\n\n\n\n概念隱喻（Conceptual Metaphor）、構式語法（Construction Grammar）、語言類型學（Linguistic Typology）與文化、語言習得和使用、語言與時間空間、語言與概念組織等"
+  },
+  {
+    "objectID": "weeks/week8.html#核心觀點",
+    "href": "weeks/week8.html#核心觀點",
+    "title": "Week 8: Cognitive Linguistics and NLP",
+    "section": "核心觀點",
+    "text": "核心觀點\n象似性 (iconicity)：語言的符號與其對應的客觀對象之間的相似性。the degree to which a linguistic expression resembles the object or event it denotes (Peirce).\n\n皮爾斯提出了三種不同類型的符號 (sign)：\n\n標誌符號 (icon) : 符號與客觀對象有形象上的關係。 \n指示符號（index）: 符號與客觀對象有直接的或因果的關係。\n象徵符號（symbol）: 符號與客觀對象有約定俗成的關係。 \n\n\npic source"
+  },
+  {
+    "objectID": "weeks/week8.html#象似性在中文文字造字上的表現",
+    "href": "weeks/week8.html#象似性在中文文字造字上的表現",
+    "title": "Week 8: Cognitive Linguistics and NLP",
+    "section": "象似性在中文文字造字上的表現",
+    "text": "象似性在中文文字造字上的表現\n象形 (iconic)、指示 (indexical)、…?"
+  },
+  {
+    "objectID": "weeks/week8.html#象似性在漢語上的表現",
+    "href": "weeks/week8.html#象似性在漢語上的表現",
+    "title": "Week 8: Cognitive Linguistics and NLP",
+    "section": "象似性在漢語上的表現",
+    "text": "象似性在漢語上的表現\n語言中的象似性主要是指「語言結構」跟人的「概念結構」之間的自然聯繫 (戴浩一, 1985)。展現在順序、距離、重疊等方面。\n\n順序象似性\n\n她搭捷運到這裏 vs 她到這裏搭捷運"
+  },
+  {
+    "objectID": "weeks/week8.html#象似性在漢語上的表現-1",
+    "href": "weeks/week8.html#象似性在漢語上的表現-1",
+    "title": "Week 8: Cognitive Linguistics and NLP",
+    "section": "象似性在漢語上的表現",
+    "text": "象似性在漢語上的表現\n\n距離象似性 (概念上距離近的成分設法在句法分佈上彼此鄰近)\n\n吃飽了vs *吃了飽 vs 吃個飽\n他送給她一張卡片vs 他送一張卡片給他"
+  },
+  {
+    "objectID": "weeks/week8.html#象似性在漢語上的表現-2",
+    "href": "weeks/week8.html#象似性在漢語上的表現-2",
+    "title": "Week 8: Cognitive Linguistics and NLP",
+    "section": "象似性在漢語上的表現",
+    "text": "象似性在漢語上的表現\n\n重疊象似性"
+  },
+  {
+    "objectID": "weeks/week8.html#主觀性場景與注意力焦點",
+    "href": "weeks/week8.html#主觀性場景與注意力焦點",
+    "title": "Week 8: Cognitive Linguistics and NLP",
+    "section": "主觀性、場景與注意力/焦點",
+    "text": "主觀性、場景與注意力/焦點\n\nSubjectivity 心理活動的選擇性\nFocus 心理活動所選擇的客觀物件"
+  },
+  {
+    "objectID": "weeks/week8.html#意象圖示-image-schemas",
+    "href": "weeks/week8.html#意象圖示-image-schemas",
+    "title": "Week 8: Cognitive Linguistics and NLP",
+    "section": "意象圖示 | Image Schemas",
+    "text": "意象圖示 | Image Schemas\n\n意象: 在某物不在場時，我們的心智還能想像得出該物的具體。\n圖示：把經驗加工組織成某種認知結構，較長期地儲存在記憶之中。\n意象圖示：在人與客觀世界感知與互動中一種反覆出現的動態的模式。 e.g, SOURCE-PATH-GOAL schema"
+  },
+  {
+    "objectID": "weeks/week8.html#完形與語言壓縮",
+    "href": "weeks/week8.html#完形與語言壓縮",
+    "title": "Week 8: Cognitive Linguistics and NLP",
+    "section": "完形與語言壓縮",
+    "text": "完形與語言壓縮"
+  },
+  {
+    "objectID": "weeks/week8.html#構式知識語料庫",
+    "href": "weeks/week8.html#構式知識語料庫",
+    "title": "Week 8: Cognitive Linguistics and NLP",
+    "section": "構式知識語料庫",
+    "text": "構式知識語料庫\n北大現代漢語構式數據庫"
+  },
+  {
+    "objectID": "weeks/week8.html#構式與機器學習",
+    "href": "weeks/week8.html#構式與機器學習",
+    "title": "Week 8: Cognitive Linguistics and NLP",
+    "section": "構式與機器學習",
+    "text": "構式與機器學習\nComputational Construction Grammar (C*G)\n參考投影片 c2xg python"
+  },
+  {
+    "objectID": "weeks/week8.html#總結",
+    "href": "weeks/week8.html#總結",
+    "title": "Week 8: Cognitive Linguistics and NLP",
+    "section": "總結",
+    "text": "總結\n\n人的認知結構（象似性、思維時序關係、空間層次關係等）參與決定了語言的意義結構。"
+  },
+  {
+    "objectID": "weeks/week8.html#evaluation-metrics",
+    "href": "weeks/week8.html#evaluation-metrics",
+    "title": "Week 8: Cognitive Linguistics and NLP",
+    "section": "Evaluation metrics",
+    "text": "Evaluation metrics\n爲何需要這些不同的評估方法？ \n\\(F_{\\beta}= \\frac{(\\beta^{2} +1) PR} {\\beta^{2}P+R}\\)"
+  },
+  {
+    "objectID": "weeks/week9.html",
+    "href": "weeks/week9.html",
+    "title": "Week 9",
+    "section": "",
+    "text": "快速參考\n\n希望機器從餵給它的資料中學到一個預測方法。數學上地說，就是學到一個函式。\n\n\n\n\n\n\ntypes: source internet"
+  },
+  {
+    "objectID": "weeks/week9.html#parametric-vs.-non-parametric",
+    "href": "weeks/week9.html#parametric-vs.-non-parametric",
+    "title": "Week 9",
+    "section": "Parametric vs. Non-parametric",
+    "text": "Parametric vs. Non-parametric\n\nParametric model：參數化的模型，參數的數目是固定的，模型的複雜度是固定的。\nNon-parametric model：非參數化的模型，參數的數目是不固定的，隨着資料大小而不同。"
+  },
+  {
+    "objectID": "weeks/week9.html#生成式學習-generative-learning",
+    "href": "weeks/week9.html#生成式學習-generative-learning",
+    "title": "Week 9",
+    "section": "生成式學習 (Generative Learning)",
+    "text": "生成式學習 (Generative Learning)\na.k.a. 結構化學習 (structured learning)\n\n結構化學習是指輸出爲一個結構化的物件，如語音辨識、機器翻譯、語言模型等。"
+  },
+  {
+    "objectID": "weeks/week9.html#機器學習-1",
+    "href": "weeks/week9.html#機器學習-1",
+    "title": "Week 9",
+    "section": "機器學習",
+    "text": "機器學習\n\n選擇 (候選) 的函式集合 \n決定評測函式的方法 (e.g., loss function)\n找最好的函式 (最佳化 optimization)\n\n\n\n\n\n\n\nNote\n\n\n\nchatGPT (貌似) 將生成式學習解成分類問題。"
+  },
+  {
+    "objectID": "weeks/week9.html#我們用一個例子來說明",
+    "href": "weeks/week9.html#我們用一個例子來說明",
+    "title": "Week 9",
+    "section": "我們用一個例子來說明",
+    "text": "我們用一個例子來說明\n假設我們的任務是"
+  },
+  {
+    "objectID": "weeks/week9.html#令人困擾的語言表徵問題",
+    "href": "weeks/week9.html#令人困擾的語言表徵問題",
+    "title": "Week 9",
+    "section": "令人困擾的語言表徵問題",
+    "text": "令人困擾的語言表徵問題\nNatural Language as (discrete) symbols or (continuous) signals?\n\n\n\nsource: Joty 2022"
+  },
+  {
+    "objectID": "weeks/week9.html#embeddings",
+    "href": "weeks/week9.html#embeddings",
+    "title": "Week 9",
+    "section": "Embeddings",
+    "text": "Embeddings\n\n一種表徵方法，將一個物件用一個向量表徵。例如，word embeddings 將一個詞用一個向量表徵，該向量的每個元素代表該詞的某個特徵。"
+  },
+  {
+    "objectID": "weeks/week9.html#之前做法",
+    "href": "weeks/week9.html#之前做法",
+    "title": "Week 9",
+    "section": "之前做法",
+    "text": "之前做法\n\none-hot encoding\ntf-idf (term frequency-inverse document frequency)\n詞袋假說 bag-of-words (BoW) assumption： 詞的順序 (order)、語境 (context) 不重要，只看詞的出現次數。"
+  },
+  {
+    "objectID": "weeks/week9.html#ngram-語言模型",
+    "href": "weeks/week9.html#ngram-語言模型",
+    "title": "Week 9",
+    "section": "ngram 語言模型",
+    "text": "ngram 語言模型"
+  },
+  {
+    "objectID": "weeks/week9.html#用深度學習學習表徵-representation-learning",
+    "href": "weeks/week9.html#用深度學習學習表徵-representation-learning",
+    "title": "Week 9",
+    "section": "用深度學習學習表徵 (Representation Learning)",
+    "text": "用深度學習學習表徵 (Representation Learning)\n\n自動學習特徵 (features) 或表徵 (representations)。\n從輸入 \\(x\\) ，利用多層神經網路學習多層次表徵 (\\(h^{1}, h^{2}, h^{3}, ..\\)) 以及最終的輸出 \\(h^{4}\\)。\n\n\n\n\n\n\n\n\nNote\n\n\n\n\\(x\\) 可以是 sound, pixels, words, etc. 深度學習在 speech, vision, language 上取得了很大的進展。"
+  },
+  {
+    "objectID": "weeks/week5.html",
+    "href": "weeks/week5.html",
+    "title": "Week 5 Word Meaning (II)",
+    "section": "",
+    "text": "詞彙關係、詞彙網路、知識本體\n事件語意與計算表徵"
+  },
+  {
+    "objectID": "weeks/week5.html#in-class-exercise.1",
+    "href": "weeks/week5.html#in-class-exercise.1",
+    "title": "Week 5 Word Meaning (II)",
+    "section": "In-class exercise.1",
+    "text": "In-class exercise.1\nCreate a tiny knowledge graph based on the news article in Chapter 21 of the textbook. 參考"
+  },
+  {
+    "objectID": "weeks/week5.html#relations-in-named-entity-tasks",
+    "href": "weeks/week5.html#relations-in-named-entity-tasks",
+    "title": "Week 5 Word Meaning (II)",
+    "section": "Relations in Named Entity Tasks",
+    "text": "Relations in Named Entity Tasks\n\nNamed entity recognition (NER) is the task of identifying and classifying named entities in text into pre-defined categories such as person names, organization names, locations, etc."
+  },
+  {
+    "objectID": "weeks/week5.html#regular-polysemy-detecection",
+    "href": "weeks/week5.html#regular-polysemy-detecection",
+    "title": "Week 5 Word Meaning (II)",
+    "section": "Regular Polysemy Detecection",
+    "text": "Regular Polysemy Detecection\nSemEval 2010-Task 8"
+  },
+  {
+    "objectID": "weeks/week5.html#qualia-structure",
+    "href": "weeks/week5.html#qualia-structure",
+    "title": "Week 5 Word Meaning (II)",
+    "section": "Qualia structure",
+    "text": "Qualia structure\n\n\n\nPustejovsky"
+  },
+  {
+    "objectID": "weeks/week5.html#rdf-resource-description-framework",
+    "href": "weeks/week5.html#rdf-resource-description-framework",
+    "title": "Week 5 Word Meaning (II)",
+    "section": "RDF (Resource Description Framework)",
+    "text": "RDF (Resource Description Framework)\n\nRDF is a standard metalanguage (W3 recommendation) for data interchange on the Web.\nRDF triples are the basic unit of data in RDF, a triple consists of < subject, predicate, object >\nRDF triples are used to describe resources (e.g., people, places, things, etc.) and their properties (e.g., name, age, etc.).\nDBpedia and Wikidata are two popular knowledge bases that use RDF triples to represent knowledge."
+  },
+  {
+    "objectID": "weeks/week5.html#relation-extraction-algorithms",
+    "href": "weeks/week5.html#relation-extraction-algorithms",
+    "title": "Week 5 Word Meaning (II)",
+    "section": "Relation Extraction Algorithms",
+    "text": "Relation Extraction Algorithms\nFive main classes of relation extraction algorithms:\n\nPattern-based (Hearst patterns)\nFeature-based supervised relation classifier\nNeural supervised relation classifiers\nSemi-/un- supervised"
+  },
+  {
+    "objectID": "weeks/week5.html#spanbert",
+    "href": "weeks/week5.html#spanbert",
+    "title": "Week 5 Word Meaning (II)",
+    "section": "SpanBERT",
+    "text": "SpanBERT\n(Joshi et al. 2020) exceeds BERT by 3.3% F1."
+  },
+  {
+    "objectID": "weeks/week5.html#semisupervised-relation-extraction",
+    "href": "weeks/week5.html#semisupervised-relation-extraction",
+    "title": "Week 5 Word Meaning (II)",
+    "section": "Semisupervised Relation Extraction",
+    "text": "Semisupervised Relation Extraction\nbootstrapping\n\nBootstrapping is a semi-supervised learning method that uses a small amount of labeled data to train a classifier, and then uses the classifier to label a large amount of unlabeled data."
+  },
+  {
+    "objectID": "weeks/week5.html#semisupervised-relation-extraction-1",
+    "href": "weeks/week5.html#semisupervised-relation-extraction-1",
+    "title": "Week 5 Word Meaning (II)",
+    "section": "Semisupervised Relation Extraction",
+    "text": "Semisupervised Relation Extraction\nDistant Supervision\n\nDistant supervision is a semi-supervised learning method that uses a large amount of unlabeled data and a small amount of labeled data to train a classifier."
+  },
+  {
+    "objectID": "weeks/week5.html#evaluation-metrics",
+    "href": "weeks/week5.html#evaluation-metrics",
+    "title": "Week 5 Word Meaning (II)",
+    "section": "Evaluation Metrics",
+    "text": "Evaluation Metrics"
+  },
+  {
+    "objectID": "weeks/week5.html#實務運用上的練習",
+    "href": "weeks/week5.html#實務運用上的練習",
+    "title": "Week 5 Word Meaning (II)",
+    "section": "實務運用上的練習",
+    "text": "實務運用上的練習\n\n\n\n\n\n\nTip\n\n\n\nExtract money and currency values (entities labelled as MONEY) and find the noun phrase they are referring to - for example: “Net income was $9.4 million compared to the prior year of $2.7 million.”\n$9.4 million → Net income.\n$2.7 million → the prior year"
+  },
+  {
+    "objectID": "weeks/week5.html#一般解法",
+    "href": "weeks/week5.html#一般解法",
+    "title": "Week 5 Word Meaning (II)",
+    "section": "一般解法",
+    "text": "一般解法\n\nStep 1: use spaCy’s named entity recognizer to extract money and currency values (entities labelled as MONEY)\nStep2: use spaCy’s dependency parser to find the noun phrase they are referring to."
+  },
+  {
+    "objectID": "weeks/week5.html#gpt4-解法",
+    "href": "weeks/week5.html#gpt4-解法",
+    "title": "Week 5 Word Meaning (II)",
+    "section": "GPT4 解法",
+    "text": "GPT4 解法"
+  },
+  {
+    "objectID": "weeks/week5.html#實務練習二",
+    "href": "weeks/week5.html#實務練習二",
+    "title": "Week 5 Word Meaning (II)",
+    "section": "實務練習二",
+    "text": "實務練習二\n\n用 wordnet 做知識圖譜，week5.ipnb\n計算詞彙的詞意頻率"
+  },
+  {
+    "objectID": "weeks/week5.html#event-types-aktionsart-lexical-aspect",
+    "href": "weeks/week5.html#event-types-aktionsart-lexical-aspect",
+    "title": "Week 5 Word Meaning (II)",
+    "section": "Event types (Aktionsart; Lexical Aspect)",
+    "text": "Event types (Aktionsart; Lexical Aspect)\n\n\nstate, activitis, accomplishments, achievements, semelfactives\n\n\n\n\n\n\n\nTip\n\n\n\nAktionsart is a German term that refers to the type of action that a verb expresses."
+  },
+  {
+    "objectID": "weeks/week5.html#event-representation",
+    "href": "weeks/week5.html#event-representation",
+    "title": "Week 5 Word Meaning (II)",
+    "section": "Event Representation",
+    "text": "Event Representation\n\nEvent representation is the task of representing events in a structured format."
+  },
+  {
+    "objectID": "weeks/week5.html#event-extraction",
+    "href": "weeks/week5.html#event-extraction",
+    "title": "Week 5 Word Meaning (II)",
+    "section": "Event Extraction",
+    "text": "Event Extraction\n\nEvent extraction is the task of identifying mentions of events and classifying them in text.\nan event mention is a span of text (expressions) that refers to an event that can be assigned to a particular point or interval in time."
+  },
+  {
+    "objectID": "weeks/week5.html#chinese-framenet",
+    "href": "weeks/week5.html#chinese-framenet",
+    "title": "Week 5 Word Meaning (II)",
+    "section": "Chinese FrameNet",
+    "text": "Chinese FrameNet\n\n(中國) Chinese FrameNet project (CFN) by the State Key Laboratory of Intelligent Technology and Systems at Tsinghua University in Beijing. 失效的計劃連接\n(台灣) NTU 半自動生成版\n(香港) 中文 VerbNet"
+  },
+  {
+    "objectID": "weeks/week5.html#以-caused-motion-為例",
+    "href": "weeks/week5.html#以-caused-motion-為例",
+    "title": "Week 5 Word Meaning (II)",
+    "section": "以 CAUSED-MOTION 為例",
+    "text": "以 CAUSED-MOTION 為例"
+  },
+  {
+    "objectID": "weeks/week5.html#frames-constructions-and-framenet",
+    "href": "weeks/week5.html#frames-constructions-and-framenet",
+    "title": "Week 5 Word Meaning (II)",
+    "section": "Frames, constructions, and FrameNet",
+    "text": "Frames, constructions, and FrameNet\nCharles J. Fillmore 過世前的經典論文"
+  },
+  {
+    "objectID": "weeks/week5.html#延伸出來的認知語言研究",
+    "href": "weeks/week5.html#延伸出來的認知語言研究",
+    "title": "Week 5 Word Meaning (II)",
+    "section": "延伸出來的認知語言研究",
+    "text": "延伸出來的認知語言研究\n視角 (perspective) 怎麼反應在語言上？\n\n\n\ncommercial_event frame"
   }
 ]
