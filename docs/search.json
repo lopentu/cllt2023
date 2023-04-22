@@ -1160,5 +1160,208 @@
     "title": "Week 5 Word Meaning (II)",
     "section": "延伸出來的認知語言研究",
     "text": "延伸出來的認知語言研究\n視角 (perspective) 怎麼反應在語言上？\n\n\n\ncommercial_event frame"
+  },
+  {
+    "objectID": "weeks/week6.html",
+    "href": "weeks/week6.html",
+    "title": "Week 6 Word Meaning (III)",
+    "section": "",
+    "text": "詞彙的情感意義\n自動情緒分析 sentiment analysis"
+  },
+  {
+    "objectID": "weeks/week6.html#這個範式轉移還在迅速發生中",
+    "href": "weeks/week6.html#這個範式轉移還在迅速發生中",
+    "title": "Week 6 Word Meaning (III)",
+    "section": "這個範式轉移還在迅速發生中",
+    "text": "這個範式轉移還在迅速發生中\nPretrain, Prompt, and Predict (P. Liu et al. 2023)\n\n\n\nParadigm shift in NLP"
+  },
+  {
+    "objectID": "weeks/week6.html#llm-2023-",
+    "href": "weeks/week6.html#llm-2023-",
+    "title": "Week 6 Word Meaning (III)",
+    "section": "LLM 2023-",
+    "text": "LLM 2023-\n\n\n\n語言與知識資源作爲一種符碼專家模式是合理的 (在產學攻防的脈絡亦有其意義)。目前又稱 neuro-symbolic approach。\n接下來的 Bakeoff (week 13) 我們會讓大家練習實作這個方向。"
+  },
+  {
+    "objectID": "weeks/week6.html#今天的打算",
+    "href": "weeks/week6.html#今天的打算",
+    "title": "Week 6 Word Meaning (III)",
+    "section": "今天的打算",
+    "text": "今天的打算\n\n我們一起讀過 SLP-chap 25。\nFrameNet data analysis"
+  },
+  {
+    "objectID": "weeks/week6.html#相關的整組概念",
+    "href": "weeks/week6.html#相關的整組概念",
+    "title": "Week 6 Word Meaning (III)",
+    "section": "相關的整組概念",
+    "text": "相關的整組概念\n包括了 deceptive opinions (詐騙意見)、emotion (情緒)、sentiment (情感)、subjectivity (主觀性)、stance (立場)、trustworthiness (可信度)、polarity (極性)、irony (反諷)、sarcasm (嘲笑)、humor (幽默)、propaganda (宣傳)、bias (偏見)、aggression (侵略性)、toxicity (毒性)、evaluation、appraisal、affect、mood、feelings、beliefs intention 等等。\n\n\n\n\n\n\nImportant\n\n\n\n先做概念的區分、實用出發的詞意區分，再來做實際的應用。"
+  },
+  {
+    "objectID": "weeks/week6.html#比較常討論的情感分析",
+    "href": "weeks/week6.html#比較常討論的情感分析",
+    "title": "Week 6 Word Meaning (III)",
+    "section": "比較常討論的情感分析",
+    "text": "比較常討論的情感分析\n\nsentiment is defined as an attitude, thought, or judgment prompted by feeling, whereas opinion is defined as a view, judgment, or appraisal formed in the mind about a particular matter.(B. Liu 2020)\n\n\n\n\n\n\n\nsentiment 和 opinion 在語言使用上的差異\n\n\n\n\n我有點擔心今年全球的經濟。（我也是/我也蠻擔心的）\n我認爲今年的經濟不會很好。（我同意/不同意）"
+  },
+  {
+    "objectID": "weeks/week6.html#levels-of-analysis",
+    "href": "weeks/week6.html#levels-of-analysis",
+    "title": "Week 6 Word Meaning (III)",
+    "section": "Levels of Analysis",
+    "text": "Levels of Analysis\n\ndocument-level (文檔級)\nsentence-level (句子級)\naspect-level (方面級)\n\n實作上大部分都當成（類別 class、極度 polarity）分類問題。Aspect-based Sentiment Analysis 難度更高一點 (Zhang et al. 2022)。\n\n\n\nABSA"
+  },
+  {
+    "objectID": "weeks/week6.html#但可能也沒那麼難了",
+    "href": "weeks/week6.html#但可能也沒那麼難了",
+    "title": "Week 6 Word Meaning (III)",
+    "section": "但可能也沒那麼難了",
+    "text": "但可能也沒那麼難了"
+  },
+  {
+    "objectID": "weeks/week6.html#多模態的情感計算",
+    "href": "weeks/week6.html#多模態的情感計算",
+    "title": "Week 6 Word Meaning (III)",
+    "section": "多模態的情感計算",
+    "text": "多模態的情感計算\nmultimodal affective computing"
+  },
+  {
+    "objectID": "weeks/week4.html",
+    "href": "weeks/week4.html",
+    "title": "Week 4 Word Meaning",
+    "section": "",
+    "text": "詞義的概念\n詞彙語意資源\n詞義的計算與應用 (feat.GPT4 的詞義理解能力)"
+  },
+  {
+    "objectID": "weeks/week4.html#多義與歧義",
+    "href": "weeks/week4.html#多義與歧義",
+    "title": "Week 4 Word Meaning",
+    "section": "多義與歧義",
+    "text": "多義與歧義\npolysemy and ambiguity\n\n多義 (polysemy): 同一詞彙在不同語境下有不同的使用意義\n\n\n\n\n\n\n\nImportant\n\n\n\nhomonymy"
+  },
+  {
+    "objectID": "weeks/week4.html#詞意的區辨",
+    "href": "weeks/week4.html#詞意的區辨",
+    "title": "Week 4 Word Meaning",
+    "section": "詞意的區辨",
+    "text": "詞意的區辨\n\nzeugma (共軛修飾法)"
+  },
+  {
+    "objectID": "weeks/week4.html#中文詞網-詞意區辨原則",
+    "href": "weeks/week4.html#中文詞網-詞意區辨原則",
+    "title": "Week 4 Word Meaning",
+    "section": "(中文詞網) 詞意區辨原則",
+    "text": "(中文詞網) 詞意區辨原則\n\n一義一項\n一物一義\n一事一義\n義不隨境遷\n義面由觀點何語境決定"
+  },
+  {
+    "objectID": "weeks/week4.html#詞意與義面",
+    "href": "weeks/week4.html#詞意與義面",
+    "title": "Week 4 Word Meaning",
+    "section": "詞意與義面",
+    "text": "詞意與義面\nsense and meaning facet"
+  },
+  {
+    "objectID": "weeks/week4.html#詞意的粒度",
+    "href": "weeks/week4.html#詞意的粒度",
+    "title": "Week 4 Word Meaning",
+    "section": "詞意的粒度",
+    "text": "詞意的粒度\nword sense granularity\n\nKillagraf “I don’t believe in word sensse”\n細粒度 fine-grained (WordNet) vs 粗粒度 coarse-grained word senses (e.g., OntoNotes))"
+  },
+  {
+    "objectID": "weeks/week4.html#詞意的規則結構",
+    "href": "weeks/week4.html#詞意的規則結構",
+    "title": "Week 4 Word Meaning",
+    "section": "詞意的（規則）結構",
+    "text": "詞意的（規則）結構\nsense alternation\n\n規則多義 (regular polysemy)\n隱喻、比喻 (metaphor, metonymy, etc)"
+  },
+  {
+    "objectID": "weeks/week4.html#詞意的-概念-結構",
+    "href": "weeks/week4.html#詞意的-概念-結構",
+    "title": "Week 4 Word Meaning",
+    "section": "詞意的 (概念) 結構",
+    "text": "詞意的 (概念) 結構\nqualia structure"
+  },
+  {
+    "objectID": "weeks/week4.html#附帶一題",
+    "href": "weeks/week4.html#附帶一題",
+    "title": "Week 4 Word Meaning",
+    "section": "附帶一題",
+    "text": "附帶一題\n\n\n\n\n\n\nNote\n\n\n\n機器(深度)學習課程\n\n中文 以李宏毅老師 2021 年的課程優先（參考此份播放清單，再往 2022-23 參考。（感謝建成提供）\n英文 NTU: Deep Learning for Natural Language Processing: From Theory to Practice； MIT introduction to Deep Learning 都還不錯。"
+  },
+  {
+    "objectID": "weeks/week4.html#專有名詞的語意",
+    "href": "weeks/week4.html#專有名詞的語意",
+    "title": "Week 4 Word Meaning",
+    "section": "專有名詞的語意",
+    "text": "專有名詞的語意\nsemantic issues of Proper Names\n\nNamed Entity Taxonymy\n專名辨識任務 (Named Entity Recognition, NER)\n\n\nMillian theorists claim that proper names do not possess a lexical meaning but directly refer to a certain entity,Fregean scholars assert that proper names do carry meanings, and the problem is just about the “meaning” employed."
+  },
+  {
+    "objectID": "weeks/week4.html#專有名詞的語意-1",
+    "href": "weeks/week4.html#專有名詞的語意-1",
+    "title": "Week 4 Word Meaning",
+    "section": "專有名詞的語意",
+    "text": "專有名詞的語意\nwordhood vs properhood\n\n專名有詞意嗎？\n專名的詞意有規律嗎？"
+  },
+  {
+    "objectID": "weeks/week4.html#詞義的計算與應用-1-詞義消歧",
+    "href": "weeks/week4.html#詞義的計算與應用-1-詞義消歧",
+    "title": "Week 4 Word Meaning",
+    "section": "詞義的計算與應用 (1): 詞義消歧",
+    "text": "詞義的計算與應用 (1): 詞義消歧\nword sense disambiguation (WSD)\n\n決定詞彙在句子中的最合的詞意\n只做一個詞 (lexical sample) 和全部做 (all-words task)\n演算\n\nBaseline: 挑頻率最高的（在 wordnet 排第一個的詞意）\n通常都是使用 supervised learning (e.g., nearest neighbors with contextual embeddings)\n也有所謂 knowledge-based 的方法 (e.g., Lesk algorithm 比對字典釋義共享詞彙數量)"
+  },
+  {
+    "objectID": "weeks/week4.html#glossbert",
+    "href": "weeks/week4.html#glossbert",
+    "title": "Week 4 Word Meaning",
+    "section": "GlossBert",
+    "text": "GlossBert"
+  },
+  {
+    "objectID": "weeks/week4.html#gpt4-的詞義消歧能力",
+    "href": "weeks/week4.html#gpt4-的詞義消歧能力",
+    "title": "Week 4 Word Meaning",
+    "section": "GPT4 的詞義消歧能力",
+    "text": "GPT4 的詞義消歧能力"
+  },
+  {
+    "objectID": "weeks/week4.html#詞義的計算與應用-2-詞意推導",
+    "href": "weeks/week4.html#詞義的計算與應用-2-詞意推導",
+    "title": "Week 4 Word Meaning",
+    "section": "詞義的計算與應用 (2): 詞意推導",
+    "text": "詞義的計算與應用 (2): 詞意推導\nword sense induction (WSI)\n\nunsupervised machine learning (不使用 wordnet 的詞意資源當答案)\nagglomerative clustering"
+  },
+  {
+    "objectID": "weeks/week4.html#gpt4-的詞義推導能力",
+    "href": "weeks/week4.html#gpt4-的詞義推導能力",
+    "title": "Week 4 Word Meaning",
+    "section": "GPT4 的詞義推導能力",
+    "text": "GPT4 的詞義推導能力"
+  },
+  {
+    "objectID": "weeks/week4.html#詞義的計算與應用-3-詞意理解與行動",
+    "href": "weeks/week4.html#詞義的計算與應用-3-詞意理解與行動",
+    "title": "Week 4 Word Meaning",
+    "section": "詞義的計算與應用 (3): 詞意理解與行動",
+    "text": "詞義的計算與應用 (3): 詞意理解與行動"
+  },
+  {
+    "objectID": "weeks/week4.html#gpt4-的詞義語用能力",
+    "href": "weeks/week4.html#gpt4-的詞義語用能力",
+    "title": "Week 4 Word Meaning",
+    "section": "GPT4 的詞義語用能力",
+    "text": "GPT4 的詞義語用能力"
+  },
+  {
+    "objectID": "weeks/week4.html#詞義的計算與應用-4-詞意角色標註",
+    "href": "weeks/week4.html#詞義的計算與應用-4-詞意角色標註",
+    "title": "Week 4 Word Meaning",
+    "section": "詞義的計算與應用 (4): 詞意角色標註",
+    "text": "詞義的計算與應用 (4): 詞意角色標註\nsemantic role labeling (SRL)"
+  },
+  {
+    "objectID": "weeks/week4.html#任務評測",
+    "href": "weeks/week4.html#任務評測",
+    "title": "Week 4 Word Meaning",
+    "section": "任務評測",
+    "text": "任務評測\nEvaluation\n\n\n代表性的會議與前瞻任務 bakeoff SemEval: International Workshop on Semantic Evaluation"
   }
 ]
