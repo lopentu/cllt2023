@@ -1230,5 +1230,33 @@
     "title": "計算語言學與語言學理論",
     "section": "",
     "text": "週次\n日期\n主題\n預習 📖\n投影片\n助教課\n課堂練習\n作業\n\n\n\n\n1\n02/23\n課程導論\n\norientation\n\n\n\n\n\n2\n03/02\n計算語言學導論\n\nw2\nslides\ncolab\nHW1, HW1_Ans\n\n\n3\n03/09\n計算構詞與詞彙 (1)\nslp3-02\nw3\nslides\ncolab\nHW2, HW2_Ans\n\n\n4\n03/16\n計算構詞與詞彙 (2)\nslp3-23\nw4\n\ncolab\nHW3, HW3_Ans\n\n\n5\n03/23\n計算構詞與詞彙 (3)\nslp3-21\nw5\nguidline\ncolab, gsheet\nHW4, HW4_Ans\n\n\n6\n03/30\n計算構詞與詞彙 (4)\nslp3-25\nw6\n\ncolab\nHW5, HW5_Ans\n\n\n7\n04/06\n句法理論與剖析器\nslp3-18; (Linzen and Baroni, 2021)\nw7\nslides\n\nHW6, HW6_Ans\n\n\n8\n04/13\n認知語法與計算\ncognitive linguistics meets computational linguistics\nw8\nslides\ncolab\nHW7\n\n\n9\n04/20\n語意表徵 (1): 分佈向量語意\nslp3-06\nw9\nslides\ncolab\nHW8\n\n\n10\n04/27\n語意表徵 (2): Neural Language Models and Pre-trained LLMs\nslp3-10\n\n\n\n\n\n\n11\n05/04\n語意表徵 (3): Prompt and Instruction Learning\nslp3-11\n\n\n\n\n\n\n12\n05/11\n語意表徵 (4): Prompt Engineering and LLM-based applications\n\n\n\n\n\n\n\n13\n05/18\nBakeoff (LLMs and LangChain practice)\n\n\n\n\n\n\n\n14\n05/25\n語音、多模態與言談分析 + 業師演講\nslp3-15; slp3-28\n\n\n\n\n\n\n15\n06/01\n綜合討論\n\n\n\n\n\n\n\n16\n06/08\n期末報告"
+  },
+  {
+    "objectID": "course-overview.html",
+    "href": "course-overview.html",
+    "title": "LING8505:計算語言學與語言學理論",
+    "section": "",
+    "text": "沒有理論，就不似(/是)科學。"
+  },
+  {
+    "objectID": "course-overview.html#課程先備知識建議",
+    "href": "course-overview.html#課程先備知識建議",
+    "title": "LING8505:計算語言學與語言學理論",
+    "section": "課程先備知識建議",
+    "text": "課程先備知識建議\n\n熟悉 Python | 繳交作業時，我們會要求你使用 Python 來完成。如果你不確定狀況，建議你先參考 Programming for Linguists 這類課程，確認你已經熟悉 Python 的基本語法。\n大學初級微積分與線性代數 | 瞭解微積分與線性代數的基本概念，包括導數、積分、矩陣、向量、線性方程式、線性空間、線性變換、特徵值與特徵向量等。\n機率與統計 | 熟悉基本的機率分佈，推估參數，以及機率的加法定理與乘法定理。"
+  },
+  {
+    "objectID": "course-team.html",
+    "href": "course-team.html",
+    "title": "教學團隊",
+    "section": "",
+    "text": "謝舒凱，德國杜賓根大學計算語言學博士，臺大語言學研究所副教授。\n\n\n\nOffice hours\nLocation\n\n\n\n\n個別另約\nR307, GIL."
+  },
+  {
+    "objectID": "course-team.html#助教",
+    "href": "course-team.html#助教",
+    "title": "教學團隊",
+    "section": "助教",
+    "text": "助教\n\n\n\n\nTA\nemail\n\n\n\n\n\n王伯雅，語言所博士班\ndiffere94nt@gmail.com\n\n\n\n古貿昌，語言所博士班\nd08142002@ntu.edu.tw\n\n\n\n陳韋伶，語言所博士班\nd10142007@ntu.edu.tw\n\n\n\n陳品而，語言所博士班\nf10142001@ntu.edu.tw\n\n\n\n周昕妤，語言所碩士班\nr10142008@ntu.edu.tw"
   }
 ]
