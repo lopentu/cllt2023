@@ -1,0 +1,56 @@
+---
+title: "Week 10 計算語意 (II)"
+author: "謝舒凱 台大語言所"
+format: 
+    revealjs:
+        incremental: true
+        slide-number: true
+        preview-links: auto
+        # chalkboard: true
+        logo: ../images/logo_round.png
+
+bibliography: ../cllt.bib
+---
+
+
+# Neural Language Models
+
+
+# Transformer
+
+
+
+## Motivation
+- 克服 RNN 的長距離依賴 (long-term dependency) 問題
+- `Attention is all you need` (2017)
+
+
+
+## Transformer Architecture
+
+
+
+
+## 用一個實例推導一次
+
+
+# BERT
+
+
+## Pre-trained Language Models
+
+
+## Transformers as Language Models
+
+- **Auto-encoding** language models
+    
+
+- **Auto-regressive** language models
+
+
+
+
+
+# The `HuggingFace` Ecosystem
+
+![Tunstall et al. 2022](../images/huggingface.png){width=70%}
