@@ -3,12 +3,12 @@ title: "Week 8: Cognitive Linguistics and NLP"
 author: "謝舒凱 台大語言所"
 format: 
     revealjs:
-        incremental: true
-        slide-number: true
-        preview-links: auto
-        # chalkboard: true
-        logo: ../images/logo_round.png
-
+      slide-number: true
+      preview-links: auto
+      chalkboard: true
+      logo: ../images/logo_round.png
+    html:
+        code-fold: true
 bibliography: ../cllt.bib
 ---
 

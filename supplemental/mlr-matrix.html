@@ -1,20 +1,13 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-html/tabby.min.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+
+<meta charset="utf-8">
 <meta name="generator" content="quarto-1.3.306">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="謝舒凱 台大語言所">
 
-<title>Computational linguisics and linguistic theories - Spring 2023 - Week 8: Cognitive Linguistics and NLP</title>
+<title>Computational linguisics and linguistic theories - Spring 2023 - Matrix Notation for Multiple Linear Regression</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -36,8 +29,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../weeks/week9.html" rel="next">
-<link href="../weeks/week7.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -72,17 +63,12 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../styles.css">
 <link rel="stylesheet" href="../sydney-fonts.css">
-<meta property="og:title" content="Computational linguisics and linguistic theories - Spring 2023 - Week 8: Cognitive Linguistics and NLP">
+<meta property="og:title" content="Computational linguisics and linguistic theories - Spring 2023 - Matrix Notation for Multiple Linear Regression">
 <meta property="og:description" content="">
-<meta property="og:image" content="https://lopentu.github.io/cllt2023/images/icon.jpeg">
-<meta property="og:site-name" content="Computational linguisics and linguistic theories - Spring 2023">
-<meta property="og:title" content="Computational linguisics and linguistic theories - Spring 2023 - Week 8: Cognitive Linguistics and NLP">
-<meta property="og:description" content="意義是一切！">
-<meta property="og:image" content="https://lopentu.github.io/cllt2023/images/icon.jpeg">
 <meta property="og:site-name" content="Computational linguisics and linguistic theories - Spring 2023">
 </head>
 
-<body class="nav-sidebar docked quarto-light">
+<body class="nav-sidebar docked">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -91,7 +77,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../weeks/week-1.html">每週教材</a></li><li class="breadcrumb-item"><a href="../weeks/week8.html">Week 8</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Matrix Notation for Multiple Linear Regression</li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -174,13 +160,13 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
  <span class="menu-text">每週教材</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../weeks/week-1.html" class="sidebar-item-text sidebar-link">
@@ -225,7 +211,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../weeks/week8.html" class="sidebar-item-text sidebar-link active">
+  <a href="../weeks/week8.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 8</span></a>
   </div>
 </li>
@@ -251,58 +237,25 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#背景" id="toc-背景" class="nav-link active" data-scroll-target="#背景">背景</a></li>
-  <li><a href="#語言學到現在累積的幾個經驗" id="toc-語言學到現在累積的幾個經驗" class="nav-link" data-scroll-target="#語言學到現在累積的幾個經驗">語言學到現在累積的幾個經驗</a></li>
-  <li><a href="#認知與語言" id="toc-認知與語言" class="nav-link" data-scroll-target="#認知與語言">認知與語言</a>
-  <ul class="collapse">
-  <li><a href="#語言學的認知假設" id="toc-語言學的認知假設" class="nav-link" data-scroll-target="#語言學的認知假設">語言學的認知假設</a></li>
-  <li><a href="#主要研究範疇" id="toc-主要研究範疇" class="nav-link" data-scroll-target="#主要研究範疇">主要研究範疇</a></li>
-  <li><a href="#核心觀點" id="toc-核心觀點" class="nav-link" data-scroll-target="#核心觀點">核心觀點</a></li>
-  <li><a href="#象似性在中文文字造字上的表現" id="toc-象似性在中文文字造字上的表現" class="nav-link" data-scroll-target="#象似性在中文文字造字上的表現">象似性在中文文字造字上的表現</a></li>
-  <li><a href="#象似性在漢語上的表現" id="toc-象似性在漢語上的表現" class="nav-link" data-scroll-target="#象似性在漢語上的表現">象似性在漢語上的表現</a></li>
-  <li><a href="#象似性在漢語上的表現-1" id="toc-象似性在漢語上的表現-1" class="nav-link" data-scroll-target="#象似性在漢語上的表現-1">象似性在漢語上的表現</a></li>
-  <li><a href="#象似性在漢語上的表現-2" id="toc-象似性在漢語上的表現-2" class="nav-link" data-scroll-target="#象似性在漢語上的表現-2">象似性在漢語上的表現</a></li>
-  <li><a href="#主觀性場景與注意力焦點" id="toc-主觀性場景與注意力焦點" class="nav-link" data-scroll-target="#主觀性場景與注意力焦點">主觀性、場景與注意力/焦點</a></li>
-  </ul></li>
-  <li><a href="#範疇化-categorization" id="toc-範疇化-categorization" class="nav-link" data-scroll-target="#範疇化-categorization">範疇化 (categorization)</a></li>
-  <li><a href="#主體與背景-figure-and-ground" id="toc-主體與背景-figure-and-ground" class="nav-link" data-scroll-target="#主體與背景-figure-and-ground">主體與背景 | Figure and Ground</a>
-  <ul class="collapse">
-  <li><a href="#意象圖示-image-schemas" id="toc-意象圖示-image-schemas" class="nav-link" data-scroll-target="#意象圖示-image-schemas">意象圖示 | Image Schemas</a></li>
-  <li><a href="#完形與語言壓縮" id="toc-完形與語言壓縮" class="nav-link" data-scroll-target="#完形與語言壓縮">完形與語言壓縮</a></li>
-  </ul></li>
-  <li><a href="#隱喻與轉喻-metaphor-and-metonymy" id="toc-隱喻與轉喻-metaphor-and-metonymy" class="nav-link" data-scroll-target="#隱喻與轉喻-metaphor-and-metonymy">隱喻與轉喻 | metaphor and metonymy</a></li>
-  <li><a href="#構式語法-construction-grammar" id="toc-構式語法-construction-grammar" class="nav-link" data-scroll-target="#構式語法-construction-grammar">構式語法 | Construction Grammar</a>
-  <ul class="collapse">
-  <li><a href="#構式知識語料庫" id="toc-構式知識語料庫" class="nav-link" data-scroll-target="#構式知識語料庫">構式知識語料庫</a></li>
-  <li><a href="#構式與機器學習" id="toc-構式與機器學習" class="nav-link" data-scroll-target="#構式與機器學習">構式與機器學習</a></li>
-  <li><a href="#總結" id="toc-總結" class="nav-link" data-scroll-target="#總結">總結</a></li>
-  </ul></li>
-  <li><a href="#llmfm-的成效與認知語言學的關係" id="toc-llmfm-的成效與認知語言學的關係" class="nav-link" data-scroll-target="#llmfm-的成效與認知語言學的關係">LLM/FM 的成效與認知語言學的關係</a></li>
-  <li><a href="#機器學習和-nlp-已經無法分開" id="toc-機器學習和-nlp-已經無法分開" class="nav-link" data-scroll-target="#機器學習和-nlp-已經無法分開">機器學習和 NLP 已經無法分開</a>
-  <ul class="collapse">
-  <li><a href="#evaluation-metrics" id="toc-evaluation-metrics" class="nav-link" data-scroll-target="#evaluation-metrics">Evaluation metrics</a></li>
-  </ul></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#matrix-representation-for-the-regression-model" id="toc-matrix-representation-for-the-regression-model" class="nav-link" data-scroll-target="#matrix-representation-for-the-regression-model">Matrix Representation for the Regression Model</a></li>
+  <li><a href="#estimating-the-coefficients" id="toc-estimating-the-coefficients" class="nav-link" data-scroll-target="#estimating-the-coefficients">Estimating the Coefficients</a></li>
+  <li><a href="#variance-covariance-matrix-of-the-coefficients" id="toc-variance-covariance-matrix-of-the-coefficients" class="nav-link" data-scroll-target="#variance-covariance-matrix-of-the-coefficients">Variance-covariance matrix of the coefficients</a></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/lopentu/cllt2023/edit/main/weeks/week8.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/lopentu/cllt2023/issues/new" class="toc-action">Report an issue</a></p></div></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="week8.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/lopentu/cllt2023/edit/main/supplemental/mlr-matrix.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/lopentu/cllt2023/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Week 8: Cognitive Linguistics and NLP</h1>
+<h1 class="title">Matrix Notation for Multiple Linear Regression</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>謝舒凱 台大語言所 </p>
-          </div>
-  </div>
     
   
     
@@ -311,23 +264,6 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="背景" class="level2">
-<h2 class="anchored" data-anchor-id="背景">背景</h2>
-<p><strong>意義是一切</strong>！</p>
-<ul>
-<li><p>上週提到的形式語言學（形式語法與邏輯語意）在程式語言的編譯上具有很大的用途。</p></li>
-<li><p>語意學很長一段時間將重點放在具有真值 (truth value) 判斷的陳述句，同時開展了相當完整的邏輯與推導系統。</p></li>
-<li><p>但是，語言的使用者不只是要表達真實的意義，也要表達自己的情緒、態度、立場、意圖、想法、慾望等交際意義。</p></li>
-</ul>
-</section>
-<section id="語言學到現在累積的幾個經驗" class="level2">
-<h2 class="anchored" data-anchor-id="語言學到現在累積的幾個經驗">語言學到現在累積的幾個經驗</h2>
-<p>(Hsieh 2023)</p>
-<ul>
-<li><p>化約論 (reductionism) (複雜的問題可以通過分析其組成部分來解決) 在探究<strong>語言的意義</strong>上有很大的局限性。</p></li>
-<li><p>模塊觀 (modularist view) 是 useful fiction。例如把語意與語用分開處理，是教學方便。</p></li>
-<li><p>語法自主 (autonomy of syntax) 與內在天賦論 (innateness) 是可疑的。 <span class="math inline">\(\rightarrow\)</span> 語言學習是意義與交互作用中驅動的。句法與語意不可分，是在使用中湧現的產物。</p></li>
-</ul>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -338,200 +274,130 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>語言不僅是單一的物理現象、生理現象、社會現象，心理現象。它是人文化成的複雜系統。</p>
+<p>The following supplemental notes were created by <a href="https://www.mariatackett.net/">Dr.&nbsp;Maria Tackett</a> for STA 210. They are provided for students who want to dive deeper into the mathematics behind regression and reflect some of the material covered in STA 211: Mathematics of Regression. Additional supplemental notes will be added throughout the semester.</p>
 </div>
 </div>
+<p>This document provides the details for the matrix notation for multiple linear regression. We assume the reader has familiarity with some linear algebra. Please see Chapter 1 of <a href="https://www-bcf.usc.edu/~gareth/ISL/"><em>An Introduction to Statistical Learning</em></a> for a brief review of linear algebra.</p>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Suppose we have <span class="math inline">\(n\)</span> observations. Let the <span class="math inline">\(i^{th}\)</span> be <span class="math inline">\((x_{i1}, \ldots, x_{ip}, y_i)\)</span>, such that <span class="math inline">\(x_{i1}, \ldots, x_{ip}\)</span> are the explanatory variables (predictors) and <span class="math inline">\(y_i\)</span> is the response variable. We assume the data can be modeled using the least-squares regression model, such that the mean response for a given combination of explanatory variables follows the form in <a href="#eq-basic_model">Equation&nbsp;1</a>.</p>
+<p><span id="eq-basic_model"><span class="math display">\[
+y = \beta_0 + \beta_1 x_1 + \dots + \beta_p x_p
+\tag{1}\]</span></span></p>
+<p>We can write the response for the <span class="math inline">\(i^{th}\)</span> observation as shown in <a href="#eq-ind_response">Equation&nbsp;2</a></p>
+<p><span id="eq-ind_response"><span class="math display">\[
+y_i = \beta_0 + \beta_1 x_{i1} + \dots + \beta_p x_{ip} + \epsilon_i
+\tag{2}\]</span></span></p>
+<p>such that <span class="math inline">\(\epsilon_i\)</span> is the amount <span class="math inline">\(y_i\)</span> deviates from <span class="math inline">\(\mu\{y|x_{i1}, \ldots, x_{ip}\}\)</span>, the mean response for a given combination of explanatory variables. We assume each <span class="math inline">\(\epsilon_i \sim N(0,\sigma^2)\)</span>, where <span class="math inline">\(\sigma^2\)</span> is a constant variance for the distribution of the response <span class="math inline">\(y\)</span> for any combination of explanatory variables <span class="math inline">\(x_1, \ldots, x_p\)</span>.</p>
 </section>
-<section id="認知與語言" class="level1">
-<h1>認知與語言</h1>
-<p>那麼，在語言學中有什麼其他的想法或假設嗎？</p>
-<section id="語言學的認知假設" class="level2">
-<h2 class="anchored" data-anchor-id="語言學的認知假設">語言學的認知假設</h2>
-<p><strong>認知語言學</strong> (cognitive linguistics) ，或<strong>語言與認知</strong></p>
-<ul>
-<li>在腦神經科學與認知科學的基礎下，80-90 年代，一些語言學家開始關注語言與人類認知之間的相互作用。</li>
-</ul>
-<blockquote class="blockquote">
-<p>核心觀點是語言不僅是一種抽象的符號系統，而且是與我們的思維、知識和經驗密切相關的複雜心智現象。</p>
-</blockquote>
+<section id="matrix-representation-for-the-regression-model" class="level2">
+<h2 class="anchored" data-anchor-id="matrix-representation-for-the-regression-model">Matrix Representation for the Regression Model</h2>
+<p>We can represent the <a href="#eq-basic_model">Equation&nbsp;1</a> and <a href="#eq-ind_response">Equation&nbsp;2</a> using matrix notation. Let</p>
+<p><span id="eq-matrix-notation"><span class="math display">\[
+\mathbf{Y} = \begin{bmatrix}y_1 \\ y_2 \\ \vdots \\y_n\end{bmatrix}
+\hspace{15mm}
+\mathbf{X} = \begin{bmatrix}x_{11} &amp; x_{12} &amp; \dots &amp; x_{1p} \\
+x_{21} &amp; x_{22} &amp; \dots &amp; x_{2p} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots\\
+x_{n1} &amp; x_{n2} &amp; \dots &amp; x_{np} \end{bmatrix}
+\hspace{15mm}
+\boldsymbol{\beta}= \begin{bmatrix}\beta_0 \\ \beta_1 \\ \vdots \\ \beta_p \end{bmatrix}
+\hspace{15mm}
+\boldsymbol{\epsilon}= \begin{bmatrix}\epsilon_1 \\ \epsilon_2 \\ \vdots \\ \epsilon_n \end{bmatrix}
+\tag{3}\]</span></span></p>
+<p>Thus,</p>
+<p><span class="math display">\[\mathbf{Y} = \mathbf{X}\boldsymbol{\beta} + \mathbf{\epsilon}\]</span></p>
+<p>Therefore the estimated response for a given combination of explanatory variables and the associated residuals can be written as</p>
+<p><span id="eq-matrix_mean"><span class="math display">\[
+\hat{\mathbf{Y}} = \mathbf{X}\hat{\boldsymbol{\beta}} \hspace{10mm} \mathbf{e} = \mathbf{Y} - \mathbf{X}\hat{\boldsymbol{\beta}}
+\tag{4}\]</span></span></p>
 </section>
-<section id="主要研究範疇" class="level2">
-<h2 class="anchored" data-anchor-id="主要研究範疇">主要研究範疇</h2>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>概念隱喻（Conceptual Metaphor）、構式語法（Construction Grammar）、語言類型學（Linguistic Typology）與文化、語言習得和使用、語言與時間空間、語言與概念組織等</p>
-</div>
-</div>
+<section id="estimating-the-coefficients" class="level2">
+<h2 class="anchored" data-anchor-id="estimating-the-coefficients">Estimating the Coefficients</h2>
+<p>The least-squares model is the one that minimizes the sum of the squared residuals. Therefore, we want to find the coefficients, <span class="math inline">\(\hat{\boldsymbol{\beta}}\)</span> that minimizes</p>
+<p><span id="eq-sum_sq_resid"><span class="math display">\[
+\sum\limits_{i=1}^{n} e_{i}^2 = \mathbf{e}^T\mathbf{e} = (\mathbf{Y} - \mathbf{X}\hat{\boldsymbol{\beta}})^T(\mathbf{Y} - \mathbf{X}\hat{\boldsymbol{\beta}})
+\tag{5}\]</span></span></p>
+<p>where <span class="math inline">\(\mathbf{e}^T\)</span>, the transpose of the matrix <span class="math inline">\(\mathbf{e}\)</span>.</p>
+<p><span id="eq-model_equation"><span class="math display">\[
+(\mathbf{Y} - \mathbf{X}\hat{\boldsymbol{\beta}})^T(\mathbf{Y} - \mathbf{X}\hat{\boldsymbol{\beta}}) = (\mathbf{Y}^T\mathbf{Y} -
+\mathbf{Y}^T \mathbf{X}\hat{\boldsymbol{\beta}} - (\hat{\boldsymbol{\beta}}{}^{T}\mathbf{X}^T\mathbf{Y} +
+\hat{\boldsymbol{\beta}}{}^{T}\mathbf{X}^T\mathbf{X}
+\hat{\boldsymbol{\beta}})
+\tag{6}\]</span></span></p>
+<p>Note that <span class="math inline">\((\mathbf{Y^T}\mathbf{X}\hat{\boldsymbol{\beta}})^T = \hat{\boldsymbol{\beta}}{}^{T}\mathbf{X}^T\mathbf{Y}\)</span>. Since these are both constants (i.e.&nbsp;<span class="math inline">\(1\times 1\)</span> vectors), <span class="math inline">\(\mathbf{Y^T}\mathbf{X}\hat{\boldsymbol{\beta}} = \hat{\boldsymbol{\beta}}{}^{T}\mathbf{X}^T\mathbf{Y}\)</span>. Thus, <a href="#eq-model_equation">Equation&nbsp;6</a> becomes</p>
+<p><span class="math display">\[
+\mathbf{Y}^T\mathbf{Y} - 2 \mathbf{X}^T\hat{\boldsymbol{\beta}}{}^{T}\mathbf{Y} + \hat{\boldsymbol{\beta}}{}^{T}\mathbf{X}^T\mathbf{X}
+\hat{\boldsymbol{\beta}}
+\]</span></p>
+<p>Since we want to find the <span class="math inline">\(\hat{\boldsymbol{\beta}}\)</span> that minimizes <a href="#eq-sum_sq_resid">Equation&nbsp;5</a>, will find the value of <span class="math inline">\(\hat{\boldsymbol{\beta}}\)</span> such that the derivative with respect to <span class="math inline">\(\hat{\boldsymbol{\beta}}\)</span> is equal to 0.</p>
+<p><span id="eq-ete"><span class="math display">\[
+\begin{aligned}
+\frac{\partial \mathbf{e}^T\mathbf{e}}{\partial \hat{\boldsymbol{\beta}}} &amp; = \frac{\partial}{\partial \hat{\boldsymbol{\beta}}}(\mathbf{Y}^T\mathbf{Y} - 2 \mathbf{X}^T\hat{\boldsymbol{\beta}}{}^T\mathbf{Y} + \hat{\boldsymbol{\beta}}{}^{T}\mathbf{X}^T\mathbf{X}\hat{\boldsymbol{\beta}}) = 0 \\
+&amp;\Rightarrow - 2 \mathbf{X}^T\mathbf{Y} + 2 \mathbf{X}^T\mathbf{X}\hat{\boldsymbol{\beta}} = 0 \\
+&amp; \Rightarrow 2 \mathbf{X}^T\mathbf{Y} = 2 \mathbf{X}^T\mathbf{X}\hat{\boldsymbol{\beta}} \\
+&amp; \Rightarrow \mathbf{X}^T\mathbf{Y} = \mathbf{X}^T\mathbf{X}\hat{\boldsymbol{\beta}} \\
+&amp; \Rightarrow (\mathbf{X}^T\mathbf{X})^{-1}\mathbf{X}^T\mathbf{Y} = (\mathbf{X}^T\mathbf{X})^{-1}\mathbf{X}^T\mathbf{X}\hat{\boldsymbol{\beta}} \\
+&amp; \Rightarrow (\mathbf{X}^T\mathbf{X})^{-1}\mathbf{X}^T\mathbf{Y} = \mathbf{I}\hat{\boldsymbol{\beta}}
+\end{aligned}
+\tag{7}\]</span></span></p>
+<p>Thus, the estimate of the model coefficients is <span class="math inline">\(\hat{\boldsymbol{\beta}} = (\mathbf{X}^T\mathbf{X})^{-1}\mathbf{X}^T\mathbf{Y}\)</span>.</p>
 </section>
-<section id="核心觀點" class="level2">
-<h2 class="anchored" data-anchor-id="核心觀點">核心觀點</h2>
-<p><strong>象似性</strong> (iconicity)：語言的符號與其對應的客觀對象之間的相似性。<span class="tiny">the degree to which a linguistic expression resembles the object or event it denotes (Peirce).</span></p>
-<ul>
-<li><p>皮爾斯提出了三種不同類型的符號 (sign)：</p>
-<ul>
-<li><p>標誌符號 (icon) : 符號與客觀對象有形象上的關係。 <img src="../images/icon.jpeg" class="img-fluid" style="width:30.0%" alt="icon"></p></li>
-<li><p>指示符號（index）: 符號與客觀對象有直接的或因果的關係。<img src="../images/paw-prints.jpg" class="img-fluid" style="width:30.0%" alt="index"></p></li>
-<li><p>象徵符號（symbol）: 符號與客觀對象有約定俗成的關係。 <img src="../images/symbols.jpeg" class="img-fluid" style="width:30.0%" alt="symbol"></p></li>
-</ul></li>
-</ul>
-<p><a href="https://media-studies.com/peirce-sign-categories/">pic source</a></p>
-</section>
-<section id="象似性在中文文字造字上的表現" class="level2">
-<h2 class="anchored" data-anchor-id="象似性在中文文字造字上的表現">象似性在中文文字造字上的表現</h2>
-<p>象形 (<em>iconic</em>)、指示 (<em>indexical</em>)、…?</p>
-</section>
-<section id="象似性在漢語上的表現" class="level2">
-<h2 class="anchored" data-anchor-id="象似性在漢語上的表現">象似性在漢語上的表現</h2>
-<p>語言中的象似性主要是指「語言結構」跟人的「概念結構」之間的自然聯繫 (戴浩一, 1985)。展現在順序、距離、重疊等方面。</p>
-<ul>
-<li><strong>順序象似性</strong></li>
-</ul>
-<p><code>她搭捷運到這裏</code> vs <code>她到這裏搭捷運</code></p>
-</section>
-<section id="象似性在漢語上的表現-1" class="level2">
-<h2 class="anchored" data-anchor-id="象似性在漢語上的表現-1">象似性在漢語上的表現</h2>
-<ul>
-<li><strong>距離象似性</strong> (概念上距離近的成分設法在句法分佈上彼此鄰近)</li>
-</ul>
-<p><code>吃飽了</code>vs <code>*吃了飽</code> vs <code>吃個飽</code></p>
-<p><code>他送給她一張卡片</code>vs <code>他送一張卡片給他</code></p>
-</section>
-<section id="象似性在漢語上的表現-2" class="level2">
-<h2 class="anchored" data-anchor-id="象似性在漢語上的表現-2">象似性在漢語上的表現</h2>
-<ul>
-<li><strong>重疊象似性</strong></li>
-</ul>
-</section>
-<section id="主觀性場景與注意力焦點" class="level2">
-<h2 class="anchored" data-anchor-id="主觀性場景與注意力焦點">主觀性、場景與注意力/焦點</h2>
-<ul>
-<li><p>Subjectivity 心理活動的選擇性</p></li>
-<li><p>Focus 心理活動所選擇的客觀物件</p></li>
-</ul>
-</section>
-</section>
-<section id="範疇化-categorization" class="level1">
-<h1>範疇化 (categorization)</h1>
-<ul>
-<li>概念的原型和屬性</li>
-</ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../images/Labov-Cups.png" class="img-fluid figure-img" style="width:70.0%"></p>
-<p></p><figcaption class="figure-caption">cup or bowl</figcaption><p></p>
-</figure>
-</div>
-<ul>
-<li>階層</li>
-</ul>
-</section>
-<section id="主體與背景-figure-and-ground" class="level1">
-<h1>主體與背景 | Figure and Ground</h1>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../images/fig-ground.png" class="img-fluid figure-img" style="width:40.0%"></p>
-<p></p><figcaption class="figure-caption">figure and ground</figcaption><p></p>
-</figure>
-</div>
-<ul>
-<li>語言順序如何反應主體與背景的認知關係？</li>
-</ul>
-<section id="意象圖示-image-schemas" class="level2">
-<h2 class="anchored" data-anchor-id="意象圖示-image-schemas">意象圖示 | Image Schemas</h2>
-<ul>
-<li><p><strong>意象</strong>: 在某物不在場時，我們的心智還能想像得出該物的具體。</p></li>
-<li><p><strong>圖示</strong>：把經驗加工組織成某種認知結構，較長期地儲存在記憶之中。</p></li>
-<li><p><strong>意象圖示</strong>：在人與客觀世界感知與互動中一種反覆出現的動態的模式。 e.g, <code>SOURCE-PATH-GOAL</code> schema</p></li>
-</ul>
-</section>
-<section id="完形與語言壓縮" class="level2">
-<h2 class="anchored" data-anchor-id="完形與語言壓縮">完形與語言壓縮</h2>
-</section>
-</section>
-<section id="隱喻與轉喻-metaphor-and-metonymy" class="level1">
-<h1>隱喻與轉喻 | metaphor and metonymy</h1>
-<p><strong>隱喻</strong> (基於相似)</p>
-<ul>
-<li><p>隱喻在修辭上，由<strong>本體</strong> (tenor)、喻體 (vehicle)、<strong>喻基</strong> (ground) 三個部分組成。</p></li>
-<li><p>認知隱喻：source - target</p></li>
-</ul>
-<p><strong>轉喻</strong> (基於鄰近)</p>
-</section>
-<section id="構式語法-construction-grammar" class="level1">
-<h1>構式語法 | Construction Grammar</h1>
-<p>(Goldberg)</p>
-<ul>
-<li><p>構式是指形意配對的模式，是語言的一種基本結構。</p></li>
-<li><p>較穩定的如</p>
-<ul>
-<li>中動構式 <code>NP-起來-AP(AD+Adj)</code></li>
-<li>把字句構式</li>
-<li>…</li>
-</ul></li>
-</ul>
-<section id="構式知識語料庫" class="level2">
-<h2 class="anchored" data-anchor-id="構式知識語料庫">構式知識語料庫</h2>
-<p><a href="http://ccl.pku.edu.cn/ccgd/">北大現代漢語構式數據庫</a></p>
-</section>
-<section id="構式與機器學習" class="level2">
-<h2 class="anchored" data-anchor-id="構式與機器學習">構式與機器學習</h2>
-<p>Computational Construction Grammar (C*G)</p>
-<p><a href="https://deeplexr.github.io/cocogram/cocog.html#1">參考投影片</a> <a href="https://github.com/jonathandunn/c2xg/tree/v2.0/c2xg">c2xg python</a></p>
-</section>
-<section id="總結" class="level2">
-<h2 class="anchored" data-anchor-id="總結">總結</h2>
-<ul>
-<li>人的認知結構（象似性、思維時序關係、空間層次關係等）參與決定了語言的意義結構。</li>
-</ul>
-</section>
-</section>
-<section id="llmfm-的成效與認知語言學的關係" class="level1">
-<h1>LLM/FM 的成效與認知語言學的關係</h1>
-<ul>
-<li><p>藏在<strong>語言使用</strong>中（注意 instruction, feedback 也在其中）。</p></li>
-<li><p>但認知涉及感官與身體經驗，多模態資料的整合在 usage-based learning 中可以達到什麼樣的成效，可以拭目以待。</p>
-<ul>
-<li>以 affordance 為例</li>
-</ul></li>
-</ul>
-</section>
-<section id="機器學習和-nlp-已經無法分開" class="level1">
-<h1>機器學習和 NLP 已經無法分開</h1>
-<ul>
-<li><p>下週開始進入（以深度學習爲主的）語意表徵的世界。</p></li>
-<li><p>雖然時代的演進可能會讓機器學習變成 no-code/low-code 的常民工具，但是我們至少要了解它的基本原理。</p></li>
-</ul>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>推薦李宏毅老師的機器學習課程 (2021-2022)</p>
-</div>
-</div>
-<ul>
-<li>理論與應用學習法<a href="https://www.kdnuggets.com/2017/11/getting-started-machine-learning-one-hour.html">Getting Started with Machine Learning in One Hour!</a>：自己選擇學習路徑！</li>
-</ul>
-<section id="evaluation-metrics" class="level2">
-<h2 class="anchored" data-anchor-id="evaluation-metrics">Evaluation metrics</h2>
-<p>爲何需要這些不同的評估方法？ <img src="../images/eval_ml.png" class="img-fluid"></p>
-<p><span class="math inline">\(F_{\beta}= \frac{(\beta^{2} +1) PR} {\beta^{2}P+R}\)</span></p>
+<section id="variance-covariance-matrix-of-the-coefficients" class="level2">
+<h2 class="anchored" data-anchor-id="variance-covariance-matrix-of-the-coefficients">Variance-covariance matrix of the coefficients</h2>
+<p>We will use two properties to derive the form of the variance-covariance matrix of the coefficients:</p>
+<ol type="1">
+<li><span class="math inline">\(E[\boldsymbol{\epsilon}\boldsymbol{\epsilon}^T] = \sigma^2I\)</span></li>
+<li><span class="math inline">\(\hat{\boldsymbol{\beta}} = \boldsymbol{\beta} + (\mathbf{X}^T\mathbf{X})^{-1}\epsilon\)</span></li>
+</ol>
+<p>First, we will show that <span class="math inline">\(E[\boldsymbol{\epsilon}\boldsymbol{\epsilon}^T] = \sigma^2I\)</span></p>
+<p><span id="eq-expected_error"><span class="math display">\[
+\begin{aligned}
+E[\boldsymbol{\epsilon}\boldsymbol{\epsilon}^T] &amp;= E \begin{bmatrix}\epsilon_1  &amp; \epsilon_2 &amp; \dots &amp; \epsilon_n \end{bmatrix}\begin{bmatrix}\epsilon_1 \\ \epsilon_2 \\ \vdots \\ \epsilon_n \end{bmatrix}  \\
+&amp; = E \begin{bmatrix} \epsilon_1^2  &amp; \epsilon_1 \epsilon_2 &amp; \dots &amp; \epsilon_1 \epsilon_n \\
+\epsilon_2 \epsilon_1 &amp; \epsilon_2^2 &amp; \dots &amp; \epsilon_2 \epsilon_n \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+\epsilon_n \epsilon_1 &amp; \epsilon_n \epsilon_2 &amp; \dots &amp; \epsilon_n^2
+\end{bmatrix} \\
+&amp; = \begin{bmatrix} E[\epsilon_1^2]  &amp; E[\epsilon_1 \epsilon_2] &amp; \dots &amp; E[\epsilon_1 \epsilon_n] \\
+E[\epsilon_2 \epsilon_1] &amp; E[\epsilon_2^2] &amp; \dots &amp; E[\epsilon_2 \epsilon_n] \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+E[\epsilon_n \epsilon_1] &amp; E[\epsilon_n \epsilon_2] &amp; \dots &amp; E[\epsilon_n^2]
+\end{bmatrix}
+\end{aligned}
+\tag{8}\]</span></span></p>
+<p>Recall, the regression assumption that the errors <span class="math inline">\(\epsilon_i's\)</span> are Normally distributed with mean 0 and variance <span class="math inline">\(\sigma^2\)</span>. Thus, <span class="math inline">\(E(\epsilon_i^2) = Var(\epsilon_i) = \sigma^2\)</span> for all <span class="math inline">\(i\)</span>. Additionally, recall the regression assumption that the errors are uncorrelated, i.e.&nbsp;<span class="math inline">\(E(\epsilon_i \epsilon_j) = Cov(\epsilon_i, \epsilon_j) = 0\)</span> for all <span class="math inline">\(i,j\)</span>. Using these assumptions, we can write <a href="#eq-expected_error">Equation&nbsp;8</a> as</p>
+<p><span id="eq-expected_error2"><span class="math display">\[
+E[\mathbf{\epsilon}\mathbf{\epsilon}^T]  = \begin{bmatrix} \sigma^2  &amp; 0 &amp; \dots &amp; 0 \\
+0 &amp; \sigma^2  &amp; \dots &amp; 0 \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+0 &amp; 0 &amp; \dots &amp; \sigma^2
+\end{bmatrix} = \sigma^2 \mathbf{I}
+\tag{9}\]</span></span></p>
+<p>where <span class="math inline">\(\mathbf{I}\)</span> is the <span class="math inline">\(n \times n\)</span> identity matrix.</p>
+<p>Next, we show that <span class="math inline">\(\hat{\boldsymbol{\beta}} = \boldsymbol{\beta} + (\mathbf{X}^T\mathbf{X})^{-1}\epsilon\)</span>.</p>
+<p>Recall that the <span class="math inline">\(\hat{\boldsymbol{\beta}} = (\mathbf{X}^T\mathbf{X})^{-1}\mathbf{X}^T\mathbf{Y}\)</span> and <span class="math inline">\(\mathbf{Y} = \mathbf{X}\mathbf{\beta} + \mathbf{\epsilon}\)</span>. Then,</p>
+<p><span id="eq-est-beta"><span class="math display">\[
+\begin{aligned}
+\hat{\boldsymbol{\beta}} &amp;= (\mathbf{X}^T\mathbf{X})^{-1}\mathbf{X}^T\mathbf{Y} \\
+&amp;= (\mathbf{X}^T\mathbf{X})^{-1}\mathbf{X}^T(\mathbf{X}\boldsymbol{\beta} + \boldsymbol{\epsilon}) \\
+&amp;= \boldsymbol{\beta} + (\mathbf{X}^T\mathbf{X})^{-1}\mathbf{X}^T \mathbf{\epsilon} \\
+\end{aligned}
+\tag{10}\]</span></span></p>
+<p>Using these two properties, we derive the form of the variance-covariance matrix for the coefficients. Note that the covariance matrix is <span class="math inline">\(E[(\hat{\boldsymbol{\beta}} - \boldsymbol{\beta})(\hat{\boldsymbol{\beta}} - \boldsymbol{\beta})^T]\)</span></p>
+<p><span id="eq-var-cov"><span class="math display">\[
+\begin{aligned}
+E[(\hat{\boldsymbol{\beta}} - \boldsymbol{\beta})(\hat{\boldsymbol{\beta}} - \boldsymbol{\beta})^T] &amp;= E[(\boldsymbol{\beta} + (\mathbf{X}^T\mathbf{X})^{-1} \mathbf{X}^T \boldsymbol{\epsilon} - \boldsymbol{\beta})(\boldsymbol{\beta} + (\mathbf{X}^T\mathbf{X})^{-1} \mathbf{X}^T \boldsymbol{\epsilon} - \boldsymbol{\beta})^T]\\
+&amp; = E[(\mathbf{X}^T\mathbf{X})^{-1} \mathbf{X}^T \boldsymbol{\epsilon}\boldsymbol{\epsilon}^T\mathbf{X}(\mathbf{X}^T\mathbf{X})^{-1}] \\
+&amp; = (\mathbf{X}^T\mathbf{X})^{-1} \mathbf{X}^T E[\boldsymbol{\epsilon}\boldsymbol{\epsilon}^T]\mathbf{X}(\mathbf{X}^T\mathbf{X})^{-1}\\
+&amp; = (\mathbf{X}^T\mathbf{X})^{-1} \mathbf{X}^T (\sigma^2\mathbf{I})\mathbf{X}(\mathbf{X}^T\mathbf{X})^{-1}\\
+&amp;= \sigma^2\mathbf{I}(\mathbf{X}^T\mathbf{X})^{-1}\mathbf{X}^T\mathbf{X}(\mathbf{X}^T\mathbf{X})^{-1}\\
+&amp; = \sigma^2\mathbf{I}(\mathbf{X}^T\mathbf{X})^{-1}\\
+&amp;  = \sigma^2(\mathbf{X}^T\mathbf{X})^{-1} \\
+\end{aligned}
+\tag{11}\]</span></span></p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -768,18 +634,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="../weeks/week7.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Week 7</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="../weeks/week9.html" class="pagination-link">
-        <span class="nav-page-text">Week 9</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
