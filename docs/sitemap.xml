@@ -2,35 +2,35 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://lopentu.github.io/cllt2023/index.html</loc>
-    <lastmod>2023-06-01T06:26:58.721Z</lastmod>
+    <lastmod>2023-06-01T06:48:13.960Z</lastmod>
   </url>
   <url>
     <loc>https://lopentu.github.io/cllt2023/project-tips-resources.html</loc>
-    <lastmod>2023-06-01T06:26:55.558Z</lastmod>
+    <lastmod>2023-06-01T06:48:09.093Z</lastmod>
   </url>
   <url>
     <loc>https://lopentu.github.io/cllt2023/supplemental/mlr-matrix.html</loc>
-    <lastmod>2023-06-01T06:26:55.873Z</lastmod>
+    <lastmod>2023-06-01T06:48:09.582Z</lastmod>
   </url>
   <url>
     <loc>https://lopentu.github.io/cllt2023/supplemental/model-diagnostics-matrix.html</loc>
-    <lastmod>2023-06-01T06:26:56.179Z</lastmod>
+    <lastmod>2023-06-01T06:48:10.082Z</lastmod>
   </url>
   <url>
     <loc>https://lopentu.github.io/cllt2023/supplemental/slr-derivations.html</loc>
-    <lastmod>2023-06-01T06:26:56.462Z</lastmod>
+    <lastmod>2023-06-01T06:48:10.519Z</lastmod>
   </url>
   <url>
     <loc>https://lopentu.github.io/cllt2023/supplemental/log-transformations.html</loc>
-    <lastmod>2023-06-01T06:26:56.808Z</lastmod>
+    <lastmod>2023-06-01T06:48:11.066Z</lastmod>
   </url>
   <url>
     <loc>https://lopentu.github.io/cllt2023/supplemental/math_pre.html</loc>
-    <lastmod>2023-06-01T06:26:57.068Z</lastmod>
+    <lastmod>2023-06-01T06:48:11.460Z</lastmod>
   </url>
   <url>
     <loc>https://lopentu.github.io/cllt2023/supplemental/model-selection-criteria.html</loc>
-    <lastmod>2023-06-01T06:26:57.359Z</lastmod>
+    <lastmod>2023-06-01T06:48:11.934Z</lastmod>
   </url>
   <url>
     <loc>https://lopentu.github.io/cllt2023/course-faq.html</loc>
@@ -42,30 +42,34 @@
   </url>
   <url>
     <loc>https://lopentu.github.io/cllt2023/exams/exam-1.html</loc>
-    <lastmod>2023-06-01T06:26:57.647Z</lastmod>
+    <lastmod>2023-06-01T06:48:12.370Z</lastmod>
   </url>
   <url>
     <loc>https://lopentu.github.io/cllt2023/weeks/week8.html</loc>
-    <lastmod>2023-06-01T06:26:53.234Z</lastmod>
+    <lastmod>2023-06-01T06:48:04.922Z</lastmod>
   </url>
   <url>
     <loc>https://lopentu.github.io/cllt2023/weeks/week7.html</loc>
-    <lastmod>2023-06-01T06:26:54.061Z</lastmod>
+    <lastmod>2023-06-01T06:48:06.728Z</lastmod>
   </url>
   <url>
     <loc>https://lopentu.github.io/cllt2023/weeks/week10.html</loc>
-    <lastmod>2023-06-01T06:26:55.058Z</lastmod>
+    <lastmod>2023-06-01T06:48:08.283Z</lastmod>
   </url>
   <url>
     <loc>https://lopentu.github.io/cllt2023/weeks/week3.html</loc>
-    <lastmod>2023-06-01T06:26:53.681Z</lastmod>
+    <lastmod>2023-06-01T06:48:06.100Z</lastmod>
   </url>
   <url>
     <loc>https://lopentu.github.io/cllt2023/weeks/week6.html</loc>
-    <lastmod>2023-06-01T06:26:54.410Z</lastmod>
+    <lastmod>2023-06-01T06:48:07.286Z</lastmod>
   </url>
   <url>
     <loc>https://lopentu.github.io/cllt2023/weeks/week5.html</loc>
-    <lastmod>2023-06-01T06:26:54.771Z</lastmod>
+    <lastmod>2023-06-01T06:48:07.856Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lopentu.github.io/cllt2023/weeks/week-1.html</loc>
+    <lastmod>2023-06-01T06:48:05.435Z</lastmod>
   </url>
 </urlset>
